@@ -2,6 +2,8 @@
 
   <!-- Streamlining package specs -->
   <PropertyGroup>
+    <IsPublishable>false</IsPublishable>
+    <IsPackable>true</IsPackable>
     <PackRelease>false</PackRelease>
     <PublishRelease>false</PublishRelease>
   </PropertyGroup>

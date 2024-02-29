@@ -12,8 +12,8 @@
   <Import Project="Package/Config/PackageSpecs.props" />
 
   <ItemGroup>
-    <PackageReference Include="Coree.Hosting.NetCore" Version="0.1.8825.30526-prerelease" />
-    <PackageReference Include="Coree.Hosting.NETStandard" Version="0.1.8825.30613-prerelease" />
+    <PackageReference Include="Coree.NET" Version="0.1.8825.36675" />
+    <PackageReference Include="Coree.NETStandard" Version="0.1.8825.36604" />
     <PackageReference Include="Microsoft.Extensions.Hosting" Version="8.0.0" />
   </ItemGroup>
 

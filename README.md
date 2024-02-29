@@ -1,0 +1,1 @@
+# Coree.Hosting.ASPNetCore

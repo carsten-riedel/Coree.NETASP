@@ -1,1 +1,1 @@
-# Coree.Hosting.ASPNetCore
+# Coree.ASP.NETCore

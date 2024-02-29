@@ -1,4 +1,4 @@
-﻿namespace Coree.Hosting.ASPNetCore
+﻿namespace Coree.ASP.NETCore
 {
     public class Class1
     {

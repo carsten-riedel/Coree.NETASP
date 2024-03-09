@@ -8,10 +8,10 @@
     <Owners>Carsten Riedel</Owners>
     <Company></Company>
     <Copyright>Copyright © Carsten Riedel 2024</Copyright>
-    <PackageId>Coree.ASP.NETCore</PackageId>
+    <PackageId>Coree.NETASP</PackageId>
     <PackageTags>dotnet;class;library</PackageTags>
-    <PackageProjectUrl>https://github.com/carsten-riedel/Coree.ASP.NETCore</PackageProjectUrl>
-    <RepositoryUrl>https://github.com/carsten-riedel/Coree.ASP.NETCore</RepositoryUrl>
+    <PackageProjectUrl>https://github.com/carsten-riedel/Coree.NETASP</PackageProjectUrl>
+    <RepositoryUrl>https://github.com/carsten-riedel/Coree.NETASP</RepositoryUrl>
     <RepositoryType>git</RepositoryType>
 
     <VersionMajor>0</VersionMajor>
@@ -26,7 +26,7 @@
     <AssemblyVersion>$(VersionPrefix)</AssemblyVersion>
 
     <Description>
-     <![CDATA[ASP.NETCore library.]]>
+      <![CDATA[Coree.NETASP library.]]>
     </Description>
     <PackageReadmeFile>Readme.md</PackageReadmeFile>
     <PackageLicenseFile>License.txt</PackageLicenseFile>

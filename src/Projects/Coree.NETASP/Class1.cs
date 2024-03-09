@@ -1,4 +1,4 @@
-﻿namespace Coree.ASP.NETCore
+﻿namespace Coree.NETASP
 {
     public class Class1
     {

@@ -25,6 +25,16 @@ on:
   workflow_dispatch:
 
 jobs:
+  alwaysinfo:
+
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Echo Committer Name
+        run: | 
+            echo "Committer Name: ${{ github.event.head_commit.committer.name }}"
+        shell: bash
+
   builddeploy:
     if: github.event.head_commit.committer.name == 'Github'
     runs-on: ubuntu-latest

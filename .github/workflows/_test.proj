@@ -1,0 +1,155 @@
+﻿<Project ToolsVersion="17.0"  xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+
+	<UsingTask
+    TaskName="IsPackCommandLine"
+    TaskFactory="RoslynCodeTaskFactory"
+    AssemblyFile="$(MSBuildToolsPath)\Microsoft.Build.Tasks.Core.dll">
+		<ParameterGroup>
+			<ContainsPack ParameterType="System.Boolean" Output="true" />
+		</ParameterGroup>
+		<Task>
+			<Using Namespace="System" />
+			<Using Namespace="Microsoft.Build.Framework" />
+			<Using Namespace="Microsoft.Build.Utilities" />
+			<Code Type="Fragment" Language="cs">
+				<![CDATA[
+            // Check if the command line contains 'pack'
+            ContainsPack = Environment.CommandLine.Contains("pack");
+            Log.LogMessage(MessageImportance.High, "Command line contains 'pack': {0}", ContainsPack);
+            return true;
+        ]]>
+			</Code>
+		</Task>
+	</UsingTask>
+
+	<UsingTask
+		TaskName="IsPublishCommandLine"
+		TaskFactory="RoslynCodeTaskFactory"
+		AssemblyFile="$(MSBuildToolsPath)\Microsoft.Build.Tasks.Core.dll">
+		<ParameterGroup>
+			<ContainsPublish ParameterType="System.Boolean" Output="true" />
+		</ParameterGroup>
+		<Task>
+			<Using Namespace="System" />
+			<Using Namespace="Microsoft.Build.Framework" />
+			<Using Namespace="Microsoft.Build.Utilities" />
+			<Code Type="Fragment" Language="cs">
+				<![CDATA[
+            // Check if the command line contains 'publish'
+            ContainsPublish = Environment.CommandLine.Contains("publish");
+            Log.LogMessage(MessageImportance.High, "Command line contains 'publish': {0}", ContainsPublish);
+            return true;
+        ]]>
+			</Code>
+		</Task>
+	</UsingTask>
+
+	<UsingTask
+	TaskName="IsRestoreCommandLine"
+	TaskFactory="RoslynCodeTaskFactory"
+	AssemblyFile="$(MSBuildToolsPath)\Microsoft.Build.Tasks.Core.dll">
+		<ParameterGroup>
+			<ContainsRestore ParameterType="System.Boolean" Output="true" />
+		</ParameterGroup>
+		<Task>
+			<Using Namespace="System" />
+			<Using Namespace="Microsoft.Build.Framework" />
+			<Using Namespace="Microsoft.Build.Utilities" />
+			<Code Type="Fragment" Language="cs">
+				<![CDATA[
+            // Check if the command line contains 'restore'
+            ContainsRestore = Environment.CommandLine.Contains("restore");
+            Log.LogMessage(MessageImportance.High, "Command line contains 'restore': {0}", ContainsRestore);
+            return true;
+        ]]>
+			</Code>
+		</Task>
+	</UsingTask>
+
+	<Target Name="Globals">
+		<Message Text="==> Globals" Importance="high" />
+	</Target>
+
+	<Target Name="Clean">
+		<CallTarget Targets="Globals"/>
+		<Message Text="==> Clean" Importance="high" />
+		<Exec Command="dotnet clean $(Solution1) $(MyBuild)"/>
+	</Target>
+
+	<Target Name="Pack">
+		<Message Text="==> Pack" Importance="high" />
+	</Target>
+
+	<Target Name="Publish">
+		<Message Text="==> Publish" Importance="high" />
+	</Target>
+
+	<!-- is invoked from dotnet build and called by pack and publish -->
+	<Target Name="Restore">
+		<Message Text="==> Restore target is invoked" Importance="high"></Message>
+		<IsPackCommandLine>
+			<Output TaskParameter="ContainsPack" PropertyName="CommandLineHasPack" />
+		</IsPackCommandLine>
+		<IsPublishCommandLine>
+			<Output TaskParameter="ContainsPublish" PropertyName="CommandLineHasPublish" />
+		</IsPublishCommandLine>
+		<IsRestoreCommandLine>
+			<Output TaskParameter="ContainsRestore" PropertyName="CommandLineHasRestore" />
+		</IsRestoreCommandLine>
+		
+		<CallTarget Targets="AllSolutions" Condition="!$(CommandLineHasPack) and !$(CommandLineHasPublish) and !$(CommandLineHasRestore)"/>
+		<CallTarget Targets="Unsupported" Condition="$(CommandLineHasPack) or $(CommandLineHasPublish) or $(CommandLineHasRestore)"/>
+	</Target>
+
+	<Target Name="Unsupported">
+		<Message Text="==> Unsupported: Exited only dotnet build is supported" Importance="high" />
+	</Target>
+
+	<!-- Property group for defining the solutions to build -->
+	<PropertyGroup>
+		<Solution1>C:\Users\Valgrind\source\VCS\github.com\carsten-riedel\Coree.NETStandard\src\Coree.NETStandard.sln</Solution1>
+		<Solution2>C:\Users\Valgrind\source\VCS\github.com\carsten-riedel\Coree.NETWindows\src\Coree.NETWindows.sln</Solution2>
+	</PropertyGroup>
+
+	<PropertyGroup>
+		<MyBuild>-c Release -p:WarningLevel=0 --property:GenerateDocumentationFile=false</MyBuild>
+	</PropertyGroup>
+
+	<Target Name="AllSolutions">
+		<Message Text="%0D%0A%0D%0A==> --------------------------------" Importance="high" />
+		<Message Text="==> Solution1" Importance="high" />
+		<Message Text="==> --------------------------------%0D%0A%0D%0A" Importance="high" />
+		<CallTarget Targets="Solution1" />
+		<Message Text="%0D%0A%0D%0A==> --------------------------------" Importance="high" />
+		<Message Text="==> Solution2" Importance="high" />
+		<Message Text="==> --------------------------------%0D%0A%0D%0A" Importance="high" />
+		<CallTarget Targets="Solution2" />
+	</Target>
+
+	<Target Name="Solution1">
+		<Exec Command="dotnet --version"/>
+
+		<Message Text="==> Solution1 build" Importance="high" />
+		<Exec Command="dotnet build $(Solution1) $(MyBuild)"/>
+
+		<Message Text="==> Solution1 pack" Importance="high" />
+		<Exec Command="dotnet pack $(Solution1) $(MyBuild)"/>
+
+		<Message Text="==> Solution1 publish" Importance="high" />
+		<Exec Command="dotnet publish $(Solution1) --framework net6.0 -p:TargetFramework=net6.0 -p:TargetFrameworks=net6.0 --force -p:PublishDir=bin\Publish\net6.0 $(MyBuild)"/>
+		<Exec Command="dotnet publish $(Solution1) --framework net7.0 -p:TargetFramework=net7.0 -p:TargetFrameworks=net7.0 --force -p:PublishDir=bin\Publish\net7.0 $(MyBuild)"/>
+	</Target>
+
+	<Target Name="Solution2">
+		<Message Text="==> Solution2 build" Importance="high" />
+
+		<Message Text="==> Solution2 pack" Importance="high" />
+		<Exec Command="dotnet pack $(Solution2) -p:OutputPath=bin\Release\Build -p:PackageOutputPath=bin\Release\Pack --force $(MyBuild)"/>
+
+		<Message Text="==> Solution2 publish" Importance="high" />
+		<Exec Command="dotnet publish $(Solution2) --framework net6.0-windows -p:TargetFramework=net6.0-windows -p:TargetFrameworks=net6.0-windows --force -p:OutputPath=bin\Release\Build\net6.0-windows -p:PublishDir=bin\Release\Publish\net6.0-windows $(MyBuild)"/>
+		<Exec Command="dotnet publish $(Solution2) --framework net7.0-windows -p:TargetFramework=net7.0-windows -p:TargetFrameworks=net7.0-windows --force -p:OutputPath=bin\Release\Build\net7.0-windows -p:PublishDir=bin\Release\Publish\net7.0-windows $(MyBuild)"/>
+		<Exec Command="dotnet publish $(Solution2) --framework net8.0-windows -p:TargetFramework=net8.0-windows -p:TargetFrameworks=net8.0-windows --force -p:OutputPath=bin\Release\Build\net8.0-windows -p:PublishDir=bin\Release\Publish\net8.0-windows $(MyBuild)"/>
+	</Target>
+
+</Project>

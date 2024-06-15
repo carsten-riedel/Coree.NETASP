@@ -1,3 +1,3 @@
-﻿0.0.1-prerelease (2024-02-25)
+﻿0.1.* (2024-02-29)
 
- - Project creation
+- For versions below 1.0, the software is in a preliminary phase, focusing on core development and testing. Users should be prepared for ongoing adjustments and enhancements as the project matures towards its initial stable release

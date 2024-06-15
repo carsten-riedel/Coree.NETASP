@@ -1,4 +1,4 @@
-<Project Sdk="Microsoft.NET.Sdk.Web">
+﻿<Project Sdk="Microsoft.NET.Sdk.Web">
 
   <PropertyGroup>
     <OutputType>Library</OutputType>
@@ -11,11 +11,18 @@
   <!-- NuGet Package configuration -->
   <Import Project="Package/Config/PackageMetadata.props" />
   <Import Project="Package/Config/PackageSpecs.props" />
+  <ItemGroup>
+    <Compile Remove="Extensions\WebApplicationBuilder\Class.cs" />
+  </ItemGroup>
 
   <ItemGroup>
     <PackageReference Include="Coree.NET" Version="0.1.8826.11042" />
-    <PackageReference Include="Coree.NETStandard" Version="0.1.8825.37975" />
+    <PackageReference Include="Coree.NETStandard" Version="0.1.8931.10863" />
     <PackageReference Include="Microsoft.Extensions.Hosting" Version="8.0.0" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Include="Extensions\WebApplicationBuilder\Class.cs" />
   </ItemGroup>
 
 </Project>

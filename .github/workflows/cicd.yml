@@ -25,17 +25,7 @@ on:
   workflow_dispatch:
 
 jobs:
-  printJob:    
-    name: Print event
-    runs-on: ubuntu-latest
-    steps:
-    - name: Dump GitHub context
-      env:
-        GITHUB_CONTEXT: ${{ toJson(github) }}
-      run: |
-        echo "$GITHUB_CONTEXT"
-
-  build:
+  builddeploy:
     if: github.event.head_commit.committer.name == 'Github'
     runs-on: ubuntu-latest
     

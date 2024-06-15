@@ -1,7 +1,7 @@
 @echo off
 echo Starting script execution...
 
-::Retrieve the top-level directory of the current git repository
+:: Retrieve the top-level directory of the current git repository.
 for /f "delims=" %%i in ('git rev-parse --show-toplevel') do set "topLevelDirectory=%%i"
 
 :: Change the current directory to the top-level directory of the git repository

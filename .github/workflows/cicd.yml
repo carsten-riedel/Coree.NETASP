@@ -7,7 +7,7 @@ name: CICD
 on:
   push:
     paths:
-      - '.github'
+      - '.github/**'
       - 'src/**'
     branches:
       - 'master'

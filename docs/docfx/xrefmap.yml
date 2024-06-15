@@ -25,19 +25,6 @@ references:
   commentId: T:Coree.NETASP.Extensions.Options.KestrelServer.OptionsKestrelServerOptionsExtensions
   fullName: Coree.NETASP.Extensions.Options.KestrelServer.OptionsKestrelServerOptionsExtensions
   nameWithType: OptionsKestrelServerOptionsExtensions
-- uid: Coree.NETASP.Extensions.Options.KestrelServer.OptionsKestrelServerOptionsExtensions.AspNetCoreDump(Microsoft.AspNetCore.Builder.WebApplicationBuilder)
-  name: AspNetCoreDump(WebApplicationBuilder)
-  href: api/Coree.NETASP.Extensions.Options.KestrelServer.OptionsKestrelServerOptionsExtensions.html#Coree_NETASP_Extensions_Options_KestrelServer_OptionsKestrelServerOptionsExtensions_AspNetCoreDump_Microsoft_AspNetCore_Builder_WebApplicationBuilder_
-  commentId: M:Coree.NETASP.Extensions.Options.KestrelServer.OptionsKestrelServerOptionsExtensions.AspNetCoreDump(Microsoft.AspNetCore.Builder.WebApplicationBuilder)
-  fullName: Coree.NETASP.Extensions.Options.KestrelServer.OptionsKestrelServerOptionsExtensions.AspNetCoreDump(Microsoft.AspNetCore.Builder.WebApplicationBuilder)
-  nameWithType: OptionsKestrelServerOptionsExtensions.AspNetCoreDump(WebApplicationBuilder)
-- uid: Coree.NETASP.Extensions.Options.KestrelServer.OptionsKestrelServerOptionsExtensions.AspNetCoreDump*
-  name: AspNetCoreDump
-  href: api/Coree.NETASP.Extensions.Options.KestrelServer.OptionsKestrelServerOptionsExtensions.html#Coree_NETASP_Extensions_Options_KestrelServer_OptionsKestrelServerOptionsExtensions_AspNetCoreDump_
-  commentId: Overload:Coree.NETASP.Extensions.Options.KestrelServer.OptionsKestrelServerOptionsExtensions.AspNetCoreDump
-  isSpec: "True"
-  fullName: Coree.NETASP.Extensions.Options.KestrelServer.OptionsKestrelServerOptionsExtensions.AspNetCoreDump
-  nameWithType: OptionsKestrelServerOptionsExtensions.AspNetCoreDump
 - uid: Coree.NETASP.Extensions.Options.KestrelServer.OptionsKestrelServerOptionsExtensions.dd(Microsoft.AspNetCore.Server.Kestrel.Core.KestrelServerOptions)
   name: dd(KestrelServerOptions)
   href: api/Coree.NETASP.Extensions.Options.KestrelServer.OptionsKestrelServerOptionsExtensions.html#Coree_NETASP_Extensions_Options_KestrelServer_OptionsKestrelServerOptionsExtensions_dd_Microsoft_AspNetCore_Server_Kestrel_Core_KestrelServerOptions_
@@ -51,3 +38,28 @@ references:
   isSpec: "True"
   fullName: Coree.NETASP.Extensions.Options.KestrelServer.OptionsKestrelServerOptionsExtensions.dd
   nameWithType: OptionsKestrelServerOptionsExtensions.dd
+- uid: Coree.NETASP.Extensions.WebApplicationBuilderExtensions
+  name: Coree.NETASP.Extensions.WebApplicationBuilderExtensions
+  href: api/Coree.NETASP.Extensions.WebApplicationBuilderExtensions.html
+  commentId: N:Coree.NETASP.Extensions.WebApplicationBuilderExtensions
+  fullName: Coree.NETASP.Extensions.WebApplicationBuilderExtensions
+  nameWithType: Coree.NETASP.Extensions.WebApplicationBuilderExtensions
+- uid: Coree.NETASP.Extensions.WebApplicationBuilderExtensions.WebApplicationBuilderExtension
+  name: WebApplicationBuilderExtension
+  href: api/Coree.NETASP.Extensions.WebApplicationBuilderExtensions.WebApplicationBuilderExtension.html
+  commentId: T:Coree.NETASP.Extensions.WebApplicationBuilderExtensions.WebApplicationBuilderExtension
+  fullName: Coree.NETASP.Extensions.WebApplicationBuilderExtensions.WebApplicationBuilderExtension
+  nameWithType: WebApplicationBuilderExtension
+- uid: Coree.NETASP.Extensions.WebApplicationBuilderExtensions.WebApplicationBuilderExtension.DumpAspNetCoreConfiguration(Microsoft.AspNetCore.Builder.WebApplicationBuilder)
+  name: DumpAspNetCoreConfiguration(WebApplicationBuilder)
+  href: api/Coree.NETASP.Extensions.WebApplicationBuilderExtensions.WebApplicationBuilderExtension.html#Coree_NETASP_Extensions_WebApplicationBuilderExtensions_WebApplicationBuilderExtension_DumpAspNetCoreConfiguration_Microsoft_AspNetCore_Builder_WebApplicationBuilder_
+  commentId: M:Coree.NETASP.Extensions.WebApplicationBuilderExtensions.WebApplicationBuilderExtension.DumpAspNetCoreConfiguration(Microsoft.AspNetCore.Builder.WebApplicationBuilder)
+  fullName: Coree.NETASP.Extensions.WebApplicationBuilderExtensions.WebApplicationBuilderExtension.DumpAspNetCoreConfiguration(Microsoft.AspNetCore.Builder.WebApplicationBuilder)
+  nameWithType: WebApplicationBuilderExtension.DumpAspNetCoreConfiguration(WebApplicationBuilder)
+- uid: Coree.NETASP.Extensions.WebApplicationBuilderExtensions.WebApplicationBuilderExtension.DumpAspNetCoreConfiguration*
+  name: DumpAspNetCoreConfiguration
+  href: api/Coree.NETASP.Extensions.WebApplicationBuilderExtensions.WebApplicationBuilderExtension.html#Coree_NETASP_Extensions_WebApplicationBuilderExtensions_WebApplicationBuilderExtension_DumpAspNetCoreConfiguration_
+  commentId: Overload:Coree.NETASP.Extensions.WebApplicationBuilderExtensions.WebApplicationBuilderExtension.DumpAspNetCoreConfiguration
+  isSpec: "True"
+  fullName: Coree.NETASP.Extensions.WebApplicationBuilderExtensions.WebApplicationBuilderExtension.DumpAspNetCoreConfiguration
+  nameWithType: WebApplicationBuilderExtension.DumpAspNetCoreConfiguration

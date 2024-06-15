@@ -34,6 +34,26 @@
     },
     {
       "type": "ManagedReference",
+      "source_relative_path": "api/Coree.NETASP.Extensions.WebApplicationBuilderExtensions.WebApplicationBuilderExtension.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Coree.NETASP.Extensions.WebApplicationBuilderExtensions.WebApplicationBuilderExtension.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Coree.NETASP.Extensions.WebApplicationBuilderExtensions.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Coree.NETASP.Extensions.WebApplicationBuilderExtensions.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
       "source_relative_path": "api/Coree.NETASP.yml",
       "output": {
         ".html": {

@@ -1,0 +1,23 @@
+### YamlMime:ManagedReference
+items:
+- uid: Coree.NETASP.Extensions.WebApplicationBuilderExtensions
+  commentId: N:Coree.NETASP.Extensions.WebApplicationBuilderExtensions
+  id: Coree.NETASP.Extensions.WebApplicationBuilderExtensions
+  children:
+  - Coree.NETASP.Extensions.WebApplicationBuilderExtensions.WebApplicationBuilderExtension
+  langs:
+  - csharp
+  - vb
+  name: Coree.NETASP.Extensions.WebApplicationBuilderExtensions
+  nameWithType: Coree.NETASP.Extensions.WebApplicationBuilderExtensions
+  fullName: Coree.NETASP.Extensions.WebApplicationBuilderExtensions
+  type: Namespace
+  assemblies:
+  - Coree.NETASP
+references:
+- uid: Coree.NETASP.Extensions.WebApplicationBuilderExtensions.WebApplicationBuilderExtension
+  commentId: T:Coree.NETASP.Extensions.WebApplicationBuilderExtensions.WebApplicationBuilderExtension
+  href: Coree.NETASP.Extensions.WebApplicationBuilderExtensions.WebApplicationBuilderExtension.html
+  name: WebApplicationBuilderExtension
+  nameWithType: WebApplicationBuilderExtension
+  fullName: Coree.NETASP.Extensions.WebApplicationBuilderExtensions.WebApplicationBuilderExtension

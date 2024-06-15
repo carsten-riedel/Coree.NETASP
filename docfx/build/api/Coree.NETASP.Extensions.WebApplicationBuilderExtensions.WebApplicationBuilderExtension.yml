@@ -1,32 +1,32 @@
 ### YamlMime:ManagedReference
 items:
-- uid: Coree.NETASP.Extensions.Options.KestrelServer.OptionsKestrelServerOptionsExtensions
-  commentId: T:Coree.NETASP.Extensions.Options.KestrelServer.OptionsKestrelServerOptionsExtensions
-  id: OptionsKestrelServerOptionsExtensions
-  parent: Coree.NETASP.Extensions.Options.KestrelServer
+- uid: Coree.NETASP.Extensions.WebApplicationBuilderExtensions.WebApplicationBuilderExtension
+  commentId: T:Coree.NETASP.Extensions.WebApplicationBuilderExtensions.WebApplicationBuilderExtension
+  id: WebApplicationBuilderExtension
+  parent: Coree.NETASP.Extensions.WebApplicationBuilderExtensions
   children:
-  - Coree.NETASP.Extensions.Options.KestrelServer.OptionsKestrelServerOptionsExtensions.dd(Microsoft.AspNetCore.Server.Kestrel.Core.KestrelServerOptions)
+  - Coree.NETASP.Extensions.WebApplicationBuilderExtensions.WebApplicationBuilderExtension.DumpAspNetCoreConfiguration(Microsoft.AspNetCore.Builder.WebApplicationBuilder)
   langs:
   - csharp
   - vb
-  name: OptionsKestrelServerOptionsExtensions
-  nameWithType: OptionsKestrelServerOptionsExtensions
-  fullName: Coree.NETASP.Extensions.Options.KestrelServer.OptionsKestrelServerOptionsExtensions
+  name: WebApplicationBuilderExtension
+  nameWithType: WebApplicationBuilderExtension
+  fullName: Coree.NETASP.Extensions.WebApplicationBuilderExtensions.WebApplicationBuilderExtension
   type: Class
   source:
     remote:
-      path: src/Projects/Coree.NETASP/Extensions/KestrelServerOptions/Class.cs
+      path: src/Projects/Coree.NETASP/Extensions/WebApplicationBuilder/DumpAspNetCoreConfiguration.cs
       branch: master
       repo: https://github.com/carsten-riedel/Coree.NETASP
-    id: OptionsKestrelServerOptionsExtensions
-    path: ../../src/Projects/Coree.NETASP/Extensions/KestrelServerOptions/Class.cs
-    startLine: 7
+    id: WebApplicationBuilderExtension
+    path: ../../src/Projects/Coree.NETASP/Extensions/WebApplicationBuilder/DumpAspNetCoreConfiguration.cs
+    startLine: 2
   assemblies:
   - Coree.NETASP
-  namespace: Coree.NETASP.Extensions.Options.KestrelServer
+  namespace: Coree.NETASP.Extensions.WebApplicationBuilderExtensions
   syntax:
-    content: public static class OptionsKestrelServerOptionsExtensions
-    content.vb: Public Module OptionsKestrelServerOptionsExtensions
+    content: public static class WebApplicationBuilderExtension
+    content.vb: Public Module WebApplicationBuilderExtension
   inheritance:
   - System.Object
   inheritedMembers:
@@ -37,43 +37,53 @@ items:
   - System.Object.MemberwiseClone
   - System.Object.ReferenceEquals(System.Object,System.Object)
   - System.Object.ToString
-- uid: Coree.NETASP.Extensions.Options.KestrelServer.OptionsKestrelServerOptionsExtensions.dd(Microsoft.AspNetCore.Server.Kestrel.Core.KestrelServerOptions)
-  commentId: M:Coree.NETASP.Extensions.Options.KestrelServer.OptionsKestrelServerOptionsExtensions.dd(Microsoft.AspNetCore.Server.Kestrel.Core.KestrelServerOptions)
-  id: dd(Microsoft.AspNetCore.Server.Kestrel.Core.KestrelServerOptions)
+- uid: Coree.NETASP.Extensions.WebApplicationBuilderExtensions.WebApplicationBuilderExtension.DumpAspNetCoreConfiguration(Microsoft.AspNetCore.Builder.WebApplicationBuilder)
+  commentId: M:Coree.NETASP.Extensions.WebApplicationBuilderExtensions.WebApplicationBuilderExtension.DumpAspNetCoreConfiguration(Microsoft.AspNetCore.Builder.WebApplicationBuilder)
+  id: DumpAspNetCoreConfiguration(Microsoft.AspNetCore.Builder.WebApplicationBuilder)
   isExtensionMethod: true
-  parent: Coree.NETASP.Extensions.Options.KestrelServer.OptionsKestrelServerOptionsExtensions
+  parent: Coree.NETASP.Extensions.WebApplicationBuilderExtensions.WebApplicationBuilderExtension
   langs:
   - csharp
   - vb
-  name: dd(KestrelServerOptions)
-  nameWithType: OptionsKestrelServerOptionsExtensions.dd(KestrelServerOptions)
-  fullName: Coree.NETASP.Extensions.Options.KestrelServer.OptionsKestrelServerOptionsExtensions.dd(Microsoft.AspNetCore.Server.Kestrel.Core.KestrelServerOptions)
+  name: DumpAspNetCoreConfiguration(WebApplicationBuilder)
+  nameWithType: WebApplicationBuilderExtension.DumpAspNetCoreConfiguration(WebApplicationBuilder)
+  fullName: Coree.NETASP.Extensions.WebApplicationBuilderExtensions.WebApplicationBuilderExtension.DumpAspNetCoreConfiguration(Microsoft.AspNetCore.Builder.WebApplicationBuilder)
   type: Method
   source:
     remote:
-      path: src/Projects/Coree.NETASP/Extensions/KestrelServerOptions/Class.cs
+      path: src/Projects/Coree.NETASP/Extensions/WebApplicationBuilder/DumpAspNetCoreConfiguration.cs
       branch: master
       repo: https://github.com/carsten-riedel/Coree.NETASP
-    id: dd
-    path: ../../src/Projects/Coree.NETASP/Extensions/KestrelServerOptions/Class.cs
-    startLine: 9
+    id: DumpAspNetCoreConfiguration
+    path: ../../src/Projects/Coree.NETASP/Extensions/WebApplicationBuilder/DumpAspNetCoreConfiguration.cs
+    startLine: 13
   assemblies:
   - Coree.NETASP
-  namespace: Coree.NETASP.Extensions.Options.KestrelServer
+  namespace: Coree.NETASP.Extensions.WebApplicationBuilderExtensions
+  summary: >-
+    Dumps the configuration settings of the ASP.NET Core application to the console.
+
+    This includes host filtering, Kestrel server options, CORS policies, authentication schemes, and cookie policy settings.
+  remarks: >-
+    Use this method to quickly visualize configuration values during development.
+
+    Note: This method should be called only in a debug build due to performance considerations and the potential sensitivity of the configuration data.
+  example: []
   syntax:
-    content: public static void dd(this KestrelServerOptions kestrelServerOptions)
+    content: public static void DumpAspNetCoreConfiguration(this WebApplicationBuilder builder)
     parameters:
-    - id: kestrelServerOptions
-      type: Microsoft.AspNetCore.Server.Kestrel.Core.KestrelServerOptions
-    content.vb: Public Shared Sub dd(kestrelServerOptions As KestrelServerOptions)
-  overload: Coree.NETASP.Extensions.Options.KestrelServer.OptionsKestrelServerOptionsExtensions.dd*
+    - id: builder
+      type: Microsoft.AspNetCore.Builder.WebApplicationBuilder
+      description: The WebApplicationBuilder used to configure the application.
+    content.vb: Public Shared Sub DumpAspNetCoreConfiguration(builder As WebApplicationBuilder)
+  overload: Coree.NETASP.Extensions.WebApplicationBuilderExtensions.WebApplicationBuilderExtension.DumpAspNetCoreConfiguration*
 references:
-- uid: Coree.NETASP.Extensions.Options.KestrelServer
-  commentId: N:Coree.NETASP.Extensions.Options.KestrelServer
+- uid: Coree.NETASP.Extensions.WebApplicationBuilderExtensions
+  commentId: N:Coree.NETASP.Extensions.WebApplicationBuilderExtensions
   href: Coree.html
-  name: Coree.NETASP.Extensions.Options.KestrelServer
-  nameWithType: Coree.NETASP.Extensions.Options.KestrelServer
-  fullName: Coree.NETASP.Extensions.Options.KestrelServer
+  name: Coree.NETASP.Extensions.WebApplicationBuilderExtensions
+  nameWithType: Coree.NETASP.Extensions.WebApplicationBuilderExtensions
+  fullName: Coree.NETASP.Extensions.WebApplicationBuilderExtensions
   spec.csharp:
   - uid: Coree
     name: Coree
@@ -87,13 +97,9 @@ references:
     name: Extensions
     href: Coree.NETASP.Extensions.html
   - name: .
-  - uid: Coree.NETASP.Extensions.Options
-    name: Options
-    href: Coree.NETASP.Extensions.Options.html
-  - name: .
-  - uid: Coree.NETASP.Extensions.Options.KestrelServer
-    name: KestrelServer
-    href: Coree.NETASP.Extensions.Options.KestrelServer.html
+  - uid: Coree.NETASP.Extensions.WebApplicationBuilderExtensions
+    name: WebApplicationBuilderExtensions
+    href: Coree.NETASP.Extensions.WebApplicationBuilderExtensions.html
   spec.vb:
   - uid: Coree
     name: Coree
@@ -107,13 +113,9 @@ references:
     name: Extensions
     href: Coree.NETASP.Extensions.html
   - name: .
-  - uid: Coree.NETASP.Extensions.Options
-    name: Options
-    href: Coree.NETASP.Extensions.Options.html
-  - name: .
-  - uid: Coree.NETASP.Extensions.Options.KestrelServer
-    name: KestrelServer
-    href: Coree.NETASP.Extensions.Options.KestrelServer.html
+  - uid: Coree.NETASP.Extensions.WebApplicationBuilderExtensions
+    name: WebApplicationBuilderExtensions
+    href: Coree.NETASP.Extensions.WebApplicationBuilderExtensions.html
 - uid: System.Object
   commentId: T:System.Object
   parent: System
@@ -351,27 +353,27 @@ references:
   name: System
   nameWithType: System
   fullName: System
-- uid: Coree.NETASP.Extensions.Options.KestrelServer.OptionsKestrelServerOptionsExtensions.dd*
-  commentId: Overload:Coree.NETASP.Extensions.Options.KestrelServer.OptionsKestrelServerOptionsExtensions.dd
-  href: Coree.NETASP.Extensions.Options.KestrelServer.OptionsKestrelServerOptionsExtensions.html#Coree_NETASP_Extensions_Options_KestrelServer_OptionsKestrelServerOptionsExtensions_dd_Microsoft_AspNetCore_Server_Kestrel_Core_KestrelServerOptions_
-  name: dd
-  nameWithType: OptionsKestrelServerOptionsExtensions.dd
-  fullName: Coree.NETASP.Extensions.Options.KestrelServer.OptionsKestrelServerOptionsExtensions.dd
-- uid: Microsoft.AspNetCore.Server.Kestrel.Core.KestrelServerOptions
-  commentId: T:Microsoft.AspNetCore.Server.Kestrel.Core.KestrelServerOptions
-  parent: Microsoft.AspNetCore.Server.Kestrel.Core
+- uid: Coree.NETASP.Extensions.WebApplicationBuilderExtensions.WebApplicationBuilderExtension.DumpAspNetCoreConfiguration*
+  commentId: Overload:Coree.NETASP.Extensions.WebApplicationBuilderExtensions.WebApplicationBuilderExtension.DumpAspNetCoreConfiguration
+  href: Coree.NETASP.Extensions.WebApplicationBuilderExtensions.WebApplicationBuilderExtension.html#Coree_NETASP_Extensions_WebApplicationBuilderExtensions_WebApplicationBuilderExtension_DumpAspNetCoreConfiguration_Microsoft_AspNetCore_Builder_WebApplicationBuilder_
+  name: DumpAspNetCoreConfiguration
+  nameWithType: WebApplicationBuilderExtension.DumpAspNetCoreConfiguration
+  fullName: Coree.NETASP.Extensions.WebApplicationBuilderExtensions.WebApplicationBuilderExtension.DumpAspNetCoreConfiguration
+- uid: Microsoft.AspNetCore.Builder.WebApplicationBuilder
+  commentId: T:Microsoft.AspNetCore.Builder.WebApplicationBuilder
+  parent: Microsoft.AspNetCore.Builder
   isExternal: true
-  href: https://learn.microsoft.com/dotnet/api/microsoft.aspnetcore.server.kestrel.core.kestrelserveroptions
-  name: KestrelServerOptions
-  nameWithType: KestrelServerOptions
-  fullName: Microsoft.AspNetCore.Server.Kestrel.Core.KestrelServerOptions
-- uid: Microsoft.AspNetCore.Server.Kestrel.Core
-  commentId: N:Microsoft.AspNetCore.Server.Kestrel.Core
+  href: https://learn.microsoft.com/dotnet/api/microsoft.aspnetcore.builder.webapplicationbuilder
+  name: WebApplicationBuilder
+  nameWithType: WebApplicationBuilder
+  fullName: Microsoft.AspNetCore.Builder.WebApplicationBuilder
+- uid: Microsoft.AspNetCore.Builder
+  commentId: N:Microsoft.AspNetCore.Builder
   isExternal: true
   href: https://learn.microsoft.com/dotnet/api/microsoft
-  name: Microsoft.AspNetCore.Server.Kestrel.Core
-  nameWithType: Microsoft.AspNetCore.Server.Kestrel.Core
-  fullName: Microsoft.AspNetCore.Server.Kestrel.Core
+  name: Microsoft.AspNetCore.Builder
+  nameWithType: Microsoft.AspNetCore.Builder
+  fullName: Microsoft.AspNetCore.Builder
   spec.csharp:
   - uid: Microsoft
     name: Microsoft
@@ -383,20 +385,10 @@ references:
     isExternal: true
     href: https://learn.microsoft.com/dotnet/api/microsoft.aspnetcore
   - name: .
-  - uid: Microsoft.AspNetCore.Server
-    name: Server
+  - uid: Microsoft.AspNetCore.Builder
+    name: Builder
     isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/microsoft.aspnetcore.server
-  - name: .
-  - uid: Microsoft.AspNetCore.Server.Kestrel
-    name: Kestrel
-    isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/microsoft.aspnetcore.server.kestrel
-  - name: .
-  - uid: Microsoft.AspNetCore.Server.Kestrel.Core
-    name: Core
-    isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/microsoft.aspnetcore.server.kestrel.core
+    href: https://learn.microsoft.com/dotnet/api/microsoft.aspnetcore.builder
   spec.vb:
   - uid: Microsoft
     name: Microsoft
@@ -408,17 +400,7 @@ references:
     isExternal: true
     href: https://learn.microsoft.com/dotnet/api/microsoft.aspnetcore
   - name: .
-  - uid: Microsoft.AspNetCore.Server
-    name: Server
+  - uid: Microsoft.AspNetCore.Builder
+    name: Builder
     isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/microsoft.aspnetcore.server
-  - name: .
-  - uid: Microsoft.AspNetCore.Server.Kestrel
-    name: Kestrel
-    isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/microsoft.aspnetcore.server.kestrel
-  - name: .
-  - uid: Microsoft.AspNetCore.Server.Kestrel.Core
-    name: Core
-    isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/microsoft.aspnetcore.server.kestrel.core
+    href: https://learn.microsoft.com/dotnet/api/microsoft.aspnetcore.builder

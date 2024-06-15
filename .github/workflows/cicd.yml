@@ -66,3 +66,15 @@ jobs:
     - name: Workflow Build/Deploy
       run: .github/workflows/cicd_main.ps1 "${{ secrets.PAT }}" "${{ secrets.NUGET_PAT }}" "${{ secrets.NUGET_TEST_PAT }}"
       shell: pwsh 
+
+  buildcheckout:
+      runs-on: ubuntu-latest
+      
+      env:
+        GH_TOKEN: ${{ github.token }}
+  
+      steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0

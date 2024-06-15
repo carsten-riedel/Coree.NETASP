@@ -14,6 +14,7 @@
   <Import Project="Package/Config/PackageSpecs.props" />
   <ItemGroup>
     <None Remove="Extensions\WebApplicationBuilder\DumpAspNetCoreConfiguration.cs" />
+    <None Remove="Services\CertificateManager\CertificateManagerService.cs" />
   </ItemGroup>
 
   <ItemGroup>

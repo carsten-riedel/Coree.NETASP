@@ -20,7 +20,7 @@ items:
       repo: https://github.com/carsten-riedel/Coree.NETASP
     id: OptionsKestrelServerOptionsExtensions
     path: ../../src/Projects/Coree.NETASP/Extensions/KestrelServerOptions/Class.cs
-    startLine: 7
+    startLine: 8
   assemblies:
   - Coree.NETASP
   namespace: Coree.NETASP.Extensions.Options.KestrelServer
@@ -56,7 +56,7 @@ items:
       repo: https://github.com/carsten-riedel/Coree.NETASP
     id: dd
     path: ../../src/Projects/Coree.NETASP/Extensions/KestrelServerOptions/Class.cs
-    startLine: 9
+    startLine: 11
   assemblies:
   - Coree.NETASP
   namespace: Coree.NETASP.Extensions.Options.KestrelServer

@@ -5,6 +5,7 @@ using Microsoft.Extensions.Options;
 
 namespace Coree.NETASP.Extensions.Options.KestrelServer
 {
+    //push
     public static partial class OptionsKestrelServerOptionsExtensions
     {
         public static void dd(this KestrelServerOptions kestrelServerOptions)

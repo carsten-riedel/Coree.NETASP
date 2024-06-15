@@ -93,11 +93,16 @@ jobs:
       - name: Display powershell core version
         run: pwsh --version
 
-      - name: Force
+      - name: Force main to ->release
         run: | 
           git fetch --all
           git checkout release
           git reset --hard origin/master
           git push origin release --force
-
-
+      
+      - name: Force main to -> develop
+        run: | 
+            git fetch --all
+            git checkout develop
+            git reset --hard origin/master
+            git push origin develop --force

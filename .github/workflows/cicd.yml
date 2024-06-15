@@ -101,9 +101,8 @@ jobs:
           git push origin release --force
       
       - name: Force main to -> develop
-          run: | 
+        run: | 
             git fetch --all
-            git checkout release
+            git checkout develop
             git reset --hard origin/master
-            git push origin release --force
-
+            git push origin develop --force

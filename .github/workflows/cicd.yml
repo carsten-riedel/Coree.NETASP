@@ -92,3 +92,12 @@ jobs:
 
       - name: Display powershell core version
         run: pwsh --version
+
+      - name: Force
+        run: | 
+          git fetch --all
+          git checkout release
+          git reset --hard origin/master
+          git push origin release --force
+
+

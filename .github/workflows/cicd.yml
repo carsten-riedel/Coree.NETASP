@@ -5,8 +5,7 @@
 name: CICD
 
 on:
-  pull_request:
-    types: [ closed ]
+  push:
     paths:
       - 'src/**'
     branches:

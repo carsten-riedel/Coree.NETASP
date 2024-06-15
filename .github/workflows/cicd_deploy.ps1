@@ -11,21 +11,21 @@ Log-Block -Stage "Deploy" -Section "Nuget" -Task "Nuget"
 
 if ($branchNameSegment -ieq "feature") {
 
-    $basePath = "$topLevelPath/src/Projects/Coree.NETStandard"
+    $basePath = "$topLevelPath/src/Projects/Coree.NETASP"
     $pattern = "*.nupkg"
     $firstFileMatch = Get-ChildItem -Path $basePath -Filter $pattern -File -Recurse | Select-Object -First 1
     Execute-Command "dotnet nuget push ""$($firstFileMatch.FullName)"" --api-key $PAT --source ""github"""
 
 } elseif ($branchNameSegment -ieq "develop") {
 
-    $basePath = "$topLevelPath/src/Projects/Coree.NETStandard"
+    $basePath = "$topLevelPath/src/Projects/Coree.NETASP"
     $pattern = "*.nupkg"
     $firstFileMatch = Get-ChildItem -Path $basePath -Filter $pattern -File -Recurse | Select-Object -First 1
     Execute-Command "dotnet nuget push ""$($firstFileMatch.FullName)"" --api-key $PAT --source ""github"""
 
 } elseif ($branchNameSegment -ieq "release") {
 
-    $basePath = "$topLevelPath/src/Projects/Coree.NETStandard"
+    $basePath = "$topLevelPath/src/Projects/Coree.NETASP"
     $pattern = "*.nupkg"
     $firstFileMatch = Get-ChildItem -Path $basePath -Filter $pattern -File -Recurse | Select-Object -First 1
     Execute-Command "dotnet nuget push ""$($firstFileMatch.FullName)"" --api-key $PAT --source ""github"""
@@ -34,7 +34,7 @@ if ($branchNameSegment -ieq "feature") {
 
 } elseif ($branchNameSegment -ieq "master") {
 
-    $basePath = "$topLevelPath/src/Projects/Coree.NETStandard"
+    $basePath = "$topLevelPath/src/Projects/Coree.NETASP"
     $pattern = "*.nupkg"
     $firstFileMatch = Get-ChildItem -Path $basePath -Filter $pattern -File -Recurse | Select-Object -First 1
     Execute-Command "dotnet nuget push ""$($firstFileMatch.FullName)"" --api-key $PAT --source ""github"""
@@ -43,7 +43,7 @@ if ($branchNameSegment -ieq "feature") {
 
 } elseif ($branchNameSegment -ieq "hotfix") {
 
-    $basePath = "$topLevelPath/src/Projects/Coree.NETStandard"
+    $basePath = "$topLevelPath/src/Projects/Coree.NETASP"
     $pattern = "*.nupkg"
     $firstFileMatch = Get-ChildItem -Path $basePath -Filter $pattern -File -Recurse | Select-Object -First 1
     Execute-Command "dotnet nuget push ""$($firstFileMatch.FullName)"" --api-key $PAT --source ""github"""

@@ -12,7 +12,10 @@ namespace Coree.NETASP.Extensions.Options.KestrelServer
             kestrelServerOptions.ListenAnyIP(80);
         }
 
-
+        /// <summary>
+        /// dump
+        /// </summary>
+        /// <param name="builder"></param>
         public static void AspNetCoreDump(this WebApplicationBuilder builder)
         {
 #if DEBUG

@@ -1,0 +1,23 @@
+### YamlMime:ManagedReference
+items:
+- uid: Coree.NETASP
+  commentId: N:Coree.NETASP
+  id: Coree.NETASP
+  children:
+  - Coree.NETASP.Class1
+  langs:
+  - csharp
+  - vb
+  name: Coree.NETASP
+  nameWithType: Coree.NETASP
+  fullName: Coree.NETASP
+  type: Namespace
+  assemblies:
+  - Coree.NETASP
+references:
+- uid: Coree.NETASP.Class1
+  commentId: T:Coree.NETASP.Class1
+  href: Coree.NETASP.Class1.html
+  name: Class1
+  nameWithType: Class1
+  fullName: Coree.NETASP.Class1

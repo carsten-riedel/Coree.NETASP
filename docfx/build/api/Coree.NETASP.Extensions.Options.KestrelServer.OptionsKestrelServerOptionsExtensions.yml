@@ -1,0 +1,509 @@
+### YamlMime:ManagedReference
+items:
+- uid: Coree.NETASP.Extensions.Options.KestrelServer.OptionsKestrelServerOptionsExtensions
+  commentId: T:Coree.NETASP.Extensions.Options.KestrelServer.OptionsKestrelServerOptionsExtensions
+  id: OptionsKestrelServerOptionsExtensions
+  parent: Coree.NETASP.Extensions.Options.KestrelServer
+  children:
+  - Coree.NETASP.Extensions.Options.KestrelServer.OptionsKestrelServerOptionsExtensions.AspNetCoreDump(Microsoft.AspNetCore.Builder.WebApplicationBuilder)
+  - Coree.NETASP.Extensions.Options.KestrelServer.OptionsKestrelServerOptionsExtensions.dd(Microsoft.AspNetCore.Server.Kestrel.Core.KestrelServerOptions)
+  langs:
+  - csharp
+  - vb
+  name: OptionsKestrelServerOptionsExtensions
+  nameWithType: OptionsKestrelServerOptionsExtensions
+  fullName: Coree.NETASP.Extensions.Options.KestrelServer.OptionsKestrelServerOptionsExtensions
+  type: Class
+  source:
+    remote:
+      path: src/Projects/Coree.NETASP/Extensions/KestrelServerOptions/Class.cs
+      branch: master
+      repo: https://github.com/carsten-riedel/Coree.NETASP
+    id: OptionsKestrelServerOptionsExtensions
+    path: ../../src/Projects/Coree.NETASP/Extensions/KestrelServerOptions/Class.cs
+    startLine: 7
+  assemblies:
+  - Coree.NETASP
+  namespace: Coree.NETASP.Extensions.Options.KestrelServer
+  syntax:
+    content: public static class OptionsKestrelServerOptionsExtensions
+    content.vb: Public Module OptionsKestrelServerOptionsExtensions
+  inheritance:
+  - System.Object
+  inheritedMembers:
+  - System.Object.Equals(System.Object)
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.GetHashCode
+  - System.Object.GetType
+  - System.Object.MemberwiseClone
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+  - System.Object.ToString
+- uid: Coree.NETASP.Extensions.Options.KestrelServer.OptionsKestrelServerOptionsExtensions.dd(Microsoft.AspNetCore.Server.Kestrel.Core.KestrelServerOptions)
+  commentId: M:Coree.NETASP.Extensions.Options.KestrelServer.OptionsKestrelServerOptionsExtensions.dd(Microsoft.AspNetCore.Server.Kestrel.Core.KestrelServerOptions)
+  id: dd(Microsoft.AspNetCore.Server.Kestrel.Core.KestrelServerOptions)
+  isExtensionMethod: true
+  parent: Coree.NETASP.Extensions.Options.KestrelServer.OptionsKestrelServerOptionsExtensions
+  langs:
+  - csharp
+  - vb
+  name: dd(KestrelServerOptions)
+  nameWithType: OptionsKestrelServerOptionsExtensions.dd(KestrelServerOptions)
+  fullName: Coree.NETASP.Extensions.Options.KestrelServer.OptionsKestrelServerOptionsExtensions.dd(Microsoft.AspNetCore.Server.Kestrel.Core.KestrelServerOptions)
+  type: Method
+  source:
+    remote:
+      path: src/Projects/Coree.NETASP/Extensions/KestrelServerOptions/Class.cs
+      branch: master
+      repo: https://github.com/carsten-riedel/Coree.NETASP
+    id: dd
+    path: ../../src/Projects/Coree.NETASP/Extensions/KestrelServerOptions/Class.cs
+    startLine: 9
+  assemblies:
+  - Coree.NETASP
+  namespace: Coree.NETASP.Extensions.Options.KestrelServer
+  syntax:
+    content: public static void dd(this KestrelServerOptions kestrelServerOptions)
+    parameters:
+    - id: kestrelServerOptions
+      type: Microsoft.AspNetCore.Server.Kestrel.Core.KestrelServerOptions
+    content.vb: Public Shared Sub dd(kestrelServerOptions As KestrelServerOptions)
+  overload: Coree.NETASP.Extensions.Options.KestrelServer.OptionsKestrelServerOptionsExtensions.dd*
+- uid: Coree.NETASP.Extensions.Options.KestrelServer.OptionsKestrelServerOptionsExtensions.AspNetCoreDump(Microsoft.AspNetCore.Builder.WebApplicationBuilder)
+  commentId: M:Coree.NETASP.Extensions.Options.KestrelServer.OptionsKestrelServerOptionsExtensions.AspNetCoreDump(Microsoft.AspNetCore.Builder.WebApplicationBuilder)
+  id: AspNetCoreDump(Microsoft.AspNetCore.Builder.WebApplicationBuilder)
+  isExtensionMethod: true
+  parent: Coree.NETASP.Extensions.Options.KestrelServer.OptionsKestrelServerOptionsExtensions
+  langs:
+  - csharp
+  - vb
+  name: AspNetCoreDump(WebApplicationBuilder)
+  nameWithType: OptionsKestrelServerOptionsExtensions.AspNetCoreDump(WebApplicationBuilder)
+  fullName: Coree.NETASP.Extensions.Options.KestrelServer.OptionsKestrelServerOptionsExtensions.AspNetCoreDump(Microsoft.AspNetCore.Builder.WebApplicationBuilder)
+  type: Method
+  source:
+    remote:
+      path: src/Projects/Coree.NETASP/Extensions/KestrelServerOptions/Class.cs
+      branch: master
+      repo: https://github.com/carsten-riedel/Coree.NETASP
+    id: AspNetCoreDump
+    path: ../../src/Projects/Coree.NETASP/Extensions/KestrelServerOptions/Class.cs
+    startLine: 18
+  assemblies:
+  - Coree.NETASP
+  namespace: Coree.NETASP.Extensions.Options.KestrelServer
+  summary: dump
+  example: []
+  syntax:
+    content: public static void AspNetCoreDump(this WebApplicationBuilder builder)
+    parameters:
+    - id: builder
+      type: Microsoft.AspNetCore.Builder.WebApplicationBuilder
+      description: ''
+    content.vb: Public Shared Sub AspNetCoreDump(builder As WebApplicationBuilder)
+  overload: Coree.NETASP.Extensions.Options.KestrelServer.OptionsKestrelServerOptionsExtensions.AspNetCoreDump*
+references:
+- uid: Coree.NETASP.Extensions.Options.KestrelServer
+  commentId: N:Coree.NETASP.Extensions.Options.KestrelServer
+  href: Coree.html
+  name: Coree.NETASP.Extensions.Options.KestrelServer
+  nameWithType: Coree.NETASP.Extensions.Options.KestrelServer
+  fullName: Coree.NETASP.Extensions.Options.KestrelServer
+  spec.csharp:
+  - uid: Coree
+    name: Coree
+    href: Coree.html
+  - name: .
+  - uid: Coree.NETASP
+    name: NETASP
+    href: Coree.NETASP.html
+  - name: .
+  - uid: Coree.NETASP.Extensions
+    name: Extensions
+    href: Coree.NETASP.Extensions.html
+  - name: .
+  - uid: Coree.NETASP.Extensions.Options
+    name: Options
+    href: Coree.NETASP.Extensions.Options.html
+  - name: .
+  - uid: Coree.NETASP.Extensions.Options.KestrelServer
+    name: KestrelServer
+    href: Coree.NETASP.Extensions.Options.KestrelServer.html
+  spec.vb:
+  - uid: Coree
+    name: Coree
+    href: Coree.html
+  - name: .
+  - uid: Coree.NETASP
+    name: NETASP
+    href: Coree.NETASP.html
+  - name: .
+  - uid: Coree.NETASP.Extensions
+    name: Extensions
+    href: Coree.NETASP.Extensions.html
+  - name: .
+  - uid: Coree.NETASP.Extensions.Options
+    name: Options
+    href: Coree.NETASP.Extensions.Options.html
+  - name: .
+  - uid: Coree.NETASP.Extensions.Options.KestrelServer
+    name: KestrelServer
+    href: Coree.NETASP.Extensions.Options.KestrelServer.html
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object
+  name: object
+  nameWithType: object
+  fullName: object
+  nameWithType.vb: Object
+  fullName.vb: Object
+  name.vb: Object
+- uid: System.Object.Equals(System.Object)
+  commentId: M:System.Object.Equals(System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  name: Equals(object)
+  nameWithType: object.Equals(object)
+  fullName: object.Equals(object)
+  nameWithType.vb: Object.Equals(Object)
+  fullName.vb: Object.Equals(Object)
+  name.vb: Equals(Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  name: Equals(object, object)
+  nameWithType: object.Equals(object, object)
+  fullName: object.Equals(object, object)
+  nameWithType.vb: Object.Equals(Object, Object)
+  fullName.vb: Object.Equals(Object, Object)
+  name.vb: Equals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.GetHashCode
+  commentId: M:System.Object.GetHashCode
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  name: GetHashCode()
+  nameWithType: object.GetHashCode()
+  fullName: object.GetHashCode()
+  nameWithType.vb: Object.GetHashCode()
+  fullName.vb: Object.GetHashCode()
+  spec.csharp:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  - name: (
+  - name: )
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  name: GetType()
+  nameWithType: object.GetType()
+  fullName: object.GetType()
+  nameWithType.vb: Object.GetType()
+  fullName.vb: Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+- uid: System.Object.MemberwiseClone
+  commentId: M:System.Object.MemberwiseClone
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  name: MemberwiseClone()
+  nameWithType: object.MemberwiseClone()
+  fullName: object.MemberwiseClone()
+  nameWithType.vb: Object.MemberwiseClone()
+  fullName.vb: Object.MemberwiseClone()
+  spec.csharp:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  - name: (
+  - name: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  name: ReferenceEquals(object, object)
+  nameWithType: object.ReferenceEquals(object, object)
+  fullName: object.ReferenceEquals(object, object)
+  nameWithType.vb: Object.ReferenceEquals(Object, Object)
+  fullName.vb: Object.ReferenceEquals(Object, Object)
+  name.vb: ReferenceEquals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.ToString
+  commentId: M:System.Object.ToString
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  name: ToString()
+  nameWithType: object.ToString()
+  fullName: object.ToString()
+  nameWithType.vb: Object.ToString()
+  fullName.vb: Object.ToString()
+  spec.csharp:
+  - uid: System.Object.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  - name: (
+  - name: )
+- uid: System
+  commentId: N:System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: Coree.NETASP.Extensions.Options.KestrelServer.OptionsKestrelServerOptionsExtensions.dd*
+  commentId: Overload:Coree.NETASP.Extensions.Options.KestrelServer.OptionsKestrelServerOptionsExtensions.dd
+  href: Coree.NETASP.Extensions.Options.KestrelServer.OptionsKestrelServerOptionsExtensions.html#Coree_NETASP_Extensions_Options_KestrelServer_OptionsKestrelServerOptionsExtensions_dd_Microsoft_AspNetCore_Server_Kestrel_Core_KestrelServerOptions_
+  name: dd
+  nameWithType: OptionsKestrelServerOptionsExtensions.dd
+  fullName: Coree.NETASP.Extensions.Options.KestrelServer.OptionsKestrelServerOptionsExtensions.dd
+- uid: Microsoft.AspNetCore.Server.Kestrel.Core.KestrelServerOptions
+  commentId: T:Microsoft.AspNetCore.Server.Kestrel.Core.KestrelServerOptions
+  parent: Microsoft.AspNetCore.Server.Kestrel.Core
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/microsoft.aspnetcore.server.kestrel.core.kestrelserveroptions
+  name: KestrelServerOptions
+  nameWithType: KestrelServerOptions
+  fullName: Microsoft.AspNetCore.Server.Kestrel.Core.KestrelServerOptions
+- uid: Microsoft.AspNetCore.Server.Kestrel.Core
+  commentId: N:Microsoft.AspNetCore.Server.Kestrel.Core
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/microsoft
+  name: Microsoft.AspNetCore.Server.Kestrel.Core
+  nameWithType: Microsoft.AspNetCore.Server.Kestrel.Core
+  fullName: Microsoft.AspNetCore.Server.Kestrel.Core
+  spec.csharp:
+  - uid: Microsoft
+    name: Microsoft
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/microsoft
+  - name: .
+  - uid: Microsoft.AspNetCore
+    name: AspNetCore
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/microsoft.aspnetcore
+  - name: .
+  - uid: Microsoft.AspNetCore.Server
+    name: Server
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/microsoft.aspnetcore.server
+  - name: .
+  - uid: Microsoft.AspNetCore.Server.Kestrel
+    name: Kestrel
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/microsoft.aspnetcore.server.kestrel
+  - name: .
+  - uid: Microsoft.AspNetCore.Server.Kestrel.Core
+    name: Core
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/microsoft.aspnetcore.server.kestrel.core
+  spec.vb:
+  - uid: Microsoft
+    name: Microsoft
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/microsoft
+  - name: .
+  - uid: Microsoft.AspNetCore
+    name: AspNetCore
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/microsoft.aspnetcore
+  - name: .
+  - uid: Microsoft.AspNetCore.Server
+    name: Server
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/microsoft.aspnetcore.server
+  - name: .
+  - uid: Microsoft.AspNetCore.Server.Kestrel
+    name: Kestrel
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/microsoft.aspnetcore.server.kestrel
+  - name: .
+  - uid: Microsoft.AspNetCore.Server.Kestrel.Core
+    name: Core
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/microsoft.aspnetcore.server.kestrel.core
+- uid: Coree.NETASP.Extensions.Options.KestrelServer.OptionsKestrelServerOptionsExtensions.AspNetCoreDump*
+  commentId: Overload:Coree.NETASP.Extensions.Options.KestrelServer.OptionsKestrelServerOptionsExtensions.AspNetCoreDump
+  href: Coree.NETASP.Extensions.Options.KestrelServer.OptionsKestrelServerOptionsExtensions.html#Coree_NETASP_Extensions_Options_KestrelServer_OptionsKestrelServerOptionsExtensions_AspNetCoreDump_Microsoft_AspNetCore_Builder_WebApplicationBuilder_
+  name: AspNetCoreDump
+  nameWithType: OptionsKestrelServerOptionsExtensions.AspNetCoreDump
+  fullName: Coree.NETASP.Extensions.Options.KestrelServer.OptionsKestrelServerOptionsExtensions.AspNetCoreDump
+- uid: Microsoft.AspNetCore.Builder.WebApplicationBuilder
+  commentId: T:Microsoft.AspNetCore.Builder.WebApplicationBuilder
+  parent: Microsoft.AspNetCore.Builder
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/microsoft.aspnetcore.builder.webapplicationbuilder
+  name: WebApplicationBuilder
+  nameWithType: WebApplicationBuilder
+  fullName: Microsoft.AspNetCore.Builder.WebApplicationBuilder
+- uid: Microsoft.AspNetCore.Builder
+  commentId: N:Microsoft.AspNetCore.Builder
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/microsoft
+  name: Microsoft.AspNetCore.Builder
+  nameWithType: Microsoft.AspNetCore.Builder
+  fullName: Microsoft.AspNetCore.Builder
+  spec.csharp:
+  - uid: Microsoft
+    name: Microsoft
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/microsoft
+  - name: .
+  - uid: Microsoft.AspNetCore
+    name: AspNetCore
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/microsoft.aspnetcore
+  - name: .
+  - uid: Microsoft.AspNetCore.Builder
+    name: Builder
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/microsoft.aspnetcore.builder
+  spec.vb:
+  - uid: Microsoft
+    name: Microsoft
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/microsoft
+  - name: .
+  - uid: Microsoft.AspNetCore
+    name: AspNetCore
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/microsoft.aspnetcore
+  - name: .
+  - uid: Microsoft.AspNetCore.Builder
+    name: Builder
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/microsoft.aspnetcore.builder

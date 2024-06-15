@@ -1,0 +1,8 @@
+{
+  "Coree.NETASP": "Coree.NETASP.yml",
+  "Coree.NETASP.Class1": "Coree.NETASP.Class1.yml",
+  "Coree.NETASP.Extensions.Options.KestrelServer": "Coree.NETASP.Extensions.Options.KestrelServer.yml",
+  "Coree.NETASP.Extensions.Options.KestrelServer.OptionsKestrelServerOptionsExtensions": "Coree.NETASP.Extensions.Options.KestrelServer.OptionsKestrelServerOptionsExtensions.yml",
+  "Coree.NETASP.Extensions.Options.KestrelServer.OptionsKestrelServerOptionsExtensions.AspNetCoreDump(Microsoft.AspNetCore.Builder.WebApplicationBuilder)": "Coree.NETASP.Extensions.Options.KestrelServer.OptionsKestrelServerOptionsExtensions.yml",
+  "Coree.NETASP.Extensions.Options.KestrelServer.OptionsKestrelServerOptionsExtensions.dd(Microsoft.AspNetCore.Server.Kestrel.Core.KestrelServerOptions)": "Coree.NETASP.Extensions.Options.KestrelServer.OptionsKestrelServerOptionsExtensions.yml"
+}

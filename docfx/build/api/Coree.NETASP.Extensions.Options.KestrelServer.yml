@@ -1,0 +1,23 @@
+### YamlMime:ManagedReference
+items:
+- uid: Coree.NETASP.Extensions.Options.KestrelServer
+  commentId: N:Coree.NETASP.Extensions.Options.KestrelServer
+  id: Coree.NETASP.Extensions.Options.KestrelServer
+  children:
+  - Coree.NETASP.Extensions.Options.KestrelServer.OptionsKestrelServerOptionsExtensions
+  langs:
+  - csharp
+  - vb
+  name: Coree.NETASP.Extensions.Options.KestrelServer
+  nameWithType: Coree.NETASP.Extensions.Options.KestrelServer
+  fullName: Coree.NETASP.Extensions.Options.KestrelServer
+  type: Namespace
+  assemblies:
+  - Coree.NETASP
+references:
+- uid: Coree.NETASP.Extensions.Options.KestrelServer.OptionsKestrelServerOptionsExtensions
+  commentId: T:Coree.NETASP.Extensions.Options.KestrelServer.OptionsKestrelServerOptionsExtensions
+  href: Coree.NETASP.Extensions.Options.KestrelServer.OptionsKestrelServerOptionsExtensions.html
+  name: OptionsKestrelServerOptionsExtensions
+  nameWithType: OptionsKestrelServerOptionsExtensions
+  fullName: Coree.NETASP.Extensions.Options.KestrelServer.OptionsKestrelServerOptionsExtensions

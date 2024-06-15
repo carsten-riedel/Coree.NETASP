@@ -26,7 +26,7 @@ on:
 
 jobs:
   build:
-
+    if: github.event.head_commit.committer.name == 'Github'
     runs-on: ubuntu-latest
     
     env:
@@ -34,28 +34,22 @@ jobs:
 
     steps:
     - name: Checkout
-      if: github.event.pull_request.merged
       uses: actions/checkout@v4
 
     - name: Setup-dotnet
-      if: github.event.pull_request.merged
       uses: actions/setup-dotnet@v4
       with:
         dotnet-version: 8.0.x
 
     - name: Diagnostic print enviroment vars
-      if: github.event.pull_request.merged
       run: printenv
 
     - name: Display dotnet version
-      if: github.event.pull_request.merged
       run: dotnet --version    
 
     - name: Display powershell core version
-      if: github.event.pull_request.merged
       run: pwsh --version
 
     - name: Workflow Build/Deploy
-      if: github.event.pull_request.merged
       run: .github/workflows/cicd_main.ps1 "${{ secrets.PAT }}" "${{ secrets.NUGET_PAT }}" "${{ secrets.NUGET_TEST_PAT }}"
       shell: pwsh 

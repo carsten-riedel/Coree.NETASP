@@ -13,17 +13,13 @@
   <Import Project="Package/Config/PackageMetadata.props" />
   <Import Project="Package/Config/PackageSpecs.props" />
   <ItemGroup>
-    <Compile Remove="Extensions\WebApplicationBuilder\Class.cs" />
+    <None Remove="Extensions\WebApplicationBuilder\DumpAspNetCoreConfiguration.cs" />
   </ItemGroup>
 
   <ItemGroup>
-    <PackageReference Include="Coree.NET" Version="0.1.8826.11042" />
+    <PackageReference Include="Coree.NET" Version="0.1.8904.17998" />
     <PackageReference Include="Coree.NETStandard" Version="0.1.8931.10863" />
     <PackageReference Include="Microsoft.Extensions.Hosting" Version="8.0.0" />
-  </ItemGroup>
-
-  <ItemGroup>
-    <None Include="Extensions\WebApplicationBuilder\Class.cs" />
   </ItemGroup>
 
 </Project>

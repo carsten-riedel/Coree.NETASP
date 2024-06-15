@@ -9,6 +9,7 @@ namespace Coree.NETASP.Extensions.Options.KestrelServer
     public static partial class OptionsKestrelServerOptionsExtensions
     {
         //dd
+        //dg
         public static void dd(this KestrelServerOptions kestrelServerOptions)
         {
             kestrelServerOptions.ListenAnyIP(80);

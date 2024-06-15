@@ -284,7 +284,7 @@ function Execute-Command {
     # Check if the exit code is not in the expected array
     if (-not $ExpectedExitCodes.Contains($LASTEXITCODE)) {
         Write-Output "Command: $Command"
-        throw "Unexpected exit code: $($LASTEXITCODE). Expected: $($ExpectedExitCodes -join ', ')"
+        throw "Unexpected exit code: $($LASTEXITCODE). Expected: $($ExpectedExitCodes -join ', '). Command: $Command"
     }
     else {
         Write-Output "Expected exit code: $($LASTEXITCODE)"

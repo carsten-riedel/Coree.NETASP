@@ -14,13 +14,11 @@
   <Import Project="Package/Config/PackageSpecs.props" />
   <ItemGroup>
     <None Remove="Extensions\WebApplicationBuilder\DumpAspNetCoreConfiguration.cs" />
+    <None Remove="Middleware\HostNameFilteringMiddleware.cs" />
     <None Remove="Services\CertificateManager\CertificateManagerService.cs" />
   </ItemGroup>
-
   <ItemGroup>
-    <PackageReference Include="Coree.NET" Version="0.1.8904.17998" />
     <PackageReference Include="Coree.NETStandard" Version="0.1.8931.10863" />
-    <PackageReference Include="Microsoft.Extensions.Hosting" Version="8.0.0" />
   </ItemGroup>
 
 </Project>

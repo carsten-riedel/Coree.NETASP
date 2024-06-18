@@ -1,4 +1,10 @@
-﻿namespace Coree.NETASP.Extensions.WebApplicationBuilderExtensions
+﻿using Microsoft.AspNetCore.Authentication;
+using Microsoft.AspNetCore.Cors.Infrastructure;
+using Microsoft.AspNetCore.HostFiltering;
+using Microsoft.AspNetCore.Server.Kestrel.Core;
+using Microsoft.Extensions.Options;
+
+namespace Coree.NETASP.Extensions.WebApplicationBuilderExtensions
 {
     public static partial class WebApplicationBuilderExtension
     {
@@ -33,14 +39,14 @@
         }
 
         // Dump CORS policy settings
-        var corsOptions = serviceProvider.GetService<IOptions<CorsOptions>>();
-        if (corsOptions != null)
-        {
-            foreach (var policy in corsOptions.Value.GetPolicies())
-            {
-                Console.WriteLine($"CORS Policy {policy.Key}: {string.Join(", ", policy.Value.Origins)}");
-            }
-        }
+        //var corsOptions = serviceProvider.GetService<IOptions<CorsOptions>>();
+        //if (corsOptions != null)
+        //{
+        //    foreach (var policy in corsOptions.Value.GetPolicies())
+        //    {
+        //        Console.WriteLine($"CORS Policy {policy.Key}: {string.Join(", ", policy.Value.Origins)}");
+        //    }
+        //}
 
         // Dump Authentication schemes
         var authOptions = serviceProvider.GetService<IOptions<AuthenticationOptions>>();

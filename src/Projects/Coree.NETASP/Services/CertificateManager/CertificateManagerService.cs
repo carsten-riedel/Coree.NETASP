@@ -115,9 +115,9 @@ namespace Coree.NETASP.Services.CertificateManager
         /// <remarks>
         /// This method checks for an existing certificate file and loads it if valid. If no valid certificate is found, a new one is generated.
         /// </remarks>
-        public static X509Certificate2 GenerateAndOrLoadSelfSignedCertificate(string subjectName, string[] sanNames, int validityPeriodYears, string password, string fileName)
+        public static X509Certificate2 GenerateAndOrLoadSelfSignedCertificate(string subjectName, string[] sanNames, int validityPeriodYears, string password, string fileName,string path)
         {
-            string filePath = Path.Combine(AppDomain.CurrentDomain.BaseDirectory, fileName);
+            string filePath = Path.Combine(path, fileName);
 
             // Check if the certificate file exists and try to load it
             if (File.Exists(filePath))

@@ -2,23 +2,18 @@
 
 using Microsoft.Extensions.Options;
 
-namespace Coree.NETASP.Middleware
+namespace Coree.NETASP.Middleware.HostNameFiltering
 {
     /// <summary>
     /// Middleware to filter requests based on the host header.
     /// </summary>
     public class HostNameFilteringMiddleware
     {
-        public class HostFilterOptions
-        {
-            public string[] AllowedHosts { get; set; }
-        }
-
         private readonly RequestDelegate _next;
         private readonly ILogger<HostNameFilteringMiddleware> _logger;
         private readonly string[]? _allowedHosts;
 
-        public HostNameFilteringMiddleware(RequestDelegate next, IOptions<HostFilterOptions> options, ILogger<HostNameFilteringMiddleware> logger)
+        public HostNameFilteringMiddleware(RequestDelegate next, IOptions<HostNameFilterOptions> options, ILogger<HostNameFilteringMiddleware> logger)
         {
             _next = next;
             _logger = logger;
@@ -40,15 +35,15 @@ namespace Coree.NETASP.Middleware
                 // Check if the request host matches any allowed host (including wildcards)
                 if (_allowedHosts is not null && _allowedHosts.Any(allowedHost => IsHostAllowed(request.Host.Host, allowedHost)))
                 {
-                    _logger.LogInformation("Request host '{RequestHost}' is allowed.", request.Host.Host);
+                    _logger.LogDebug("Request host: '{RequestHost}' is allowed.", request.Host.Host);
                     await _next(context);
+                    return;
                 }
             }
 
-            _logger.LogError("Request host '{RequestHost}' is not allowed.", request.Host.Host);
+            _logger.LogError("Request host: '{RequestHost}' is not allowed.", request.Host.Host);
             context.Response.StatusCode = StatusCodes.Status400BadRequest;
-            await context.Response.WriteAsync("Forbidden: Host not allowed.");
-
+            await context.Response.WriteAsync("Forbidden: Not allowed.");
         }
 
         /// <summary>
@@ -61,24 +56,6 @@ namespace Coree.NETASP.Middleware
         {
             var pattern = "^" + Regex.Escape(allowedHost).Replace(@"\*", ".*") + "$";
             return Regex.IsMatch(requestHost, pattern, RegexOptions.IgnoreCase);
-        }
-    }
-
-    public static class MiddlewareExtensions
-    {
-        /// <summary>
-        /// Adds and configures the HostNameFilteringMiddleware options.
-        /// </summary>
-        /// <param name="services">The IServiceCollection to add services to.</param>
-        /// <returns>The IServiceCollection so that additional calls can be chained.</returns>
-        public static IServiceCollection AddHostNameFiltering(this IServiceCollection services, string[] allowedHosts)
-        {
-            services.Configure<HostNameFilteringMiddleware.HostFilterOptions>(options =>
-            {
-                options.AllowedHosts = allowedHosts;
-            });
-
-            return services;
         }
     }
 }

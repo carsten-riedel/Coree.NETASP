@@ -1,4 +1,5 @@
 ﻿using System.Text.RegularExpressions;
+
 using Microsoft.Extensions.Options;
 
 namespace Coree.NETASP.Middleware.UserAgentFiltering
@@ -8,7 +9,6 @@ namespace Coree.NETASP.Middleware.UserAgentFiltering
     /// </summary>
     public class UserAgentFilteringMiddleware
     {
-
         private readonly RequestDelegate _next;
         private readonly ILogger<UserAgentFilteringMiddleware> _logger;
         private readonly UserAgentFilterOptions _filters;
@@ -31,27 +31,18 @@ namespace Coree.NETASP.Middleware.UserAgentFiltering
             var requestIp = context.Connection.RemoteIpAddress;
             string userAgentHeader = context.Request.Headers["User-Agent"].ToString();
 
-            bool isblacklist = false;
-            for (int i = 0; i < _filters.Blacklist.Length; i++)
-            {
-                if (IsMatch(userAgentHeader, _filters.Blacklist[i]))
-                {
-                   isblacklist = true;
-                }
-            }
+            var result = userAgentHeader.ValidateWhitelistBlacklist(_filters.Whitelist, _filters.Blacklist);
 
-            if (!isblacklist)
+            if (result)
             {
                 _logger.LogDebug("Useragent: '{userAgentHeader}' is allowed.", userAgentHeader);
                 await _next(context);
                 return;
             }
 
-
             _logger.LogError("Useragent: '{userAgentHeader}' is not allowed.", userAgentHeader);
             context.Response.StatusCode = StatusCodes.Status400BadRequest;
             await context.Response.WriteAsync("Forbidden: Not allowed.");
-
         }
 
         /// <summary>
@@ -66,6 +57,4 @@ namespace Coree.NETASP.Middleware.UserAgentFiltering
             return Regex.IsMatch(requestHost, pattern, RegexOptions.IgnoreCase);
         }
     }
-
-
 }

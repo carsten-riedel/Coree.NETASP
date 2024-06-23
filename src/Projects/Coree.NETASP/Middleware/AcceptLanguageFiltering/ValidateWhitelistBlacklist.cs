@@ -1,77 +1,12 @@
 ﻿using System.Text.RegularExpressions;
 
-using Microsoft.Extensions.Options;
-
-using static System.Net.WebRequestMethods;
-
-namespace Coree.NETASP.Middleware.ProtocolFiltering
+namespace Coree.NETASP.Middleware.AcceptLanguageFiltering
 {
-
-    public class ProtocolFilteringOptions
-    {
-        public string[]? Whitelist { get; set; }
-        public string[]? Blacklist { get; set; }
-    }
-
     /// <summary>
-    /// Middleware to filter requests based on the HTTP protocol used.
+    /// Provides extension methods for string operations, enhancing the built-in string manipulation capabilities.
     /// </summary>
-    public class ProtocolFilteringMiddleware
+    public static partial class ValidationsStringExtensions
     {
-        private readonly RequestDelegate _next;
-        private readonly ILogger<ProtocolFilteringMiddleware> _logger;
-        private readonly ProtocolFilteringOptions _protocolFilteringOptions;
-
-        public ProtocolFilteringMiddleware(RequestDelegate next, ILogger<ProtocolFilteringMiddleware> logger, IOptions<ProtocolFilteringOptions> options)
-        {
-            _next = next;
-            _logger = logger;
-            _protocolFilteringOptions = options.Value;
-        }
-
-        /// <summary>
-        /// Invoke method to process the HTTP context based on allowed protocols.
-        /// </summary>
-        /// <param name="context">The HTTP context.</param>
-        /// <returns>A task representing the asynchronous operation.</returns>
-        public async Task InvokeAsync(HttpContext context)
-        {
-            string protocol = context.Request.Protocol;
-            
-            var result = protocol.ValidateWhitelistBlacklist(_protocolFilteringOptions.Whitelist,_protocolFilteringOptions.Blacklist);
-
-            if (result)
-            {
-                _logger.LogDebug("Protocol: '{Protocol}' is allowed.", protocol);
-                await _next(context);
-                return;
-            }
-
-            _logger.LogError("Protocol: '{Protocol}' is not allowed.", protocol);
-            context.Response.StatusCode = StatusCodes.Status400BadRequest;
-            await context.Response.WriteAsync("Forbidden: Not allowed.");
-
-        }
-    }
-
-    public static class ProtocolFilteringMiddlewareExtensions
-    {
-
-
-        public static IServiceCollection AddProtocolFiltering(this IServiceCollection services, string[]? whitelist = null, string[]? blacklist = null)
-        {
-            whitelist ??= new string[] { "HTTP/1.1" , "HTTP/2" , "HTTP/2.0", "HTTP/3" , "HTTP/3.0" };
-            blacklist ??= new string[] { "" , "HTTP/1.0" , "HTTP/1.?" };
-
-            services.Configure<ProtocolFilteringOptions>(options =>
-            {
-                options.Whitelist = whitelist;
-                options.Blacklist = blacklist;
-            });
-
-            return services;
-        }
-
         /// <summary>
         /// Attempts to match the given input against the specified pattern using regular expressions.
         /// Returns true if the input matches the pattern, false otherwise.

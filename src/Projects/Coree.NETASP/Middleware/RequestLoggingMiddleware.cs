@@ -91,14 +91,10 @@ namespace Coree.NETASP.Middleware
         {
             if (!isignored)
             {
-        
-
                 context.Response.OnCompleted(async () =>
                 {
                     try
                     {
-
-
                         // Calculate the response time
                         var duration = DateTime.UtcNow - startTime;
 
@@ -120,11 +116,9 @@ namespace Coree.NETASP.Middleware
                         _logger.LogError(ex, "An exception occurred while processing the response logging after completion.");
                     }
                 });
-
             }
 
             return Task.CompletedTask;
         }
-
     }
 }

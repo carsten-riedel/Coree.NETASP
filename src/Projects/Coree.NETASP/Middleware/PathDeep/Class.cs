@@ -38,8 +38,9 @@ namespace Coree.NETASP.Middleware.PathDeep
             if (currentScore >= _blockScoreThreshold)
             {
                 _ipBlockList.Set(requestKey, currentScore, _blockDuration);
-                _logger.LogWarning($"IP Temporarily Blocked: {remoteIp} with a total score of {currentScore}. Triggered by suspicious path depth activity.");
-                context.Response.StatusCode = 403; // Forbidden
+                _logger.LogError($"IP Temporarily Blocked: {remoteIp} with a total score of {currentScore}. Triggered by suspicious path depth activity.");
+                context.Response.StatusCode = StatusCodes.Status400BadRequest;
+                await context.Response.WriteAsync("Forbidden: Not allowed.");
                 return;
             }
             else

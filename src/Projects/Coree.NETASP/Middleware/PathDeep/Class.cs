@@ -76,6 +76,8 @@ namespace Coree.NETASP.Middleware.PathDeep
                 case 2:
                     return 0; // Slightly more suspicious
                 case 3:
+                    return 0; // Even more suspicious
+                case 4:
                     return 100; // Even more suspicious
                 default:
                     return 100; // Very deep paths are highly suspicious

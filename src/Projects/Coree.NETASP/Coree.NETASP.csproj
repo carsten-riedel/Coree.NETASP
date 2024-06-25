@@ -6,6 +6,7 @@
 		<ImplicitUsings>enable</ImplicitUsings>
 		<Nullable>enable</Nullable>
 		<DebugType>embedded</DebugType>
+		<LangVersion>latest</LangVersion>
 		<GenerateDocumentationFile>true</GenerateDocumentationFile>
 	</PropertyGroup>
 
@@ -13,7 +14,11 @@
 	<Import Project="Package/Config/PackageMetadata.props" />
 	<Import Project="Package/Config/PackageSpecs.props" />
 	<ItemGroup>
+	  <Compile Remove="Extensions\Class.cs" />
+	</ItemGroup>
+	<ItemGroup>
 		<None Remove="Extensions\WebApplicationBuilder\DumpAspNetCoreConfiguration.cs" />
+		<None Remove="Extensions\WebApplicationBuilder\SetupAndBuild.cs" />
 		<None Remove="Middleware\AcceptLanguageFiltering\AcceptLanguageFilteringMiddleware.cs" />
 		<None Remove="Middleware\AcceptLanguageFiltering\AcceptLanguageFilteringOptions.cs" />
 		<None Remove="Middleware\AcceptLanguageFiltering\AddAcceptLanguageFiltering.cs" />
@@ -28,6 +33,7 @@
 		<None Remove="Middleware\RequestUrlFiltering\RequestUrlFilteringOptions.cs" />
 		<None Remove="Middleware\RequestUrlFiltering\ValidateWhitelistBlacklist.cs" />
 		<None Remove="Middleware\SegmentBlacklistFilteringMiddleware.cs" />
+		<None Remove="Middleware\UnwantedHeaderKeysFiltering\UnwantedHeaderKeysMiddleware.cs" />
 		<None Remove="Middleware\UserAgendFiltering\AddUserAgentFiltering.cs" />
 		<None Remove="Middleware\UserAgendFiltering\UserAgentFilteringMiddleware.cs" />
 		<None Remove="Middleware\UserAgendFiltering\UserAgentFilterOptions.cs" />

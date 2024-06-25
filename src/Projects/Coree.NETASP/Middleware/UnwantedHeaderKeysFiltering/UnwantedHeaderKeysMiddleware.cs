@@ -1,70 +1,63 @@
-﻿using System.Text.RegularExpressions;
-
+﻿using Microsoft.EntityFrameworkCore.Internal;
 using Microsoft.Extensions.Options;
+using System.Text.RegularExpressions;
 
-
-namespace Coree.NETASP.Middleware.ProtocolFiltering
+namespace Coree.NETASP.Middleware.UnwantedHeaderKeysFiltering
 {
-
-    public class ProtocolFilteringOptions
+    public class UnwantedHeaderKeysOptions
     {
-        public string[]? Whitelist { get; set; }
         public string[]? Blacklist { get; set; }
     }
 
     /// <summary>
     /// Middleware to filter requests based on the HTTP protocol used.
     /// </summary>
-    public class ProtocolFilteringMiddleware
+    public class UnwantedHeaderKeysMiddleware
     {
         private readonly RequestDelegate _next;
-        private readonly ILogger<ProtocolFilteringMiddleware> _logger;
-        private readonly ProtocolFilteringOptions _protocolFilteringOptions;
+        private readonly ILogger<UnwantedHeaderKeysMiddleware> _logger;
+        private readonly UnwantedHeaderKeysOptions _UnwantedHeaderKeysOptions;
 
-        public ProtocolFilteringMiddleware(RequestDelegate next, ILogger<ProtocolFilteringMiddleware> logger, IOptions<ProtocolFilteringOptions> options)
+        public UnwantedHeaderKeysMiddleware(RequestDelegate next, ILogger<UnwantedHeaderKeysMiddleware> logger, IOptions<UnwantedHeaderKeysOptions> options)
         {
             _next = next;
             _logger = logger;
-            _protocolFilteringOptions = options.Value;
+            _UnwantedHeaderKeysOptions = options.Value;
         }
 
         /// <summary>
-        /// Invoke method to process the HTTP context based on allowed protocols.
+        /// Invoke method to process the HTTP context based on blacklisted headers.
         /// </summary>
         /// <param name="context">The HTTP context.</param>
         /// <returns>A task representing the asynchronous operation.</returns>
         public async Task InvokeAsync(HttpContext context)
         {
-            string protocol = context.Request.Protocol;
-            
-            var result = protocol.ValidateWhitelistBlacklist(_protocolFilteringOptions.Whitelist,_protocolFilteringOptions.Blacklist);
-
-            if (result)
+            foreach (var header in context.Request.Headers)
             {
-                _logger.LogDebug("Protocol: '{Protocol}' is allowed.", protocol);
-                await _next(context);
-                return;
+                var isValid = header.Key.ValidateWhitelistBlacklist(null,_UnwantedHeaderKeysOptions.Blacklist);
+                if (!isValid)
+                {
+                    _logger.LogError("Access denied due to unwanted header key: {Key}", header.Key);
+                    context.Response.StatusCode = StatusCodes.Status400BadRequest;
+                    await context.Response.WriteAsync("Forbidden: Not allowed.");
+                    return;
+                }
             }
 
-            _logger.LogError("Protocol: '{Protocol}' is not allowed.", protocol);
-            context.Response.StatusCode = StatusCodes.Status400BadRequest;
-            await context.Response.WriteAsync("Forbidden: Not allowed.");
-
+            _logger.LogDebug("No unwanted headers detected. Proceeding with request.");
+            await _next(context);
         }
     }
 
-    public static class ProtocolFilteringMiddlewareExtensions
+    public static class UnwantedHeaderKeysMiddlewareExtensions
     {
 
 
-        public static IServiceCollection AddProtocolFiltering(this IServiceCollection services, string[]? whitelist = null, string[]? blacklist = null)
+        public static IServiceCollection AddUnwantedHeaderKeysFiltering(this IServiceCollection services,string[]? blacklist = null)
         {
-            whitelist ??= new string[] { "HTTP/1.1" , "HTTP/2" , "HTTP/2.0", "HTTP/3" , "HTTP/3.0" };
-            blacklist ??= new string[] { "" , "HTTP/1.0" , "HTTP/1.?" };
 
-            services.Configure<ProtocolFilteringOptions>(options =>
+            services.Configure<UnwantedHeaderKeysOptions>(options =>
             {
-                options.Whitelist = whitelist;
                 options.Blacklist = blacklist;
             });
 

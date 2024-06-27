@@ -1,4 +1,5 @@
-﻿using System.Reflection.PortableExecutable;
+﻿using System.Net;
+using System.Reflection.PortableExecutable;
 using System.Text;
 
 using Microsoft.AspNetCore.Http.Extensions;
@@ -76,6 +77,17 @@ namespace Coree.NETASP.Middleware
                 requestString.AppendLine($"Request:  {context.Request.GetDisplayUrl()}");
                 requestString.AppendLine($"Remote:   {RemoteIP}:{RemotePort}");
                 //_logger.LogInformation("-- Request URL: {URL}, Client IP: {ClientIP}", context.Request.GetDisplayUrl(), clientIP);
+
+                if (RemoteIP != null)
+                {
+                    var dns = Dns.GetHostEntry(RemoteIP);
+                    requestString.AppendLine($"DNSHostName:   {dns.HostName}");
+                    foreach (var DNS in dns.Aliases)
+                    {
+                        requestString.AppendLine($"DNSAlias:   {DNS}");
+                    }
+                }
+                var ss = Dns.GetHostEntry(RemoteIP);
 
                 foreach (var header in context.Request.Headers)
                 {

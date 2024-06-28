@@ -26,18 +26,10 @@ on:
   workflow_dispatch:
 
 jobs:
-  alwaysinfo:
-
-    runs-on: ubuntu-latest
-
-    steps:
-      - name: Echo Committer Name
-        run: | 
-            echo "Committer Name: ${{ github.event.head_commit.committer.name }}"
-        shell: bash
 
   builddeploy:
-    if: github.event.head_commit.committer.name == 'Github'
+    if: (github.event_name == 'workflow_dispatch') || (github.event_name == 'repository_dispatch') ||  github.event.head_commit.committer.name == 'Github'
+ 
     runs-on: ubuntu-latest
     
     env:
@@ -66,43 +58,10 @@ jobs:
     - name: Workflow Build/Deploy
       run: .github/workflows/cicd_main.ps1 "${{ secrets.PAT }}" "${{ secrets.NUGET_PAT }}" "${{ secrets.NUGET_TEST_PAT }}"
       shell: pwsh 
-
-  buildcheckout:
-      runs-on: ubuntu-latest
-      
-      env:
-        GH_TOKEN: ${{ github.token }}
-  
-      steps:
-      - name: Checkout
-        uses: actions/checkout@v4
-        with:
-          fetch-depth: 0
-      
-      - name: Setup-dotnet
-        uses: actions/setup-dotnet@v4
-        with:
-          dotnet-version: 8.0.x
-
-      - name: Diagnostic print enviroment vars
-        run: printenv
-
-      - name: Display dotnet version
-        run: dotnet --version    
-
-      - name: Display powershell core version
-        run: pwsh --version
-
-      - name: Force main to ->release
-        run: | 
-          git fetch --all
-          git checkout release
-          git reset --hard origin/master
-          git push origin release --force
-      
-      - name: Force main to -> develop
-        run: | 
-            git fetch --all
-            git checkout develop
-            git reset --hard origin/master
-            git push origin develop --force
+    
+    - name: Force main to -> release
+      run: | 
+        git fetch --all
+        git checkout release
+        git reset --hard origin/master
+        git push origin release --force

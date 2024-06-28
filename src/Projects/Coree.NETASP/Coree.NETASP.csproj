@@ -1,25 +1,46 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk.Web">
 
-  <PropertyGroup>
-    <OutputType>Library</OutputType>
-    <TargetFrameworks>net6.0;net7.0;net8.0</TargetFrameworks>
-    <ImplicitUsings>enable</ImplicitUsings>
-    <Nullable>enable</Nullable>
-	  <DebugType>embedded</DebugType>
-	  <GenerateDocumentationFile>true</GenerateDocumentationFile>
-  </PropertyGroup>
+	<PropertyGroup>
+		<OutputType>Library</OutputType>
+		<TargetFrameworks>net6.0;net7.0;net8.0</TargetFrameworks>
+		<ImplicitUsings>enable</ImplicitUsings>
+		<Nullable>enable</Nullable>
+		<DebugType>embedded</DebugType>
+		<LangVersion>latest</LangVersion>
+		<GenerateDocumentationFile>true</GenerateDocumentationFile>
+	</PropertyGroup>
 
-  <!-- NuGet Package configuration -->
-  <Import Project="Package/Config/PackageMetadata.props" />
-  <Import Project="Package/Config/PackageSpecs.props" />
-  <ItemGroup>
-    <None Remove="Extensions\WebApplicationBuilder\DumpAspNetCoreConfiguration.cs" />
-  </ItemGroup>
-
-  <ItemGroup>
-    <PackageReference Include="Coree.NET" Version="0.1.8904.17998" />
-    <PackageReference Include="Coree.NETStandard" Version="0.1.8931.10863" />
-    <PackageReference Include="Microsoft.Extensions.Hosting" Version="8.0.0" />
-  </ItemGroup>
+	<!-- NuGet Package configuration -->
+	<Import Project="Package/Config/PackageMetadata.props" />
+	<Import Project="Package/Config/PackageSpecs.props" />
+	<ItemGroup>
+	  <Compile Remove="Extensions\Class.cs" />
+	</ItemGroup>
+	<ItemGroup>
+		<None Remove="Extensions\WebApplicationBuilder\DumpAspNetCoreConfiguration.cs" />
+		<None Remove="Extensions\WebApplicationBuilder\SetupAndBuild.cs" />
+		<None Remove="Middleware\AcceptLanguageFiltering\AcceptLanguageFilteringMiddleware.cs" />
+		<None Remove="Middleware\DnsHostNameFiltering\DnsHostNameFilteringMiddleware.cs" />
+		<None Remove="Middleware\HostNameFilteringMiddleware.cs" />
+		<None Remove="Middleware\PathDeepFiltering\PathDeepFilteringMiddleware.cs" />
+		<None Remove="Middleware\RequestLoggingMiddleware.cs" />
+		<None Remove="Middleware\RequestUrlFiltering\AddRequestUrlFiltering.cs" />
+		<None Remove="Middleware\RequestUrlFiltering\RequestUrlFilteringMiddleware.cs" />
+		<None Remove="Middleware\RequestUrlFiltering\RequestUrlFilteringOptions.cs" />
+		<None Remove="Middleware\RequestUrlFiltering\ValidateWhitelistBlacklist.cs" />
+		<None Remove="Middleware\SegmentBlacklistFilteringMiddleware.cs" />
+		<None Remove="Middleware\UnwantedHeaderKeysFiltering\UnwantedHeaderKeysMiddleware.cs" />
+		<None Remove="Middleware\UserAgentFiltering\AddUserAgentFiltering.cs" />
+		<None Remove="Middleware\UserAgentFiltering\UserAgentFilteringMiddleware.cs" />
+		<None Remove="Middleware\UserAgentFiltering\UserAgentFilterOptions.cs" />
+		<None Remove="Middleware\UserAgentFiltering\ValidateWhitelistBlacklist.cs" />
+		<None Remove="Services\CertificateManager\CertificateManagerService.cs" />
+	</ItemGroup>
+	<ItemGroup>
+		<PackageReference Include="Coree.NET" Version="0.1.8945.20552" />
+	</ItemGroup>
+	<ItemGroup>
+	  <Folder Include="Extensions\KestrelServerOptions\" />
+	</ItemGroup>
 
 </Project>

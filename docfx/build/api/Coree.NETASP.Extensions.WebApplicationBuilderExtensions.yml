@@ -4,6 +4,7 @@ items:
   commentId: N:Coree.NETASP.Extensions.WebApplicationBuilderExtensions
   id: Coree.NETASP.Extensions.WebApplicationBuilderExtensions
   children:
+  - Coree.NETASP.Extensions.WebApplicationBuilderExtensions.WebAppBuilderExtensions
   - Coree.NETASP.Extensions.WebApplicationBuilderExtensions.WebApplicationBuilderExtension
   langs:
   - csharp
@@ -21,3 +22,9 @@ references:
   name: WebApplicationBuilderExtension
   nameWithType: WebApplicationBuilderExtension
   fullName: Coree.NETASP.Extensions.WebApplicationBuilderExtensions.WebApplicationBuilderExtension
+- uid: Coree.NETASP.Extensions.WebApplicationBuilderExtensions.WebAppBuilderExtensions
+  commentId: T:Coree.NETASP.Extensions.WebApplicationBuilderExtensions.WebAppBuilderExtensions
+  href: Coree.NETASP.Extensions.WebApplicationBuilderExtensions.WebAppBuilderExtensions.html
+  name: WebAppBuilderExtensions
+  nameWithType: WebAppBuilderExtensions
+  fullName: Coree.NETASP.Extensions.WebApplicationBuilderExtensions.WebAppBuilderExtensions

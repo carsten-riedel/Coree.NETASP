@@ -1,0 +1,37 @@
+### YamlMime:ManagedReference
+items:
+- uid: Coree.NETASP.Middleware.AcceptLanguageFiltering
+  commentId: N:Coree.NETASP.Middleware.AcceptLanguageFiltering
+  id: Coree.NETASP.Middleware.AcceptLanguageFiltering
+  children:
+  - Coree.NETASP.Middleware.AcceptLanguageFiltering.AcceptLanguageFilteringExtensions
+  - Coree.NETASP.Middleware.AcceptLanguageFiltering.AcceptLanguageFilteringMiddleware
+  - Coree.NETASP.Middleware.AcceptLanguageFiltering.AcceptLanguageFilteringOptions
+  langs:
+  - csharp
+  - vb
+  name: Coree.NETASP.Middleware.AcceptLanguageFiltering
+  nameWithType: Coree.NETASP.Middleware.AcceptLanguageFiltering
+  fullName: Coree.NETASP.Middleware.AcceptLanguageFiltering
+  type: Namespace
+  assemblies:
+  - Coree.NETASP
+references:
+- uid: Coree.NETASP.Middleware.AcceptLanguageFiltering.AcceptLanguageFilteringMiddleware
+  commentId: T:Coree.NETASP.Middleware.AcceptLanguageFiltering.AcceptLanguageFilteringMiddleware
+  href: Coree.NETASP.Middleware.AcceptLanguageFiltering.AcceptLanguageFilteringMiddleware.html
+  name: AcceptLanguageFilteringMiddleware
+  nameWithType: AcceptLanguageFilteringMiddleware
+  fullName: Coree.NETASP.Middleware.AcceptLanguageFiltering.AcceptLanguageFilteringMiddleware
+- uid: Coree.NETASP.Middleware.AcceptLanguageFiltering.AcceptLanguageFilteringOptions
+  commentId: T:Coree.NETASP.Middleware.AcceptLanguageFiltering.AcceptLanguageFilteringOptions
+  href: Coree.NETASP.Middleware.AcceptLanguageFiltering.AcceptLanguageFilteringOptions.html
+  name: AcceptLanguageFilteringOptions
+  nameWithType: AcceptLanguageFilteringOptions
+  fullName: Coree.NETASP.Middleware.AcceptLanguageFiltering.AcceptLanguageFilteringOptions
+- uid: Coree.NETASP.Middleware.AcceptLanguageFiltering.AcceptLanguageFilteringExtensions
+  commentId: T:Coree.NETASP.Middleware.AcceptLanguageFiltering.AcceptLanguageFilteringExtensions
+  href: Coree.NETASP.Middleware.AcceptLanguageFiltering.AcceptLanguageFilteringExtensions.html
+  name: AcceptLanguageFilteringExtensions
+  nameWithType: AcceptLanguageFilteringExtensions
+  fullName: Coree.NETASP.Middleware.AcceptLanguageFiltering.AcceptLanguageFilteringExtensions

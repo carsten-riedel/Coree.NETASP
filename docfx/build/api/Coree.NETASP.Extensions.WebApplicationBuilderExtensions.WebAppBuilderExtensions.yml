@@ -1,0 +1,678 @@
+### YamlMime:ManagedReference
+items:
+- uid: Coree.NETASP.Extensions.WebApplicationBuilderExtensions.WebAppBuilderExtensions
+  commentId: T:Coree.NETASP.Extensions.WebApplicationBuilderExtensions.WebAppBuilderExtensions
+  id: WebAppBuilderExtensions
+  parent: Coree.NETASP.Extensions.WebApplicationBuilderExtensions
+  children:
+  - Coree.NETASP.Extensions.WebApplicationBuilderExtensions.WebAppBuilderExtensions.SetupAndBuild(Microsoft.AspNetCore.Builder.WebApplicationBuilder,System.Action{Microsoft.AspNetCore.Builder.WebApplicationBuilder,Microsoft.AspNetCore.Builder.WebApplication})
+  - Coree.NETASP.Extensions.WebApplicationBuilderExtensions.WebAppBuilderExtensions.SetupAndBuildRun(Microsoft.AspNetCore.Builder.WebApplicationBuilder,System.Action{Microsoft.AspNetCore.Builder.WebApplicationBuilder,Microsoft.AspNetCore.Builder.WebApplication})
+  - Coree.NETASP.Extensions.WebApplicationBuilderExtensions.WebAppBuilderExtensions.SetupAndBuildRunAsync(Microsoft.AspNetCore.Builder.WebApplicationBuilder,System.Action{Microsoft.AspNetCore.Builder.WebApplicationBuilder,Microsoft.AspNetCore.Builder.WebApplication})
+  langs:
+  - csharp
+  - vb
+  name: WebAppBuilderExtensions
+  nameWithType: WebAppBuilderExtensions
+  fullName: Coree.NETASP.Extensions.WebApplicationBuilderExtensions.WebAppBuilderExtensions
+  type: Class
+  source:
+    remote:
+      path: src/Projects/Coree.NETASP/Extensions/WebApplicationBuilder/SetupAndBuild.cs
+      branch: master
+      repo: https://github.com/carsten-riedel/Coree.NETASP
+    id: WebAppBuilderExtensions
+    path: ../../src/Projects/Coree.NETASP/Extensions/WebApplicationBuilder/SetupAndBuild.cs
+    startLine: 57
+  assemblies:
+  - Coree.NETASP
+  namespace: Coree.NETASP.Extensions.WebApplicationBuilderExtensions
+  summary: Provides extension methods for WebApplicationBuilder to configure, build, and optionally run a WebApplication.
+  example: []
+  syntax:
+    content: public static class WebAppBuilderExtensions
+    content.vb: Public Module WebAppBuilderExtensions
+  inheritance:
+  - System.Object
+  inheritedMembers:
+  - System.Object.Equals(System.Object)
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.GetHashCode
+  - System.Object.GetType
+  - System.Object.MemberwiseClone
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+  - System.Object.ToString
+- uid: Coree.NETASP.Extensions.WebApplicationBuilderExtensions.WebAppBuilderExtensions.SetupAndBuild(Microsoft.AspNetCore.Builder.WebApplicationBuilder,System.Action{Microsoft.AspNetCore.Builder.WebApplicationBuilder,Microsoft.AspNetCore.Builder.WebApplication})
+  commentId: M:Coree.NETASP.Extensions.WebApplicationBuilderExtensions.WebAppBuilderExtensions.SetupAndBuild(Microsoft.AspNetCore.Builder.WebApplicationBuilder,System.Action{Microsoft.AspNetCore.Builder.WebApplicationBuilder,Microsoft.AspNetCore.Builder.WebApplication})
+  id: SetupAndBuild(Microsoft.AspNetCore.Builder.WebApplicationBuilder,System.Action{Microsoft.AspNetCore.Builder.WebApplicationBuilder,Microsoft.AspNetCore.Builder.WebApplication})
+  isExtensionMethod: true
+  parent: Coree.NETASP.Extensions.WebApplicationBuilderExtensions.WebAppBuilderExtensions
+  langs:
+  - csharp
+  - vb
+  name: SetupAndBuild(WebApplicationBuilder, Action<WebApplicationBuilder?, WebApplication?>)
+  nameWithType: WebAppBuilderExtensions.SetupAndBuild(WebApplicationBuilder, Action<WebApplicationBuilder?, WebApplication?>)
+  fullName: Coree.NETASP.Extensions.WebApplicationBuilderExtensions.WebAppBuilderExtensions.SetupAndBuild(Microsoft.AspNetCore.Builder.WebApplicationBuilder, System.Action<Microsoft.AspNetCore.Builder.WebApplicationBuilder?, Microsoft.AspNetCore.Builder.WebApplication?>)
+  type: Method
+  source:
+    remote:
+      path: src/Projects/Coree.NETASP/Extensions/WebApplicationBuilder/SetupAndBuild.cs
+      branch: master
+      repo: https://github.com/carsten-riedel/Coree.NETASP
+    id: SetupAndBuild
+    path: ../../src/Projects/Coree.NETASP/Extensions/WebApplicationBuilder/SetupAndBuild.cs
+    startLine: 93
+  assemblies:
+  - Coree.NETASP
+  namespace: Coree.NETASP.Extensions.WebApplicationBuilderExtensions
+  summary: >-
+    Configures and builds a WebApplication using the specified configuration actions. This method centralizes
+
+    the setup for various components of a web application, helping to keep the configuration clean and uncluttered.
+
+    <param name="builder">The WebApplicationBuilder to configure.</param>
+
+    <param name="configure">An action to configure both the builder and the application. This unified approach allows for
+
+    keeping related configurations together, simplifying the overall setup process.</param>
+
+    <returns>The configured and built WebApplication.</returns>
+
+    <example>
+
+    This example demonstrates how to use the SetupAndBuild method to configure and build a WebApplication.
+
+    The configuration actions for controllers and Razor pages are defined within the method call, illustrating
+
+    how to keep related setup tasks together in a single, cohesive block.
+
+    <pre><code class="lang-csharp">var app = WebApplication.CreateBuilder(args).SetupAndBuild((builderStage, appStage) =&gt; {
+        // Configure the services for controllers.
+        if (builderStage != null)
+        {
+            builderStage.Services.AddControllers();
+        }
+
+        // Map controller routes.
+        if (appStage != null)
+        {
+            appStage.MapControllers();
+        }
+
+        // Configure the services for Razor Pages.
+        builderStage?.Services.AddRazorPages();
+        // Map Razor Page routes.
+        appStage?.MapRazorPages();
+    });
+
+    app.Run();</code></pre>
+
+    </example>
+  example: []
+  syntax:
+    content: public static WebApplication SetupAndBuild(this WebApplicationBuilder builder, Action<WebApplicationBuilder?, WebApplication?> configure)
+    parameters:
+    - id: builder
+      type: Microsoft.AspNetCore.Builder.WebApplicationBuilder
+    - id: configure
+      type: System.Action{Microsoft.AspNetCore.Builder.WebApplicationBuilder,Microsoft.AspNetCore.Builder.WebApplication}
+    return:
+      type: Microsoft.AspNetCore.Builder.WebApplication
+    content.vb: Public Shared Function SetupAndBuild(builder As WebApplicationBuilder, configure As Action(Of WebApplicationBuilder, WebApplication)) As WebApplication
+  overload: Coree.NETASP.Extensions.WebApplicationBuilderExtensions.WebAppBuilderExtensions.SetupAndBuild*
+  nameWithType.vb: WebAppBuilderExtensions.SetupAndBuild(WebApplicationBuilder, Action(Of WebApplicationBuilder, WebApplication))
+  fullName.vb: Coree.NETASP.Extensions.WebApplicationBuilderExtensions.WebAppBuilderExtensions.SetupAndBuild(Microsoft.AspNetCore.Builder.WebApplicationBuilder, System.Action(Of Microsoft.AspNetCore.Builder.WebApplicationBuilder, Microsoft.AspNetCore.Builder.WebApplication))
+  name.vb: SetupAndBuild(WebApplicationBuilder, Action(Of WebApplicationBuilder, WebApplication))
+- uid: Coree.NETASP.Extensions.WebApplicationBuilderExtensions.WebAppBuilderExtensions.SetupAndBuildRunAsync(Microsoft.AspNetCore.Builder.WebApplicationBuilder,System.Action{Microsoft.AspNetCore.Builder.WebApplicationBuilder,Microsoft.AspNetCore.Builder.WebApplication})
+  commentId: M:Coree.NETASP.Extensions.WebApplicationBuilderExtensions.WebAppBuilderExtensions.SetupAndBuildRunAsync(Microsoft.AspNetCore.Builder.WebApplicationBuilder,System.Action{Microsoft.AspNetCore.Builder.WebApplicationBuilder,Microsoft.AspNetCore.Builder.WebApplication})
+  id: SetupAndBuildRunAsync(Microsoft.AspNetCore.Builder.WebApplicationBuilder,System.Action{Microsoft.AspNetCore.Builder.WebApplicationBuilder,Microsoft.AspNetCore.Builder.WebApplication})
+  isExtensionMethod: true
+  parent: Coree.NETASP.Extensions.WebApplicationBuilderExtensions.WebAppBuilderExtensions
+  langs:
+  - csharp
+  - vb
+  name: SetupAndBuildRunAsync(WebApplicationBuilder, Action<WebApplicationBuilder?, WebApplication?>)
+  nameWithType: WebAppBuilderExtensions.SetupAndBuildRunAsync(WebApplicationBuilder, Action<WebApplicationBuilder?, WebApplication?>)
+  fullName: Coree.NETASP.Extensions.WebApplicationBuilderExtensions.WebAppBuilderExtensions.SetupAndBuildRunAsync(Microsoft.AspNetCore.Builder.WebApplicationBuilder, System.Action<Microsoft.AspNetCore.Builder.WebApplicationBuilder?, Microsoft.AspNetCore.Builder.WebApplication?>)
+  type: Method
+  source:
+    remote:
+      path: src/Projects/Coree.NETASP/Extensions/WebApplicationBuilder/SetupAndBuild.cs
+      branch: master
+      repo: https://github.com/carsten-riedel/Coree.NETASP
+    id: SetupAndBuildRunAsync
+    path: ../../src/Projects/Coree.NETASP/Extensions/WebApplicationBuilder/SetupAndBuild.cs
+    startLine: 107
+  assemblies:
+  - Coree.NETASP
+  namespace: Coree.NETASP.Extensions.WebApplicationBuilderExtensions
+  summary: Configures, builds, and runs a WebApplication asynchronously using the specified configuration actions.
+  example: []
+  syntax:
+    content: public static Task SetupAndBuildRunAsync(this WebApplicationBuilder builder, Action<WebApplicationBuilder?, WebApplication?> configure)
+    parameters:
+    - id: builder
+      type: Microsoft.AspNetCore.Builder.WebApplicationBuilder
+      description: The WebApplicationBuilder to configure.
+    - id: configure
+      type: System.Action{Microsoft.AspNetCore.Builder.WebApplicationBuilder,Microsoft.AspNetCore.Builder.WebApplication}
+      description: An action to configure both the builder and the application.
+    return:
+      type: System.Threading.Tasks.Task
+      description: A Task representing the asynchronous operation of building and running the application.
+    content.vb: Public Shared Function SetupAndBuildRunAsync(builder As WebApplicationBuilder, configure As Action(Of WebApplicationBuilder, WebApplication)) As Task
+  overload: Coree.NETASP.Extensions.WebApplicationBuilderExtensions.WebAppBuilderExtensions.SetupAndBuildRunAsync*
+  nameWithType.vb: WebAppBuilderExtensions.SetupAndBuildRunAsync(WebApplicationBuilder, Action(Of WebApplicationBuilder, WebApplication))
+  fullName.vb: Coree.NETASP.Extensions.WebApplicationBuilderExtensions.WebAppBuilderExtensions.SetupAndBuildRunAsync(Microsoft.AspNetCore.Builder.WebApplicationBuilder, System.Action(Of Microsoft.AspNetCore.Builder.WebApplicationBuilder, Microsoft.AspNetCore.Builder.WebApplication))
+  name.vb: SetupAndBuildRunAsync(WebApplicationBuilder, Action(Of WebApplicationBuilder, WebApplication))
+- uid: Coree.NETASP.Extensions.WebApplicationBuilderExtensions.WebAppBuilderExtensions.SetupAndBuildRun(Microsoft.AspNetCore.Builder.WebApplicationBuilder,System.Action{Microsoft.AspNetCore.Builder.WebApplicationBuilder,Microsoft.AspNetCore.Builder.WebApplication})
+  commentId: M:Coree.NETASP.Extensions.WebApplicationBuilderExtensions.WebAppBuilderExtensions.SetupAndBuildRun(Microsoft.AspNetCore.Builder.WebApplicationBuilder,System.Action{Microsoft.AspNetCore.Builder.WebApplicationBuilder,Microsoft.AspNetCore.Builder.WebApplication})
+  id: SetupAndBuildRun(Microsoft.AspNetCore.Builder.WebApplicationBuilder,System.Action{Microsoft.AspNetCore.Builder.WebApplicationBuilder,Microsoft.AspNetCore.Builder.WebApplication})
+  isExtensionMethod: true
+  parent: Coree.NETASP.Extensions.WebApplicationBuilderExtensions.WebAppBuilderExtensions
+  langs:
+  - csharp
+  - vb
+  name: SetupAndBuildRun(WebApplicationBuilder, Action<WebApplicationBuilder?, WebApplication?>)
+  nameWithType: WebAppBuilderExtensions.SetupAndBuildRun(WebApplicationBuilder, Action<WebApplicationBuilder?, WebApplication?>)
+  fullName: Coree.NETASP.Extensions.WebApplicationBuilderExtensions.WebAppBuilderExtensions.SetupAndBuildRun(Microsoft.AspNetCore.Builder.WebApplicationBuilder, System.Action<Microsoft.AspNetCore.Builder.WebApplicationBuilder?, Microsoft.AspNetCore.Builder.WebApplication?>)
+  type: Method
+  source:
+    remote:
+      path: src/Projects/Coree.NETASP/Extensions/WebApplicationBuilder/SetupAndBuild.cs
+      branch: master
+      repo: https://github.com/carsten-riedel/Coree.NETASP
+    id: SetupAndBuildRun
+    path: ../../src/Projects/Coree.NETASP/Extensions/WebApplicationBuilder/SetupAndBuild.cs
+    startLine: 120
+  assemblies:
+  - Coree.NETASP
+  namespace: Coree.NETASP.Extensions.WebApplicationBuilderExtensions
+  summary: Configures, builds, and runs a WebApplication synchronously using the specified configuration actions.
+  example: []
+  syntax:
+    content: public static void SetupAndBuildRun(this WebApplicationBuilder builder, Action<WebApplicationBuilder?, WebApplication?> configure)
+    parameters:
+    - id: builder
+      type: Microsoft.AspNetCore.Builder.WebApplicationBuilder
+      description: The WebApplicationBuilder to configure.
+    - id: configure
+      type: System.Action{Microsoft.AspNetCore.Builder.WebApplicationBuilder,Microsoft.AspNetCore.Builder.WebApplication}
+      description: An action to configure both the builder and the application.
+    content.vb: Public Shared Sub SetupAndBuildRun(builder As WebApplicationBuilder, configure As Action(Of WebApplicationBuilder, WebApplication))
+  overload: Coree.NETASP.Extensions.WebApplicationBuilderExtensions.WebAppBuilderExtensions.SetupAndBuildRun*
+  nameWithType.vb: WebAppBuilderExtensions.SetupAndBuildRun(WebApplicationBuilder, Action(Of WebApplicationBuilder, WebApplication))
+  fullName.vb: Coree.NETASP.Extensions.WebApplicationBuilderExtensions.WebAppBuilderExtensions.SetupAndBuildRun(Microsoft.AspNetCore.Builder.WebApplicationBuilder, System.Action(Of Microsoft.AspNetCore.Builder.WebApplicationBuilder, Microsoft.AspNetCore.Builder.WebApplication))
+  name.vb: SetupAndBuildRun(WebApplicationBuilder, Action(Of WebApplicationBuilder, WebApplication))
+references:
+- uid: Coree.NETASP.Extensions.WebApplicationBuilderExtensions
+  commentId: N:Coree.NETASP.Extensions.WebApplicationBuilderExtensions
+  href: Coree.html
+  name: Coree.NETASP.Extensions.WebApplicationBuilderExtensions
+  nameWithType: Coree.NETASP.Extensions.WebApplicationBuilderExtensions
+  fullName: Coree.NETASP.Extensions.WebApplicationBuilderExtensions
+  spec.csharp:
+  - uid: Coree
+    name: Coree
+    href: Coree.html
+  - name: .
+  - uid: Coree.NETASP
+    name: NETASP
+    href: Coree.NETASP.html
+  - name: .
+  - uid: Coree.NETASP.Extensions
+    name: Extensions
+    href: Coree.NETASP.Extensions.html
+  - name: .
+  - uid: Coree.NETASP.Extensions.WebApplicationBuilderExtensions
+    name: WebApplicationBuilderExtensions
+    href: Coree.NETASP.Extensions.WebApplicationBuilderExtensions.html
+  spec.vb:
+  - uid: Coree
+    name: Coree
+    href: Coree.html
+  - name: .
+  - uid: Coree.NETASP
+    name: NETASP
+    href: Coree.NETASP.html
+  - name: .
+  - uid: Coree.NETASP.Extensions
+    name: Extensions
+    href: Coree.NETASP.Extensions.html
+  - name: .
+  - uid: Coree.NETASP.Extensions.WebApplicationBuilderExtensions
+    name: WebApplicationBuilderExtensions
+    href: Coree.NETASP.Extensions.WebApplicationBuilderExtensions.html
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object
+  name: object
+  nameWithType: object
+  fullName: object
+  nameWithType.vb: Object
+  fullName.vb: Object
+  name.vb: Object
+- uid: System.Object.Equals(System.Object)
+  commentId: M:System.Object.Equals(System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  name: Equals(object)
+  nameWithType: object.Equals(object)
+  fullName: object.Equals(object)
+  nameWithType.vb: Object.Equals(Object)
+  fullName.vb: Object.Equals(Object)
+  name.vb: Equals(Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  name: Equals(object, object)
+  nameWithType: object.Equals(object, object)
+  fullName: object.Equals(object, object)
+  nameWithType.vb: Object.Equals(Object, Object)
+  fullName.vb: Object.Equals(Object, Object)
+  name.vb: Equals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.GetHashCode
+  commentId: M:System.Object.GetHashCode
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  name: GetHashCode()
+  nameWithType: object.GetHashCode()
+  fullName: object.GetHashCode()
+  nameWithType.vb: Object.GetHashCode()
+  fullName.vb: Object.GetHashCode()
+  spec.csharp:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  - name: (
+  - name: )
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  name: GetType()
+  nameWithType: object.GetType()
+  fullName: object.GetType()
+  nameWithType.vb: Object.GetType()
+  fullName.vb: Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+- uid: System.Object.MemberwiseClone
+  commentId: M:System.Object.MemberwiseClone
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  name: MemberwiseClone()
+  nameWithType: object.MemberwiseClone()
+  fullName: object.MemberwiseClone()
+  nameWithType.vb: Object.MemberwiseClone()
+  fullName.vb: Object.MemberwiseClone()
+  spec.csharp:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  - name: (
+  - name: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  name: ReferenceEquals(object, object)
+  nameWithType: object.ReferenceEquals(object, object)
+  fullName: object.ReferenceEquals(object, object)
+  nameWithType.vb: Object.ReferenceEquals(Object, Object)
+  fullName.vb: Object.ReferenceEquals(Object, Object)
+  name.vb: ReferenceEquals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.ToString
+  commentId: M:System.Object.ToString
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  name: ToString()
+  nameWithType: object.ToString()
+  fullName: object.ToString()
+  nameWithType.vb: Object.ToString()
+  fullName.vb: Object.ToString()
+  spec.csharp:
+  - uid: System.Object.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  - name: (
+  - name: )
+- uid: System
+  commentId: N:System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: Coree.NETASP.Extensions.WebApplicationBuilderExtensions.WebAppBuilderExtensions.SetupAndBuild*
+  commentId: Overload:Coree.NETASP.Extensions.WebApplicationBuilderExtensions.WebAppBuilderExtensions.SetupAndBuild
+  href: Coree.NETASP.Extensions.WebApplicationBuilderExtensions.WebAppBuilderExtensions.html#Coree_NETASP_Extensions_WebApplicationBuilderExtensions_WebAppBuilderExtensions_SetupAndBuild_Microsoft_AspNetCore_Builder_WebApplicationBuilder_System_Action_Microsoft_AspNetCore_Builder_WebApplicationBuilder_Microsoft_AspNetCore_Builder_WebApplication__
+  name: SetupAndBuild
+  nameWithType: WebAppBuilderExtensions.SetupAndBuild
+  fullName: Coree.NETASP.Extensions.WebApplicationBuilderExtensions.WebAppBuilderExtensions.SetupAndBuild
+- uid: Microsoft.AspNetCore.Builder.WebApplicationBuilder
+  commentId: T:Microsoft.AspNetCore.Builder.WebApplicationBuilder
+  parent: Microsoft.AspNetCore.Builder
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/microsoft.aspnetcore.builder.webapplicationbuilder
+  name: WebApplicationBuilder
+  nameWithType: WebApplicationBuilder
+  fullName: Microsoft.AspNetCore.Builder.WebApplicationBuilder
+- uid: System.Action{Microsoft.AspNetCore.Builder.WebApplicationBuilder,Microsoft.AspNetCore.Builder.WebApplication}
+  commentId: T:System.Action{Microsoft.AspNetCore.Builder.WebApplicationBuilder,Microsoft.AspNetCore.Builder.WebApplication}
+  parent: System
+  definition: System.Action`2
+  href: https://learn.microsoft.com/dotnet/api/system.action-2
+  name: Action<WebApplicationBuilder, WebApplication>
+  nameWithType: Action<WebApplicationBuilder, WebApplication>
+  fullName: System.Action<Microsoft.AspNetCore.Builder.WebApplicationBuilder, Microsoft.AspNetCore.Builder.WebApplication>
+  nameWithType.vb: Action(Of WebApplicationBuilder, WebApplication)
+  fullName.vb: System.Action(Of Microsoft.AspNetCore.Builder.WebApplicationBuilder, Microsoft.AspNetCore.Builder.WebApplication)
+  name.vb: Action(Of WebApplicationBuilder, WebApplication)
+  spec.csharp:
+  - uid: System.Action`2
+    name: Action
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.action-2
+  - name: <
+  - uid: Microsoft.AspNetCore.Builder.WebApplicationBuilder
+    name: WebApplicationBuilder
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/microsoft.aspnetcore.builder.webapplicationbuilder
+  - name: ','
+  - name: " "
+  - uid: Microsoft.AspNetCore.Builder.WebApplication
+    name: WebApplication
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/microsoft.aspnetcore.builder.webapplication
+  - name: '>'
+  spec.vb:
+  - uid: System.Action`2
+    name: Action
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.action-2
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: Microsoft.AspNetCore.Builder.WebApplicationBuilder
+    name: WebApplicationBuilder
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/microsoft.aspnetcore.builder.webapplicationbuilder
+  - name: ','
+  - name: " "
+  - uid: Microsoft.AspNetCore.Builder.WebApplication
+    name: WebApplication
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/microsoft.aspnetcore.builder.webapplication
+  - name: )
+- uid: Microsoft.AspNetCore.Builder.WebApplication
+  commentId: T:Microsoft.AspNetCore.Builder.WebApplication
+  parent: Microsoft.AspNetCore.Builder
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/microsoft.aspnetcore.builder.webapplication
+  name: WebApplication
+  nameWithType: WebApplication
+  fullName: Microsoft.AspNetCore.Builder.WebApplication
+- uid: Microsoft.AspNetCore.Builder
+  commentId: N:Microsoft.AspNetCore.Builder
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/microsoft
+  name: Microsoft.AspNetCore.Builder
+  nameWithType: Microsoft.AspNetCore.Builder
+  fullName: Microsoft.AspNetCore.Builder
+  spec.csharp:
+  - uid: Microsoft
+    name: Microsoft
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/microsoft
+  - name: .
+  - uid: Microsoft.AspNetCore
+    name: AspNetCore
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/microsoft.aspnetcore
+  - name: .
+  - uid: Microsoft.AspNetCore.Builder
+    name: Builder
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/microsoft.aspnetcore.builder
+  spec.vb:
+  - uid: Microsoft
+    name: Microsoft
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/microsoft
+  - name: .
+  - uid: Microsoft.AspNetCore
+    name: AspNetCore
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/microsoft.aspnetcore
+  - name: .
+  - uid: Microsoft.AspNetCore.Builder
+    name: Builder
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/microsoft.aspnetcore.builder
+- uid: System.Action`2
+  commentId: T:System.Action`2
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.action-2
+  name: Action<T1, T2>
+  nameWithType: Action<T1, T2>
+  fullName: System.Action<T1, T2>
+  nameWithType.vb: Action(Of T1, T2)
+  fullName.vb: System.Action(Of T1, T2)
+  name.vb: Action(Of T1, T2)
+  spec.csharp:
+  - uid: System.Action`2
+    name: Action
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.action-2
+  - name: <
+  - name: T1
+  - name: ','
+  - name: " "
+  - name: T2
+  - name: '>'
+  spec.vb:
+  - uid: System.Action`2
+    name: Action
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.action-2
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T1
+  - name: ','
+  - name: " "
+  - name: T2
+  - name: )
+- uid: Coree.NETASP.Extensions.WebApplicationBuilderExtensions.WebAppBuilderExtensions.SetupAndBuildRunAsync*
+  commentId: Overload:Coree.NETASP.Extensions.WebApplicationBuilderExtensions.WebAppBuilderExtensions.SetupAndBuildRunAsync
+  href: Coree.NETASP.Extensions.WebApplicationBuilderExtensions.WebAppBuilderExtensions.html#Coree_NETASP_Extensions_WebApplicationBuilderExtensions_WebAppBuilderExtensions_SetupAndBuildRunAsync_Microsoft_AspNetCore_Builder_WebApplicationBuilder_System_Action_Microsoft_AspNetCore_Builder_WebApplicationBuilder_Microsoft_AspNetCore_Builder_WebApplication__
+  name: SetupAndBuildRunAsync
+  nameWithType: WebAppBuilderExtensions.SetupAndBuildRunAsync
+  fullName: Coree.NETASP.Extensions.WebApplicationBuilderExtensions.WebAppBuilderExtensions.SetupAndBuildRunAsync
+- uid: System.Threading.Tasks.Task
+  commentId: T:System.Threading.Tasks.Task
+  parent: System.Threading.Tasks
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.threading.tasks.task
+  name: Task
+  nameWithType: Task
+  fullName: System.Threading.Tasks.Task
+- uid: System.Threading.Tasks
+  commentId: N:System.Threading.Tasks
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System.Threading.Tasks
+  nameWithType: System.Threading.Tasks
+  fullName: System.Threading.Tasks
+  spec.csharp:
+  - uid: System
+    name: System
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system
+  - name: .
+  - uid: System.Threading
+    name: Threading
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading
+  - name: .
+  - uid: System.Threading.Tasks
+    name: Tasks
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading.tasks
+  spec.vb:
+  - uid: System
+    name: System
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system
+  - name: .
+  - uid: System.Threading
+    name: Threading
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading
+  - name: .
+  - uid: System.Threading.Tasks
+    name: Tasks
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading.tasks
+- uid: Coree.NETASP.Extensions.WebApplicationBuilderExtensions.WebAppBuilderExtensions.SetupAndBuildRun*
+  commentId: Overload:Coree.NETASP.Extensions.WebApplicationBuilderExtensions.WebAppBuilderExtensions.SetupAndBuildRun
+  href: Coree.NETASP.Extensions.WebApplicationBuilderExtensions.WebAppBuilderExtensions.html#Coree_NETASP_Extensions_WebApplicationBuilderExtensions_WebAppBuilderExtensions_SetupAndBuildRun_Microsoft_AspNetCore_Builder_WebApplicationBuilder_System_Action_Microsoft_AspNetCore_Builder_WebApplicationBuilder_Microsoft_AspNetCore_Builder_WebApplication__
+  name: SetupAndBuildRun
+  nameWithType: WebAppBuilderExtensions.SetupAndBuildRun
+  fullName: Coree.NETASP.Extensions.WebApplicationBuilderExtensions.WebAppBuilderExtensions.SetupAndBuildRun

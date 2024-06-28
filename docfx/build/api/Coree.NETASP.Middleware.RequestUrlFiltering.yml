@@ -1,0 +1,44 @@
+### YamlMime:ManagedReference
+items:
+- uid: Coree.NETASP.Middleware.RequestUrlFiltering
+  commentId: N:Coree.NETASP.Middleware.RequestUrlFiltering
+  id: Coree.NETASP.Middleware.RequestUrlFiltering
+  children:
+  - Coree.NETASP.Middleware.RequestUrlFiltering.RequestUrlFilteringExtensions
+  - Coree.NETASP.Middleware.RequestUrlFiltering.RequestUrlFilteringMiddleware
+  - Coree.NETASP.Middleware.RequestUrlFiltering.RequestUrlFilteringOptions
+  - Coree.NETASP.Middleware.RequestUrlFiltering.ValidationsStringExtensions
+  langs:
+  - csharp
+  - vb
+  name: Coree.NETASP.Middleware.RequestUrlFiltering
+  nameWithType: Coree.NETASP.Middleware.RequestUrlFiltering
+  fullName: Coree.NETASP.Middleware.RequestUrlFiltering
+  type: Namespace
+  assemblies:
+  - Coree.NETASP
+references:
+- uid: Coree.NETASP.Middleware.RequestUrlFiltering.RequestUrlFilteringExtensions
+  commentId: T:Coree.NETASP.Middleware.RequestUrlFiltering.RequestUrlFilteringExtensions
+  href: Coree.NETASP.Middleware.RequestUrlFiltering.RequestUrlFilteringExtensions.html
+  name: RequestUrlFilteringExtensions
+  nameWithType: RequestUrlFilteringExtensions
+  fullName: Coree.NETASP.Middleware.RequestUrlFiltering.RequestUrlFilteringExtensions
+- uid: Coree.NETASP.Middleware.RequestUrlFiltering.RequestUrlFilteringMiddleware
+  commentId: T:Coree.NETASP.Middleware.RequestUrlFiltering.RequestUrlFilteringMiddleware
+  href: Coree.NETASP.Middleware.RequestUrlFiltering.RequestUrlFilteringMiddleware.html
+  name: RequestUrlFilteringMiddleware
+  nameWithType: RequestUrlFilteringMiddleware
+  fullName: Coree.NETASP.Middleware.RequestUrlFiltering.RequestUrlFilteringMiddleware
+- uid: Coree.NETASP.Middleware.RequestUrlFiltering.RequestUrlFilteringOptions
+  commentId: T:Coree.NETASP.Middleware.RequestUrlFiltering.RequestUrlFilteringOptions
+  href: Coree.NETASP.Middleware.RequestUrlFiltering.RequestUrlFilteringOptions.html
+  name: RequestUrlFilteringOptions
+  nameWithType: RequestUrlFilteringOptions
+  fullName: Coree.NETASP.Middleware.RequestUrlFiltering.RequestUrlFilteringOptions
+- uid: Coree.NETASP.Middleware.RequestUrlFiltering.ValidationsStringExtensions
+  commentId: T:Coree.NETASP.Middleware.RequestUrlFiltering.ValidationsStringExtensions
+  href: Coree.NETASP.Middleware.RequestUrlFiltering.ValidationsStringExtensions.html
+  name: ValidationsStringExtensions
+  nameWithType: ValidationsStringExtensions
+  fullName: Coree.NETASP.Middleware.RequestUrlFiltering.ValidationsStringExtensions

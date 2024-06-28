@@ -1,0 +1,37 @@
+### YamlMime:ManagedReference
+items:
+- uid: Coree.NETASP.Middleware.ProtocolFiltering
+  commentId: N:Coree.NETASP.Middleware.ProtocolFiltering
+  id: Coree.NETASP.Middleware.ProtocolFiltering
+  children:
+  - Coree.NETASP.Middleware.ProtocolFiltering.ProtocolFilteringMiddleware
+  - Coree.NETASP.Middleware.ProtocolFiltering.ProtocolFilteringMiddlewareExtensions
+  - Coree.NETASP.Middleware.ProtocolFiltering.ProtocolFilteringOptions
+  langs:
+  - csharp
+  - vb
+  name: Coree.NETASP.Middleware.ProtocolFiltering
+  nameWithType: Coree.NETASP.Middleware.ProtocolFiltering
+  fullName: Coree.NETASP.Middleware.ProtocolFiltering
+  type: Namespace
+  assemblies:
+  - Coree.NETASP
+references:
+- uid: Coree.NETASP.Middleware.ProtocolFiltering.ProtocolFilteringOptions
+  commentId: T:Coree.NETASP.Middleware.ProtocolFiltering.ProtocolFilteringOptions
+  href: Coree.NETASP.Middleware.ProtocolFiltering.ProtocolFilteringOptions.html
+  name: ProtocolFilteringOptions
+  nameWithType: ProtocolFilteringOptions
+  fullName: Coree.NETASP.Middleware.ProtocolFiltering.ProtocolFilteringOptions
+- uid: Coree.NETASP.Middleware.ProtocolFiltering.ProtocolFilteringMiddleware
+  commentId: T:Coree.NETASP.Middleware.ProtocolFiltering.ProtocolFilteringMiddleware
+  href: Coree.NETASP.Middleware.ProtocolFiltering.ProtocolFilteringMiddleware.html
+  name: ProtocolFilteringMiddleware
+  nameWithType: ProtocolFilteringMiddleware
+  fullName: Coree.NETASP.Middleware.ProtocolFiltering.ProtocolFilteringMiddleware
+- uid: Coree.NETASP.Middleware.ProtocolFiltering.ProtocolFilteringMiddlewareExtensions
+  commentId: T:Coree.NETASP.Middleware.ProtocolFiltering.ProtocolFilteringMiddlewareExtensions
+  href: Coree.NETASP.Middleware.ProtocolFiltering.ProtocolFilteringMiddlewareExtensions.html
+  name: ProtocolFilteringMiddlewareExtensions
+  nameWithType: ProtocolFilteringMiddlewareExtensions
+  fullName: Coree.NETASP.Middleware.ProtocolFiltering.ProtocolFilteringMiddlewareExtensions

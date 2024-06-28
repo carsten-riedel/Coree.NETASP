@@ -1,13 +1,157 @@
 ### YamlMime:TableOfContent
 items:
-- uid: Coree.NETASP.Extensions.Options.KestrelServer
-  name: Coree.NETASP.Extensions.Options.KestrelServer
-  items:
-  - uid: Coree.NETASP.Extensions.Options.KestrelServer.OptionsKestrelServerOptionsExtensions
-    name: OptionsKestrelServerOptionsExtensions
 - uid: Coree.NETASP.Extensions.WebApplicationBuilderExtensions
   name: Coree.NETASP.Extensions.WebApplicationBuilderExtensions
   items:
+  - uid: Coree.NETASP.Extensions.WebApplicationBuilderExtensions.WebAppBuilderExtensions
+    name: WebAppBuilderExtensions
   - uid: Coree.NETASP.Extensions.WebApplicationBuilderExtensions.WebApplicationBuilderExtension
     name: WebApplicationBuilderExtension
+- uid: Coree.NETASP.Middleware
+  name: Coree.NETASP.Middleware
+  items:
+  - uid: Coree.NETASP.Middleware.RequestLoggingMiddleware
+    name: RequestLoggingMiddleware
+  - uid: Coree.NETASP.Middleware.ResponseRecordingMiddleware
+    name: ResponseRecordingMiddleware
+  - uid: Coree.NETASP.Middleware.SegmentBlacklistFilterOptions
+    name: SegmentBlacklistFilterOptions
+  - uid: Coree.NETASP.Middleware.SegmentBlacklistFilteringExtensions
+    name: SegmentBlacklistFilteringExtensions
+  - uid: Coree.NETASP.Middleware.SegmentBlacklistFilteringMiddleware
+    name: SegmentBlacklistFilteringMiddleware
+- uid: Coree.NETASP.Middleware.AcceptLanguageFiltering
+  name: Coree.NETASP.Middleware.AcceptLanguageFiltering
+  items:
+  - uid: Coree.NETASP.Middleware.AcceptLanguageFiltering.AcceptLanguageFilteringExtensions
+    name: AcceptLanguageFilteringExtensions
+  - uid: Coree.NETASP.Middleware.AcceptLanguageFiltering.AcceptLanguageFilteringMiddleware
+    name: AcceptLanguageFilteringMiddleware
+  - uid: Coree.NETASP.Middleware.AcceptLanguageFiltering.AcceptLanguageFilteringOptions
+    name: AcceptLanguageFilteringOptions
+- uid: Coree.NETASP.Middleware.DnsHostNameFiltering
+  name: Coree.NETASP.Middleware.DnsHostNameFiltering
+  items:
+  - uid: Coree.NETASP.Middleware.DnsHostNameFiltering.DnsHostNameFilteringMiddleware
+    name: DnsHostNameFilteringMiddleware
+  - uid: Coree.NETASP.Middleware.DnsHostNameFiltering.DnsHostNameFilteringMiddlewareExtensions
+    name: DnsHostNameFilteringMiddlewareExtensions
+  - uid: Coree.NETASP.Middleware.DnsHostNameFiltering.DnsHostNameFilteringOptions
+    name: DnsHostNameFilteringOptions
+- uid: Coree.NETASP.Middleware.HostNameFiltering
+  name: Coree.NETASP.Middleware.HostNameFiltering
+  items:
+  - uid: Coree.NETASP.Middleware.HostNameFiltering.HostNameFilterOptions
+    name: HostNameFilterOptions
+  - uid: Coree.NETASP.Middleware.HostNameFiltering.HostNameFilteringExtensions
+    name: HostNameFilteringExtensions
+  - uid: Coree.NETASP.Middleware.HostNameFiltering.HostNameFilteringMiddleware
+    name: HostNameFilteringMiddleware
+- uid: Coree.NETASP.Middleware.PathDeep
+  name: Coree.NETASP.Middleware.PathDeep
+  items:
+  - uid: Coree.NETASP.Middleware.PathDeep.PathDeepFilteringMiddleware
+    name: PathDeepFilteringMiddleware
+- uid: Coree.NETASP.Middleware.ProtocolFiltering
+  name: Coree.NETASP.Middleware.ProtocolFiltering
+  items:
+  - uid: Coree.NETASP.Middleware.ProtocolFiltering.ProtocolFilteringMiddleware
+    name: ProtocolFilteringMiddleware
+  - uid: Coree.NETASP.Middleware.ProtocolFiltering.ProtocolFilteringMiddlewareExtensions
+    name: ProtocolFilteringMiddlewareExtensions
+  - uid: Coree.NETASP.Middleware.ProtocolFiltering.ProtocolFilteringOptions
+    name: ProtocolFilteringOptions
+- uid: Coree.NETASP.Middleware.RequestUrlFiltering
+  name: Coree.NETASP.Middleware.RequestUrlFiltering
+  items:
+  - uid: Coree.NETASP.Middleware.RequestUrlFiltering.RequestUrlFilteringExtensions
+    name: RequestUrlFilteringExtensions
+  - uid: Coree.NETASP.Middleware.RequestUrlFiltering.RequestUrlFilteringMiddleware
+    name: RequestUrlFilteringMiddleware
+  - uid: Coree.NETASP.Middleware.RequestUrlFiltering.RequestUrlFilteringOptions
+    name: RequestUrlFilteringOptions
+  - uid: Coree.NETASP.Middleware.RequestUrlFiltering.ValidationsStringExtensions
+    name: ValidationsStringExtensions
+- uid: Coree.NETASP.Middleware.UnwantedHeaderKeysFiltering
+  name: Coree.NETASP.Middleware.UnwantedHeaderKeysFiltering
+  items:
+  - uid: Coree.NETASP.Middleware.UnwantedHeaderKeysFiltering.UnwantedHeaderKeysMiddleware
+    name: UnwantedHeaderKeysMiddleware
+  - uid: Coree.NETASP.Middleware.UnwantedHeaderKeysFiltering.UnwantedHeaderKeysMiddlewareExtensions
+    name: UnwantedHeaderKeysMiddlewareExtensions
+  - uid: Coree.NETASP.Middleware.UnwantedHeaderKeysFiltering.UnwantedHeaderKeysOptions
+    name: UnwantedHeaderKeysOptions
+- uid: Coree.NETASP.Middleware.UserAgentFiltering
+  name: Coree.NETASP.Middleware.UserAgentFiltering
+  items:
+  - uid: Coree.NETASP.Middleware.UserAgentFiltering.UserAgentFilterOptions
+    name: UserAgentFilterOptions
+  - uid: Coree.NETASP.Middleware.UserAgentFiltering.UserAgentFilteringExtensions
+    name: UserAgentFilteringExtensions
+  - uid: Coree.NETASP.Middleware.UserAgentFiltering.UserAgentFilteringMiddleware
+    name: UserAgentFilteringMiddleware
+  - uid: Coree.NETASP.Middleware.UserAgentFiltering.ValidationsStringExtensions
+    name: ValidationsStringExtensions
+- uid: Coree.NETASP.Services.CertificateManager
+  name: Coree.NETASP.Services.CertificateManager
+  items:
+  - uid: Coree.NETASP.Services.CertificateManager.CertificateManager
+    name: CertificateManager
+  - uid: Coree.NETASP.Services.CertificateManager.CertificateManagerService
+    name: CertificateManagerService
+  - uid: Coree.NETASP.Services.CertificateManager.CommonDistinguishedNameBuilder
+    name: CommonDistinguishedNameBuilder
+  - uid: Coree.NETASP.Services.CertificateManager.DistinguishedName
+    name: DistinguishedName
+  - uid: Coree.NETASP.Services.CertificateManager.ICertificateManagerService
+    name: ICertificateManagerService
+- uid: Coree.NETASP.UnderConstruction
+  name: Coree.NETASP.UnderConstruction
+  items:
+  - uid: Coree.NETASP.UnderConstruction.CustomWebApplication
+    name: CustomWebApplication
+  - uid: Coree.NETASP.UnderConstruction.CustomWebApplication2
+    name: CustomWebApplication2
+  - uid: Coree.NETASP.UnderConstruction.DummyFileProvider
+    name: DummyFileProvider
+  - uid: Coree.NETASP.UnderConstruction.EmptyWebHostBuilder
+    name: EmptyWebHostBuilder
+  - uid: Coree.NETASP.UnderConstruction.EmptyWebHostBuilder2
+    name: EmptyWebHostBuilder2
+  - uid: Coree.NETASP.UnderConstruction.EmptyWebHostBuilder3
+    name: EmptyWebHostBuilder3
+  - uid: Coree.NETASP.UnderConstruction.EmptyWebHostBuilderx
+    name: EmptyWebHostBuilderx
+  - uid: Coree.NETASP.UnderConstruction.ExampleClass
+    name: ExampleClass
+  - uid: Coree.NETASP.UnderConstruction.FileServerMiddleware
+    name: FileServerMiddleware
+  - uid: Coree.NETASP.UnderConstruction.FileServerMiddlewareExtensions
+    name: FileServerMiddlewareExtensions
+  - uid: Coree.NETASP.UnderConstruction.MyWebHostBuilder
+    name: MyWebHostBuilder
+  - uid: Coree.NETASP.UnderConstruction.ObjectDumper
+    name: ObjectDumper
+  - uid: Coree.NETASP.UnderConstruction.ObjectDumper2
+    name: ObjectDumper2
+  - uid: Coree.NETASP.UnderConstruction.ObjectDumper3
+    name: ObjectDumper3
+  - uid: Coree.NETASP.UnderConstruction.OptionsDumper
+    name: OptionsDumper
+  - uid: Coree.NETASP.UnderConstruction.OptionsKestrelServerOptionsExtensions
+    name: OptionsKestrelServerOptionsExtensions
+  - uid: Coree.NETASP.UnderConstruction.PhpCgiExecutor
+    name: PhpCgiExecutor
+  - uid: Coree.NETASP.UnderConstruction.Product
+    name: Product
+  - uid: Coree.NETASP.UnderConstruction.PropertyAccessTracker`1
+    name: PropertyAccessTracker<T>
+  - uid: Coree.NETASP.UnderConstruction.ServicesDumper
+    name: ServicesDumper
+  - uid: Coree.NETASP.UnderConstruction.TrackableItem`1
+    name: TrackableItem<T>
+  - uid: Coree.NETASP.UnderConstruction.TrackableList`1
+    name: TrackableList<T>
+  - uid: Coree.NETASP.UnderConstruction.TrackableState
+    name: TrackableState
 memberLayout: SamePage

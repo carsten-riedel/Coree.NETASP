@@ -1,0 +1,51 @@
+### YamlMime:ManagedReference
+items:
+- uid: Coree.NETASP.Middleware
+  commentId: N:Coree.NETASP.Middleware
+  id: Coree.NETASP.Middleware
+  children:
+  - Coree.NETASP.Middleware.RequestLoggingMiddleware
+  - Coree.NETASP.Middleware.ResponseRecordingMiddleware
+  - Coree.NETASP.Middleware.SegmentBlacklistFilterOptions
+  - Coree.NETASP.Middleware.SegmentBlacklistFilteringExtensions
+  - Coree.NETASP.Middleware.SegmentBlacklistFilteringMiddleware
+  langs:
+  - csharp
+  - vb
+  name: Coree.NETASP.Middleware
+  nameWithType: Coree.NETASP.Middleware
+  fullName: Coree.NETASP.Middleware
+  type: Namespace
+  assemblies:
+  - Coree.NETASP
+references:
+- uid: Coree.NETASP.Middleware.RequestLoggingMiddleware
+  commentId: T:Coree.NETASP.Middleware.RequestLoggingMiddleware
+  href: Coree.NETASP.Middleware.RequestLoggingMiddleware.html
+  name: RequestLoggingMiddleware
+  nameWithType: RequestLoggingMiddleware
+  fullName: Coree.NETASP.Middleware.RequestLoggingMiddleware
+- uid: Coree.NETASP.Middleware.ResponseRecordingMiddleware
+  commentId: T:Coree.NETASP.Middleware.ResponseRecordingMiddleware
+  href: Coree.NETASP.Middleware.ResponseRecordingMiddleware.html
+  name: ResponseRecordingMiddleware
+  nameWithType: ResponseRecordingMiddleware
+  fullName: Coree.NETASP.Middleware.ResponseRecordingMiddleware
+- uid: Coree.NETASP.Middleware.SegmentBlacklistFilterOptions
+  commentId: T:Coree.NETASP.Middleware.SegmentBlacklistFilterOptions
+  href: Coree.NETASP.Middleware.SegmentBlacklistFilterOptions.html
+  name: SegmentBlacklistFilterOptions
+  nameWithType: SegmentBlacklistFilterOptions
+  fullName: Coree.NETASP.Middleware.SegmentBlacklistFilterOptions
+- uid: Coree.NETASP.Middleware.SegmentBlacklistFilteringExtensions
+  commentId: T:Coree.NETASP.Middleware.SegmentBlacklistFilteringExtensions
+  href: Coree.NETASP.Middleware.SegmentBlacklistFilteringExtensions.html
+  name: SegmentBlacklistFilteringExtensions
+  nameWithType: SegmentBlacklistFilteringExtensions
+  fullName: Coree.NETASP.Middleware.SegmentBlacklistFilteringExtensions
+- uid: Coree.NETASP.Middleware.SegmentBlacklistFilteringMiddleware
+  commentId: T:Coree.NETASP.Middleware.SegmentBlacklistFilteringMiddleware
+  href: Coree.NETASP.Middleware.SegmentBlacklistFilteringMiddleware.html
+  name: SegmentBlacklistFilteringMiddleware
+  nameWithType: SegmentBlacklistFilteringMiddleware
+  fullName: Coree.NETASP.Middleware.SegmentBlacklistFilteringMiddleware

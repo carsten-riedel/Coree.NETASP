@@ -1,0 +1,37 @@
+### YamlMime:ManagedReference
+items:
+- uid: Coree.NETASP.Middleware.HostNameFiltering
+  commentId: N:Coree.NETASP.Middleware.HostNameFiltering
+  id: Coree.NETASP.Middleware.HostNameFiltering
+  children:
+  - Coree.NETASP.Middleware.HostNameFiltering.HostNameFilterOptions
+  - Coree.NETASP.Middleware.HostNameFiltering.HostNameFilteringExtensions
+  - Coree.NETASP.Middleware.HostNameFiltering.HostNameFilteringMiddleware
+  langs:
+  - csharp
+  - vb
+  name: Coree.NETASP.Middleware.HostNameFiltering
+  nameWithType: Coree.NETASP.Middleware.HostNameFiltering
+  fullName: Coree.NETASP.Middleware.HostNameFiltering
+  type: Namespace
+  assemblies:
+  - Coree.NETASP
+references:
+- uid: Coree.NETASP.Middleware.HostNameFiltering.HostNameFilteringMiddleware
+  commentId: T:Coree.NETASP.Middleware.HostNameFiltering.HostNameFilteringMiddleware
+  href: Coree.NETASP.Middleware.HostNameFiltering.HostNameFilteringMiddleware.html
+  name: HostNameFilteringMiddleware
+  nameWithType: HostNameFilteringMiddleware
+  fullName: Coree.NETASP.Middleware.HostNameFiltering.HostNameFilteringMiddleware
+- uid: Coree.NETASP.Middleware.HostNameFiltering.HostNameFilteringExtensions
+  commentId: T:Coree.NETASP.Middleware.HostNameFiltering.HostNameFilteringExtensions
+  href: Coree.NETASP.Middleware.HostNameFiltering.HostNameFilteringExtensions.html
+  name: HostNameFilteringExtensions
+  nameWithType: HostNameFilteringExtensions
+  fullName: Coree.NETASP.Middleware.HostNameFiltering.HostNameFilteringExtensions
+- uid: Coree.NETASP.Middleware.HostNameFiltering.HostNameFilterOptions
+  commentId: T:Coree.NETASP.Middleware.HostNameFiltering.HostNameFilterOptions
+  href: Coree.NETASP.Middleware.HostNameFiltering.HostNameFilterOptions.html
+  name: HostNameFilterOptions
+  nameWithType: HostNameFilterOptions
+  fullName: Coree.NETASP.Middleware.HostNameFiltering.HostNameFilterOptions

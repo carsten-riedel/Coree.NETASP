@@ -1,0 +1,1317 @@
+### YamlMime:ManagedReference
+items:
+- uid: Coree.NETASP.Services.CertificateManager.CertificateManagerService
+  commentId: T:Coree.NETASP.Services.CertificateManager.CertificateManagerService
+  id: CertificateManagerService
+  parent: Coree.NETASP.Services.CertificateManager
+  children:
+  - Coree.NETASP.Services.CertificateManager.CertificateManagerService.#ctor(Microsoft.Extensions.Logging.ILogger{Coree.NETASP.Services.CertificateManager.CertificateManagerService})
+  langs:
+  - csharp
+  - vb
+  name: CertificateManagerService
+  nameWithType: CertificateManagerService
+  fullName: Coree.NETASP.Services.CertificateManager.CertificateManagerService
+  type: Class
+  source:
+    remote:
+      path: src/Projects/Coree.NETASP/Services/CertificateManager/CertificateManagerService.cs
+      branch: master
+      repo: https://github.com/carsten-riedel/Coree.NETASP
+    id: CertificateManagerService
+    path: ../../src/Projects/Coree.NETASP/Services/CertificateManager/CertificateManagerService.cs
+    startLine: 7
+  assemblies:
+  - Coree.NETASP
+  namespace: Coree.NETASP.Services.CertificateManager
+  syntax:
+    content: 'public class CertificateManagerService : ServiceFactoryEx<CertificateManagerService>, IDisposable, ICertificateManagerService'
+    content.vb: Public Class CertificateManagerService Inherits ServiceFactoryEx(Of CertificateManagerService) Implements IDisposable, ICertificateManagerService
+  inheritance:
+  - System.Object
+  - Coree.NETStandard.Abstractions.ServiceFactoryEx.ServiceFactoryEx{Coree.NETASP.Services.CertificateManager.CertificateManagerService,System.Object,System.Object,System.Object,System.Object,System.Object,System.Object,System.Object,System.Object,System.Object}
+  - Coree.NETStandard.Abstractions.ServiceFactoryEx.ServiceFactoryEx{Coree.NETASP.Services.CertificateManager.CertificateManagerService}
+  implements:
+  - System.IDisposable
+  - Coree.NETASP.Services.CertificateManager.ICertificateManagerService
+  inheritedMembers:
+  - Coree.NETStandard.Abstractions.ServiceFactoryEx.ServiceFactoryEx{Coree.NETASP.Services.CertificateManager.CertificateManagerService,System.Object,System.Object,System.Object,System.Object,System.Object,System.Object,System.Object,System.Object,System.Object}.CreateServiceFactory(System.Action{Microsoft.Extensions.Hosting.IHostBuilder})
+  - Coree.NETStandard.Abstractions.ServiceFactoryEx.ServiceFactoryEx{Coree.NETASP.Services.CertificateManager.CertificateManagerService,System.Object,System.Object,System.Object,System.Object,System.Object,System.Object,System.Object,System.Object,System.Object}.CreateServiceFactory(System.Action{Microsoft.Extensions.DependencyInjection.IServiceCollection})
+  - Coree.NETStandard.Abstractions.ServiceFactoryEx.ServiceFactoryEx{Coree.NETASP.Services.CertificateManager.CertificateManagerService,System.Object,System.Object,System.Object,System.Object,System.Object,System.Object,System.Object,System.Object,System.Object}.CreateServiceFactory(System.Action{Microsoft.Extensions.DependencyInjection.IServiceCollection},System.Action{Microsoft.Extensions.Logging.ILoggingBuilder},System.Action{Microsoft.Extensions.Hosting.IHostBuilder})
+  - Coree.NETStandard.Abstractions.ServiceFactoryEx.ServiceFactoryEx{Coree.NETASP.Services.CertificateManager.CertificateManagerService,System.Object,System.Object,System.Object,System.Object,System.Object,System.Object,System.Object,System.Object,System.Object}.CreateServiceFactory
+  - Coree.NETStandard.Abstractions.ServiceFactoryEx.ServiceFactoryEx{Coree.NETASP.Services.CertificateManager.CertificateManagerService,System.Object,System.Object,System.Object,System.Object,System.Object,System.Object,System.Object,System.Object,System.Object}.CreateServiceFactory(Microsoft.Extensions.Logging.LogLevel)
+  - Coree.NETStandard.Abstractions.ServiceFactoryEx.ServiceFactoryEx{Coree.NETASP.Services.CertificateManager.CertificateManagerService,System.Object,System.Object,System.Object,System.Object,System.Object,System.Object,System.Object,System.Object,System.Object}.Dispose
+  - System.Object.Equals(System.Object)
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.GetHashCode
+  - System.Object.GetType
+  - System.Object.MemberwiseClone
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+  - System.Object.ToString
+- uid: Coree.NETASP.Services.CertificateManager.CertificateManagerService.#ctor(Microsoft.Extensions.Logging.ILogger{Coree.NETASP.Services.CertificateManager.CertificateManagerService})
+  commentId: M:Coree.NETASP.Services.CertificateManager.CertificateManagerService.#ctor(Microsoft.Extensions.Logging.ILogger{Coree.NETASP.Services.CertificateManager.CertificateManagerService})
+  id: '#ctor(Microsoft.Extensions.Logging.ILogger{Coree.NETASP.Services.CertificateManager.CertificateManagerService})'
+  parent: Coree.NETASP.Services.CertificateManager.CertificateManagerService
+  langs:
+  - csharp
+  - vb
+  name: CertificateManagerService(ILogger<CertificateManagerService>?)
+  nameWithType: CertificateManagerService.CertificateManagerService(ILogger<CertificateManagerService>?)
+  fullName: Coree.NETASP.Services.CertificateManager.CertificateManagerService.CertificateManagerService(Microsoft.Extensions.Logging.ILogger<Coree.NETASP.Services.CertificateManager.CertificateManagerService>?)
+  type: Constructor
+  source:
+    remote:
+      path: src/Projects/Coree.NETASP/Services/CertificateManager/CertificateManagerService.cs
+      branch: master
+      repo: https://github.com/carsten-riedel/Coree.NETASP
+    id: .ctor
+    path: ../../src/Projects/Coree.NETASP/Services/CertificateManager/CertificateManagerService.cs
+    startLine: 19
+  assemblies:
+  - Coree.NETASP
+  namespace: Coree.NETASP.Services.CertificateManager
+  summary: Initializes a new instance of the <xref href="Coree.NETASP.Services.CertificateManager.CertificateManagerService" data-throw-if-not-resolved="false"></xref> class.
+  remarks: >-
+    The logger provided here can be used with the field within the class.
+
+    Be mindful that the logger may be null in scenarios where it's not explicitly provided.
+  example: []
+  syntax:
+    content: public CertificateManagerService(ILogger<CertificateManagerService>? logger = null)
+    parameters:
+    - id: logger
+      type: Microsoft.Extensions.Logging.ILogger{Coree.NETASP.Services.CertificateManager.CertificateManagerService}
+      description: Optional logger instance for logging purposes.
+    content.vb: Public Sub New(logger As ILogger(Of CertificateManagerService) = Nothing)
+  overload: Coree.NETASP.Services.CertificateManager.CertificateManagerService.#ctor*
+  nameWithType.vb: CertificateManagerService.New(ILogger(Of CertificateManagerService))
+  fullName.vb: Coree.NETASP.Services.CertificateManager.CertificateManagerService.New(Microsoft.Extensions.Logging.ILogger(Of Coree.NETASP.Services.CertificateManager.CertificateManagerService))
+  name.vb: New(ILogger(Of CertificateManagerService))
+references:
+- uid: Coree.NETASP.Services.CertificateManager
+  commentId: N:Coree.NETASP.Services.CertificateManager
+  href: Coree.html
+  name: Coree.NETASP.Services.CertificateManager
+  nameWithType: Coree.NETASP.Services.CertificateManager
+  fullName: Coree.NETASP.Services.CertificateManager
+  spec.csharp:
+  - uid: Coree
+    name: Coree
+    href: Coree.html
+  - name: .
+  - uid: Coree.NETASP
+    name: NETASP
+    href: Coree.NETASP.html
+  - name: .
+  - uid: Coree.NETASP.Services
+    name: Services
+    href: Coree.NETASP.Services.html
+  - name: .
+  - uid: Coree.NETASP.Services.CertificateManager
+    name: CertificateManager
+    href: Coree.NETASP.Services.CertificateManager.html
+  spec.vb:
+  - uid: Coree
+    name: Coree
+    href: Coree.html
+  - name: .
+  - uid: Coree.NETASP
+    name: NETASP
+    href: Coree.NETASP.html
+  - name: .
+  - uid: Coree.NETASP.Services
+    name: Services
+    href: Coree.NETASP.Services.html
+  - name: .
+  - uid: Coree.NETASP.Services.CertificateManager
+    name: CertificateManager
+    href: Coree.NETASP.Services.CertificateManager.html
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object
+  name: object
+  nameWithType: object
+  fullName: object
+  nameWithType.vb: Object
+  fullName.vb: Object
+  name.vb: Object
+- uid: Coree.NETStandard.Abstractions.ServiceFactoryEx.ServiceFactoryEx{Coree.NETASP.Services.CertificateManager.CertificateManagerService,System.Object,System.Object,System.Object,System.Object,System.Object,System.Object,System.Object,System.Object,System.Object}
+  commentId: T:Coree.NETStandard.Abstractions.ServiceFactoryEx.ServiceFactoryEx{Coree.NETASP.Services.CertificateManager.CertificateManagerService,System.Object,System.Object,System.Object,System.Object,System.Object,System.Object,System.Object,System.Object,System.Object}
+  parent: Coree.NETStandard.Abstractions.ServiceFactoryEx
+  definition: Coree.NETStandard.Abstractions.ServiceFactoryEx.ServiceFactoryEx`10
+  href: Coree.NETASP.Services.CertificateManager.CertificateManagerService.html
+  name: ServiceFactoryEx<CertificateManagerService, object, object, object, object, object, object, object, object, object>
+  nameWithType: ServiceFactoryEx<CertificateManagerService, object, object, object, object, object, object, object, object, object>
+  fullName: Coree.NETStandard.Abstractions.ServiceFactoryEx.ServiceFactoryEx<Coree.NETASP.Services.CertificateManager.CertificateManagerService, object, object, object, object, object, object, object, object, object>
+  nameWithType.vb: ServiceFactoryEx(Of CertificateManagerService, Object, Object, Object, Object, Object, Object, Object, Object, Object)
+  fullName.vb: Coree.NETStandard.Abstractions.ServiceFactoryEx.ServiceFactoryEx(Of Coree.NETASP.Services.CertificateManager.CertificateManagerService, Object, Object, Object, Object, Object, Object, Object, Object, Object)
+  name.vb: ServiceFactoryEx(Of CertificateManagerService, Object, Object, Object, Object, Object, Object, Object, Object, Object)
+  spec.csharp:
+  - uid: Coree.NETStandard.Abstractions.ServiceFactoryEx.ServiceFactoryEx`10
+    name: ServiceFactoryEx
+    isExternal: true
+  - name: <
+  - uid: Coree.NETASP.Services.CertificateManager.CertificateManagerService
+    name: CertificateManagerService
+    href: Coree.NETASP.Services.CertificateManager.CertificateManagerService.html
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: '>'
+  spec.vb:
+  - uid: Coree.NETStandard.Abstractions.ServiceFactoryEx.ServiceFactoryEx`10
+    name: ServiceFactoryEx
+    isExternal: true
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: Coree.NETASP.Services.CertificateManager.CertificateManagerService
+    name: CertificateManagerService
+    href: Coree.NETASP.Services.CertificateManager.CertificateManagerService.html
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: Coree.NETStandard.Abstractions.ServiceFactoryEx.ServiceFactoryEx{Coree.NETASP.Services.CertificateManager.CertificateManagerService}
+  commentId: T:Coree.NETStandard.Abstractions.ServiceFactoryEx.ServiceFactoryEx{Coree.NETASP.Services.CertificateManager.CertificateManagerService}
+  parent: Coree.NETStandard.Abstractions.ServiceFactoryEx
+  definition: Coree.NETStandard.Abstractions.ServiceFactoryEx.ServiceFactoryEx`1
+  href: Coree.NETASP.Services.CertificateManager.CertificateManagerService.html
+  name: ServiceFactoryEx<CertificateManagerService>
+  nameWithType: ServiceFactoryEx<CertificateManagerService>
+  fullName: Coree.NETStandard.Abstractions.ServiceFactoryEx.ServiceFactoryEx<Coree.NETASP.Services.CertificateManager.CertificateManagerService>
+  nameWithType.vb: ServiceFactoryEx(Of CertificateManagerService)
+  fullName.vb: Coree.NETStandard.Abstractions.ServiceFactoryEx.ServiceFactoryEx(Of Coree.NETASP.Services.CertificateManager.CertificateManagerService)
+  name.vb: ServiceFactoryEx(Of CertificateManagerService)
+  spec.csharp:
+  - uid: Coree.NETStandard.Abstractions.ServiceFactoryEx.ServiceFactoryEx`1
+    name: ServiceFactoryEx
+    isExternal: true
+  - name: <
+  - uid: Coree.NETASP.Services.CertificateManager.CertificateManagerService
+    name: CertificateManagerService
+    href: Coree.NETASP.Services.CertificateManager.CertificateManagerService.html
+  - name: '>'
+  spec.vb:
+  - uid: Coree.NETStandard.Abstractions.ServiceFactoryEx.ServiceFactoryEx`1
+    name: ServiceFactoryEx
+    isExternal: true
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: Coree.NETASP.Services.CertificateManager.CertificateManagerService
+    name: CertificateManagerService
+    href: Coree.NETASP.Services.CertificateManager.CertificateManagerService.html
+  - name: )
+- uid: System.IDisposable
+  commentId: T:System.IDisposable
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.idisposable
+  name: IDisposable
+  nameWithType: IDisposable
+  fullName: System.IDisposable
+- uid: Coree.NETASP.Services.CertificateManager.ICertificateManagerService
+  commentId: T:Coree.NETASP.Services.CertificateManager.ICertificateManagerService
+  parent: Coree.NETASP.Services.CertificateManager
+  href: Coree.NETASP.Services.CertificateManager.ICertificateManagerService.html
+  name: ICertificateManagerService
+  nameWithType: ICertificateManagerService
+  fullName: Coree.NETASP.Services.CertificateManager.ICertificateManagerService
+- uid: Coree.NETStandard.Abstractions.ServiceFactoryEx.ServiceFactoryEx{Coree.NETASP.Services.CertificateManager.CertificateManagerService,System.Object,System.Object,System.Object,System.Object,System.Object,System.Object,System.Object,System.Object,System.Object}.CreateServiceFactory(System.Action{Microsoft.Extensions.Hosting.IHostBuilder})
+  commentId: M:Coree.NETStandard.Abstractions.ServiceFactoryEx.ServiceFactoryEx{Coree.NETASP.Services.CertificateManager.CertificateManagerService,System.Object,System.Object,System.Object,System.Object,System.Object,System.Object,System.Object,System.Object,System.Object}.CreateServiceFactory(System.Action{Microsoft.Extensions.Hosting.IHostBuilder})
+  parent: Coree.NETStandard.Abstractions.ServiceFactoryEx.ServiceFactoryEx{Coree.NETASP.Services.CertificateManager.CertificateManagerService,System.Object,System.Object,System.Object,System.Object,System.Object,System.Object,System.Object,System.Object,System.Object}
+  definition: Coree.NETStandard.Abstractions.ServiceFactoryEx.ServiceFactoryEx`10.CreateServiceFactory(System.Action{Microsoft.Extensions.Hosting.IHostBuilder})
+  href: https://learn.microsoft.com/dotnet/api/system.action-1
+  name: CreateServiceFactory(Action<IHostBuilder>)
+  nameWithType: ServiceFactoryEx<CertificateManagerService, object, object, object, object, object, object, object, object, object>.CreateServiceFactory(Action<IHostBuilder>)
+  fullName: Coree.NETStandard.Abstractions.ServiceFactoryEx.ServiceFactoryEx<Coree.NETASP.Services.CertificateManager.CertificateManagerService, object, object, object, object, object, object, object, object, object>.CreateServiceFactory(System.Action<Microsoft.Extensions.Hosting.IHostBuilder>)
+  nameWithType.vb: ServiceFactoryEx(Of CertificateManagerService, Object, Object, Object, Object, Object, Object, Object, Object, Object).CreateServiceFactory(Action(Of IHostBuilder))
+  fullName.vb: Coree.NETStandard.Abstractions.ServiceFactoryEx.ServiceFactoryEx(Of Coree.NETASP.Services.CertificateManager.CertificateManagerService, Object, Object, Object, Object, Object, Object, Object, Object, Object).CreateServiceFactory(System.Action(Of Microsoft.Extensions.Hosting.IHostBuilder))
+  name.vb: CreateServiceFactory(Action(Of IHostBuilder))
+  spec.csharp:
+  - uid: Coree.NETStandard.Abstractions.ServiceFactoryEx.ServiceFactoryEx{Coree.NETASP.Services.CertificateManager.CertificateManagerService,System.Object,System.Object,System.Object,System.Object,System.Object,System.Object,System.Object,System.Object,System.Object}.CreateServiceFactory(System.Action{Microsoft.Extensions.Hosting.IHostBuilder})
+    name: CreateServiceFactory
+    isExternal: true
+  - name: (
+  - uid: System.Action`1
+    name: Action
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.action-1
+  - name: <
+  - uid: Microsoft.Extensions.Hosting.IHostBuilder
+    name: IHostBuilder
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/microsoft.extensions.hosting.ihostbuilder
+  - name: '>'
+  - name: )
+  spec.vb:
+  - uid: Coree.NETStandard.Abstractions.ServiceFactoryEx.ServiceFactoryEx{Coree.NETASP.Services.CertificateManager.CertificateManagerService,System.Object,System.Object,System.Object,System.Object,System.Object,System.Object,System.Object,System.Object,System.Object}.CreateServiceFactory(System.Action{Microsoft.Extensions.Hosting.IHostBuilder})
+    name: CreateServiceFactory
+    isExternal: true
+  - name: (
+  - uid: System.Action`1
+    name: Action
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.action-1
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: Microsoft.Extensions.Hosting.IHostBuilder
+    name: IHostBuilder
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/microsoft.extensions.hosting.ihostbuilder
+  - name: )
+  - name: )
+- uid: Coree.NETStandard.Abstractions.ServiceFactoryEx.ServiceFactoryEx{Coree.NETASP.Services.CertificateManager.CertificateManagerService,System.Object,System.Object,System.Object,System.Object,System.Object,System.Object,System.Object,System.Object,System.Object}.CreateServiceFactory(System.Action{Microsoft.Extensions.DependencyInjection.IServiceCollection})
+  commentId: M:Coree.NETStandard.Abstractions.ServiceFactoryEx.ServiceFactoryEx{Coree.NETASP.Services.CertificateManager.CertificateManagerService,System.Object,System.Object,System.Object,System.Object,System.Object,System.Object,System.Object,System.Object,System.Object}.CreateServiceFactory(System.Action{Microsoft.Extensions.DependencyInjection.IServiceCollection})
+  parent: Coree.NETStandard.Abstractions.ServiceFactoryEx.ServiceFactoryEx{Coree.NETASP.Services.CertificateManager.CertificateManagerService,System.Object,System.Object,System.Object,System.Object,System.Object,System.Object,System.Object,System.Object,System.Object}
+  definition: Coree.NETStandard.Abstractions.ServiceFactoryEx.ServiceFactoryEx`10.CreateServiceFactory(System.Action{Microsoft.Extensions.DependencyInjection.IServiceCollection})
+  href: https://learn.microsoft.com/dotnet/api/system.action-1
+  name: CreateServiceFactory(Action<IServiceCollection>)
+  nameWithType: ServiceFactoryEx<CertificateManagerService, object, object, object, object, object, object, object, object, object>.CreateServiceFactory(Action<IServiceCollection>)
+  fullName: Coree.NETStandard.Abstractions.ServiceFactoryEx.ServiceFactoryEx<Coree.NETASP.Services.CertificateManager.CertificateManagerService, object, object, object, object, object, object, object, object, object>.CreateServiceFactory(System.Action<Microsoft.Extensions.DependencyInjection.IServiceCollection>)
+  nameWithType.vb: ServiceFactoryEx(Of CertificateManagerService, Object, Object, Object, Object, Object, Object, Object, Object, Object).CreateServiceFactory(Action(Of IServiceCollection))
+  fullName.vb: Coree.NETStandard.Abstractions.ServiceFactoryEx.ServiceFactoryEx(Of Coree.NETASP.Services.CertificateManager.CertificateManagerService, Object, Object, Object, Object, Object, Object, Object, Object, Object).CreateServiceFactory(System.Action(Of Microsoft.Extensions.DependencyInjection.IServiceCollection))
+  name.vb: CreateServiceFactory(Action(Of IServiceCollection))
+  spec.csharp:
+  - uid: Coree.NETStandard.Abstractions.ServiceFactoryEx.ServiceFactoryEx{Coree.NETASP.Services.CertificateManager.CertificateManagerService,System.Object,System.Object,System.Object,System.Object,System.Object,System.Object,System.Object,System.Object,System.Object}.CreateServiceFactory(System.Action{Microsoft.Extensions.DependencyInjection.IServiceCollection})
+    name: CreateServiceFactory
+    isExternal: true
+  - name: (
+  - uid: System.Action`1
+    name: Action
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.action-1
+  - name: <
+  - uid: Microsoft.Extensions.DependencyInjection.IServiceCollection
+    name: IServiceCollection
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/microsoft.extensions.dependencyinjection.iservicecollection
+  - name: '>'
+  - name: )
+  spec.vb:
+  - uid: Coree.NETStandard.Abstractions.ServiceFactoryEx.ServiceFactoryEx{Coree.NETASP.Services.CertificateManager.CertificateManagerService,System.Object,System.Object,System.Object,System.Object,System.Object,System.Object,System.Object,System.Object,System.Object}.CreateServiceFactory(System.Action{Microsoft.Extensions.DependencyInjection.IServiceCollection})
+    name: CreateServiceFactory
+    isExternal: true
+  - name: (
+  - uid: System.Action`1
+    name: Action
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.action-1
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: Microsoft.Extensions.DependencyInjection.IServiceCollection
+    name: IServiceCollection
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/microsoft.extensions.dependencyinjection.iservicecollection
+  - name: )
+  - name: )
+- uid: Coree.NETStandard.Abstractions.ServiceFactoryEx.ServiceFactoryEx{Coree.NETASP.Services.CertificateManager.CertificateManagerService,System.Object,System.Object,System.Object,System.Object,System.Object,System.Object,System.Object,System.Object,System.Object}.CreateServiceFactory(System.Action{Microsoft.Extensions.DependencyInjection.IServiceCollection},System.Action{Microsoft.Extensions.Logging.ILoggingBuilder},System.Action{Microsoft.Extensions.Hosting.IHostBuilder})
+  commentId: M:Coree.NETStandard.Abstractions.ServiceFactoryEx.ServiceFactoryEx{Coree.NETASP.Services.CertificateManager.CertificateManagerService,System.Object,System.Object,System.Object,System.Object,System.Object,System.Object,System.Object,System.Object,System.Object}.CreateServiceFactory(System.Action{Microsoft.Extensions.DependencyInjection.IServiceCollection},System.Action{Microsoft.Extensions.Logging.ILoggingBuilder},System.Action{Microsoft.Extensions.Hosting.IHostBuilder})
+  parent: Coree.NETStandard.Abstractions.ServiceFactoryEx.ServiceFactoryEx{Coree.NETASP.Services.CertificateManager.CertificateManagerService,System.Object,System.Object,System.Object,System.Object,System.Object,System.Object,System.Object,System.Object,System.Object}
+  definition: Coree.NETStandard.Abstractions.ServiceFactoryEx.ServiceFactoryEx`10.CreateServiceFactory(System.Action{Microsoft.Extensions.DependencyInjection.IServiceCollection},System.Action{Microsoft.Extensions.Logging.ILoggingBuilder},System.Action{Microsoft.Extensions.Hosting.IHostBuilder})
+  href: https://learn.microsoft.com/dotnet/api/system.action-1
+  name: CreateServiceFactory(Action<IServiceCollection>, Action<ILoggingBuilder>, Action<IHostBuilder>)
+  nameWithType: ServiceFactoryEx<CertificateManagerService, object, object, object, object, object, object, object, object, object>.CreateServiceFactory(Action<IServiceCollection>, Action<ILoggingBuilder>, Action<IHostBuilder>)
+  fullName: Coree.NETStandard.Abstractions.ServiceFactoryEx.ServiceFactoryEx<Coree.NETASP.Services.CertificateManager.CertificateManagerService, object, object, object, object, object, object, object, object, object>.CreateServiceFactory(System.Action<Microsoft.Extensions.DependencyInjection.IServiceCollection>, System.Action<Microsoft.Extensions.Logging.ILoggingBuilder>, System.Action<Microsoft.Extensions.Hosting.IHostBuilder>)
+  nameWithType.vb: ServiceFactoryEx(Of CertificateManagerService, Object, Object, Object, Object, Object, Object, Object, Object, Object).CreateServiceFactory(Action(Of IServiceCollection), Action(Of ILoggingBuilder), Action(Of IHostBuilder))
+  fullName.vb: Coree.NETStandard.Abstractions.ServiceFactoryEx.ServiceFactoryEx(Of Coree.NETASP.Services.CertificateManager.CertificateManagerService, Object, Object, Object, Object, Object, Object, Object, Object, Object).CreateServiceFactory(System.Action(Of Microsoft.Extensions.DependencyInjection.IServiceCollection), System.Action(Of Microsoft.Extensions.Logging.ILoggingBuilder), System.Action(Of Microsoft.Extensions.Hosting.IHostBuilder))
+  name.vb: CreateServiceFactory(Action(Of IServiceCollection), Action(Of ILoggingBuilder), Action(Of IHostBuilder))
+  spec.csharp:
+  - uid: Coree.NETStandard.Abstractions.ServiceFactoryEx.ServiceFactoryEx{Coree.NETASP.Services.CertificateManager.CertificateManagerService,System.Object,System.Object,System.Object,System.Object,System.Object,System.Object,System.Object,System.Object,System.Object}.CreateServiceFactory(System.Action{Microsoft.Extensions.DependencyInjection.IServiceCollection},System.Action{Microsoft.Extensions.Logging.ILoggingBuilder},System.Action{Microsoft.Extensions.Hosting.IHostBuilder})
+    name: CreateServiceFactory
+    isExternal: true
+  - name: (
+  - uid: System.Action`1
+    name: Action
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.action-1
+  - name: <
+  - uid: Microsoft.Extensions.DependencyInjection.IServiceCollection
+    name: IServiceCollection
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/microsoft.extensions.dependencyinjection.iservicecollection
+  - name: '>'
+  - name: ','
+  - name: " "
+  - uid: System.Action`1
+    name: Action
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.action-1
+  - name: <
+  - uid: Microsoft.Extensions.Logging.ILoggingBuilder
+    name: ILoggingBuilder
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/microsoft.extensions.logging.iloggingbuilder
+  - name: '>'
+  - name: ','
+  - name: " "
+  - uid: System.Action`1
+    name: Action
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.action-1
+  - name: <
+  - uid: Microsoft.Extensions.Hosting.IHostBuilder
+    name: IHostBuilder
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/microsoft.extensions.hosting.ihostbuilder
+  - name: '>'
+  - name: )
+  spec.vb:
+  - uid: Coree.NETStandard.Abstractions.ServiceFactoryEx.ServiceFactoryEx{Coree.NETASP.Services.CertificateManager.CertificateManagerService,System.Object,System.Object,System.Object,System.Object,System.Object,System.Object,System.Object,System.Object,System.Object}.CreateServiceFactory(System.Action{Microsoft.Extensions.DependencyInjection.IServiceCollection},System.Action{Microsoft.Extensions.Logging.ILoggingBuilder},System.Action{Microsoft.Extensions.Hosting.IHostBuilder})
+    name: CreateServiceFactory
+    isExternal: true
+  - name: (
+  - uid: System.Action`1
+    name: Action
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.action-1
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: Microsoft.Extensions.DependencyInjection.IServiceCollection
+    name: IServiceCollection
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/microsoft.extensions.dependencyinjection.iservicecollection
+  - name: )
+  - name: ','
+  - name: " "
+  - uid: System.Action`1
+    name: Action
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.action-1
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: Microsoft.Extensions.Logging.ILoggingBuilder
+    name: ILoggingBuilder
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/microsoft.extensions.logging.iloggingbuilder
+  - name: )
+  - name: ','
+  - name: " "
+  - uid: System.Action`1
+    name: Action
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.action-1
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: Microsoft.Extensions.Hosting.IHostBuilder
+    name: IHostBuilder
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/microsoft.extensions.hosting.ihostbuilder
+  - name: )
+  - name: )
+- uid: Coree.NETStandard.Abstractions.ServiceFactoryEx.ServiceFactoryEx{Coree.NETASP.Services.CertificateManager.CertificateManagerService,System.Object,System.Object,System.Object,System.Object,System.Object,System.Object,System.Object,System.Object,System.Object}.CreateServiceFactory
+  commentId: M:Coree.NETStandard.Abstractions.ServiceFactoryEx.ServiceFactoryEx{Coree.NETASP.Services.CertificateManager.CertificateManagerService,System.Object,System.Object,System.Object,System.Object,System.Object,System.Object,System.Object,System.Object,System.Object}.CreateServiceFactory
+  parent: Coree.NETStandard.Abstractions.ServiceFactoryEx.ServiceFactoryEx{Coree.NETASP.Services.CertificateManager.CertificateManagerService,System.Object,System.Object,System.Object,System.Object,System.Object,System.Object,System.Object,System.Object,System.Object}
+  definition: Coree.NETStandard.Abstractions.ServiceFactoryEx.ServiceFactoryEx`10.CreateServiceFactory
+  name: CreateServiceFactory()
+  nameWithType: ServiceFactoryEx<CertificateManagerService, object, object, object, object, object, object, object, object, object>.CreateServiceFactory()
+  fullName: Coree.NETStandard.Abstractions.ServiceFactoryEx.ServiceFactoryEx<Coree.NETASP.Services.CertificateManager.CertificateManagerService, object, object, object, object, object, object, object, object, object>.CreateServiceFactory()
+  nameWithType.vb: ServiceFactoryEx(Of CertificateManagerService, Object, Object, Object, Object, Object, Object, Object, Object, Object).CreateServiceFactory()
+  fullName.vb: Coree.NETStandard.Abstractions.ServiceFactoryEx.ServiceFactoryEx(Of Coree.NETASP.Services.CertificateManager.CertificateManagerService, Object, Object, Object, Object, Object, Object, Object, Object, Object).CreateServiceFactory()
+  spec.csharp:
+  - uid: Coree.NETStandard.Abstractions.ServiceFactoryEx.ServiceFactoryEx{Coree.NETASP.Services.CertificateManager.CertificateManagerService,System.Object,System.Object,System.Object,System.Object,System.Object,System.Object,System.Object,System.Object,System.Object}.CreateServiceFactory
+    name: CreateServiceFactory
+    isExternal: true
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: Coree.NETStandard.Abstractions.ServiceFactoryEx.ServiceFactoryEx{Coree.NETASP.Services.CertificateManager.CertificateManagerService,System.Object,System.Object,System.Object,System.Object,System.Object,System.Object,System.Object,System.Object,System.Object}.CreateServiceFactory
+    name: CreateServiceFactory
+    isExternal: true
+  - name: (
+  - name: )
+- uid: Coree.NETStandard.Abstractions.ServiceFactoryEx.ServiceFactoryEx{Coree.NETASP.Services.CertificateManager.CertificateManagerService,System.Object,System.Object,System.Object,System.Object,System.Object,System.Object,System.Object,System.Object,System.Object}.CreateServiceFactory(Microsoft.Extensions.Logging.LogLevel)
+  commentId: M:Coree.NETStandard.Abstractions.ServiceFactoryEx.ServiceFactoryEx{Coree.NETASP.Services.CertificateManager.CertificateManagerService,System.Object,System.Object,System.Object,System.Object,System.Object,System.Object,System.Object,System.Object,System.Object}.CreateServiceFactory(Microsoft.Extensions.Logging.LogLevel)
+  parent: Coree.NETStandard.Abstractions.ServiceFactoryEx.ServiceFactoryEx{Coree.NETASP.Services.CertificateManager.CertificateManagerService,System.Object,System.Object,System.Object,System.Object,System.Object,System.Object,System.Object,System.Object,System.Object}
+  definition: Coree.NETStandard.Abstractions.ServiceFactoryEx.ServiceFactoryEx`10.CreateServiceFactory(Microsoft.Extensions.Logging.LogLevel)
+  href: https://learn.microsoft.com/dotnet/api/microsoft.extensions.logging.loglevel
+  name: CreateServiceFactory(LogLevel)
+  nameWithType: ServiceFactoryEx<CertificateManagerService, object, object, object, object, object, object, object, object, object>.CreateServiceFactory(LogLevel)
+  fullName: Coree.NETStandard.Abstractions.ServiceFactoryEx.ServiceFactoryEx<Coree.NETASP.Services.CertificateManager.CertificateManagerService, object, object, object, object, object, object, object, object, object>.CreateServiceFactory(Microsoft.Extensions.Logging.LogLevel)
+  nameWithType.vb: ServiceFactoryEx(Of CertificateManagerService, Object, Object, Object, Object, Object, Object, Object, Object, Object).CreateServiceFactory(LogLevel)
+  fullName.vb: Coree.NETStandard.Abstractions.ServiceFactoryEx.ServiceFactoryEx(Of Coree.NETASP.Services.CertificateManager.CertificateManagerService, Object, Object, Object, Object, Object, Object, Object, Object, Object).CreateServiceFactory(Microsoft.Extensions.Logging.LogLevel)
+  spec.csharp:
+  - uid: Coree.NETStandard.Abstractions.ServiceFactoryEx.ServiceFactoryEx{Coree.NETASP.Services.CertificateManager.CertificateManagerService,System.Object,System.Object,System.Object,System.Object,System.Object,System.Object,System.Object,System.Object,System.Object}.CreateServiceFactory(Microsoft.Extensions.Logging.LogLevel)
+    name: CreateServiceFactory
+    isExternal: true
+  - name: (
+  - uid: Microsoft.Extensions.Logging.LogLevel
+    name: LogLevel
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/microsoft.extensions.logging.loglevel
+  - name: )
+  spec.vb:
+  - uid: Coree.NETStandard.Abstractions.ServiceFactoryEx.ServiceFactoryEx{Coree.NETASP.Services.CertificateManager.CertificateManagerService,System.Object,System.Object,System.Object,System.Object,System.Object,System.Object,System.Object,System.Object,System.Object}.CreateServiceFactory(Microsoft.Extensions.Logging.LogLevel)
+    name: CreateServiceFactory
+    isExternal: true
+  - name: (
+  - uid: Microsoft.Extensions.Logging.LogLevel
+    name: LogLevel
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/microsoft.extensions.logging.loglevel
+  - name: )
+- uid: Coree.NETStandard.Abstractions.ServiceFactoryEx.ServiceFactoryEx{Coree.NETASP.Services.CertificateManager.CertificateManagerService,System.Object,System.Object,System.Object,System.Object,System.Object,System.Object,System.Object,System.Object,System.Object}.Dispose
+  commentId: M:Coree.NETStandard.Abstractions.ServiceFactoryEx.ServiceFactoryEx{Coree.NETASP.Services.CertificateManager.CertificateManagerService,System.Object,System.Object,System.Object,System.Object,System.Object,System.Object,System.Object,System.Object,System.Object}.Dispose
+  parent: Coree.NETStandard.Abstractions.ServiceFactoryEx.ServiceFactoryEx{Coree.NETASP.Services.CertificateManager.CertificateManagerService,System.Object,System.Object,System.Object,System.Object,System.Object,System.Object,System.Object,System.Object,System.Object}
+  definition: Coree.NETStandard.Abstractions.ServiceFactoryEx.ServiceFactoryEx`10.Dispose
+  name: Dispose()
+  nameWithType: ServiceFactoryEx<CertificateManagerService, object, object, object, object, object, object, object, object, object>.Dispose()
+  fullName: Coree.NETStandard.Abstractions.ServiceFactoryEx.ServiceFactoryEx<Coree.NETASP.Services.CertificateManager.CertificateManagerService, object, object, object, object, object, object, object, object, object>.Dispose()
+  nameWithType.vb: ServiceFactoryEx(Of CertificateManagerService, Object, Object, Object, Object, Object, Object, Object, Object, Object).Dispose()
+  fullName.vb: Coree.NETStandard.Abstractions.ServiceFactoryEx.ServiceFactoryEx(Of Coree.NETASP.Services.CertificateManager.CertificateManagerService, Object, Object, Object, Object, Object, Object, Object, Object, Object).Dispose()
+  spec.csharp:
+  - uid: Coree.NETStandard.Abstractions.ServiceFactoryEx.ServiceFactoryEx{Coree.NETASP.Services.CertificateManager.CertificateManagerService,System.Object,System.Object,System.Object,System.Object,System.Object,System.Object,System.Object,System.Object,System.Object}.Dispose
+    name: Dispose
+    isExternal: true
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: Coree.NETStandard.Abstractions.ServiceFactoryEx.ServiceFactoryEx{Coree.NETASP.Services.CertificateManager.CertificateManagerService,System.Object,System.Object,System.Object,System.Object,System.Object,System.Object,System.Object,System.Object,System.Object}.Dispose
+    name: Dispose
+    isExternal: true
+  - name: (
+  - name: )
+- uid: System.Object.Equals(System.Object)
+  commentId: M:System.Object.Equals(System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  name: Equals(object)
+  nameWithType: object.Equals(object)
+  fullName: object.Equals(object)
+  nameWithType.vb: Object.Equals(Object)
+  fullName.vb: Object.Equals(Object)
+  name.vb: Equals(Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  name: Equals(object, object)
+  nameWithType: object.Equals(object, object)
+  fullName: object.Equals(object, object)
+  nameWithType.vb: Object.Equals(Object, Object)
+  fullName.vb: Object.Equals(Object, Object)
+  name.vb: Equals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.GetHashCode
+  commentId: M:System.Object.GetHashCode
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  name: GetHashCode()
+  nameWithType: object.GetHashCode()
+  fullName: object.GetHashCode()
+  nameWithType.vb: Object.GetHashCode()
+  fullName.vb: Object.GetHashCode()
+  spec.csharp:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  - name: (
+  - name: )
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  name: GetType()
+  nameWithType: object.GetType()
+  fullName: object.GetType()
+  nameWithType.vb: Object.GetType()
+  fullName.vb: Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+- uid: System.Object.MemberwiseClone
+  commentId: M:System.Object.MemberwiseClone
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  name: MemberwiseClone()
+  nameWithType: object.MemberwiseClone()
+  fullName: object.MemberwiseClone()
+  nameWithType.vb: Object.MemberwiseClone()
+  fullName.vb: Object.MemberwiseClone()
+  spec.csharp:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  - name: (
+  - name: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  name: ReferenceEquals(object, object)
+  nameWithType: object.ReferenceEquals(object, object)
+  fullName: object.ReferenceEquals(object, object)
+  nameWithType.vb: Object.ReferenceEquals(Object, Object)
+  fullName.vb: Object.ReferenceEquals(Object, Object)
+  name.vb: ReferenceEquals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.ToString
+  commentId: M:System.Object.ToString
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  name: ToString()
+  nameWithType: object.ToString()
+  fullName: object.ToString()
+  nameWithType.vb: Object.ToString()
+  fullName.vb: Object.ToString()
+  spec.csharp:
+  - uid: System.Object.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  - name: (
+  - name: )
+- uid: System
+  commentId: N:System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: Coree.NETStandard.Abstractions.ServiceFactoryEx.ServiceFactoryEx`10
+  commentId: T:Coree.NETStandard.Abstractions.ServiceFactoryEx.ServiceFactoryEx`10
+  isExternal: true
+  name: ServiceFactoryEx<T, K, R, S, U, V, W, X, Y, Z>
+  nameWithType: ServiceFactoryEx<T, K, R, S, U, V, W, X, Y, Z>
+  fullName: Coree.NETStandard.Abstractions.ServiceFactoryEx.ServiceFactoryEx<T, K, R, S, U, V, W, X, Y, Z>
+  nameWithType.vb: ServiceFactoryEx(Of T, K, R, S, U, V, W, X, Y, Z)
+  fullName.vb: Coree.NETStandard.Abstractions.ServiceFactoryEx.ServiceFactoryEx(Of T, K, R, S, U, V, W, X, Y, Z)
+  name.vb: ServiceFactoryEx(Of T, K, R, S, U, V, W, X, Y, Z)
+  spec.csharp:
+  - uid: Coree.NETStandard.Abstractions.ServiceFactoryEx.ServiceFactoryEx`10
+    name: ServiceFactoryEx
+    isExternal: true
+  - name: <
+  - name: T
+  - name: ','
+  - name: " "
+  - name: K
+  - name: ','
+  - name: " "
+  - name: R
+  - name: ','
+  - name: " "
+  - name: S
+  - name: ','
+  - name: " "
+  - name: U
+  - name: ','
+  - name: " "
+  - name: V
+  - name: ','
+  - name: " "
+  - name: W
+  - name: ','
+  - name: " "
+  - name: X
+  - name: ','
+  - name: " "
+  - name: Y
+  - name: ','
+  - name: " "
+  - name: Z
+  - name: '>'
+  spec.vb:
+  - uid: Coree.NETStandard.Abstractions.ServiceFactoryEx.ServiceFactoryEx`10
+    name: ServiceFactoryEx
+    isExternal: true
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: ','
+  - name: " "
+  - name: K
+  - name: ','
+  - name: " "
+  - name: R
+  - name: ','
+  - name: " "
+  - name: S
+  - name: ','
+  - name: " "
+  - name: U
+  - name: ','
+  - name: " "
+  - name: V
+  - name: ','
+  - name: " "
+  - name: W
+  - name: ','
+  - name: " "
+  - name: X
+  - name: ','
+  - name: " "
+  - name: Y
+  - name: ','
+  - name: " "
+  - name: Z
+  - name: )
+- uid: Coree.NETStandard.Abstractions.ServiceFactoryEx
+  commentId: N:Coree.NETStandard.Abstractions.ServiceFactoryEx
+  isExternal: true
+  name: Coree.NETStandard.Abstractions.ServiceFactoryEx
+  nameWithType: Coree.NETStandard.Abstractions.ServiceFactoryEx
+  fullName: Coree.NETStandard.Abstractions.ServiceFactoryEx
+  spec.csharp:
+  - uid: Coree
+    name: Coree
+    isExternal: true
+  - name: .
+  - uid: Coree.NETStandard
+    name: NETStandard
+    isExternal: true
+  - name: .
+  - uid: Coree.NETStandard.Abstractions
+    name: Abstractions
+    isExternal: true
+  - name: .
+  - uid: Coree.NETStandard.Abstractions.ServiceFactoryEx
+    name: ServiceFactoryEx
+    isExternal: true
+  spec.vb:
+  - uid: Coree
+    name: Coree
+    isExternal: true
+  - name: .
+  - uid: Coree.NETStandard
+    name: NETStandard
+    isExternal: true
+  - name: .
+  - uid: Coree.NETStandard.Abstractions
+    name: Abstractions
+    isExternal: true
+  - name: .
+  - uid: Coree.NETStandard.Abstractions.ServiceFactoryEx
+    name: ServiceFactoryEx
+    isExternal: true
+- uid: Coree.NETStandard.Abstractions.ServiceFactoryEx.ServiceFactoryEx`1
+  commentId: T:Coree.NETStandard.Abstractions.ServiceFactoryEx.ServiceFactoryEx`1
+  isExternal: true
+  name: ServiceFactoryEx<T>
+  nameWithType: ServiceFactoryEx<T>
+  fullName: Coree.NETStandard.Abstractions.ServiceFactoryEx.ServiceFactoryEx<T>
+  nameWithType.vb: ServiceFactoryEx(Of T)
+  fullName.vb: Coree.NETStandard.Abstractions.ServiceFactoryEx.ServiceFactoryEx(Of T)
+  name.vb: ServiceFactoryEx(Of T)
+  spec.csharp:
+  - uid: Coree.NETStandard.Abstractions.ServiceFactoryEx.ServiceFactoryEx`1
+    name: ServiceFactoryEx
+    isExternal: true
+  - name: <
+  - name: T
+  - name: '>'
+  spec.vb:
+  - uid: Coree.NETStandard.Abstractions.ServiceFactoryEx.ServiceFactoryEx`1
+    name: ServiceFactoryEx
+    isExternal: true
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+- uid: Coree.NETStandard.Abstractions.ServiceFactoryEx.ServiceFactoryEx`10.CreateServiceFactory(System.Action{Microsoft.Extensions.Hosting.IHostBuilder})
+  commentId: M:Coree.NETStandard.Abstractions.ServiceFactoryEx.ServiceFactoryEx`10.CreateServiceFactory(System.Action{Microsoft.Extensions.Hosting.IHostBuilder})
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.action-1
+  name: CreateServiceFactory(Action<IHostBuilder>)
+  nameWithType: ServiceFactoryEx<T, K, R, S, U, V, W, X, Y, Z>.CreateServiceFactory(Action<IHostBuilder>)
+  fullName: Coree.NETStandard.Abstractions.ServiceFactoryEx.ServiceFactoryEx<T, K, R, S, U, V, W, X, Y, Z>.CreateServiceFactory(System.Action<Microsoft.Extensions.Hosting.IHostBuilder>)
+  nameWithType.vb: ServiceFactoryEx(Of T, K, R, S, U, V, W, X, Y, Z).CreateServiceFactory(Action(Of IHostBuilder))
+  fullName.vb: Coree.NETStandard.Abstractions.ServiceFactoryEx.ServiceFactoryEx(Of T, K, R, S, U, V, W, X, Y, Z).CreateServiceFactory(System.Action(Of Microsoft.Extensions.Hosting.IHostBuilder))
+  name.vb: CreateServiceFactory(Action(Of IHostBuilder))
+  spec.csharp:
+  - uid: Coree.NETStandard.Abstractions.ServiceFactoryEx.ServiceFactoryEx`10.CreateServiceFactory(System.Action{Microsoft.Extensions.Hosting.IHostBuilder})
+    name: CreateServiceFactory
+    isExternal: true
+  - name: (
+  - uid: System.Action`1
+    name: Action
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.action-1
+  - name: <
+  - uid: Microsoft.Extensions.Hosting.IHostBuilder
+    name: IHostBuilder
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/microsoft.extensions.hosting.ihostbuilder
+  - name: '>'
+  - name: )
+  spec.vb:
+  - uid: Coree.NETStandard.Abstractions.ServiceFactoryEx.ServiceFactoryEx`10.CreateServiceFactory(System.Action{Microsoft.Extensions.Hosting.IHostBuilder})
+    name: CreateServiceFactory
+    isExternal: true
+  - name: (
+  - uid: System.Action`1
+    name: Action
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.action-1
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: Microsoft.Extensions.Hosting.IHostBuilder
+    name: IHostBuilder
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/microsoft.extensions.hosting.ihostbuilder
+  - name: )
+  - name: )
+- uid: Coree.NETStandard.Abstractions.ServiceFactoryEx.ServiceFactoryEx`10.CreateServiceFactory(System.Action{Microsoft.Extensions.DependencyInjection.IServiceCollection})
+  commentId: M:Coree.NETStandard.Abstractions.ServiceFactoryEx.ServiceFactoryEx`10.CreateServiceFactory(System.Action{Microsoft.Extensions.DependencyInjection.IServiceCollection})
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.action-1
+  name: CreateServiceFactory(Action<IServiceCollection>)
+  nameWithType: ServiceFactoryEx<T, K, R, S, U, V, W, X, Y, Z>.CreateServiceFactory(Action<IServiceCollection>)
+  fullName: Coree.NETStandard.Abstractions.ServiceFactoryEx.ServiceFactoryEx<T, K, R, S, U, V, W, X, Y, Z>.CreateServiceFactory(System.Action<Microsoft.Extensions.DependencyInjection.IServiceCollection>)
+  nameWithType.vb: ServiceFactoryEx(Of T, K, R, S, U, V, W, X, Y, Z).CreateServiceFactory(Action(Of IServiceCollection))
+  fullName.vb: Coree.NETStandard.Abstractions.ServiceFactoryEx.ServiceFactoryEx(Of T, K, R, S, U, V, W, X, Y, Z).CreateServiceFactory(System.Action(Of Microsoft.Extensions.DependencyInjection.IServiceCollection))
+  name.vb: CreateServiceFactory(Action(Of IServiceCollection))
+  spec.csharp:
+  - uid: Coree.NETStandard.Abstractions.ServiceFactoryEx.ServiceFactoryEx`10.CreateServiceFactory(System.Action{Microsoft.Extensions.DependencyInjection.IServiceCollection})
+    name: CreateServiceFactory
+    isExternal: true
+  - name: (
+  - uid: System.Action`1
+    name: Action
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.action-1
+  - name: <
+  - uid: Microsoft.Extensions.DependencyInjection.IServiceCollection
+    name: IServiceCollection
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/microsoft.extensions.dependencyinjection.iservicecollection
+  - name: '>'
+  - name: )
+  spec.vb:
+  - uid: Coree.NETStandard.Abstractions.ServiceFactoryEx.ServiceFactoryEx`10.CreateServiceFactory(System.Action{Microsoft.Extensions.DependencyInjection.IServiceCollection})
+    name: CreateServiceFactory
+    isExternal: true
+  - name: (
+  - uid: System.Action`1
+    name: Action
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.action-1
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: Microsoft.Extensions.DependencyInjection.IServiceCollection
+    name: IServiceCollection
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/microsoft.extensions.dependencyinjection.iservicecollection
+  - name: )
+  - name: )
+- uid: Coree.NETStandard.Abstractions.ServiceFactoryEx.ServiceFactoryEx`10.CreateServiceFactory(System.Action{Microsoft.Extensions.DependencyInjection.IServiceCollection},System.Action{Microsoft.Extensions.Logging.ILoggingBuilder},System.Action{Microsoft.Extensions.Hosting.IHostBuilder})
+  commentId: M:Coree.NETStandard.Abstractions.ServiceFactoryEx.ServiceFactoryEx`10.CreateServiceFactory(System.Action{Microsoft.Extensions.DependencyInjection.IServiceCollection},System.Action{Microsoft.Extensions.Logging.ILoggingBuilder},System.Action{Microsoft.Extensions.Hosting.IHostBuilder})
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.action-1
+  name: CreateServiceFactory(Action<IServiceCollection>, Action<ILoggingBuilder>, Action<IHostBuilder>)
+  nameWithType: ServiceFactoryEx<T, K, R, S, U, V, W, X, Y, Z>.CreateServiceFactory(Action<IServiceCollection>, Action<ILoggingBuilder>, Action<IHostBuilder>)
+  fullName: Coree.NETStandard.Abstractions.ServiceFactoryEx.ServiceFactoryEx<T, K, R, S, U, V, W, X, Y, Z>.CreateServiceFactory(System.Action<Microsoft.Extensions.DependencyInjection.IServiceCollection>, System.Action<Microsoft.Extensions.Logging.ILoggingBuilder>, System.Action<Microsoft.Extensions.Hosting.IHostBuilder>)
+  nameWithType.vb: ServiceFactoryEx(Of T, K, R, S, U, V, W, X, Y, Z).CreateServiceFactory(Action(Of IServiceCollection), Action(Of ILoggingBuilder), Action(Of IHostBuilder))
+  fullName.vb: Coree.NETStandard.Abstractions.ServiceFactoryEx.ServiceFactoryEx(Of T, K, R, S, U, V, W, X, Y, Z).CreateServiceFactory(System.Action(Of Microsoft.Extensions.DependencyInjection.IServiceCollection), System.Action(Of Microsoft.Extensions.Logging.ILoggingBuilder), System.Action(Of Microsoft.Extensions.Hosting.IHostBuilder))
+  name.vb: CreateServiceFactory(Action(Of IServiceCollection), Action(Of ILoggingBuilder), Action(Of IHostBuilder))
+  spec.csharp:
+  - uid: Coree.NETStandard.Abstractions.ServiceFactoryEx.ServiceFactoryEx`10.CreateServiceFactory(System.Action{Microsoft.Extensions.DependencyInjection.IServiceCollection},System.Action{Microsoft.Extensions.Logging.ILoggingBuilder},System.Action{Microsoft.Extensions.Hosting.IHostBuilder})
+    name: CreateServiceFactory
+    isExternal: true
+  - name: (
+  - uid: System.Action`1
+    name: Action
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.action-1
+  - name: <
+  - uid: Microsoft.Extensions.DependencyInjection.IServiceCollection
+    name: IServiceCollection
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/microsoft.extensions.dependencyinjection.iservicecollection
+  - name: '>'
+  - name: ','
+  - name: " "
+  - uid: System.Action`1
+    name: Action
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.action-1
+  - name: <
+  - uid: Microsoft.Extensions.Logging.ILoggingBuilder
+    name: ILoggingBuilder
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/microsoft.extensions.logging.iloggingbuilder
+  - name: '>'
+  - name: ','
+  - name: " "
+  - uid: System.Action`1
+    name: Action
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.action-1
+  - name: <
+  - uid: Microsoft.Extensions.Hosting.IHostBuilder
+    name: IHostBuilder
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/microsoft.extensions.hosting.ihostbuilder
+  - name: '>'
+  - name: )
+  spec.vb:
+  - uid: Coree.NETStandard.Abstractions.ServiceFactoryEx.ServiceFactoryEx`10.CreateServiceFactory(System.Action{Microsoft.Extensions.DependencyInjection.IServiceCollection},System.Action{Microsoft.Extensions.Logging.ILoggingBuilder},System.Action{Microsoft.Extensions.Hosting.IHostBuilder})
+    name: CreateServiceFactory
+    isExternal: true
+  - name: (
+  - uid: System.Action`1
+    name: Action
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.action-1
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: Microsoft.Extensions.DependencyInjection.IServiceCollection
+    name: IServiceCollection
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/microsoft.extensions.dependencyinjection.iservicecollection
+  - name: )
+  - name: ','
+  - name: " "
+  - uid: System.Action`1
+    name: Action
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.action-1
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: Microsoft.Extensions.Logging.ILoggingBuilder
+    name: ILoggingBuilder
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/microsoft.extensions.logging.iloggingbuilder
+  - name: )
+  - name: ','
+  - name: " "
+  - uid: System.Action`1
+    name: Action
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.action-1
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: Microsoft.Extensions.Hosting.IHostBuilder
+    name: IHostBuilder
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/microsoft.extensions.hosting.ihostbuilder
+  - name: )
+  - name: )
+- uid: Coree.NETStandard.Abstractions.ServiceFactoryEx.ServiceFactoryEx`10.CreateServiceFactory
+  commentId: M:Coree.NETStandard.Abstractions.ServiceFactoryEx.ServiceFactoryEx`10.CreateServiceFactory
+  isExternal: true
+  name: CreateServiceFactory()
+  nameWithType: ServiceFactoryEx<T, K, R, S, U, V, W, X, Y, Z>.CreateServiceFactory()
+  fullName: Coree.NETStandard.Abstractions.ServiceFactoryEx.ServiceFactoryEx<T, K, R, S, U, V, W, X, Y, Z>.CreateServiceFactory()
+  nameWithType.vb: ServiceFactoryEx(Of T, K, R, S, U, V, W, X, Y, Z).CreateServiceFactory()
+  fullName.vb: Coree.NETStandard.Abstractions.ServiceFactoryEx.ServiceFactoryEx(Of T, K, R, S, U, V, W, X, Y, Z).CreateServiceFactory()
+  spec.csharp:
+  - uid: Coree.NETStandard.Abstractions.ServiceFactoryEx.ServiceFactoryEx`10.CreateServiceFactory
+    name: CreateServiceFactory
+    isExternal: true
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: Coree.NETStandard.Abstractions.ServiceFactoryEx.ServiceFactoryEx`10.CreateServiceFactory
+    name: CreateServiceFactory
+    isExternal: true
+  - name: (
+  - name: )
+- uid: Coree.NETStandard.Abstractions.ServiceFactoryEx.ServiceFactoryEx`10.CreateServiceFactory(Microsoft.Extensions.Logging.LogLevel)
+  commentId: M:Coree.NETStandard.Abstractions.ServiceFactoryEx.ServiceFactoryEx`10.CreateServiceFactory(Microsoft.Extensions.Logging.LogLevel)
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/microsoft.extensions.logging.loglevel
+  name: CreateServiceFactory(LogLevel)
+  nameWithType: ServiceFactoryEx<T, K, R, S, U, V, W, X, Y, Z>.CreateServiceFactory(LogLevel)
+  fullName: Coree.NETStandard.Abstractions.ServiceFactoryEx.ServiceFactoryEx<T, K, R, S, U, V, W, X, Y, Z>.CreateServiceFactory(Microsoft.Extensions.Logging.LogLevel)
+  nameWithType.vb: ServiceFactoryEx(Of T, K, R, S, U, V, W, X, Y, Z).CreateServiceFactory(LogLevel)
+  fullName.vb: Coree.NETStandard.Abstractions.ServiceFactoryEx.ServiceFactoryEx(Of T, K, R, S, U, V, W, X, Y, Z).CreateServiceFactory(Microsoft.Extensions.Logging.LogLevel)
+  spec.csharp:
+  - uid: Coree.NETStandard.Abstractions.ServiceFactoryEx.ServiceFactoryEx`10.CreateServiceFactory(Microsoft.Extensions.Logging.LogLevel)
+    name: CreateServiceFactory
+    isExternal: true
+  - name: (
+  - uid: Microsoft.Extensions.Logging.LogLevel
+    name: LogLevel
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/microsoft.extensions.logging.loglevel
+  - name: )
+  spec.vb:
+  - uid: Coree.NETStandard.Abstractions.ServiceFactoryEx.ServiceFactoryEx`10.CreateServiceFactory(Microsoft.Extensions.Logging.LogLevel)
+    name: CreateServiceFactory
+    isExternal: true
+  - name: (
+  - uid: Microsoft.Extensions.Logging.LogLevel
+    name: LogLevel
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/microsoft.extensions.logging.loglevel
+  - name: )
+- uid: Coree.NETStandard.Abstractions.ServiceFactoryEx.ServiceFactoryEx`10.Dispose
+  commentId: M:Coree.NETStandard.Abstractions.ServiceFactoryEx.ServiceFactoryEx`10.Dispose
+  isExternal: true
+  name: Dispose()
+  nameWithType: ServiceFactoryEx<T, K, R, S, U, V, W, X, Y, Z>.Dispose()
+  fullName: Coree.NETStandard.Abstractions.ServiceFactoryEx.ServiceFactoryEx<T, K, R, S, U, V, W, X, Y, Z>.Dispose()
+  nameWithType.vb: ServiceFactoryEx(Of T, K, R, S, U, V, W, X, Y, Z).Dispose()
+  fullName.vb: Coree.NETStandard.Abstractions.ServiceFactoryEx.ServiceFactoryEx(Of T, K, R, S, U, V, W, X, Y, Z).Dispose()
+  spec.csharp:
+  - uid: Coree.NETStandard.Abstractions.ServiceFactoryEx.ServiceFactoryEx`10.Dispose
+    name: Dispose
+    isExternal: true
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: Coree.NETStandard.Abstractions.ServiceFactoryEx.ServiceFactoryEx`10.Dispose
+    name: Dispose
+    isExternal: true
+  - name: (
+  - name: )
+- uid: Coree.NETASP.Services.CertificateManager.CertificateManagerService
+  commentId: T:Coree.NETASP.Services.CertificateManager.CertificateManagerService
+  href: Coree.NETASP.Services.CertificateManager.CertificateManagerService.html
+  name: CertificateManagerService
+  nameWithType: CertificateManagerService
+  fullName: Coree.NETASP.Services.CertificateManager.CertificateManagerService
+- uid: Coree.NETASP.Services.CertificateManager.CertificateManagerService.#ctor*
+  commentId: Overload:Coree.NETASP.Services.CertificateManager.CertificateManagerService.#ctor
+  href: Coree.NETASP.Services.CertificateManager.CertificateManagerService.html#Coree_NETASP_Services_CertificateManager_CertificateManagerService__ctor_Microsoft_Extensions_Logging_ILogger_Coree_NETASP_Services_CertificateManager_CertificateManagerService__
+  name: CertificateManagerService
+  nameWithType: CertificateManagerService.CertificateManagerService
+  fullName: Coree.NETASP.Services.CertificateManager.CertificateManagerService.CertificateManagerService
+  nameWithType.vb: CertificateManagerService.New
+  fullName.vb: Coree.NETASP.Services.CertificateManager.CertificateManagerService.New
+  name.vb: New
+- uid: Microsoft.Extensions.Logging.ILogger{Coree.NETASP.Services.CertificateManager.CertificateManagerService}
+  commentId: T:Microsoft.Extensions.Logging.ILogger{Coree.NETASP.Services.CertificateManager.CertificateManagerService}
+  parent: Microsoft.Extensions.Logging
+  definition: Microsoft.Extensions.Logging.ILogger`1
+  href: https://learn.microsoft.com/dotnet/api/microsoft.extensions.logging.ilogger-1
+  name: ILogger<CertificateManagerService>
+  nameWithType: ILogger<CertificateManagerService>
+  fullName: Microsoft.Extensions.Logging.ILogger<Coree.NETASP.Services.CertificateManager.CertificateManagerService>
+  nameWithType.vb: ILogger(Of CertificateManagerService)
+  fullName.vb: Microsoft.Extensions.Logging.ILogger(Of Coree.NETASP.Services.CertificateManager.CertificateManagerService)
+  name.vb: ILogger(Of CertificateManagerService)
+  spec.csharp:
+  - uid: Microsoft.Extensions.Logging.ILogger`1
+    name: ILogger
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/microsoft.extensions.logging.ilogger-1
+  - name: <
+  - uid: Coree.NETASP.Services.CertificateManager.CertificateManagerService
+    name: CertificateManagerService
+    href: Coree.NETASP.Services.CertificateManager.CertificateManagerService.html
+  - name: '>'
+  spec.vb:
+  - uid: Microsoft.Extensions.Logging.ILogger`1
+    name: ILogger
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/microsoft.extensions.logging.ilogger-1
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: Coree.NETASP.Services.CertificateManager.CertificateManagerService
+    name: CertificateManagerService
+    href: Coree.NETASP.Services.CertificateManager.CertificateManagerService.html
+  - name: )
+- uid: Microsoft.Extensions.Logging.ILogger`1
+  commentId: T:Microsoft.Extensions.Logging.ILogger`1
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/microsoft.extensions.logging.ilogger-1
+  name: ILogger<TCategoryName>
+  nameWithType: ILogger<TCategoryName>
+  fullName: Microsoft.Extensions.Logging.ILogger<TCategoryName>
+  nameWithType.vb: ILogger(Of TCategoryName)
+  fullName.vb: Microsoft.Extensions.Logging.ILogger(Of TCategoryName)
+  name.vb: ILogger(Of TCategoryName)
+  spec.csharp:
+  - uid: Microsoft.Extensions.Logging.ILogger`1
+    name: ILogger
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/microsoft.extensions.logging.ilogger-1
+  - name: <
+  - name: TCategoryName
+  - name: '>'
+  spec.vb:
+  - uid: Microsoft.Extensions.Logging.ILogger`1
+    name: ILogger
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/microsoft.extensions.logging.ilogger-1
+  - name: (
+  - name: Of
+  - name: " "
+  - name: TCategoryName
+  - name: )
+- uid: Microsoft.Extensions.Logging
+  commentId: N:Microsoft.Extensions.Logging
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/microsoft
+  name: Microsoft.Extensions.Logging
+  nameWithType: Microsoft.Extensions.Logging
+  fullName: Microsoft.Extensions.Logging
+  spec.csharp:
+  - uid: Microsoft
+    name: Microsoft
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/microsoft
+  - name: .
+  - uid: Microsoft.Extensions
+    name: Extensions
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/microsoft.extensions
+  - name: .
+  - uid: Microsoft.Extensions.Logging
+    name: Logging
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/microsoft.extensions.logging
+  spec.vb:
+  - uid: Microsoft
+    name: Microsoft
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/microsoft
+  - name: .
+  - uid: Microsoft.Extensions
+    name: Extensions
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/microsoft.extensions
+  - name: .
+  - uid: Microsoft.Extensions.Logging
+    name: Logging
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/microsoft.extensions.logging

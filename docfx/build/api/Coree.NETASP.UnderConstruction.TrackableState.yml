@@ -1,0 +1,271 @@
+### YamlMime:ManagedReference
+items:
+- uid: Coree.NETASP.UnderConstruction.TrackableState
+  commentId: T:Coree.NETASP.UnderConstruction.TrackableState
+  id: TrackableState
+  parent: Coree.NETASP.UnderConstruction
+  children:
+  - Coree.NETASP.UnderConstruction.TrackableState.ItemAdded
+  - Coree.NETASP.UnderConstruction.TrackableState.ItemInitialized
+  - Coree.NETASP.UnderConstruction.TrackableState.ItemInserted
+  - Coree.NETASP.UnderConstruction.TrackableState.ItemRemoved
+  - Coree.NETASP.UnderConstruction.TrackableState.ItemUpdated
+  - Coree.NETASP.UnderConstruction.TrackableState.ListItemConverted
+  - Coree.NETASP.UnderConstruction.TrackableState.RangeAdded
+  langs:
+  - csharp
+  - vb
+  name: TrackableState
+  nameWithType: TrackableState
+  fullName: Coree.NETASP.UnderConstruction.TrackableState
+  type: Enum
+  source:
+    remote:
+      path: src/Projects/Coree.NETASP/UnderConstruction/Class.cs
+      branch: master
+      repo: https://github.com/carsten-riedel/Coree.NETASP
+    id: TrackableState
+    path: ../../src/Projects/Coree.NETASP/UnderConstruction/Class.cs
+    startLine: 42
+  assemblies:
+  - Coree.NETASP
+  namespace: Coree.NETASP.UnderConstruction
+  summary: Represents the various states that a versioned item can have.
+  example: []
+  syntax:
+    content: public enum TrackableState
+    content.vb: Public Enum TrackableState
+- uid: Coree.NETASP.UnderConstruction.TrackableState.RangeAdded
+  commentId: F:Coree.NETASP.UnderConstruction.TrackableState.RangeAdded
+  id: RangeAdded
+  parent: Coree.NETASP.UnderConstruction.TrackableState
+  langs:
+  - csharp
+  - vb
+  name: RangeAdded
+  nameWithType: TrackableState.RangeAdded
+  fullName: Coree.NETASP.UnderConstruction.TrackableState.RangeAdded
+  type: Field
+  source:
+    remote:
+      path: src/Projects/Coree.NETASP/UnderConstruction/Class.cs
+      branch: master
+      repo: https://github.com/carsten-riedel/Coree.NETASP
+    id: RangeAdded
+    path: ../../src/Projects/Coree.NETASP/UnderConstruction/Class.cs
+    startLine: 47
+  assemblies:
+  - Coree.NETASP
+  namespace: Coree.NETASP.UnderConstruction
+  summary: Indicates that a range of items was added.
+  example: []
+  syntax:
+    content: RangeAdded = 0
+    return:
+      type: Coree.NETASP.UnderConstruction.TrackableState
+- uid: Coree.NETASP.UnderConstruction.TrackableState.ItemAdded
+  commentId: F:Coree.NETASP.UnderConstruction.TrackableState.ItemAdded
+  id: ItemAdded
+  parent: Coree.NETASP.UnderConstruction.TrackableState
+  langs:
+  - csharp
+  - vb
+  name: ItemAdded
+  nameWithType: TrackableState.ItemAdded
+  fullName: Coree.NETASP.UnderConstruction.TrackableState.ItemAdded
+  type: Field
+  source:
+    remote:
+      path: src/Projects/Coree.NETASP/UnderConstruction/Class.cs
+      branch: master
+      repo: https://github.com/carsten-riedel/Coree.NETASP
+    id: ItemAdded
+    path: ../../src/Projects/Coree.NETASP/UnderConstruction/Class.cs
+    startLine: 52
+  assemblies:
+  - Coree.NETASP
+  namespace: Coree.NETASP.UnderConstruction
+  summary: Indicates that an item was added.
+  example: []
+  syntax:
+    content: ItemAdded = 1
+    return:
+      type: Coree.NETASP.UnderConstruction.TrackableState
+- uid: Coree.NETASP.UnderConstruction.TrackableState.ItemUpdated
+  commentId: F:Coree.NETASP.UnderConstruction.TrackableState.ItemUpdated
+  id: ItemUpdated
+  parent: Coree.NETASP.UnderConstruction.TrackableState
+  langs:
+  - csharp
+  - vb
+  name: ItemUpdated
+  nameWithType: TrackableState.ItemUpdated
+  fullName: Coree.NETASP.UnderConstruction.TrackableState.ItemUpdated
+  type: Field
+  source:
+    remote:
+      path: src/Projects/Coree.NETASP/UnderConstruction/Class.cs
+      branch: master
+      repo: https://github.com/carsten-riedel/Coree.NETASP
+    id: ItemUpdated
+    path: ../../src/Projects/Coree.NETASP/UnderConstruction/Class.cs
+    startLine: 57
+  assemblies:
+  - Coree.NETASP
+  namespace: Coree.NETASP.UnderConstruction
+  summary: Indicates that an item was updated.
+  example: []
+  syntax:
+    content: ItemUpdated = 2
+    return:
+      type: Coree.NETASP.UnderConstruction.TrackableState
+- uid: Coree.NETASP.UnderConstruction.TrackableState.ItemInitialized
+  commentId: F:Coree.NETASP.UnderConstruction.TrackableState.ItemInitialized
+  id: ItemInitialized
+  parent: Coree.NETASP.UnderConstruction.TrackableState
+  langs:
+  - csharp
+  - vb
+  name: ItemInitialized
+  nameWithType: TrackableState.ItemInitialized
+  fullName: Coree.NETASP.UnderConstruction.TrackableState.ItemInitialized
+  type: Field
+  source:
+    remote:
+      path: src/Projects/Coree.NETASP/UnderConstruction/Class.cs
+      branch: master
+      repo: https://github.com/carsten-riedel/Coree.NETASP
+    id: ItemInitialized
+    path: ../../src/Projects/Coree.NETASP/UnderConstruction/Class.cs
+    startLine: 62
+  assemblies:
+  - Coree.NETASP
+  namespace: Coree.NETASP.UnderConstruction
+  summary: Indicates that an item was initialized.
+  example: []
+  syntax:
+    content: ItemInitialized = 3
+    return:
+      type: Coree.NETASP.UnderConstruction.TrackableState
+- uid: Coree.NETASP.UnderConstruction.TrackableState.ListItemConverted
+  commentId: F:Coree.NETASP.UnderConstruction.TrackableState.ListItemConverted
+  id: ListItemConverted
+  parent: Coree.NETASP.UnderConstruction.TrackableState
+  langs:
+  - csharp
+  - vb
+  name: ListItemConverted
+  nameWithType: TrackableState.ListItemConverted
+  fullName: Coree.NETASP.UnderConstruction.TrackableState.ListItemConverted
+  type: Field
+  source:
+    remote:
+      path: src/Projects/Coree.NETASP/UnderConstruction/Class.cs
+      branch: master
+      repo: https://github.com/carsten-riedel/Coree.NETASP
+    id: ListItemConverted
+    path: ../../src/Projects/Coree.NETASP/UnderConstruction/Class.cs
+    startLine: 67
+  assemblies:
+  - Coree.NETASP
+  namespace: Coree.NETASP.UnderConstruction
+  summary: Indicates that an item was converted from a list.
+  example: []
+  syntax:
+    content: ListItemConverted = 4
+    return:
+      type: Coree.NETASP.UnderConstruction.TrackableState
+- uid: Coree.NETASP.UnderConstruction.TrackableState.ItemInserted
+  commentId: F:Coree.NETASP.UnderConstruction.TrackableState.ItemInserted
+  id: ItemInserted
+  parent: Coree.NETASP.UnderConstruction.TrackableState
+  langs:
+  - csharp
+  - vb
+  name: ItemInserted
+  nameWithType: TrackableState.ItemInserted
+  fullName: Coree.NETASP.UnderConstruction.TrackableState.ItemInserted
+  type: Field
+  source:
+    remote:
+      path: src/Projects/Coree.NETASP/UnderConstruction/Class.cs
+      branch: master
+      repo: https://github.com/carsten-riedel/Coree.NETASP
+    id: ItemInserted
+    path: ../../src/Projects/Coree.NETASP/UnderConstruction/Class.cs
+    startLine: 72
+  assemblies:
+  - Coree.NETASP
+  namespace: Coree.NETASP.UnderConstruction
+  summary: Indicates that an item was inserted.
+  example: []
+  syntax:
+    content: ItemInserted = 5
+    return:
+      type: Coree.NETASP.UnderConstruction.TrackableState
+- uid: Coree.NETASP.UnderConstruction.TrackableState.ItemRemoved
+  commentId: F:Coree.NETASP.UnderConstruction.TrackableState.ItemRemoved
+  id: ItemRemoved
+  parent: Coree.NETASP.UnderConstruction.TrackableState
+  langs:
+  - csharp
+  - vb
+  name: ItemRemoved
+  nameWithType: TrackableState.ItemRemoved
+  fullName: Coree.NETASP.UnderConstruction.TrackableState.ItemRemoved
+  type: Field
+  source:
+    remote:
+      path: src/Projects/Coree.NETASP/UnderConstruction/Class.cs
+      branch: master
+      repo: https://github.com/carsten-riedel/Coree.NETASP
+    id: ItemRemoved
+    path: ../../src/Projects/Coree.NETASP/UnderConstruction/Class.cs
+    startLine: 77
+  assemblies:
+  - Coree.NETASP
+  namespace: Coree.NETASP.UnderConstruction
+  summary: Indicates that an item was removed.
+  example: []
+  syntax:
+    content: ItemRemoved = 6
+    return:
+      type: Coree.NETASP.UnderConstruction.TrackableState
+references:
+- uid: Coree.NETASP.UnderConstruction
+  commentId: N:Coree.NETASP.UnderConstruction
+  href: Coree.html
+  name: Coree.NETASP.UnderConstruction
+  nameWithType: Coree.NETASP.UnderConstruction
+  fullName: Coree.NETASP.UnderConstruction
+  spec.csharp:
+  - uid: Coree
+    name: Coree
+    href: Coree.html
+  - name: .
+  - uid: Coree.NETASP
+    name: NETASP
+    href: Coree.NETASP.html
+  - name: .
+  - uid: Coree.NETASP.UnderConstruction
+    name: UnderConstruction
+    href: Coree.NETASP.UnderConstruction.html
+  spec.vb:
+  - uid: Coree
+    name: Coree
+    href: Coree.html
+  - name: .
+  - uid: Coree.NETASP
+    name: NETASP
+    href: Coree.NETASP.html
+  - name: .
+  - uid: Coree.NETASP.UnderConstruction
+    name: UnderConstruction
+    href: Coree.NETASP.UnderConstruction.html
+- uid: Coree.NETASP.UnderConstruction.TrackableState
+  commentId: T:Coree.NETASP.UnderConstruction.TrackableState
+  parent: Coree.NETASP.UnderConstruction
+  href: Coree.NETASP.UnderConstruction.TrackableState.html
+  name: TrackableState
+  nameWithType: TrackableState
+  fullName: Coree.NETASP.UnderConstruction.TrackableState

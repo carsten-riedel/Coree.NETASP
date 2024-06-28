@@ -1,0 +1,91 @@
+### YamlMime:ManagedReference
+items:
+- uid: Coree.NETASP.Services.CertificateManager
+  commentId: N:Coree.NETASP.Services.CertificateManager
+  id: Coree.NETASP.Services.CertificateManager
+  children:
+  - Coree.NETASP.Services.CertificateManager.CertificateManager
+  - Coree.NETASP.Services.CertificateManager.CertificateManagerService
+  - Coree.NETASP.Services.CertificateManager.CommonDistinguishedNameBuilder
+  - Coree.NETASP.Services.CertificateManager.DistinguishedName
+  - Coree.NETASP.Services.CertificateManager.ICertificateManagerService
+  langs:
+  - csharp
+  - vb
+  name: Coree.NETASP.Services.CertificateManager
+  nameWithType: Coree.NETASP.Services.CertificateManager
+  fullName: Coree.NETASP.Services.CertificateManager
+  type: Namespace
+  assemblies:
+  - Coree.NETASP
+references:
+- uid: Coree.NETASP.Services.CertificateManager.CertificateManagerService
+  commentId: T:Coree.NETASP.Services.CertificateManager.CertificateManagerService
+  href: Coree.NETASP.Services.CertificateManager.CertificateManagerService.html
+  name: CertificateManagerService
+  nameWithType: CertificateManagerService
+  fullName: Coree.NETASP.Services.CertificateManager.CertificateManagerService
+- uid: Coree.NETASP.Services.CertificateManager.ICertificateManagerService
+  commentId: T:Coree.NETASP.Services.CertificateManager.ICertificateManagerService
+  parent: Coree.NETASP.Services.CertificateManager
+  href: Coree.NETASP.Services.CertificateManager.ICertificateManagerService.html
+  name: ICertificateManagerService
+  nameWithType: ICertificateManagerService
+  fullName: Coree.NETASP.Services.CertificateManager.ICertificateManagerService
+- uid: Coree.NETASP.Services.CertificateManager.CommonDistinguishedNameBuilder
+  commentId: T:Coree.NETASP.Services.CertificateManager.CommonDistinguishedNameBuilder
+  href: Coree.NETASP.Services.CertificateManager.CommonDistinguishedNameBuilder.html
+  name: CommonDistinguishedNameBuilder
+  nameWithType: CommonDistinguishedNameBuilder
+  fullName: Coree.NETASP.Services.CertificateManager.CommonDistinguishedNameBuilder
+- uid: Coree.NETASP.Services.CertificateManager.DistinguishedName
+  commentId: T:Coree.NETASP.Services.CertificateManager.DistinguishedName
+  parent: Coree.NETASP.Services.CertificateManager
+  href: Coree.NETASP.Services.CertificateManager.DistinguishedName.html
+  name: DistinguishedName
+  nameWithType: DistinguishedName
+  fullName: Coree.NETASP.Services.CertificateManager.DistinguishedName
+- uid: Coree.NETASP.Services.CertificateManager.CertificateManager
+  commentId: T:Coree.NETASP.Services.CertificateManager.CertificateManager
+  href: Coree.NETASP.Services.CertificateManager.CertificateManager.html
+  name: CertificateManager
+  nameWithType: CertificateManager
+  fullName: Coree.NETASP.Services.CertificateManager.CertificateManager
+- uid: Coree.NETASP.Services.CertificateManager
+  commentId: N:Coree.NETASP.Services.CertificateManager
+  href: Coree.html
+  name: Coree.NETASP.Services.CertificateManager
+  nameWithType: Coree.NETASP.Services.CertificateManager
+  fullName: Coree.NETASP.Services.CertificateManager
+  spec.csharp:
+  - uid: Coree
+    name: Coree
+    href: Coree.html
+  - name: .
+  - uid: Coree.NETASP
+    name: NETASP
+    href: Coree.NETASP.html
+  - name: .
+  - uid: Coree.NETASP.Services
+    name: Services
+    href: Coree.NETASP.Services.html
+  - name: .
+  - uid: Coree.NETASP.Services.CertificateManager
+    name: CertificateManager
+    href: Coree.NETASP.Services.CertificateManager.html
+  spec.vb:
+  - uid: Coree
+    name: Coree
+    href: Coree.html
+  - name: .
+  - uid: Coree.NETASP
+    name: NETASP
+    href: Coree.NETASP.html
+  - name: .
+  - uid: Coree.NETASP.Services
+    name: Services
+    href: Coree.NETASP.Services.html
+  - name: .
+  - uid: Coree.NETASP.Services.CertificateManager
+    name: CertificateManager
+    href: Coree.NETASP.Services.CertificateManager.html

@@ -20,7 +20,7 @@ items:
       repo: https://github.com/carsten-riedel/Coree.NETASP
     id: WebApplicationBuilderExtension
     path: ../../src/Projects/Coree.NETASP/Extensions/WebApplicationBuilder/DumpAspNetCoreConfiguration.cs
-    startLine: 2
+    startLine: 8
   assemblies:
   - Coree.NETASP
   namespace: Coree.NETASP.Extensions.WebApplicationBuilderExtensions
@@ -56,7 +56,7 @@ items:
       repo: https://github.com/carsten-riedel/Coree.NETASP
     id: DumpAspNetCoreConfiguration
     path: ../../src/Projects/Coree.NETASP/Extensions/WebApplicationBuilder/DumpAspNetCoreConfiguration.cs
-    startLine: 13
+    startLine: 19
   assemblies:
   - Coree.NETASP
   namespace: Coree.NETASP.Extensions.WebApplicationBuilderExtensions

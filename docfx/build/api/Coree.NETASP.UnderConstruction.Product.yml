@@ -1,0 +1,531 @@
+### YamlMime:ManagedReference
+items:
+- uid: Coree.NETASP.UnderConstruction.Product
+  commentId: T:Coree.NETASP.UnderConstruction.Product
+  id: Product
+  parent: Coree.NETASP.UnderConstruction
+  children:
+  - Coree.NETASP.UnderConstruction.Product.#ctor(System.Int32,System.String,System.Double)
+  - Coree.NETASP.UnderConstruction.Product.Id
+  - Coree.NETASP.UnderConstruction.Product.Name
+  - Coree.NETASP.UnderConstruction.Product.Price
+  - Coree.NETASP.UnderConstruction.Product.ToString
+  langs:
+  - csharp
+  - vb
+  name: Product
+  nameWithType: Product
+  fullName: Coree.NETASP.UnderConstruction.Product
+  type: Class
+  source:
+    remote:
+      path: src/Projects/Coree.NETASP/UnderConstruction/Class.cs
+      branch: master
+      repo: https://github.com/carsten-riedel/Coree.NETASP
+    id: Product
+    path: ../../src/Projects/Coree.NETASP/UnderConstruction/Class.cs
+    startLine: 332
+  assemblies:
+  - Coree.NETASP
+  namespace: Coree.NETASP.UnderConstruction
+  syntax:
+    content: public class Product
+    content.vb: Public Class Product
+  inheritance:
+  - System.Object
+  inheritedMembers:
+  - System.Object.Equals(System.Object)
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.GetHashCode
+  - System.Object.GetType
+  - System.Object.MemberwiseClone
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+- uid: Coree.NETASP.UnderConstruction.Product.Id
+  commentId: P:Coree.NETASP.UnderConstruction.Product.Id
+  id: Id
+  parent: Coree.NETASP.UnderConstruction.Product
+  langs:
+  - csharp
+  - vb
+  name: Id
+  nameWithType: Product.Id
+  fullName: Coree.NETASP.UnderConstruction.Product.Id
+  type: Property
+  source:
+    remote:
+      path: src/Projects/Coree.NETASP/UnderConstruction/Class.cs
+      branch: master
+      repo: https://github.com/carsten-riedel/Coree.NETASP
+    id: Id
+    path: ../../src/Projects/Coree.NETASP/UnderConstruction/Class.cs
+    startLine: 334
+  assemblies:
+  - Coree.NETASP
+  namespace: Coree.NETASP.UnderConstruction
+  syntax:
+    content: public int Id { get; set; }
+    parameters: []
+    return:
+      type: System.Int32
+    content.vb: Public Property Id As Integer
+  overload: Coree.NETASP.UnderConstruction.Product.Id*
+- uid: Coree.NETASP.UnderConstruction.Product.Name
+  commentId: P:Coree.NETASP.UnderConstruction.Product.Name
+  id: Name
+  parent: Coree.NETASP.UnderConstruction.Product
+  langs:
+  - csharp
+  - vb
+  name: Name
+  nameWithType: Product.Name
+  fullName: Coree.NETASP.UnderConstruction.Product.Name
+  type: Property
+  source:
+    remote:
+      path: src/Projects/Coree.NETASP/UnderConstruction/Class.cs
+      branch: master
+      repo: https://github.com/carsten-riedel/Coree.NETASP
+    id: Name
+    path: ../../src/Projects/Coree.NETASP/UnderConstruction/Class.cs
+    startLine: 335
+  assemblies:
+  - Coree.NETASP
+  namespace: Coree.NETASP.UnderConstruction
+  syntax:
+    content: public string Name { get; set; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: Public Property Name As String
+  overload: Coree.NETASP.UnderConstruction.Product.Name*
+- uid: Coree.NETASP.UnderConstruction.Product.Price
+  commentId: P:Coree.NETASP.UnderConstruction.Product.Price
+  id: Price
+  parent: Coree.NETASP.UnderConstruction.Product
+  langs:
+  - csharp
+  - vb
+  name: Price
+  nameWithType: Product.Price
+  fullName: Coree.NETASP.UnderConstruction.Product.Price
+  type: Property
+  source:
+    remote:
+      path: src/Projects/Coree.NETASP/UnderConstruction/Class.cs
+      branch: master
+      repo: https://github.com/carsten-riedel/Coree.NETASP
+    id: Price
+    path: ../../src/Projects/Coree.NETASP/UnderConstruction/Class.cs
+    startLine: 336
+  assemblies:
+  - Coree.NETASP
+  namespace: Coree.NETASP.UnderConstruction
+  syntax:
+    content: public double Price { get; set; }
+    parameters: []
+    return:
+      type: System.Double
+    content.vb: Public Property Price As Double
+  overload: Coree.NETASP.UnderConstruction.Product.Price*
+- uid: Coree.NETASP.UnderConstruction.Product.#ctor(System.Int32,System.String,System.Double)
+  commentId: M:Coree.NETASP.UnderConstruction.Product.#ctor(System.Int32,System.String,System.Double)
+  id: '#ctor(System.Int32,System.String,System.Double)'
+  parent: Coree.NETASP.UnderConstruction.Product
+  langs:
+  - csharp
+  - vb
+  name: Product(int, string, double)
+  nameWithType: Product.Product(int, string, double)
+  fullName: Coree.NETASP.UnderConstruction.Product.Product(int, string, double)
+  type: Constructor
+  source:
+    remote:
+      path: src/Projects/Coree.NETASP/UnderConstruction/Class.cs
+      branch: master
+      repo: https://github.com/carsten-riedel/Coree.NETASP
+    id: .ctor
+    path: ../../src/Projects/Coree.NETASP/UnderConstruction/Class.cs
+    startLine: 338
+  assemblies:
+  - Coree.NETASP
+  namespace: Coree.NETASP.UnderConstruction
+  syntax:
+    content: public Product(int id, string name, double price)
+    parameters:
+    - id: id
+      type: System.Int32
+    - id: name
+      type: System.String
+    - id: price
+      type: System.Double
+    content.vb: Public Sub New(id As Integer, name As String, price As Double)
+  overload: Coree.NETASP.UnderConstruction.Product.#ctor*
+  nameWithType.vb: Product.New(Integer, String, Double)
+  fullName.vb: Coree.NETASP.UnderConstruction.Product.New(Integer, String, Double)
+  name.vb: New(Integer, String, Double)
+- uid: Coree.NETASP.UnderConstruction.Product.ToString
+  commentId: M:Coree.NETASP.UnderConstruction.Product.ToString
+  id: ToString
+  parent: Coree.NETASP.UnderConstruction.Product
+  langs:
+  - csharp
+  - vb
+  name: ToString()
+  nameWithType: Product.ToString()
+  fullName: Coree.NETASP.UnderConstruction.Product.ToString()
+  type: Method
+  source:
+    remote:
+      path: src/Projects/Coree.NETASP/UnderConstruction/Class.cs
+      branch: master
+      repo: https://github.com/carsten-riedel/Coree.NETASP
+    id: ToString
+    path: ../../src/Projects/Coree.NETASP/UnderConstruction/Class.cs
+    startLine: 345
+  assemblies:
+  - Coree.NETASP
+  namespace: Coree.NETASP.UnderConstruction
+  summary: Returns a string that represents the current object.
+  example: []
+  syntax:
+    content: public override string ToString()
+    return:
+      type: System.String
+      description: A string that represents the current object.
+    content.vb: Public Overrides Function ToString() As String
+  overridden: System.Object.ToString
+  overload: Coree.NETASP.UnderConstruction.Product.ToString*
+references:
+- uid: Coree.NETASP.UnderConstruction
+  commentId: N:Coree.NETASP.UnderConstruction
+  href: Coree.html
+  name: Coree.NETASP.UnderConstruction
+  nameWithType: Coree.NETASP.UnderConstruction
+  fullName: Coree.NETASP.UnderConstruction
+  spec.csharp:
+  - uid: Coree
+    name: Coree
+    href: Coree.html
+  - name: .
+  - uid: Coree.NETASP
+    name: NETASP
+    href: Coree.NETASP.html
+  - name: .
+  - uid: Coree.NETASP.UnderConstruction
+    name: UnderConstruction
+    href: Coree.NETASP.UnderConstruction.html
+  spec.vb:
+  - uid: Coree
+    name: Coree
+    href: Coree.html
+  - name: .
+  - uid: Coree.NETASP
+    name: NETASP
+    href: Coree.NETASP.html
+  - name: .
+  - uid: Coree.NETASP.UnderConstruction
+    name: UnderConstruction
+    href: Coree.NETASP.UnderConstruction.html
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object
+  name: object
+  nameWithType: object
+  fullName: object
+  nameWithType.vb: Object
+  fullName.vb: Object
+  name.vb: Object
+- uid: System.Object.Equals(System.Object)
+  commentId: M:System.Object.Equals(System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  name: Equals(object)
+  nameWithType: object.Equals(object)
+  fullName: object.Equals(object)
+  nameWithType.vb: Object.Equals(Object)
+  fullName.vb: Object.Equals(Object)
+  name.vb: Equals(Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  name: Equals(object, object)
+  nameWithType: object.Equals(object, object)
+  fullName: object.Equals(object, object)
+  nameWithType.vb: Object.Equals(Object, Object)
+  fullName.vb: Object.Equals(Object, Object)
+  name.vb: Equals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.GetHashCode
+  commentId: M:System.Object.GetHashCode
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  name: GetHashCode()
+  nameWithType: object.GetHashCode()
+  fullName: object.GetHashCode()
+  nameWithType.vb: Object.GetHashCode()
+  fullName.vb: Object.GetHashCode()
+  spec.csharp:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  - name: (
+  - name: )
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  name: GetType()
+  nameWithType: object.GetType()
+  fullName: object.GetType()
+  nameWithType.vb: Object.GetType()
+  fullName.vb: Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+- uid: System.Object.MemberwiseClone
+  commentId: M:System.Object.MemberwiseClone
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  name: MemberwiseClone()
+  nameWithType: object.MemberwiseClone()
+  fullName: object.MemberwiseClone()
+  nameWithType.vb: Object.MemberwiseClone()
+  fullName.vb: Object.MemberwiseClone()
+  spec.csharp:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  - name: (
+  - name: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  name: ReferenceEquals(object, object)
+  nameWithType: object.ReferenceEquals(object, object)
+  fullName: object.ReferenceEquals(object, object)
+  nameWithType.vb: Object.ReferenceEquals(Object, Object)
+  fullName.vb: Object.ReferenceEquals(Object, Object)
+  name.vb: ReferenceEquals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System
+  commentId: N:System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: Coree.NETASP.UnderConstruction.Product.Id*
+  commentId: Overload:Coree.NETASP.UnderConstruction.Product.Id
+  href: Coree.NETASP.UnderConstruction.Product.html#Coree_NETASP_UnderConstruction_Product_Id
+  name: Id
+  nameWithType: Product.Id
+  fullName: Coree.NETASP.UnderConstruction.Product.Id
+- uid: System.Int32
+  commentId: T:System.Int32
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.int32
+  name: int
+  nameWithType: int
+  fullName: int
+  nameWithType.vb: Integer
+  fullName.vb: Integer
+  name.vb: Integer
+- uid: Coree.NETASP.UnderConstruction.Product.Name*
+  commentId: Overload:Coree.NETASP.UnderConstruction.Product.Name
+  href: Coree.NETASP.UnderConstruction.Product.html#Coree_NETASP_UnderConstruction_Product_Name
+  name: Name
+  nameWithType: Product.Name
+  fullName: Coree.NETASP.UnderConstruction.Product.Name
+- uid: System.String
+  commentId: T:System.String
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.string
+  name: string
+  nameWithType: string
+  fullName: string
+  nameWithType.vb: String
+  fullName.vb: String
+  name.vb: String
+- uid: Coree.NETASP.UnderConstruction.Product.Price*
+  commentId: Overload:Coree.NETASP.UnderConstruction.Product.Price
+  href: Coree.NETASP.UnderConstruction.Product.html#Coree_NETASP_UnderConstruction_Product_Price
+  name: Price
+  nameWithType: Product.Price
+  fullName: Coree.NETASP.UnderConstruction.Product.Price
+- uid: System.Double
+  commentId: T:System.Double
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.double
+  name: double
+  nameWithType: double
+  fullName: double
+  nameWithType.vb: Double
+  fullName.vb: Double
+  name.vb: Double
+- uid: Coree.NETASP.UnderConstruction.Product.#ctor*
+  commentId: Overload:Coree.NETASP.UnderConstruction.Product.#ctor
+  href: Coree.NETASP.UnderConstruction.Product.html#Coree_NETASP_UnderConstruction_Product__ctor_System_Int32_System_String_System_Double_
+  name: Product
+  nameWithType: Product.Product
+  fullName: Coree.NETASP.UnderConstruction.Product.Product
+  nameWithType.vb: Product.New
+  fullName.vb: Coree.NETASP.UnderConstruction.Product.New
+  name.vb: New
+- uid: System.Object.ToString
+  commentId: M:System.Object.ToString
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  name: ToString()
+  nameWithType: object.ToString()
+  fullName: object.ToString()
+  nameWithType.vb: Object.ToString()
+  fullName.vb: Object.ToString()
+  spec.csharp:
+  - uid: System.Object.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  - name: (
+  - name: )
+- uid: Coree.NETASP.UnderConstruction.Product.ToString*
+  commentId: Overload:Coree.NETASP.UnderConstruction.Product.ToString
+  href: Coree.NETASP.UnderConstruction.Product.html#Coree_NETASP_UnderConstruction_Product_ToString
+  name: ToString
+  nameWithType: Product.ToString
+  fullName: Coree.NETASP.UnderConstruction.Product.ToString

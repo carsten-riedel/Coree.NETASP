@@ -1,0 +1,67 @@
+### YamlMime:ManagedReference
+items:
+- uid: Coree.NETASP.Services.CertificateManager.ICertificateManagerService
+  commentId: T:Coree.NETASP.Services.CertificateManager.ICertificateManagerService
+  id: ICertificateManagerService
+  parent: Coree.NETASP.Services.CertificateManager
+  children: []
+  langs:
+  - csharp
+  - vb
+  name: ICertificateManagerService
+  nameWithType: ICertificateManagerService
+  fullName: Coree.NETASP.Services.CertificateManager.ICertificateManagerService
+  type: Interface
+  source:
+    remote:
+      path: src/Projects/Coree.NETASP/Services/CertificateManager/CertificateManagerService.cs
+      branch: master
+      repo: https://github.com/carsten-riedel/Coree.NETASP
+    id: ICertificateManagerService
+    path: ../../src/Projects/Coree.NETASP/Services/CertificateManager/CertificateManagerService.cs
+    startLine: 25
+  assemblies:
+  - Coree.NETASP
+  namespace: Coree.NETASP.Services.CertificateManager
+  syntax:
+    content: public interface ICertificateManagerService
+    content.vb: Public Interface ICertificateManagerService
+references:
+- uid: Coree.NETASP.Services.CertificateManager
+  commentId: N:Coree.NETASP.Services.CertificateManager
+  href: Coree.html
+  name: Coree.NETASP.Services.CertificateManager
+  nameWithType: Coree.NETASP.Services.CertificateManager
+  fullName: Coree.NETASP.Services.CertificateManager
+  spec.csharp:
+  - uid: Coree
+    name: Coree
+    href: Coree.html
+  - name: .
+  - uid: Coree.NETASP
+    name: NETASP
+    href: Coree.NETASP.html
+  - name: .
+  - uid: Coree.NETASP.Services
+    name: Services
+    href: Coree.NETASP.Services.html
+  - name: .
+  - uid: Coree.NETASP.Services.CertificateManager
+    name: CertificateManager
+    href: Coree.NETASP.Services.CertificateManager.html
+  spec.vb:
+  - uid: Coree
+    name: Coree
+    href: Coree.html
+  - name: .
+  - uid: Coree.NETASP
+    name: NETASP
+    href: Coree.NETASP.html
+  - name: .
+  - uid: Coree.NETASP.Services
+    name: Services
+    href: Coree.NETASP.Services.html
+  - name: .
+  - uid: Coree.NETASP.Services.CertificateManager
+    name: CertificateManager
+    href: Coree.NETASP.Services.CertificateManager.html

@@ -1,0 +1,270 @@
+### YamlMime:ManagedReference
+items:
+- uid: Coree.NETASP.UnderConstruction
+  commentId: N:Coree.NETASP.UnderConstruction
+  id: Coree.NETASP.UnderConstruction
+  children:
+  - Coree.NETASP.UnderConstruction.CustomWebApplication
+  - Coree.NETASP.UnderConstruction.CustomWebApplication2
+  - Coree.NETASP.UnderConstruction.DummyFileProvider
+  - Coree.NETASP.UnderConstruction.EmptyWebHostBuilder
+  - Coree.NETASP.UnderConstruction.EmptyWebHostBuilder2
+  - Coree.NETASP.UnderConstruction.EmptyWebHostBuilder3
+  - Coree.NETASP.UnderConstruction.EmptyWebHostBuilderx
+  - Coree.NETASP.UnderConstruction.ExampleClass
+  - Coree.NETASP.UnderConstruction.FileServerMiddleware
+  - Coree.NETASP.UnderConstruction.FileServerMiddlewareExtensions
+  - Coree.NETASP.UnderConstruction.MyWebHostBuilder
+  - Coree.NETASP.UnderConstruction.ObjectDumper
+  - Coree.NETASP.UnderConstruction.ObjectDumper2
+  - Coree.NETASP.UnderConstruction.ObjectDumper3
+  - Coree.NETASP.UnderConstruction.OptionsDumper
+  - Coree.NETASP.UnderConstruction.OptionsKestrelServerOptionsExtensions
+  - Coree.NETASP.UnderConstruction.PhpCgiExecutor
+  - Coree.NETASP.UnderConstruction.Product
+  - Coree.NETASP.UnderConstruction.PropertyAccessTracker`1
+  - Coree.NETASP.UnderConstruction.ServicesDumper
+  - Coree.NETASP.UnderConstruction.TrackableItem`1
+  - Coree.NETASP.UnderConstruction.TrackableList`1
+  - Coree.NETASP.UnderConstruction.TrackableState
+  langs:
+  - csharp
+  - vb
+  name: Coree.NETASP.UnderConstruction
+  nameWithType: Coree.NETASP.UnderConstruction
+  fullName: Coree.NETASP.UnderConstruction
+  type: Namespace
+  assemblies:
+  - Coree.NETASP
+references:
+- uid: Coree.NETASP.UnderConstruction.EmptyWebHostBuilder3
+  commentId: T:Coree.NETASP.UnderConstruction.EmptyWebHostBuilder3
+  href: Coree.NETASP.UnderConstruction.EmptyWebHostBuilder3.html
+  name: EmptyWebHostBuilder3
+  nameWithType: EmptyWebHostBuilder3
+  fullName: Coree.NETASP.UnderConstruction.EmptyWebHostBuilder3
+- uid: Coree.NETASP.UnderConstruction.CustomWebApplication2
+  commentId: T:Coree.NETASP.UnderConstruction.CustomWebApplication2
+  parent: Coree.NETASP.UnderConstruction
+  href: Coree.NETASP.UnderConstruction.CustomWebApplication2.html
+  name: CustomWebApplication2
+  nameWithType: CustomWebApplication2
+  fullName: Coree.NETASP.UnderConstruction.CustomWebApplication2
+- uid: Coree.NETASP.UnderConstruction.OptionsKestrelServerOptionsExtensions
+  commentId: T:Coree.NETASP.UnderConstruction.OptionsKestrelServerOptionsExtensions
+  href: Coree.NETASP.UnderConstruction.OptionsKestrelServerOptionsExtensions.html
+  name: OptionsKestrelServerOptionsExtensions
+  nameWithType: OptionsKestrelServerOptionsExtensions
+  fullName: Coree.NETASP.UnderConstruction.OptionsKestrelServerOptionsExtensions
+- uid: Coree.NETASP.UnderConstruction.TrackableState
+  commentId: T:Coree.NETASP.UnderConstruction.TrackableState
+  parent: Coree.NETASP.UnderConstruction
+  href: Coree.NETASP.UnderConstruction.TrackableState.html
+  name: TrackableState
+  nameWithType: TrackableState
+  fullName: Coree.NETASP.UnderConstruction.TrackableState
+- uid: Coree.NETASP.UnderConstruction.TrackableItem`1
+  commentId: T:Coree.NETASP.UnderConstruction.TrackableItem`1
+  parent: Coree.NETASP.UnderConstruction
+  href: Coree.NETASP.UnderConstruction.TrackableItem-1.html
+  name: TrackableItem<T>
+  nameWithType: TrackableItem<T>
+  fullName: Coree.NETASP.UnderConstruction.TrackableItem<T>
+  nameWithType.vb: TrackableItem(Of T)
+  fullName.vb: Coree.NETASP.UnderConstruction.TrackableItem(Of T)
+  name.vb: TrackableItem(Of T)
+  spec.csharp:
+  - uid: Coree.NETASP.UnderConstruction.TrackableItem`1
+    name: TrackableItem
+    href: Coree.NETASP.UnderConstruction.TrackableItem-1.html
+  - name: <
+  - name: T
+  - name: '>'
+  spec.vb:
+  - uid: Coree.NETASP.UnderConstruction.TrackableItem`1
+    name: TrackableItem
+    href: Coree.NETASP.UnderConstruction.TrackableItem-1.html
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+- uid: Coree.NETASP.UnderConstruction.TrackableList`1
+  commentId: T:Coree.NETASP.UnderConstruction.TrackableList`1
+  parent: Coree.NETASP.UnderConstruction
+  href: Coree.NETASP.UnderConstruction.TrackableList-1.html
+  name: TrackableList<T>
+  nameWithType: TrackableList<T>
+  fullName: Coree.NETASP.UnderConstruction.TrackableList<T>
+  nameWithType.vb: TrackableList(Of T)
+  fullName.vb: Coree.NETASP.UnderConstruction.TrackableList(Of T)
+  name.vb: TrackableList(Of T)
+  spec.csharp:
+  - uid: Coree.NETASP.UnderConstruction.TrackableList`1
+    name: TrackableList
+    href: Coree.NETASP.UnderConstruction.TrackableList-1.html
+  - name: <
+  - name: T
+  - name: '>'
+  spec.vb:
+  - uid: Coree.NETASP.UnderConstruction.TrackableList`1
+    name: TrackableList
+    href: Coree.NETASP.UnderConstruction.TrackableList-1.html
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+- uid: Coree.NETASP.UnderConstruction.Product
+  commentId: T:Coree.NETASP.UnderConstruction.Product
+  href: Coree.NETASP.UnderConstruction.Product.html
+  name: Product
+  nameWithType: Product
+  fullName: Coree.NETASP.UnderConstruction.Product
+- uid: Coree.NETASP.UnderConstruction.PropertyAccessTracker`1
+  commentId: T:Coree.NETASP.UnderConstruction.PropertyAccessTracker`1
+  href: Coree.NETASP.UnderConstruction.PropertyAccessTracker-1.html
+  name: PropertyAccessTracker<T>
+  nameWithType: PropertyAccessTracker<T>
+  fullName: Coree.NETASP.UnderConstruction.PropertyAccessTracker<T>
+  nameWithType.vb: PropertyAccessTracker(Of T)
+  fullName.vb: Coree.NETASP.UnderConstruction.PropertyAccessTracker(Of T)
+  name.vb: PropertyAccessTracker(Of T)
+  spec.csharp:
+  - uid: Coree.NETASP.UnderConstruction.PropertyAccessTracker`1
+    name: PropertyAccessTracker
+    href: Coree.NETASP.UnderConstruction.PropertyAccessTracker-1.html
+  - name: <
+  - name: T
+  - name: '>'
+  spec.vb:
+  - uid: Coree.NETASP.UnderConstruction.PropertyAccessTracker`1
+    name: PropertyAccessTracker
+    href: Coree.NETASP.UnderConstruction.PropertyAccessTracker-1.html
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+- uid: Coree.NETASP.UnderConstruction.ExampleClass
+  commentId: T:Coree.NETASP.UnderConstruction.ExampleClass
+  href: Coree.NETASP.UnderConstruction.ExampleClass.html
+  name: ExampleClass
+  nameWithType: ExampleClass
+  fullName: Coree.NETASP.UnderConstruction.ExampleClass
+- uid: Coree.NETASP.UnderConstruction.DummyFileProvider
+  commentId: T:Coree.NETASP.UnderConstruction.DummyFileProvider
+  href: Coree.NETASP.UnderConstruction.DummyFileProvider.html
+  name: DummyFileProvider
+  nameWithType: DummyFileProvider
+  fullName: Coree.NETASP.UnderConstruction.DummyFileProvider
+- uid: Coree.NETASP.UnderConstruction.ServicesDumper
+  commentId: T:Coree.NETASP.UnderConstruction.ServicesDumper
+  href: Coree.NETASP.UnderConstruction.ServicesDumper.html
+  name: ServicesDumper
+  nameWithType: ServicesDumper
+  fullName: Coree.NETASP.UnderConstruction.ServicesDumper
+- uid: Coree.NETASP.UnderConstruction.OptionsDumper
+  commentId: T:Coree.NETASP.UnderConstruction.OptionsDumper
+  href: Coree.NETASP.UnderConstruction.OptionsDumper.html
+  name: OptionsDumper
+  nameWithType: OptionsDumper
+  fullName: Coree.NETASP.UnderConstruction.OptionsDumper
+- uid: Coree.NETASP.UnderConstruction.ObjectDumper
+  commentId: T:Coree.NETASP.UnderConstruction.ObjectDumper
+  href: Coree.NETASP.UnderConstruction.ObjectDumper.html
+  name: ObjectDumper
+  nameWithType: ObjectDumper
+  fullName: Coree.NETASP.UnderConstruction.ObjectDumper
+- uid: Coree.NETASP.UnderConstruction.ObjectDumper2
+  commentId: T:Coree.NETASP.UnderConstruction.ObjectDumper2
+  href: Coree.NETASP.UnderConstruction.ObjectDumper2.html
+  name: ObjectDumper2
+  nameWithType: ObjectDumper2
+  fullName: Coree.NETASP.UnderConstruction.ObjectDumper2
+- uid: Coree.NETASP.UnderConstruction.ObjectDumper3
+  commentId: T:Coree.NETASP.UnderConstruction.ObjectDumper3
+  href: Coree.NETASP.UnderConstruction.ObjectDumper3.html
+  name: ObjectDumper3
+  nameWithType: ObjectDumper3
+  fullName: Coree.NETASP.UnderConstruction.ObjectDumper3
+- uid: Coree.NETASP.UnderConstruction.FileServerMiddleware
+  commentId: T:Coree.NETASP.UnderConstruction.FileServerMiddleware
+  href: Coree.NETASP.UnderConstruction.FileServerMiddleware.html
+  name: FileServerMiddleware
+  nameWithType: FileServerMiddleware
+  fullName: Coree.NETASP.UnderConstruction.FileServerMiddleware
+- uid: Coree.NETASP.UnderConstruction.FileServerMiddlewareExtensions
+  commentId: T:Coree.NETASP.UnderConstruction.FileServerMiddlewareExtensions
+  parent: Coree.NETASP.UnderConstruction
+  href: Coree.NETASP.UnderConstruction.FileServerMiddlewareExtensions.html
+  name: FileServerMiddlewareExtensions
+  nameWithType: FileServerMiddlewareExtensions
+  fullName: Coree.NETASP.UnderConstruction.FileServerMiddlewareExtensions
+- uid: Coree.NETASP.UnderConstruction.PhpCgiExecutor
+  commentId: T:Coree.NETASP.UnderConstruction.PhpCgiExecutor
+  href: Coree.NETASP.UnderConstruction.PhpCgiExecutor.html
+  name: PhpCgiExecutor
+  nameWithType: PhpCgiExecutor
+  fullName: Coree.NETASP.UnderConstruction.PhpCgiExecutor
+- uid: Coree.NETASP.UnderConstruction.EmptyWebHostBuilder2
+  commentId: T:Coree.NETASP.UnderConstruction.EmptyWebHostBuilder2
+  href: Coree.NETASP.UnderConstruction.EmptyWebHostBuilder2.html
+  name: EmptyWebHostBuilder2
+  nameWithType: EmptyWebHostBuilder2
+  fullName: Coree.NETASP.UnderConstruction.EmptyWebHostBuilder2
+- uid: Coree.NETASP.UnderConstruction.CustomWebApplication
+  commentId: T:Coree.NETASP.UnderConstruction.CustomWebApplication
+  parent: Coree.NETASP.UnderConstruction
+  href: Coree.NETASP.UnderConstruction.CustomWebApplication.html
+  name: CustomWebApplication
+  nameWithType: CustomWebApplication
+  fullName: Coree.NETASP.UnderConstruction.CustomWebApplication
+- uid: Coree.NETASP.UnderConstruction.EmptyWebHostBuilder
+  commentId: T:Coree.NETASP.UnderConstruction.EmptyWebHostBuilder
+  href: Coree.NETASP.UnderConstruction.EmptyWebHostBuilder.html
+  name: EmptyWebHostBuilder
+  nameWithType: EmptyWebHostBuilder
+  fullName: Coree.NETASP.UnderConstruction.EmptyWebHostBuilder
+- uid: Coree.NETASP.UnderConstruction.EmptyWebHostBuilderx
+  commentId: T:Coree.NETASP.UnderConstruction.EmptyWebHostBuilderx
+  href: Coree.NETASP.UnderConstruction.EmptyWebHostBuilderx.html
+  name: EmptyWebHostBuilderx
+  nameWithType: EmptyWebHostBuilderx
+  fullName: Coree.NETASP.UnderConstruction.EmptyWebHostBuilderx
+- uid: Coree.NETASP.UnderConstruction.MyWebHostBuilder
+  commentId: T:Coree.NETASP.UnderConstruction.MyWebHostBuilder
+  href: Coree.NETASP.UnderConstruction.MyWebHostBuilder.html
+  name: MyWebHostBuilder
+  nameWithType: MyWebHostBuilder
+  fullName: Coree.NETASP.UnderConstruction.MyWebHostBuilder
+- uid: Coree.NETASP.UnderConstruction
+  commentId: N:Coree.NETASP.UnderConstruction
+  href: Coree.html
+  name: Coree.NETASP.UnderConstruction
+  nameWithType: Coree.NETASP.UnderConstruction
+  fullName: Coree.NETASP.UnderConstruction
+  spec.csharp:
+  - uid: Coree
+    name: Coree
+    href: Coree.html
+  - name: .
+  - uid: Coree.NETASP
+    name: NETASP
+    href: Coree.NETASP.html
+  - name: .
+  - uid: Coree.NETASP.UnderConstruction
+    name: UnderConstruction
+    href: Coree.NETASP.UnderConstruction.html
+  spec.vb:
+  - uid: Coree
+    name: Coree
+    href: Coree.html
+  - name: .
+  - uid: Coree.NETASP
+    name: NETASP
+    href: Coree.NETASP.html
+  - name: .
+  - uid: Coree.NETASP.UnderConstruction
+    name: UnderConstruction
+    href: Coree.NETASP.UnderConstruction.html

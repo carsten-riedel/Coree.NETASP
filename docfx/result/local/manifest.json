@@ -34,6 +34,16 @@
     },
     {
       "type": "ManagedReference",
+      "source_relative_path": "api/Coree.NETASP.Extensions.WebApplicationBuilderExtensions.WebAppBuilderExtensions.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Coree.NETASP.Extensions.WebApplicationBuilderExtensions.WebAppBuilderExtensions.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
       "source_relative_path": "api/Coree.NETASP.Extensions.WebApplicationBuilderExtensions.WebApplicationBuilderExtension.yml",
       "output": {
         ".html": {
@@ -48,6 +58,686 @@
       "output": {
         ".html": {
           "relative_path": "api/Coree.NETASP.Extensions.WebApplicationBuilderExtensions.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Coree.NETASP.Middleware.AcceptLanguageFiltering.AcceptLanguageFilteringExtensions.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Coree.NETASP.Middleware.AcceptLanguageFiltering.AcceptLanguageFilteringExtensions.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Coree.NETASP.Middleware.AcceptLanguageFiltering.AcceptLanguageFilteringMiddleware.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Coree.NETASP.Middleware.AcceptLanguageFiltering.AcceptLanguageFilteringMiddleware.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Coree.NETASP.Middleware.AcceptLanguageFiltering.AcceptLanguageFilteringOptions.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Coree.NETASP.Middleware.AcceptLanguageFiltering.AcceptLanguageFilteringOptions.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Coree.NETASP.Middleware.AcceptLanguageFiltering.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Coree.NETASP.Middleware.AcceptLanguageFiltering.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Coree.NETASP.Middleware.DnsHostNameFiltering.DnsHostNameFilteringMiddleware.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Coree.NETASP.Middleware.DnsHostNameFiltering.DnsHostNameFilteringMiddleware.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Coree.NETASP.Middleware.DnsHostNameFiltering.DnsHostNameFilteringMiddlewareExtensions.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Coree.NETASP.Middleware.DnsHostNameFiltering.DnsHostNameFilteringMiddlewareExtensions.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Coree.NETASP.Middleware.DnsHostNameFiltering.DnsHostNameFilteringOptions.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Coree.NETASP.Middleware.DnsHostNameFiltering.DnsHostNameFilteringOptions.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Coree.NETASP.Middleware.DnsHostNameFiltering.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Coree.NETASP.Middleware.DnsHostNameFiltering.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Coree.NETASP.Middleware.HostNameFiltering.HostNameFilterOptions.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Coree.NETASP.Middleware.HostNameFiltering.HostNameFilterOptions.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Coree.NETASP.Middleware.HostNameFiltering.HostNameFilteringExtensions.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Coree.NETASP.Middleware.HostNameFiltering.HostNameFilteringExtensions.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Coree.NETASP.Middleware.HostNameFiltering.HostNameFilteringMiddleware.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Coree.NETASP.Middleware.HostNameFiltering.HostNameFilteringMiddleware.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Coree.NETASP.Middleware.HostNameFiltering.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Coree.NETASP.Middleware.HostNameFiltering.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Coree.NETASP.Middleware.PathDeep.PathDeepFilteringMiddleware.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Coree.NETASP.Middleware.PathDeep.PathDeepFilteringMiddleware.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Coree.NETASP.Middleware.PathDeep.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Coree.NETASP.Middleware.PathDeep.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Coree.NETASP.Middleware.ProtocolFiltering.ProtocolFilteringMiddleware.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Coree.NETASP.Middleware.ProtocolFiltering.ProtocolFilteringMiddleware.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Coree.NETASP.Middleware.ProtocolFiltering.ProtocolFilteringMiddlewareExtensions.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Coree.NETASP.Middleware.ProtocolFiltering.ProtocolFilteringMiddlewareExtensions.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Coree.NETASP.Middleware.ProtocolFiltering.ProtocolFilteringOptions.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Coree.NETASP.Middleware.ProtocolFiltering.ProtocolFilteringOptions.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Coree.NETASP.Middleware.ProtocolFiltering.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Coree.NETASP.Middleware.ProtocolFiltering.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Coree.NETASP.Middleware.RequestLoggingMiddleware.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Coree.NETASP.Middleware.RequestLoggingMiddleware.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Coree.NETASP.Middleware.RequestUrlFiltering.RequestUrlFilteringExtensions.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Coree.NETASP.Middleware.RequestUrlFiltering.RequestUrlFilteringExtensions.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Coree.NETASP.Middleware.RequestUrlFiltering.RequestUrlFilteringMiddleware.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Coree.NETASP.Middleware.RequestUrlFiltering.RequestUrlFilteringMiddleware.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Coree.NETASP.Middleware.RequestUrlFiltering.RequestUrlFilteringOptions.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Coree.NETASP.Middleware.RequestUrlFiltering.RequestUrlFilteringOptions.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Coree.NETASP.Middleware.RequestUrlFiltering.ValidationsStringExtensions.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Coree.NETASP.Middleware.RequestUrlFiltering.ValidationsStringExtensions.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Coree.NETASP.Middleware.RequestUrlFiltering.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Coree.NETASP.Middleware.RequestUrlFiltering.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Coree.NETASP.Middleware.ResponseRecordingMiddleware.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Coree.NETASP.Middleware.ResponseRecordingMiddleware.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Coree.NETASP.Middleware.SegmentBlacklistFilterOptions.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Coree.NETASP.Middleware.SegmentBlacklistFilterOptions.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Coree.NETASP.Middleware.SegmentBlacklistFilteringExtensions.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Coree.NETASP.Middleware.SegmentBlacklistFilteringExtensions.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Coree.NETASP.Middleware.SegmentBlacklistFilteringMiddleware.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Coree.NETASP.Middleware.SegmentBlacklistFilteringMiddleware.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Coree.NETASP.Middleware.UnwantedHeaderKeysFiltering.UnwantedHeaderKeysMiddleware.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Coree.NETASP.Middleware.UnwantedHeaderKeysFiltering.UnwantedHeaderKeysMiddleware.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Coree.NETASP.Middleware.UnwantedHeaderKeysFiltering.UnwantedHeaderKeysMiddlewareExtensions.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Coree.NETASP.Middleware.UnwantedHeaderKeysFiltering.UnwantedHeaderKeysMiddlewareExtensions.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Coree.NETASP.Middleware.UnwantedHeaderKeysFiltering.UnwantedHeaderKeysOptions.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Coree.NETASP.Middleware.UnwantedHeaderKeysFiltering.UnwantedHeaderKeysOptions.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Coree.NETASP.Middleware.UnwantedHeaderKeysFiltering.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Coree.NETASP.Middleware.UnwantedHeaderKeysFiltering.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Coree.NETASP.Middleware.UserAgentFiltering.UserAgentFilterOptions.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Coree.NETASP.Middleware.UserAgentFiltering.UserAgentFilterOptions.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Coree.NETASP.Middleware.UserAgentFiltering.UserAgentFilteringExtensions.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Coree.NETASP.Middleware.UserAgentFiltering.UserAgentFilteringExtensions.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Coree.NETASP.Middleware.UserAgentFiltering.UserAgentFilteringMiddleware.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Coree.NETASP.Middleware.UserAgentFiltering.UserAgentFilteringMiddleware.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Coree.NETASP.Middleware.UserAgentFiltering.ValidationsStringExtensions.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Coree.NETASP.Middleware.UserAgentFiltering.ValidationsStringExtensions.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Coree.NETASP.Middleware.UserAgentFiltering.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Coree.NETASP.Middleware.UserAgentFiltering.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Coree.NETASP.Middleware.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Coree.NETASP.Middleware.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Coree.NETASP.Services.CertificateManager.CertificateManager.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Coree.NETASP.Services.CertificateManager.CertificateManager.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Coree.NETASP.Services.CertificateManager.CertificateManagerService.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Coree.NETASP.Services.CertificateManager.CertificateManagerService.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Coree.NETASP.Services.CertificateManager.CommonDistinguishedNameBuilder.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Coree.NETASP.Services.CertificateManager.CommonDistinguishedNameBuilder.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Coree.NETASP.Services.CertificateManager.DistinguishedName.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Coree.NETASP.Services.CertificateManager.DistinguishedName.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Coree.NETASP.Services.CertificateManager.ICertificateManagerService.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Coree.NETASP.Services.CertificateManager.ICertificateManagerService.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Coree.NETASP.Services.CertificateManager.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Coree.NETASP.Services.CertificateManager.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Coree.NETASP.UnderConstruction.CustomWebApplication.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Coree.NETASP.UnderConstruction.CustomWebApplication.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Coree.NETASP.UnderConstruction.CustomWebApplication2.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Coree.NETASP.UnderConstruction.CustomWebApplication2.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Coree.NETASP.UnderConstruction.DummyFileProvider.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Coree.NETASP.UnderConstruction.DummyFileProvider.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Coree.NETASP.UnderConstruction.EmptyWebHostBuilder.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Coree.NETASP.UnderConstruction.EmptyWebHostBuilder.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Coree.NETASP.UnderConstruction.EmptyWebHostBuilder2.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Coree.NETASP.UnderConstruction.EmptyWebHostBuilder2.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Coree.NETASP.UnderConstruction.EmptyWebHostBuilder3.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Coree.NETASP.UnderConstruction.EmptyWebHostBuilder3.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Coree.NETASP.UnderConstruction.EmptyWebHostBuilderx.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Coree.NETASP.UnderConstruction.EmptyWebHostBuilderx.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Coree.NETASP.UnderConstruction.ExampleClass.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Coree.NETASP.UnderConstruction.ExampleClass.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Coree.NETASP.UnderConstruction.FileServerMiddleware.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Coree.NETASP.UnderConstruction.FileServerMiddleware.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Coree.NETASP.UnderConstruction.FileServerMiddlewareExtensions.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Coree.NETASP.UnderConstruction.FileServerMiddlewareExtensions.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Coree.NETASP.UnderConstruction.MyWebHostBuilder.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Coree.NETASP.UnderConstruction.MyWebHostBuilder.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Coree.NETASP.UnderConstruction.ObjectDumper.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Coree.NETASP.UnderConstruction.ObjectDumper.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Coree.NETASP.UnderConstruction.ObjectDumper2.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Coree.NETASP.UnderConstruction.ObjectDumper2.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Coree.NETASP.UnderConstruction.ObjectDumper3.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Coree.NETASP.UnderConstruction.ObjectDumper3.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Coree.NETASP.UnderConstruction.OptionsDumper.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Coree.NETASP.UnderConstruction.OptionsDumper.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Coree.NETASP.UnderConstruction.OptionsKestrelServerOptionsExtensions.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Coree.NETASP.UnderConstruction.OptionsKestrelServerOptionsExtensions.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Coree.NETASP.UnderConstruction.PhpCgiExecutor.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Coree.NETASP.UnderConstruction.PhpCgiExecutor.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Coree.NETASP.UnderConstruction.Product.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Coree.NETASP.UnderConstruction.Product.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Coree.NETASP.UnderConstruction.PropertyAccessTracker-1.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Coree.NETASP.UnderConstruction.PropertyAccessTracker-1.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Coree.NETASP.UnderConstruction.ServicesDumper.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Coree.NETASP.UnderConstruction.ServicesDumper.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Coree.NETASP.UnderConstruction.TrackableItem-1.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Coree.NETASP.UnderConstruction.TrackableItem-1.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Coree.NETASP.UnderConstruction.TrackableList-1.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Coree.NETASP.UnderConstruction.TrackableList-1.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Coree.NETASP.UnderConstruction.TrackableState.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Coree.NETASP.UnderConstruction.TrackableState.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Coree.NETASP.UnderConstruction.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Coree.NETASP.UnderConstruction.html"
         }
       },
       "version": ""

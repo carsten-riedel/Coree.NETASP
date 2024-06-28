@@ -1,4 +1,6 @@
-﻿using Microsoft.AspNetCore.Http.Features;
+﻿#pragma warning disable
+
+using Microsoft.AspNetCore.Http.Features;
 
 namespace Coree.NETASP.UnderConstruction
 {
@@ -230,3 +232,6 @@ namespace Coree.NETASP.UnderConstruction
         }
     }
 }
+
+
+#pragma warning restore

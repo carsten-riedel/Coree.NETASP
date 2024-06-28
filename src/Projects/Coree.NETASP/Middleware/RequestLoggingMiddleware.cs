@@ -61,11 +61,14 @@ namespace Coree.NETASP.Middleware
                 isIgnored = ignoredUserAgentList.Any(ignored => userAgent.ToString().Contains(ignored, StringComparison.OrdinalIgnoreCase));
             }
 
+
             // Check if User-Agent header is present and if its value is in the ignored list
             if (!isIgnored)
             {
                 //var request = context.Request;
                 //var fullUrl = $"{request.Scheme}://{request.Host}{request.Path}{request.QueryString}";
+                var uri = GetFullRequestUri(context);
+                var uriPath = uri.AbsoluteUri;
 
                 var RemoteIP = context.Connection.RemoteIpAddress?.ToString();
                 var RemotePort = context.Connection.RemotePort.ToString();
@@ -73,25 +76,30 @@ namespace Coree.NETASP.Middleware
                 // Log request URL and headers if the User-Agent is not in the ignored list
                 StringBuilder requestString = new StringBuilder();
                 requestString.AppendLine();
-                requestString.AppendLine($"Trace:    {context.TraceIdentifier}");
-                requestString.AppendLine($"Request:  {context.Request.GetDisplayUrl()}");
-                requestString.AppendLine($"Remote:   {RemoteIP}:{RemotePort}");
+                requestString.AppendLine($"Trace:       {context.TraceIdentifier}");
+                requestString.AppendLine($"Request:     {context.Request.GetDisplayUrl()}");
+                requestString.AppendLine($"AbsoluteUri: {uriPath}");
+                requestString.AppendLine($"Method:      {context.Request.Method}");
+                requestString.AppendLine($"Remote:      {RemoteIP}:{RemotePort}");
                 //_logger.LogInformation("-- Request URL: {URL}, Client IP: {ClientIP}", context.Request.GetDisplayUrl(), clientIP);
 
                 if (RemoteIP != null)
                 {
-                    var dns = Dns.GetHostEntry(RemoteIP);
-                    requestString.AppendLine($"DNSHostName:   {dns.HostName}");
-                    foreach (var DNS in dns.Aliases)
+                    try
                     {
-                        requestString.AppendLine($"DNSAlias:   {DNS}");
+                        var dns = Dns.GetHostEntry(RemoteIP);
+                        requestString.AppendLine($"RemoteHost:  {dns.HostName}");
                     }
+                    catch (Exception)
+                    {
+                        requestString.AppendLine($"RemoteHost:  Unresolvable");
+                    }
+
                 }
-                var ss = Dns.GetHostEntry(RemoteIP);
 
                 foreach (var header in context.Request.Headers)
                 {
-                    requestString.AppendLine($"Header:   {header.Key} = {header.Value}");
+                     requestString.AppendLine($"Header:      {header.Key} = {header.Value}");
                 }
                 //_logger.LogInformation("Header: {Key}: {Value}", header.Key, header.Value);
                 _logger.LogInformation("Request: {request}", requestString.ToString());
@@ -131,6 +139,28 @@ namespace Coree.NETASP.Middleware
             }
 
             return Task.CompletedTask;
+        }
+
+        /// <summary>
+        /// Builds the complete URI from the request components.
+        /// </summary>
+        /// <param name="context">The HTTP context containing the request.</param>
+        /// <returns>The full URI of the request.</returns>
+        public Uri GetFullRequestUri(HttpContext context)
+        {
+            var request = context.Request;
+
+            // Build the full URI
+            var uriBuilder = new UriBuilder
+            {
+                Scheme = request.Scheme,
+                Host = request.Host.Host,
+                Port = request.Host.Port ?? -1, // Keep default port handling
+                Path = request.PathBase.Add(request.Path).ToString(),
+                Query = request.QueryString.ToString()
+            };
+
+            return uriBuilder.Uri;
         }
     }
 }

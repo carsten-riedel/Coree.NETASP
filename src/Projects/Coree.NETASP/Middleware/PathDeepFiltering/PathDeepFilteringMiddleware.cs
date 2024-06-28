@@ -2,15 +2,15 @@
 
 namespace Coree.NETASP.Middleware.PathDeep
 {
-    public class MaliciousRequestBlockerMiddleware
+    public class PathDeepFilteringMiddleware
     {
         private readonly RequestDelegate _next;
         private readonly MemoryCache _ipBlockList;
         private readonly TimeSpan _blockDuration;
-        private readonly ILogger<MaliciousRequestBlockerMiddleware> _logger;
+        private readonly ILogger<PathDeepFilteringMiddleware> _logger;
         private readonly int _blockScoreThreshold;
 
-        public MaliciousRequestBlockerMiddleware(RequestDelegate next, ILogger<MaliciousRequestBlockerMiddleware> logger,
+        public PathDeepFilteringMiddleware(RequestDelegate next, ILogger<PathDeepFilteringMiddleware> logger,
                                                   int blockDurationInSeconds = 300)
         {
             _next = next;

@@ -1,4 +1,8 @@
-﻿using Microsoft.Extensions.Options;
+﻿
+
+#pragma warning disable
+
+using Microsoft.Extensions.Options;
 using System.Reflection;
 using System.Text.RegularExpressions;
 
@@ -447,3 +451,6 @@ namespace Coree.NETASP.UnderConstruction
 
     }
 }
+
+
+#pragma warning restore

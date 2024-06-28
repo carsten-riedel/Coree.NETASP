@@ -1,4 +1,7 @@
-﻿using Microsoft.Extensions.FileProviders.Physical;
+﻿
+#pragma warning disable
+
+using Microsoft.Extensions.FileProviders.Physical;
 using Microsoft.Extensions.FileProviders;
 using Microsoft.Extensions.Primitives;
 
@@ -69,3 +72,5 @@ namespace Coree.NETASP.UnderConstruction
         }
     }
 }
+
+#pragma warning restore

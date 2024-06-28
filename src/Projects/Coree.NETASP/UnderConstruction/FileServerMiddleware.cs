@@ -1,9 +1,10 @@
-﻿using System.Diagnostics;
-using System.Text;
+﻿#pragma warning disable
 
+using System.Diagnostics;
+using System.Text;
 using Microsoft.AspNetCore.StaticFiles;
 
-namespace Coree.NETASP.Middleware.FileServer
+namespace Coree.NETASP.UnderConstruction
 {
     public class FileServerMiddleware
     {
@@ -18,9 +19,9 @@ namespace Coree.NETASP.Middleware.FileServer
         {
             _next = next;
             _rootPath = rootPath;
-            this.provider = new FileExtensionContentTypeProvider();
-            this.options = new DefaultFilesOptions();
-            this.provider.Mappings.Add(".php", "application/x-httpd-php");
+            provider = new FileExtensionContentTypeProvider();
+            options = new DefaultFilesOptions();
+            provider.Mappings.Add(".php", "application/x-httpd-php");
         }
 
 
@@ -38,9 +39,9 @@ namespace Coree.NETASP.Middleware.FileServer
             {
                 foreach (var item in options.DefaultFileNames)
                 {
-                    if (System.IO.File.Exists(System.IO.Path.Combine(dirInfo.FullName, item)))
+                    if (File.Exists(Path.Combine(dirInfo.FullName, item)))
                     {
-                        fileInfo = new FileInfo(System.IO.Path.Combine(dirInfo.FullName, item));
+                        fileInfo = new FileInfo(Path.Combine(dirInfo.FullName, item));
                     }
                 }
             }
@@ -247,3 +248,5 @@ namespace Coree.NETASP.Middleware.FileServer
         }
     }
 }
+
+#pragma warning restore

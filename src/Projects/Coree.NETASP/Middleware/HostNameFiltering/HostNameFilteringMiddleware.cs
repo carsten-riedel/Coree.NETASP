@@ -1,5 +1,7 @@
 ﻿using System.Text.RegularExpressions;
 
+using Coree.NETStandard.Extensions.Validations.String;
+
 using Microsoft.Extensions.Options;
 
 namespace Coree.NETASP.Middleware.HostNameFiltering
@@ -9,15 +11,15 @@ namespace Coree.NETASP.Middleware.HostNameFiltering
     /// </summary>
     public class HostNameFilteringMiddleware
     {
-        private readonly RequestDelegate _next;
+        private readonly RequestDelegate _nextMiddleware;
         private readonly ILogger<HostNameFilteringMiddleware> _logger;
-        private readonly string[]? _allowedHosts;
+        private readonly HostNameFilterOptions _options;
 
-        public HostNameFilteringMiddleware(RequestDelegate next, IOptions<HostNameFilterOptions> options, ILogger<HostNameFilteringMiddleware> logger)
+        public HostNameFilteringMiddleware(RequestDelegate nextMiddleware, ILogger<HostNameFilteringMiddleware> logger, IOptions<HostNameFilterOptions> options)
         {
-            _next = next;
+            _nextMiddleware = nextMiddleware;
             _logger = logger;
-            _allowedHosts = options.Value.AllowedHosts;
+            _options = options.Value;
         }
 
         /// <summary>
@@ -32,11 +34,12 @@ namespace Coree.NETASP.Middleware.HostNameFiltering
 
             if (request.Host.HasValue)
             {
+                var isAllowed = request.Host.Host.ValidateWhitelistBlacklist(_options.Whitelist?.ToList(), new List<string>() { "*" });
                 // Check if the request host matches any allowed host (including wildcards)
-                if (_allowedHosts is not null && _allowedHosts.Any(allowedHost => IsHostAllowed(request.Host.Host, allowedHost)))
+                if (isAllowed)
                 {
                     _logger.LogDebug("Request host: '{RequestHost}' is allowed.", request.Host.Host);
-                    await _next(context);
+                    await _nextMiddleware(context);
                     return;
                 }
             }
@@ -45,17 +48,45 @@ namespace Coree.NETASP.Middleware.HostNameFiltering
             context.Response.StatusCode = StatusCodes.Status400BadRequest;
             await context.Response.WriteAsync("Forbidden: Not allowed.");
         }
+    }
 
+    /// <summary>
+    /// Contains extension methods for registering the <see cref="HostNameFilteringMiddleware"/> in an application's service collection.
+    /// These methods provide a convenient way to configure and apply hostname-based request filtering directly from the application startup.
+    /// </summary>
+    public static class HostNameFilteringExtensions
+    {
         /// <summary>
-        /// Checks if the request host matches the allowed host pattern.
+        /// Adds and configures the HostNameFilteringMiddleware options.
         /// </summary>
-        /// <param name="requestHost">The request host.</param>
-        /// <param name="allowedHost">The allowed host pattern.</param>
-        /// <returns>True if the host is allowed; otherwise, false.</returns>
-        private bool IsHostAllowed(string requestHost, string allowedHost)
+        /// <param name="services">The IServiceCollection to add services to. This collection will be enhanced by the configuration of the HostNameFilteringMiddleware.</param>
+        /// <param name="whitelist">An array of strings specifying the hostnames that should be allowed by the middleware. This list directly populates the Whitelist property of the <see cref="HostNameFilterOptions"/>.</param>
+        /// <returns>The IServiceCollection so that additional calls can be chained, enabling fluent configuration.</returns>
+        public static IServiceCollection AddHostNameFiltering(this IServiceCollection services, string[] whitelist)
         {
-            var pattern = "^" + Regex.Escape(allowedHost).Replace(@"\*", ".*") + "$";
-            return Regex.IsMatch(requestHost, pattern, RegexOptions.IgnoreCase);
+            services.Configure<HostNameFilterOptions>(options =>
+            {
+                options.Whitelist = whitelist;
+            });
+
+            return services;
         }
     }
+
+    /// <summary>
+    /// Provides configuration settings for filtering requests based on hostname values.
+    /// This class represents the options used by <see cref="HostNameFilteringMiddleware"/> to determine
+    /// which hostnames are allowed to access the application.
+    /// </summary>
+    public class HostNameFilterOptions
+    {
+        /// <summary>
+        /// Gets or sets an array of hostnames that are allowed to access the application.
+        /// </summary>
+        /// <value>An array of strings, each representing a hostname in the whitelist.</value>
+        public string[]? Whitelist { get; set; }
+    }
+
+
+
 }

@@ -1,4 +1,7 @@
-﻿namespace Coree.NETASP.UnderConstruction
+﻿
+#pragma warning disable
+
+namespace Coree.NETASP.UnderConstruction
 {
     public class EmptyWebHostBuilder3
     {
@@ -65,3 +68,5 @@
         }
     }
 }
+
+#pragma warning restore

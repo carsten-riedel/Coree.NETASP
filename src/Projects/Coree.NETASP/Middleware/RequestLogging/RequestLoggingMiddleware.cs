@@ -1,10 +1,9 @@
 ﻿using System.Net;
 using System.Reflection.PortableExecutable;
 using System.Text;
-
 using Microsoft.AspNetCore.Http.Extensions;
 
-namespace Coree.NETASP.Middleware
+namespace Coree.NETASP.Middleware.RequestLogging
 {
     public class RequestLoggingMiddleware
     {
@@ -67,8 +66,6 @@ namespace Coree.NETASP.Middleware
             {
                 //var request = context.Request;
                 //var fullUrl = $"{request.Scheme}://{request.Host}{request.Path}{request.QueryString}";
-                var uri = GetFullRequestUri(context);
-                var uriPath = uri.AbsoluteUri;
 
                 var RemoteIP = context.Connection.RemoteIpAddress?.ToString();
                 var RemotePort = context.Connection.RemotePort.ToString();
@@ -76,11 +73,11 @@ namespace Coree.NETASP.Middleware
                 // Log request URL and headers if the User-Agent is not in the ignored list
                 StringBuilder requestString = new StringBuilder();
                 requestString.AppendLine();
-                requestString.AppendLine($"Trace:       {context.TraceIdentifier}");
-                requestString.AppendLine($"Request:     {context.Request.GetDisplayUrl()}");
-                requestString.AppendLine($"AbsoluteUri: {uriPath}");
-                requestString.AppendLine($"Method:      {context.Request.Method}");
-                requestString.AppendLine($"Remote:      {RemoteIP}:{RemotePort}");
+                requestString.AppendLine($"Connection.Id: {context.Connection.Id}");
+                requestString.AppendLine($"Trace:         {context.TraceIdentifier}");
+                requestString.AppendLine($"Request:       {context.Request.GetDisplayUrl()}");
+                requestString.AppendLine($"Method:        {context.Request.Method}");
+                requestString.AppendLine($"Remote:        {RemoteIP}:{RemotePort}");
                 //_logger.LogInformation("-- Request URL: {URL}, Client IP: {ClientIP}", context.Request.GetDisplayUrl(), clientIP);
 
                 if (RemoteIP != null)
@@ -88,18 +85,18 @@ namespace Coree.NETASP.Middleware
                     try
                     {
                         var dns = Dns.GetHostEntry(RemoteIP);
-                        requestString.AppendLine($"RemoteHost:  {dns.HostName}");
+                        requestString.AppendLine($"RemoteHost:    {dns.HostName}");
                     }
                     catch (Exception)
                     {
-                        requestString.AppendLine($"RemoteHost:  Unresolvable");
+                        requestString.AppendLine($"RemoteHost:    Unresolvable");
                     }
 
                 }
 
                 foreach (var header in context.Request.Headers)
                 {
-                     requestString.AppendLine($"Header:      {header.Key} = {header.Value}");
+                    requestString.AppendLine($"Header:        {header.Key} = {header.Value}");
                 }
                 //_logger.LogInformation("Header: {Key}: {Value}", header.Key, header.Value);
                 _logger.LogInformation("Request: {request}", requestString.ToString());
@@ -120,16 +117,17 @@ namespace Coree.NETASP.Middleware
 
                         StringBuilder responseString = new StringBuilder();
                         responseString.AppendLine();
-                        responseString.AppendLine($"Trace:       {context.TraceIdentifier}");
-                        responseString.AppendLine($"StatusCode:  {context.Response.StatusCode}");
-                        responseString.AppendLine($"Duration:    {duration.TotalMilliseconds}");
-                        responseString.AppendLine($"ContentType: {context.Response.ContentType}");
+                        responseString.AppendLine($"Connection id: {context.Connection.Id}");
+                        responseString.AppendLine($"Request id:    {context.TraceIdentifier}");
+                        responseString.AppendLine($"StatusCode:    {context.Response.StatusCode}");
+                        responseString.AppendLine($"Duration:      {duration.TotalMilliseconds}");
+                        responseString.AppendLine($"ContentType:   {context.Response.ContentType}");
 
                         foreach (var header in context.Response.Headers)
                         {
-                            responseString.AppendLine($"Header:      {header.Key} = {header.Value}");
+                            responseString.AppendLine($"Header:        {header.Key} = {header.Value}");
                         }
-                        _logger.LogInformation("Response: {response}", responseString.ToString());
+                        _logger.LogInformation("Response:      {response}", responseString.ToString());
                     }
                     catch (Exception ex)
                     {

@@ -1,8 +1,7 @@
 ﻿using System.Text.RegularExpressions;
-
 using Microsoft.Extensions.Options;
 
-namespace Coree.NETASP.Middleware
+namespace Coree.NETASP.Middleware.SegmentBlacklistFiltering
 {
 
     public class SegmentBlacklistFilterOptions

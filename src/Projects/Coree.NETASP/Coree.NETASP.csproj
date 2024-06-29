@@ -17,6 +17,7 @@
 	  <Compile Remove="Extensions\Class.cs" />
 	</ItemGroup>
 	<ItemGroup>
+		<None Remove="Extensions\KestrelServerOptions\ConfigureKestrelSimple.cs" />
 		<None Remove="Extensions\WebApplicationBuilder\DumpAspNetCoreConfiguration.cs" />
 		<None Remove="Extensions\WebApplicationBuilder\SetupAndBuild.cs" />
 		<None Remove="Middleware\AcceptLanguageFiltering\AcceptLanguageFilteringMiddleware.cs" />
@@ -38,9 +39,6 @@
 	</ItemGroup>
 	<ItemGroup>
 		<PackageReference Include="Coree.NET" Version="0.1.8945.20552" />
-	</ItemGroup>
-	<ItemGroup>
-	  <Folder Include="Extensions\KestrelServerOptions\" />
 	</ItemGroup>
 
 </Project>

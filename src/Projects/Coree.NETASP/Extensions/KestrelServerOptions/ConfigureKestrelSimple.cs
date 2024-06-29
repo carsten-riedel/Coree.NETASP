@@ -215,8 +215,10 @@ namespace Coree.NETASP.Extensions.KestrelOptions
 
         public static AuthenticationBuilder AddDefaultCookieConfig(this AuthenticationBuilder builder, Action<CookieBuilder, CookieAuthenticationEvents, CookieAuthenticationOptions> action)
         {
+    
             return builder.AddCookie(options =>
             {
+
                 action.Invoke(options.Cookie, options.Events, options);
             });
         }

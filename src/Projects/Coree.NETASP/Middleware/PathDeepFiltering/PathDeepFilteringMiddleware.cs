@@ -1,4 +1,6 @@
-﻿using Microsoft.Extensions.Caching.Memory;
+﻿using Coree.NETASP.Extensions.HttpResponsex;
+
+using Microsoft.Extensions.Caching.Memory;
 
 namespace Coree.NETASP.Middleware.PathDeep
 {
@@ -39,8 +41,7 @@ namespace Coree.NETASP.Middleware.PathDeep
             {
                 _ipBlockList.Set(requestKey, currentScore, _blockDuration);
                 _logger.LogError($"IP Temporarily Blocked: {remoteIp} with a total score of {currentScore}. Triggered by suspicious path depth activity.");
-                context.Response.StatusCode = StatusCodes.Status400BadRequest;
-                await context.Response.WriteAsync("Forbidden: Not allowed.");
+                await context.Response.WriteDefaultStatusCodeAnswer(StatusCodes.Status400BadRequest);
                 return;
             }
             else

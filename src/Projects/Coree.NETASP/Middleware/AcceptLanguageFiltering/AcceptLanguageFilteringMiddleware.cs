@@ -1,4 +1,5 @@
-﻿using Coree.NETStandard.Extensions.Validations.String;
+﻿using Coree.NETASP.Extensions.HttpResponsex;
+using Coree.NETStandard.Extensions.Validations.String;
 
 using Microsoft.Extensions.Options;
 
@@ -39,14 +40,13 @@ namespace Coree.NETASP.Middleware.AcceptLanguageFiltering
 
             if (isAllowedLanguage)
             {
-                _logger.LogDebug("AcceptLanguage: '{AcceptLanguage}' is allowed.", languageHeader);
+                _logger.LogDebug("Accept-Language: '{AcceptLanguage}' is allowed.", languageHeader);
                 await _nextMiddleware(context);
                 return;
             }
 
-            _logger.LogError("AcceptLanguage: '{AcceptLanguage}' is not allowed.", languageHeader);
-            context.Response.StatusCode = StatusCodes.Status400BadRequest;
-            await context.Response.WriteAsync("Forbidden: Not allowed.");
+            _logger.LogError("Accept-Language: '{AcceptLanguage}' is not allowed.", languageHeader);
+            await context.Response.WriteDefaultStatusCodeAnswer(StatusCodes.Status400BadRequest);
         }
     }
 

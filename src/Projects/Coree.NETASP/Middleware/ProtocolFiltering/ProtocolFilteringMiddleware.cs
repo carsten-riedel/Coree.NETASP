@@ -1,5 +1,7 @@
 ﻿using System.Text.RegularExpressions;
 
+using Coree.NETASP.Extensions.HttpResponsex;
+
 using Microsoft.Extensions.Options;
 
 
@@ -47,8 +49,7 @@ namespace Coree.NETASP.Middleware.ProtocolFiltering
             }
 
             _logger.LogError("Protocol: '{Protocol}' is not allowed.", protocol);
-            context.Response.StatusCode = StatusCodes.Status400BadRequest;
-            await context.Response.WriteAsync("Forbidden: Not allowed.");
+            await context.Response.WriteDefaultStatusCodeAnswer(StatusCodes.Status400BadRequest);
 
         }
     }

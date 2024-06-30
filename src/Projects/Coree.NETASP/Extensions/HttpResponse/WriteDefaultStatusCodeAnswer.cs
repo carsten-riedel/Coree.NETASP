@@ -1,53 +1,30 @@
-﻿using Coree.NETASP.Extensions.HttpResponsex;
-using Coree.NETStandard.Extensions.Validations.String;
+﻿using Polly;
 
-using Microsoft.EntityFrameworkCore.Internal;
-using Microsoft.Extensions.Options;
-using System.Text.RegularExpressions;
-
-namespace Coree.NETASP.Middleware.UnwantedHeaderKeysFiltering
+namespace Coree.NETASP.Extensions.HttpResponsex
 {
-    public class UnwantedHeaderKeysOptions
+    public static class HttpResponseExtensions
     {
-        public string[]? Blacklist { get; set; }
-    }
-
-    /// <summary>
-    /// Middleware to filter requests based on the HTTP protocol used.
-    /// </summary>
-    public class UnwantedHeaderKeysMiddleware
-    {
-        private readonly RequestDelegate _next;
-        private readonly ILogger<UnwantedHeaderKeysMiddleware> _logger;
-        private readonly UnwantedHeaderKeysOptions _UnwantedHeaderKeysOptions;
-
-        public UnwantedHeaderKeysMiddleware(RequestDelegate next, ILogger<UnwantedHeaderKeysMiddleware> logger, IOptions<UnwantedHeaderKeysOptions> options)
-        {
-            _next = next;
-            _logger = logger;
-            _UnwantedHeaderKeysOptions = options.Value;
-        }
-
         /// <summary>
-        /// Invoke method to process the HTTP context based on blacklisted headers.
+        /// Adds security headers to the HTTP response.
         /// </summary>
-        /// <param name="context">The HTTP context.</param>
-        /// <returns>A task representing the asynchronous operation.</returns>
-        public async Task InvokeAsync(HttpContext context)
+        /// <param name="response">The HTTP response.</param>
+        public static async Task WriteDefaultStatusCodeAnswer(this HttpResponse response,int StatusCode)
         {
-            foreach (var header in context.Request.Headers)
-            {
-                var isValid = header.Key.ValidateWhitelistBlacklist(null,_UnwantedHeaderKeysOptions.Blacklist?.ToList());
-                if (!isValid)
-                {
-                    _logger.LogError("Access denied due to unwanted header key: {Key}", header.Key);
-                    await context.Response.WriteDefaultStatusCodeAnswer(StatusCodes.Status400BadRequest);
-                    return;
-                }
-            }
+            response.StatusCode = StatusCode;
+            response.ContentType = "text/html";
 
-            _logger.LogDebug("No unwanted headers detected. Proceeding with request.");
-            await _next(context);
+            // Adding additional headers
+            response.Headers.Add("Strict-Transport-Security", "max-age=31536000; includeSubDomains; preload");
+            response.Headers.Add("Content-Security-Policy", "default-src 'self'; script-src 'self'; object-src 'none';");
+            response.Headers.Add("X-Frame-Options", "SAMEORIGIN");
+            response.Headers.Add("X-Content-Type-Options", "nosniff");
+            response.Headers.Add("Referrer-Policy", "no-referrer");
+            response.Headers.Add("Permissions-Policy", "accelerometer=(), autoplay=(), camera=(), encrypted-media=(), fullscreen=(), geolocation=(), gyroscope=(), magnetometer=(), microphone=(), midi=(), payment=(), picture-in-picture=(), sync-xhr=(), usb=(), vr=(), xr-spatial-tracking=()");
+            response.Headers.Add("Expect-CT", "max-age=86400, enforce");
+            response.Headers.Add("Feature-Policy", "geolocation 'none'; microphone 'none'; camera 'none'");
+
+            string responseMessage = $"<html><body><h1><p>{response.StatusCode} - {GetStatusCodeDescription(response.StatusCode)}</p></h1></body></html>";
+            await response.WriteAsync(responseMessage);
         }
 
         private static string GetStatusCodeDescription(int statusCode)
@@ -118,25 +95,5 @@ namespace Coree.NETASP.Middleware.UnwantedHeaderKeysFiltering
                 _ => "Unknown Status Code"
             };
         }
-    }
-
-    public static class UnwantedHeaderKeysMiddlewareExtensions
-    {
-
-
-        public static IServiceCollection AddUnwantedHeaderKeysFiltering(this IServiceCollection services,string[]? blacklist = null)
-        {
-
-            services.Configure<UnwantedHeaderKeysOptions>(options =>
-            {
-                options.Blacklist = blacklist;
-            });
-
-            return services;
-        }
-
-   
-
-
     }
 }

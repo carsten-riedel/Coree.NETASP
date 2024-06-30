@@ -1,5 +1,6 @@
 ﻿using System.Net;
 
+using Coree.NETASP.Extensions.HttpResponsex;
 using Coree.NETStandard.Extensions.Validations.String;
 
 using Microsoft.Extensions.Options;
@@ -70,8 +71,7 @@ namespace Coree.NETASP.Middleware.DnsHostNameFiltering
             }
 
             _logger.LogError("DNS Host Name: '{ResolvedDnsName}' is not allowed.", resolvedDnsName);
-            context.Response.StatusCode = StatusCodes.Status400BadRequest;
-            await context.Response.WriteAsync("Forbidden: Not allowed.");
+            await context.Response.WriteDefaultStatusCodeAnswer(StatusCodes.Status400BadRequest);
         }
     }
 

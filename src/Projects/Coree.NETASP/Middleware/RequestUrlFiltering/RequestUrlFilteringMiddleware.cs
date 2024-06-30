@@ -1,5 +1,7 @@
 ﻿using System.Text.RegularExpressions;
 
+using Coree.NETASP.Extensions.HttpResponsex;
+
 using Microsoft.Extensions.Options;
 
 namespace Coree.NETASP.Middleware.RequestUrlFiltering
@@ -39,8 +41,7 @@ namespace Coree.NETASP.Middleware.RequestUrlFiltering
             }
 
             _logger.LogError("Request: '{Request}' is not allowed.", uriPath);
-            context.Response.StatusCode = StatusCodes.Status400BadRequest;
-            await context.Response.WriteAsync("Forbidden: Not allowed.");
+            await context.Response.WriteDefaultStatusCodeAnswer(StatusCodes.Status400BadRequest);
         }
 
         /// <summary>

@@ -1,4 +1,6 @@
 ﻿using System.Text.RegularExpressions;
+using Coree.NETASP.Extensions.HttpResponsex;
+
 using Microsoft.Extensions.Options;
 
 namespace Coree.NETASP.Middleware.SegmentBlacklistFiltering
@@ -65,8 +67,7 @@ namespace Coree.NETASP.Middleware.SegmentBlacklistFiltering
                     if (!isAllowed)
                     {
                         _logger.LogError("Access denied to the URL path: '{RequestPath}'.", fullUri.PathAndQuery);
-                        context.Response.StatusCode = StatusCodes.Status400BadRequest;
-                        await context.Response.WriteAsync("Forbidden: Not allowed.");
+                        await context.Response.WriteDefaultStatusCodeAnswer(StatusCodes.Status400BadRequest);
                         return;
                     }
                 }

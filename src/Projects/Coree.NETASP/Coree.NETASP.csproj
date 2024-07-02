@@ -16,6 +16,9 @@
 	<ItemGroup>
 	  <Compile Remove="Extensions\Class.cs" />
 	</ItemGroup>
+	<ItemGroup>
+	  <None Remove="Services\Points\PointService.cs" />
+	</ItemGroup>
 
 	<ItemGroup>
 		<PackageReference Include="Coree.NET" Version="0.1.8945.20552" />

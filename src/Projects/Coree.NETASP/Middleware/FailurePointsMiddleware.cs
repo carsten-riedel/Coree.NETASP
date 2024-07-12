@@ -49,11 +49,11 @@ namespace Coree.NETASP.Middleware
             }
             else
             {
-                _logger.LogError("Request Ip: {requestIp} rejected cause of {points}",requestIp,points);
-                await context.Response.WriteDefaultStatusCodeAnswer(StatusCodes.Status422UnprocessableEntity);
+                _logger.LogError("FailurePoints: Request Ip: {requestIp} rejected cause of {points} failure points.(History)", requestIp,points);
+                await context.Response.WriteDefaultStatusCodeAnswer(StatusCodes.Status400BadRequest);
+                return;
             }
 
-            await _nextMiddleware(context);
             
         }
     }

@@ -72,7 +72,7 @@ namespace Coree.NETASP.Middleware.SegmentBlacklistFiltering
                     }
                 }
             }
-            _logger.LogInformation("Segments filter allowed.");
+            _logger.LogDebug("Segments filter allowed.");
             await _next(context);
         }
 

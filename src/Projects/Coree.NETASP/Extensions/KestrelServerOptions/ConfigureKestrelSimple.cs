@@ -1,9 +1,11 @@
-﻿using System.Security.Cryptography.X509Certificates;
+﻿using System.Security.Claims;
+using System.Security.Cryptography.X509Certificates;
 
 using Microsoft.AspNetCore.Authentication;
 using Microsoft.AspNetCore.Authentication.Cookies;
 using Microsoft.AspNetCore.ResponseCompression;
 using Microsoft.AspNetCore.Server.Kestrel.Core;
+
 
 namespace Coree.NETASP.Extensions.KestrelOptions
 {
@@ -154,29 +156,87 @@ namespace Coree.NETASP.Extensions.KestrelOptions
 
     public static class AuthenticationBuilderExtensions
     {
+
+        private static async Task<IEnumerable<Claim>> GetUserClaimsAsync(string userId)
+        {
+            throw new NotImplementedException();
+        }
+
+        private static bool HaveClaimsChanged(IEnumerable<Claim> currentClaims, IEnumerable<Claim> newClaims)
+        {
+            // Compare current claims with new claims
+            // This is a simple example; you might need a more sophisticated comparison
+            var currentClaimsSet = new HashSet<Claim>(currentClaims);
+            var newClaimsSet = new HashSet<Claim>(newClaims);
+
+            return !currentClaimsSet.SetEquals(newClaimsSet);
+        }
+
         public static AuthenticationBuilder AddDefaultCookieConfig(this AuthenticationBuilder builder)
         {
+
             return builder.AddDefaultCookieConfig(
-                context =>
+                contextOnSignedIn =>
                 {
                     return Task.CompletedTask;
                 },
-                context =>
+                contextOnRedirectToAccessDenied =>
                 {
-                    context.Response.StatusCode = StatusCodes.Status403Forbidden;
-                    context.Response.ContentType = "text/plain";
-                    return context.Response.WriteAsync("Access denied. You do not have permission to access this resource.");
+                    contextOnRedirectToAccessDenied.Response.StatusCode = StatusCodes.Status403Forbidden;
+                    contextOnRedirectToAccessDenied.Response.ContentType = "text/plain";
+                    return contextOnRedirectToAccessDenied.Response.WriteAsync("Access denied. You do not have permission to access this resource.");
                 },
-                context =>
+                contextOnRedirectToLogin =>
                 {
-                    context.Response.StatusCode = StatusCodes.Status401Unauthorized;
-                    context.Response.ContentType = "text/plain";
-                    return context.Response.WriteAsync("Unauthorized access. Please login to continue.");
+                    contextOnRedirectToLogin.Response.StatusCode = StatusCodes.Status401Unauthorized;
+                    contextOnRedirectToLogin.Response.ContentType = "text/plain";
+                    return contextOnRedirectToLogin.Response.WriteAsync("Unauthorized access. Please login to continue.");
+                },
+                async contextOnValidatePrincipal =>
+                {
+                    var context = contextOnValidatePrincipal;
+                    var userPrincipal = context.Principal;
+
+
+                    // Retrieve user ID or other identifier
+                    var userIdClaim = userPrincipal?.FindFirst(ClaimTypes.Name);
+
+
+                    if (userIdClaim == null)
+                    {
+                        context.RejectPrincipal();
+                        await context.HttpContext.SignOutAsync(CookieAuthenticationDefaults.AuthenticationScheme);
+                        return;
+                    }
+
+                    var userId = userIdClaim.Value;
+
+                    // Fetch updated user roles/claims from your data store
+                    var userClaims = await GetUserClaimsAsync(userId);
+
+                    // If claims have changed, reject the principal and sign the user back in with the updated claims
+                    if (HaveClaimsChanged(userPrincipal.Claims, userClaims))
+                    {
+                        context.RejectPrincipal();
+
+                        // Create a new ClaimsIdentity with updated claims
+                        var identity = new ClaimsIdentity(userClaims, CookieAuthenticationDefaults.AuthenticationScheme);
+                        var newPrincipal = new ClaimsPrincipal(identity);
+
+                        // Sign the user in with the new principal
+                        await context.HttpContext.SignInAsync(CookieAuthenticationDefaults.AuthenticationScheme, newPrincipal);
+                    }
+
+
+                    //contextOnValidatePrincipal.Response.StatusCode = StatusCodes.Status401Unauthorized;
+                    //contextOnValidatePrincipal.Response.ContentType = "text/plain";
+                    //return contextOnValidatePrincipal.Response.WriteAsync("Unauthorized access. Please login to continue.");
                 }
              );
         }
 
-        public static AuthenticationBuilder AddDefaultCookieConfig(this AuthenticationBuilder builder, Func<CookieSignedInContext, Task> OnSignedIn, Func<RedirectContext<CookieAuthenticationOptions>, Task> OnRedirectToAccessDenied, Func<RedirectContext<CookieAuthenticationOptions>, Task> OnRedirectToLogin, string Name = "AuthorizationToken", TimeSpan? ExpireTimeSpan = null, bool SlidingExpiration = true)
+
+        public static AuthenticationBuilder AddDefaultCookieConfig(this AuthenticationBuilder builder, Func<CookieSignedInContext, Task> OnSignedIn, Func<RedirectContext<CookieAuthenticationOptions>, Task> OnRedirectToAccessDenied, Func<RedirectContext<CookieAuthenticationOptions>, Task> OnRedirectToLogin, Func<CookieValidatePrincipalContext, Task> OnValidatePrincipal, string Name = "AuthorizationToken", TimeSpan? ExpireTimeSpan = null, bool SlidingExpiration = true)
         {
             ExpireTimeSpan ??= TimeSpan.FromDays(14);
             return builder.AddDefaultCookieConfig((cookie, events, options) =>
@@ -194,6 +254,8 @@ namespace Coree.NETASP.Extensions.KestrelOptions
                 cookie.SecurePolicy = CookieSecurePolicy.Always;
 
                 events.OnSignedIn = OnSignedIn;
+
+                //events.OnValidatePrincipal = OnValidatePrincipal;
 
                 // Event triggered when a user is authenticated but lacks the required permissions for a specific resource.
                 // Instead of the default behavior of redirecting to an "Access Denied" page, it returns a 403 Forbidden status code.
@@ -215,10 +277,8 @@ namespace Coree.NETASP.Extensions.KestrelOptions
 
         public static AuthenticationBuilder AddDefaultCookieConfig(this AuthenticationBuilder builder, Action<CookieBuilder, CookieAuthenticationEvents, CookieAuthenticationOptions> action)
         {
-    
             return builder.AddCookie(options =>
             {
-
                 action.Invoke(options.Cookie, options.Events, options);
             });
         }

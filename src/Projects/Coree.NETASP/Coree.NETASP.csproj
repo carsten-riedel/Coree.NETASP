@@ -17,6 +17,9 @@
 	  <Compile Remove="Extensions\Class.cs" />
 	</ItemGroup>
 	<ItemGroup>
+	  <None Remove="Middleware\FailurePointsMiddleware.cs" />
+	  <None Remove="Middleware\RequestThrottlingMiddleware2.cs" />
+	  <None Remove="Services\CookieAuth\CookieAuthHandler.cs" />
 	  <None Remove="Services\Points\PointService.cs" />
 	</ItemGroup>
 

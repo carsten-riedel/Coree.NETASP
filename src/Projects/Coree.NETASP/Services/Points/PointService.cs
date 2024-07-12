@@ -49,14 +49,14 @@ namespace Coree.NETASP.Services.Points
         /// <param name="ipAddress">The IP address.</param>
         /// <param name="points">The number of points to assign.</param>
         /// <param name="reason">The reason for assigning points.</param>
-        void AssignPoints(string ipAddress, int points, string reason);
+        void AssignFailureRating(string ipAddress, int points, string reason);
 
         /// <summary>
         /// Gets all point entries for a specific IP address.
         /// </summary>
         /// <param name="ipAddress">The IP address.</param>
         /// <returns>An Entry object containing point entries.</returns>
-        Entry GetPoints(string ipAddress);
+        Entry? GetPoints(string ipAddress);
 
         /// <summary>
         /// Loads the point data from disk.
@@ -86,21 +86,30 @@ namespace Coree.NETASP.Services.Points
             LoadData();
         }
 
-        public void AssignPoints(string ipAddress, int points, string reason)
+        public void AssignFailureRating(string ipAddress, int points, string reason)
         {
             var pointEntry = new PointEntry(points, reason);
-            _entries.AddOrUpdate(ipAddress, new Entry(), (key, entry) =>
-            {
-                entry.LastUpdated = DateTime.UtcNow;
-                entry.PointEntries.Add(pointEntry);
-                return entry;
-            });
+
+            _entries.AddOrUpdate(ipAddress,
+                // Correctly include key in the delegate for creating new Entry
+                addValueFactory: (key) => new Entry
+                {
+                    LastUpdated = DateTime.UtcNow,
+                    PointEntries = new List<PointEntry>() { pointEntry } // Initialize with the pointEntry
+                },
+                // Update method used if the key already exists
+                updateValueFactory: (key, existingEntry) =>
+                {
+                    existingEntry.LastUpdated = DateTime.UtcNow;
+                    existingEntry.PointEntries.Add(pointEntry);
+                    return existingEntry;
+                });
         }
 
-        public Entry GetPoints(string ipAddress)
+        public Entry? GetPoints(string ipAddress)
         {
             _entries.TryGetValue(ipAddress, out var entry);
-            return entry ?? new Entry();
+            return entry ?? null;
         }
 
         public void LoadData()

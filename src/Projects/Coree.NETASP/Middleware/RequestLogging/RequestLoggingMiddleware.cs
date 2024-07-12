@@ -138,27 +138,5 @@ namespace Coree.NETASP.Middleware.RequestLogging
 
             return Task.CompletedTask;
         }
-
-        /// <summary>
-        /// Builds the complete URI from the request components.
-        /// </summary>
-        /// <param name="context">The HTTP context containing the request.</param>
-        /// <returns>The full URI of the request.</returns>
-        public Uri GetFullRequestUri(HttpContext context)
-        {
-            var request = context.Request;
-
-            // Build the full URI
-            var uriBuilder = new UriBuilder
-            {
-                Scheme = request.Scheme,
-                Host = request.Host.Host,
-                Port = request.Host.Port ?? -1, // Keep default port handling
-                Path = request.PathBase.Add(request.Path).ToString(),
-                Query = request.QueryString.ToString()
-            };
-
-            return uriBuilder.Uri;
-        }
     }
 }

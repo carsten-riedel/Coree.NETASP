@@ -1,4 +1,4 @@
-﻿namespace Coree.NETASP.Middleware
+﻿namespace Coree.NETASP.Middleware.ResponseRecording
 {
     public class ResponseRecordingMiddleware
     {

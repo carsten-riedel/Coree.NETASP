@@ -15,32 +15,21 @@
 	<Import Project="Package/Config/PackageSpecs.props" />
 	<ItemGroup>
 	  <Compile Remove="Extensions\Class.cs" />
+	  <Compile Remove="Middleware\Messages\MessageConstants.cs" />
 	</ItemGroup>
 	<ItemGroup>
-		<None Remove="Extensions\WebApplicationBuilder\DumpAspNetCoreConfiguration.cs" />
-		<None Remove="Extensions\WebApplicationBuilder\SetupAndBuild.cs" />
-		<None Remove="Middleware\AcceptLanguageFiltering\AcceptLanguageFilteringMiddleware.cs" />
-		<None Remove="Middleware\DnsHostNameFiltering\DnsHostNameFilteringMiddleware.cs" />
-		<None Remove="Middleware\HostNameFilteringMiddleware.cs" />
-		<None Remove="Middleware\PathDeepFiltering\PathDeepFilteringMiddleware.cs" />
-		<None Remove="Middleware\RequestLoggingMiddleware.cs" />
-		<None Remove="Middleware\RequestUrlFiltering\AddRequestUrlFiltering.cs" />
-		<None Remove="Middleware\RequestUrlFiltering\RequestUrlFilteringMiddleware.cs" />
-		<None Remove="Middleware\RequestUrlFiltering\RequestUrlFilteringOptions.cs" />
-		<None Remove="Middleware\RequestUrlFiltering\ValidateWhitelistBlacklist.cs" />
-		<None Remove="Middleware\SegmentBlacklistFilteringMiddleware.cs" />
-		<None Remove="Middleware\UnwantedHeaderKeysFiltering\UnwantedHeaderKeysMiddleware.cs" />
-		<None Remove="Middleware\UserAgentFiltering\AddUserAgentFiltering.cs" />
-		<None Remove="Middleware\UserAgentFiltering\UserAgentFilteringMiddleware.cs" />
-		<None Remove="Middleware\UserAgentFiltering\UserAgentFilterOptions.cs" />
-		<None Remove="Middleware\UserAgentFiltering\ValidateWhitelistBlacklist.cs" />
-		<None Remove="Services\CertificateManager\CertificateManagerService.cs" />
+	  <None Remove="Middleware\FailurePointsMiddleware.cs" />
+	  <None Remove="Middleware\RequestThrottlingMiddleware.cs" />
+	  <None Remove="Services\CookieAuth\CookieAuthHandler.cs" />
+	  <None Remove="Services\Points\PointService.cs" />
 	</ItemGroup>
+
 	<ItemGroup>
 		<PackageReference Include="Coree.NET" Version="0.1.8945.20552" />
 	</ItemGroup>
+
 	<ItemGroup>
-	  <Folder Include="Extensions\KestrelServerOptions\" />
+	  <None Include="Middleware\Messages\MessageConstants.cs" />
 	</ItemGroup>
 
 </Project>

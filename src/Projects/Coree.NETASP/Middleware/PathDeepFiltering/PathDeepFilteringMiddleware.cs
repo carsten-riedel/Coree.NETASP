@@ -1,55 +1,68 @@
-﻿using Microsoft.Extensions.Caching.Memory;
+﻿using Coree.NETASP.Extensions;
+using Coree.NETASP.Services.Points;
+
+using Microsoft.Extensions.Caching.Memory;
+using Microsoft.Extensions.Options;
 
 namespace Coree.NETASP.Middleware.PathDeep
 {
     public class PathDeepFilteringMiddleware
     {
-        private readonly RequestDelegate _next;
-        private readonly MemoryCache _ipBlockList;
-        private readonly TimeSpan _blockDuration;
+        private readonly RequestDelegate _nextMiddleware;
         private readonly ILogger<PathDeepFilteringMiddleware> _logger;
-        private readonly int _blockScoreThreshold;
+        private readonly PathDeepFilteringOptions _options;
+        private readonly IPointService _pointService;
 
-        public PathDeepFilteringMiddleware(RequestDelegate next, ILogger<PathDeepFilteringMiddleware> logger,
-                                                  int blockDurationInSeconds = 300)
+        public PathDeepFilteringMiddleware(RequestDelegate nextMiddleware, IOptions<PathDeepFilteringOptions> options, ILogger<PathDeepFilteringMiddleware> logger, IPointService pointService)
         {
-            _next = next;
+            _nextMiddleware = nextMiddleware;
             _logger = logger;
-            _blockDuration = TimeSpan.FromSeconds(blockDurationInSeconds);
-            _ipBlockList = new MemoryCache(new MemoryCacheOptions());
-            _blockScoreThreshold = 100;  // Total score that triggers a block
+            _options = options.Value;
+            _pointService = pointService;
         }
 
         public async Task InvokeAsync(HttpContext context)
         {
-            var remoteIp = context.Connection.RemoteIpAddress?.ToString();
+            
             var requestPath = context.Request.Path.ToString();
             var pathDepth = CalculatePathDepth(requestPath);
-            var requestKey = remoteIp;  // Track by IP only
 
-            // Calculate score based on path depth
-            int scoreIncrement = CalculateScoreIncrement(pathDepth);
-            var currentScore = _ipBlockList.GetOrCreate(requestKey, entry =>
-            {
-                entry.AbsoluteExpirationRelativeToNow = _blockDuration;
-                return scoreIncrement;  // Initialize score
-            });
 
-            if (currentScore >= _blockScoreThreshold)
+
+            var isAllowed = _options.PathDeepLimit >= pathDepth;
+
+            if (isAllowed)
             {
-                _ipBlockList.Set(requestKey, currentScore, _blockDuration);
-                _logger.LogError($"IP Temporarily Blocked: {remoteIp} with a total score of {currentScore}. Triggered by suspicious path depth activity.");
-                context.Response.StatusCode = StatusCodes.Status400BadRequest;
-                await context.Response.WriteAsync("Forbidden: Not allowed.");
+                _logger.LogDebug("Pathdeep: a path deep of {pathDepth} is allowed.", pathDepth);
+                await _nextMiddleware(context);
                 return;
             }
             else
             {
-                _ipBlockList.Set(requestKey, currentScore + scoreIncrement, _blockDuration);
-                _logger.LogInformation($"Updated score for {remoteIp}: {currentScore + scoreIncrement}. Current Path Depth: {pathDepth}");
-            }
+                string? requestIp = context.Connection.RemoteIpAddress?.ToString();
+                if (requestIp == null)
+                {
+                    _logger.LogError("Request Ip: Request without IPs are not allowed.");
+                    await context.Response.WriteDefaultStatusCodeAnswer(StatusCodes.Status400BadRequest);
+                    return;
+                }
 
-            await _next(context);
+                await _pointService.AddOrUpdateEntry(requestIp, _options.DisallowedFailureRating, $"{nameof(PathDeepFilteringMiddleware)} added {_options.DisallowedFailureRating} Point for IPs {requestIp}.");
+                _logger.LogDebug("{MiddlewareName} added {DisallowedFailureRating} FailureRatingPoints for IPs {requestIp}.", nameof(PathDeepFilteringMiddleware), _options.DisallowedFailureRating, requestIp);
+
+                if (_options.ContinueOnDisallowed)
+                {
+                    _logger.LogDebug("Failed on {MiddlewareName} but continue.", nameof(PathDeepFilteringMiddleware));
+                    await _nextMiddleware(context);
+                    return;
+                }
+                else
+                {
+                    _logger.LogDebug("Pathdeep: a path deep of {pathDepth} is not allowed.", pathDepth);
+                    await context.Response.WriteDefaultStatusCodeAnswer(_options.DisallowedStatusCode);
+                    return;
+                }
+            }
         }
 
         private int CalculatePathDepth(string path)
@@ -61,27 +74,6 @@ namespace Coree.NETASP.Middleware.PathDeep
             }
             var res = normalizedPath.Split('/', StringSplitOptions.None);
             return res.Length;
-        }
-
-        private int CalculateScoreIncrement(int pathDepth)
-        {
-            // Define score increments based on path depth
-            switch (pathDepth)
-            {
-                case 0:
-                    return 0;
-
-                case 1:
-                    return 0; // Shallow paths are less suspicious
-                case 2:
-                    return 0; // Slightly more suspicious
-                case 3:
-                    return 0; // Even more suspicious
-                case 4:
-                    return 100; // Even more suspicious
-                default:
-                    return 100; // Very deep paths are highly suspicious
-            }
         }
 
         public string TrimSpecific(string input, char charToTrim, int countFromStart, int countFromEnd)
@@ -111,5 +103,34 @@ namespace Coree.NETASP.Middleware.PathDeep
 
             return input.Substring(start, end - start);
         }
+    }
+
+    public static class PathDeepFilteringExtensions
+    {
+        /// <summary>
+        /// Adds and configures the HostNameFilteringMiddleware options.
+        /// </summary>
+        /// <param name="services">The IServiceCollection to add services to.</param>
+        /// <returns>The IServiceCollection so that additional calls can be chained.</returns>
+        public static IServiceCollection AddPathDeepFiltering(this IServiceCollection services, int pathDeepLimit = 4,bool continueOnDisallowed = false, int disallowedFailureRating = 10, int disallowedStatusCode = StatusCodes.Status400BadRequest)
+        {
+            services.Configure<PathDeepFilteringOptions>(options =>
+            {
+                options.PathDeepLimit = pathDeepLimit;
+                options.ContinueOnDisallowed = continueOnDisallowed;
+                options.DisallowedFailureRating = disallowedFailureRating;
+                options.DisallowedStatusCode = disallowedStatusCode;
+            });
+
+            return services;
+        }
+    }
+
+    public class PathDeepFilteringOptions
+    {
+        public int PathDeepLimit { get; set; }
+        public int DisallowedStatusCode { get; set; }
+        public int DisallowedFailureRating { get; set; }
+        public bool ContinueOnDisallowed { get; set; }
     }
 }

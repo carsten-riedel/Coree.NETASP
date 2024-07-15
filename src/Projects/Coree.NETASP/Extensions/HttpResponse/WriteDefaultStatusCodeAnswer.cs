@@ -1,6 +1,6 @@
 ﻿using Polly;
 
-namespace Coree.NETASP.Extensions.HttpResponsex
+namespace Coree.NETASP.Extensions
 {
     public static class HttpResponseExtensions
     {

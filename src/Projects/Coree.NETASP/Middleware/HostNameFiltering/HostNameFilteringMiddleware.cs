@@ -1,6 +1,4 @@
-﻿using System.Text.RegularExpressions;
-
-using Coree.NETASP.Extensions.HttpResponsex;
+﻿using Coree.NETASP.Extensions;
 using Coree.NETASP.Services.Points;
 using Coree.NETStandard.Extensions.Validations.String;
 
@@ -33,46 +31,41 @@ namespace Coree.NETASP.Middleware.HostNameFiltering
         /// <returns>A task that represents the completion of request processing.</returns>
         public async Task InvokeAsync(HttpContext context)
         {
-            var request = context.Request;
-            string? requestIp = context.Connection.RemoteIpAddress?.ToString();
-            if (requestIp == null)
+            var host = context.Request.Host;
+
+            var isAllowed = host.Host.ValidateWhitelistBlacklist(_options.Whitelist?.ToList(), new List<string>() { "*" });
+            // Check if the request host matches any allowed host (including wildcards)
+            if (isAllowed)
             {
-                _logger.LogError("Request Ip: Request without IPs are not allowed.");
-                await context.Response.WriteDefaultStatusCodeAnswer(StatusCodes.Status422UnprocessableEntity);
+                _logger.LogDebug("Request host: '{RequestHost}' is allowed.", host.Host);
+                await _nextMiddleware(context);
                 return;
             }
-
-            if (request.Host.HasValue)
+            else
             {
-                var isAllowed = request.Host.Host.ValidateWhitelistBlacklist(_options.Whitelist?.ToList(), new List<string>() { "*" });
-                // Check if the request host matches any allowed host (including wildcards)
-                if (isAllowed)
+                string? requestIp = context.Connection.RemoteIpAddress?.ToString();
+                if (requestIp == null)
                 {
-                    _logger.LogDebug("Request host: '{RequestHost}' is allowed.", request.Host.Host);
+                    _logger.LogError("Request Ip: Request without IPs are not allowed.");
+                    await context.Response.WriteDefaultStatusCodeAnswer(StatusCodes.Status400BadRequest);
+                    return;
+                }
+
+                await _pointService.AddOrUpdateEntry(requestIp, _options.DisallowedFailureRating, $"{nameof(HostNameFilteringMiddleware)} added {_options.DisallowedFailureRating} Point for IPs {requestIp}.");
+                _logger.LogDebug("{MiddlewareName} added {DisallowedFailureRating} FailureRatingPoints for IPs {requestIp}.", nameof(HostNameFilteringMiddleware), _options.DisallowedFailureRating, requestIp);
+                if (_options.ContinueOnDisallowed)
+                {
+                    _logger.LogDebug("Failed on {MiddlewareName} with {Value} but continue.", nameof(HostNameFilteringMiddleware), host.Host);
                     await _nextMiddleware(context);
                     return;
                 }
                 else
                 {
-                    _pointService.AssignFailureRating(requestIp, _options.DisallowedFailureRating, $"HostNameFiltering added {_options.DisallowedFailureRating} Point for IPs {requestIp}.");
-                    _logger.LogDebug("HostNameFiltering added {DisallowedFailureRating} FailureRatingPoints for IPs {requestIp}.", _options.DisallowedFailureRating, requestIp);
-                    if (_options.ContinueOnDisallowed)
-                    {
-                        _logger.LogDebug("Failed on HostNameFiltering but continue.");
-                        await _nextMiddleware(context);
-                        return;
-                    }
-                    else
-                    {
-                        _logger.LogError("Request host: '{RequestHost}' is not allowed.", request.Host.Host);
-                        await context.Response.WriteDefaultStatusCodeAnswer(_options.DisallowedStatusCode);
-                        return;
-                    }
+                    _logger.LogError("Request host: '{RequestHost}' is not allowed.", host.Host);
+                    await context.Response.WriteDefaultStatusCodeAnswer(_options.DisallowedStatusCode);
+                    return;
                 }
             }
-
-            _logger.LogError("Request host: '{RequestHost}' is not allowed.", request.Host.Host);
-            await context.Response.WriteDefaultStatusCodeAnswer(_options.DisallowedStatusCode);
         }
     }
 
@@ -88,7 +81,7 @@ namespace Coree.NETASP.Middleware.HostNameFiltering
         /// <param name="services">The IServiceCollection to add services to. This collection will be enhanced by the configuration of the HostNameFilteringMiddleware.</param>
         /// <param name="whitelist">An array of strings specifying the hostnames that should be allowed by the middleware. This list directly populates the Whitelist property of the <see cref="HostNameFilterOptions"/>.</param>
         /// <returns>The IServiceCollection so that additional calls can be chained, enabling fluent configuration.</returns>
-        public static IServiceCollection AddHostNameFiltering(this IServiceCollection services, string[]? whitelist = null, string[]? blacklist = null,bool continueOnDisallowed = false, int disallowedFailureRating = 10, int disallowedStatusCode = StatusCodes.Status400BadRequest)
+        public static IServiceCollection AddHostNameFiltering(this IServiceCollection services, string[]? whitelist = null, string[]? blacklist = null, bool continueOnDisallowed = false, int disallowedFailureRating = 10, int disallowedStatusCode = StatusCodes.Status400BadRequest)
         {
             services.Configure<HostNameFilterOptions>(options =>
             {
@@ -124,7 +117,4 @@ namespace Coree.NETASP.Middleware.HostNameFiltering
 
         public bool ContinueOnDisallowed { get; set; }
     }
-
-
-
 }

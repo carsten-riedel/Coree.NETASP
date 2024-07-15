@@ -2,15 +2,15 @@
 
 namespace Coree.NETASP.Middleware
 {
-    public class RequestThrottlingMiddleware2
+    public class RequestThrottlingMiddleware
     {
         private readonly RequestDelegate _next;
-        private readonly ILogger<RequestThrottlingMiddleware2> logger;
+        private readonly ILogger<RequestThrottlingMiddleware> logger;
         private static readonly int MaxValue = int.MaxValue;  // Delay set to 2000 milliseconds (2 seconds)
-        private static ConcurrentDictionary<string, SemaphoreSlim> _semaphoreByIP = new ConcurrentDictionary<string, SemaphoreSlim>();
-        private static ConcurrentDictionary<string, int> _countByIP = new ConcurrentDictionary<string, int>();
+        private static ConcurrentDictionary<string, SemaphoreSlim> _semaphoreByIP = new();
+        private static ConcurrentDictionary<string, int> _countByIP = new();
 
-        public RequestThrottlingMiddleware2(ILogger<RequestThrottlingMiddleware2> logger,RequestDelegate next)
+        public RequestThrottlingMiddleware(ILogger<RequestThrottlingMiddleware> logger,RequestDelegate next)
         {
             _next = next;
             this.logger = logger;
@@ -68,11 +68,19 @@ namespace Coree.NETASP.Middleware
             if (currentCount >= 15)
                 return 500;
             if (currentCount >= 10)
+                return 333;
+            if (currentCount >= 7)
                 return 250;
+            if (currentCount >= 6)
+                return 225;
             if (currentCount >= 5)
-                return 100;
+                return 200;
+            if (currentCount >= 4)
+                return 175;
             if (currentCount >= 3)
-                return 75;
+                return 150;
+            if (currentCount >= 2)
+                return 125;
             return 50; // No delay for less than 10 requests
         }
     }

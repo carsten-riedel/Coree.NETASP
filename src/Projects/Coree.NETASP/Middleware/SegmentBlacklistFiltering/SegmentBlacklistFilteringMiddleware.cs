@@ -1,41 +1,26 @@
 ﻿using System.Text.RegularExpressions;
-using Coree.NETASP.Extensions.HttpResponsex;
 
+using Coree.NETASP.Extensions;
+using Coree.NETASP.Services.Points;
+
+using Microsoft.AspNetCore.Http.Extensions;
 using Microsoft.Extensions.Options;
 
 namespace Coree.NETASP.Middleware.SegmentBlacklistFiltering
 {
-
-    public class SegmentBlacklistFilterOptions
-    {
-        public string[] DeniedSegments { get; set; }
-    }
-
-    public static class SegmentBlacklistFilteringExtensions
-    {
-
-        public static IServiceCollection AddSegmentBlacklistFiltering(this IServiceCollection services, string[] deniedSegments)
-        {
-            services.Configure<SegmentBlacklistFilterOptions>(options =>
-            {
-                options.DeniedSegments = deniedSegments;
-            });
-
-            return services;
-        }
-    }
-
     public class SegmentBlacklistFilteringMiddleware
     {
-        private readonly RequestDelegate _next;
+        private readonly RequestDelegate _nextMiddleware;
         private readonly ILogger<SegmentBlacklistFilteringMiddleware> _logger;
-        private readonly string[]? _deniedSegments;
+        private readonly SegmentBlacklistFilterOptions _options;
+        private readonly IPointService _pointService;
 
-        public SegmentBlacklistFilteringMiddleware(RequestDelegate next, IOptions<SegmentBlacklistFilterOptions> options, ILogger<SegmentBlacklistFilteringMiddleware> logger)
+        public SegmentBlacklistFilteringMiddleware(RequestDelegate nextMiddleware, IOptions<SegmentBlacklistFilterOptions> options, ILogger<SegmentBlacklistFilteringMiddleware> logger, IPointService pointService)
         {
-            _next = next;
+            _nextMiddleware = nextMiddleware;
             _logger = logger;
-            _deniedSegments = options.Value.DeniedSegments;
+            _options = options.Value;
+            _pointService = pointService;
         }
 
         /// <summary>
@@ -46,16 +31,42 @@ namespace Coree.NETASP.Middleware.SegmentBlacklistFiltering
         public async Task InvokeAsync(HttpContext context)
         {
             var fullUri = GetFullRequestUri(context);
+            if (fullUri is null)
+            {
+                string? requestIp = context.Connection.RemoteIpAddress?.ToString();
+                if (requestIp == null)
+                {
+                    _logger.LogError("Request Ip: Request without IPs are not allowed.");
+                    await context.Response.WriteDefaultStatusCodeAnswer(StatusCodes.Status400BadRequest);
+                    return;
+                }
+
+                await _pointService.AddOrUpdateEntry(requestIp, _options.DisallowedFailureRating, $"{nameof(SegmentBlacklistFilteringMiddleware)} added {_options.DisallowedFailureRating} Point for IPs {requestIp}.");
+                _logger.LogDebug("{MiddlewareName} added {DisallowedFailureRating} FailureRatingPoints for IPs {requestIp}.", nameof(SegmentBlacklistFilteringMiddleware), _options.DisallowedFailureRating, requestIp);
+
+                if (_options.ContinueOnDisallowed)
+                {
+                    _logger.LogDebug("Failed on {MiddlewareName} but continue.", nameof(SegmentBlacklistFilteringMiddleware));
+                    await _nextMiddleware(context);
+                    return;
+                }
+                else
+                {
+                    _logger.LogError("{MiddlewareName} can not convert {display} to uri not allowed.", nameof(SegmentBlacklistFilteringMiddleware), context.Request.GetDisplayUrl());
+                    await context.Response.WriteDefaultStatusCodeAnswer(_options.DisallowedStatusCode);
+                    return;
+                }
+            }
 
             // Check if any segment of the request URI is in the denied list
-            if (_deniedSegments != null)
+            bool isAllowed = true;
+            if (_options.DeniedSegment != null)
             {
                 foreach (var segment in fullUri.Segments)
                 {
                     string trimmedSegment = Uri.UnescapeDataString(segment.Trim('/'));
-                    bool isAllowed = true;
 
-                    foreach (var deniedSegment in _deniedSegments)
+                    foreach (var deniedSegment in _options.DeniedSegment)
                     {
                         if (!IsSegmentAllowed(trimmedSegment, deniedSegment))
                         {
@@ -66,36 +77,80 @@ namespace Coree.NETASP.Middleware.SegmentBlacklistFiltering
 
                     if (!isAllowed)
                     {
-                        _logger.LogError("Access denied to the URL path: '{RequestPath}'.", fullUri.PathAndQuery);
-                        await context.Response.WriteDefaultStatusCodeAnswer(StatusCodes.Status400BadRequest);
-                        return;
+                        break;
                     }
                 }
             }
-            _logger.LogDebug("Segments filter allowed.");
-            await _next(context);
+
+            if (isAllowed)
+            {
+                _logger.LogDebug("Segments filter allowed.");
+                await _nextMiddleware(context);
+                return;
+            }
+            else
+            {
+                string? requestIp = context.Connection.RemoteIpAddress?.ToString();
+                if (requestIp == null)
+                {
+                    _logger.LogError("Request Ip: Request without IPs are not allowed.");
+                    await context.Response.WriteDefaultStatusCodeAnswer(StatusCodes.Status400BadRequest);
+                    return;
+                }
+
+                await _pointService.AddOrUpdateEntry(requestIp, _options.DisallowedFailureRating, $"{nameof(SegmentBlacklistFilteringMiddleware)} added {_options.DisallowedFailureRating} Point for IPs {requestIp}.");
+                _logger.LogDebug("{MiddlewareName} added {DisallowedFailureRating} FailureRatingPoints for IPs {requestIp}.", nameof(SegmentBlacklistFilteringMiddleware), _options.DisallowedFailureRating, requestIp);
+
+                if (_options.ContinueOnDisallowed)
+                {
+                    _logger.LogDebug("Failed on {MiddlewareName} but continue.", nameof(SegmentBlacklistFilteringMiddleware));
+                    await _nextMiddleware(context);
+                    return;
+                }
+                else
+                {
+                    _logger.LogError("{MiddlewareName} {display} an invalid segment.", nameof(SegmentBlacklistFilteringMiddleware), context.Request.GetDisplayUrl());
+                    await context.Response.WriteDefaultStatusCodeAnswer(_options.DisallowedStatusCode);
+                    return;
+                }
+            }
         }
 
         /// <summary>
         /// Builds the complete URI from the request components.
         /// </summary>
         /// <param name="context">The HTTP context containing the request.</param>
-        /// <returns>The full URI of the request.</returns>
-        public static Uri GetFullRequestUri(HttpContext context)
+        /// <returns>The full URI of the request or null if URI is invalid.</returns>
+        public Uri? GetFullRequestUri(HttpContext context)
         {
-            var request = context.Request;
-
-            // Build the full URI
-            var uriBuilder = new UriBuilder
+            try
             {
-                Scheme = request.Scheme,
-                Host = request.Host.Host,
-                Port = request.Host.Port ?? -1, // Keep default port handling
-                Path = request.PathBase.Add(request.Path).ToString(),
-                Query = request.QueryString.ToString()
-            };
+                var request = context.Request;
 
-            return uriBuilder.Uri;
+                // Validation checks
+                if (string.IsNullOrEmpty(request.Scheme) || string.IsNullOrEmpty(request.Host.Host))
+                {
+                    throw new InvalidOperationException("Request scheme or host is not valid.");
+                }
+
+                // Build the full URI
+                var uriBuilder = new UriBuilder
+                {
+                    Scheme = request.Scheme,
+                    Host = request.Host.Host,
+                    Port = request.Host.Port ?? -1, // Keep default port handling
+                    Path = request.PathBase.Add(request.Path).ToString(),
+                    Query = request.QueryString.ToString()
+                };
+
+                return uriBuilder.Uri;
+            }
+            catch (Exception ex)
+            {
+                // Log the exception details
+                _logger.LogError(ex, "Failed to build full request URI. {DisplayUrl}", context.Request.GetDisplayUrl());
+                return null; // or handle as appropriate
+            }
         }
 
         /// <summary>
@@ -113,6 +168,30 @@ namespace Coree.NETASP.Middleware.SegmentBlacklistFiltering
             // Convert the wildcard pattern into a regular expression
             var regexPattern = "^" + Regex.Escape(pattern).Replace(@"\*", ".*") + "$";
             return !Regex.IsMatch(input, regexPattern, RegexOptions.IgnoreCase);
+        }
+    }
+
+    public class SegmentBlacklistFilterOptions
+    {
+        public string[]? DeniedSegment { get; set; }
+        public int DisallowedStatusCode { get; set; }
+        public int DisallowedFailureRating { get; set; }
+        public bool ContinueOnDisallowed { get; set; }
+    }
+
+    public static class SegmentBlacklistFilteringExtensions
+    {
+        public static IServiceCollection AddSegmentBlacklistFiltering(this IServiceCollection services, string[]? deniedSegment, bool continueOnDisallowed = false, int disallowedFailureRating = 10, int disallowedStatusCode = StatusCodes.Status400BadRequest)
+        {
+            services.Configure<SegmentBlacklistFilterOptions>(options =>
+            {
+                options.DeniedSegment = deniedSegment;
+                options.ContinueOnDisallowed = continueOnDisallowed;
+                options.DisallowedFailureRating = disallowedFailureRating;
+                options.DisallowedStatusCode = disallowedStatusCode;
+            });
+
+            return services;
         }
     }
 }

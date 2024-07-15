@@ -3,6 +3,8 @@ using System.Text.Json;
 
 using Microsoft.Extensions.Options;
 
+using Spectre.Console;
+
 namespace Coree.NETASP.Services.Points
 {
     public class Entry
@@ -10,6 +12,8 @@ namespace Coree.NETASP.Services.Points
         public DateTime Created { get; set; }
         public DateTime LastUpdated { get; set; }
         public List<PointEntry> PointEntries { get; set; }
+        public ulong PointEntriesAccumated { get; set; }
+        public ulong PointAllTime { get; set; }
 
         /// <summary>
         /// Initializes a new instance of the <see cref="Entry"/> class.
@@ -49,14 +53,18 @@ namespace Coree.NETASP.Services.Points
         /// <param name="ipAddress">The IP address.</param>
         /// <param name="points">The number of points to assign.</param>
         /// <param name="reason">The reason for assigning points.</param>
-        void AssignFailureRating(string ipAddress, int points, string reason);
+        Task AddOrUpdateEntry(string key, int points, string reason);
 
         /// <summary>
         /// Gets all point entries for a specific IP address.
         /// </summary>
         /// <param name="ipAddress">The IP address.</param>
         /// <returns>An Entry object containing point entries.</returns>
-        Entry? GetPoints(string ipAddress);
+        Task<Entry?> GetEntry(string key);
+
+        Task ShrinkEntrys(string key);
+
+        Task DeleteEntry(string key);
 
         /// <summary>
         /// Loads the point data from disk.
@@ -71,45 +79,185 @@ namespace Coree.NETASP.Services.Points
 
     public class PointService : IPointService
     {
-        private readonly ConcurrentDictionary<string, Entry> _entries;
+        private readonly Dictionary<string, Entry> _entries = new Dictionary<string, Entry>();
+        private readonly Dictionary<string, SemaphoreSlim> _keyLocks = new Dictionary<string, SemaphoreSlim>();
+        private ManualResetEventSlim _dictFree = new ManualResetEventSlim(true);
+
         private readonly string _filePath;
         private readonly ILogger<PointService> _logger;
         private readonly IHostApplicationLifetime hostApplicationLifetime;
 
+        private Timer _timer;
+
         public PointService(IOptions<PointServiceOptions> options, ILogger<PointService> logger, IHostApplicationLifetime hostApplicationLifetime)
         {
-            _entries = new ConcurrentDictionary<string, Entry>();
             _filePath = options.Value.FilePath;
             _logger = logger;
             this.hostApplicationLifetime = hostApplicationLifetime;
             hostApplicationLifetime.ApplicationStopped.Register(async () => await SaveData());
+            _timer = new Timer(async state => await SaveData(), null,TimeSpan.FromMinutes(10), TimeSpan.FromMinutes(10));
             LoadData();
         }
 
-        public void AssignFailureRating(string ipAddress, int points, string reason)
+        public async Task AddOrUpdateEntry(string key, int points, string reason)
         {
-            var pointEntry = new PointEntry(points, reason);
-
-            _entries.AddOrUpdate(ipAddress,
-                // Correctly include key in the delegate for creating new Entry
-                addValueFactory: (key) => new Entry
+            SemaphoreSlim keyLock = GetKeySemaphore(key);
+            await keyLock.WaitAsync(); // Acquire the lock for the key
+            try
+            {
+                if (_entries.ContainsKey(key))
                 {
-                    LastUpdated = DateTime.UtcNow,
-                    PointEntries = new List<PointEntry>() { pointEntry } // Initialize with the pointEntry
-                },
-                // Update method used if the key already exists
-                updateValueFactory: (key, existingEntry) =>
+                    _entries[key].LastUpdated = DateTime.UtcNow;
+                    _entries[key].PointEntries.Add(new PointEntry(points, reason));  // Here Update is a hypothetical method to update properties of Entry
+                }
+                else
                 {
-                    existingEntry.LastUpdated = DateTime.UtcNow;
-                    existingEntry.PointEntries.Add(pointEntry);
-                    return existingEntry;
-                });
+                    var newEntry = new Entry();
+                    newEntry.LastUpdated = DateTime.UtcNow;
+                    newEntry.Created = DateTime.UtcNow;
+                    newEntry.PointEntriesAccumated = 0;
+                    newEntry.PointAllTime = 0;
+                    newEntry.PointEntries = new List<PointEntry>();
+                    newEntry.PointEntries.Add(new PointEntry(points, reason));
+                    _entries.Add(key, newEntry);
+                }
+            }
+            finally
+            {
+                keyLock.Release(); // Always release the lock
+            }
         }
 
-        public Entry? GetPoints(string ipAddress)
+        public async Task<Entry?> GetEntry(string key)
         {
-            _entries.TryGetValue(ipAddress, out var entry);
-            return entry ?? null;
+            SemaphoreSlim keyLock = GetKeySemaphore(key);
+            await keyLock.WaitAsync(); // Acquire the lock for the key
+            try
+            {
+                // Attempt to get the entry; return null if the key doesn't exist
+                _entries.TryGetValue(key, out Entry? entry);
+                return entry; // Value stored and finally block executed before returning
+            }
+            finally
+            {
+                keyLock.Release(); // Always released, regardless of how the try block is exited
+            }
+        }
+
+        public async Task DeleteEntry(string key)
+        {
+            SemaphoreSlim keyLock = GetKeySemaphore(key);
+            await keyLock.WaitAsync(); // Acquire the lock for the key
+            try
+            {
+                // Check if the entry exists in the dictionary
+                if (_entries.ContainsKey(key))
+                {
+                    // Remove the entry from the dictionary
+                    _entries.Remove(key);
+                }
+            }
+            finally
+            {
+                keyLock.Release(); // Always release the semaphore, regardless of how the try block is exited
+                DeleteKeySemaphore(key); // Delete the semaphore associated with the key
+            }
+        }
+
+        public async Task ShrinkEntrys(string key)
+        {
+            SemaphoreSlim keyLock = GetKeySemaphore(key);
+            await keyLock.WaitAsync(); // Acquire the lock for the key
+            try
+            {
+                // Attempt to get the entry; return null if the key doesn't exist
+                _entries.TryGetValue(key, out Entry? entry);
+                if (entry != null)
+                {
+                    if (entry.PointEntries.Count > 30)
+                    {
+                        var pointlist = entry.PointEntries.Sum(e => e.Points);
+                        entry.PointEntriesAccumated += (ulong)pointlist;
+                        entry.PointEntries.Clear();
+                    }
+                }
+            }
+            finally
+            {
+                keyLock.Release(); // Always released, regardless of how the try block is exited
+            }
+        }
+
+        /// <summary>
+        /// Sorts the dictionary by the LastUpdated property of each entry.
+        /// </summary>
+        public void SortEntriesByLastUpdatedAsync()
+        {
+            _dictFree.Reset(); // Signal that the dictionary is being modified
+            try
+            {
+                var sorted = _entries.OrderByDescending(kvp => kvp.Value.PointAllTime).ToList();
+                _entries.Clear(); // Clear the current dictionary
+
+                foreach (var item in sorted)
+                {
+                    var pointlist = item.Value.PointEntries.Sum(e => e.Points);
+                    item.Value.PointEntriesAccumated += (ulong)pointlist;
+                    item.Value.PointEntries.Clear();
+                    item.Value.PointAllTime += item.Value.PointEntriesAccumated;
+                    item.Value.PointEntriesAccumated = 0;
+                }
+
+                sorted = sorted.OrderByDescending(kvp => kvp.Value.PointAllTime).ToList();
+
+                foreach (var item in sorted)
+                {
+                    _entries.Add(item.Key, item.Value); // Re-add entries in sorted order
+                }
+            }
+            finally
+            {
+                _dictFree.Set(); // Signal that the dictionary is free again
+            }
+        }
+
+        private SemaphoreSlim GetKeySemaphore(string key)
+        {
+            SemaphoreSlim keyLock;
+
+            // Wait until the dictionary is signaled as free
+            _dictFree.Wait();
+
+            lock (_keyLocks) // Use a local lock to check and possibly add semaphore
+            {
+                if (!_keyLocks.TryGetValue(key, out keyLock))
+                {
+                    keyLock = new SemaphoreSlim(1, 1);
+                    _keyLocks.Add(key, keyLock);
+                }
+            }
+
+            return keyLock;
+        }
+
+        /// <summary>
+        /// Deletes the semaphore for a specified key if it exists.
+        /// </summary>
+        /// <param name="key">The key for which to delete the semaphore.</param>
+        public void DeleteKeySemaphore(string key)
+        {
+            // Wait until the dictionary is signaled as free
+            _dictFree.Wait();
+
+            lock (_keyLocks) // Use a local lock to safely remove semaphore
+            {
+                if (_keyLocks.TryGetValue(key, out var keyLock))
+                {
+                    _keyLocks.Remove(key);
+                    keyLock.Dispose();
+                }
+            }
+
         }
 
         public void LoadData()
@@ -139,12 +287,18 @@ namespace Coree.NETASP.Services.Points
         {
             try
             {
-                var jsonData = JsonSerializer.Serialize(_entries, new JsonSerializerOptions() { WriteIndented = true});
+                SortEntriesByLastUpdatedAsync();
+                _dictFree.Reset();
+                var jsonData = JsonSerializer.Serialize(_entries, new JsonSerializerOptions() { WriteIndented = true });
                 await File.WriteAllTextAsync(_filePath, jsonData);
             }
             catch (Exception ex)
             {
                 _logger.LogError(ex, "Failed to save point data to disk.");
+            }
+            finally
+            {
+                _dictFree.Set(); // Signal that the dictionary is free again
             }
         }
 
@@ -157,7 +311,6 @@ namespace Coree.NETASP.Services.Points
         public async Task StopAsync(CancellationToken cancellationToken)
         {
             await SaveData();
-            
         }
     }
 

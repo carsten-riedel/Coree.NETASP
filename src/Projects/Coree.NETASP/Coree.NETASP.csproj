@@ -15,16 +15,21 @@
 	<Import Project="Package/Config/PackageSpecs.props" />
 	<ItemGroup>
 	  <Compile Remove="Extensions\Class.cs" />
+	  <Compile Remove="Middleware\Messages\MessageConstants.cs" />
 	</ItemGroup>
 	<ItemGroup>
 	  <None Remove="Middleware\FailurePointsMiddleware.cs" />
-	  <None Remove="Middleware\RequestThrottlingMiddleware2.cs" />
+	  <None Remove="Middleware\RequestThrottlingMiddleware.cs" />
 	  <None Remove="Services\CookieAuth\CookieAuthHandler.cs" />
 	  <None Remove="Services\Points\PointService.cs" />
 	</ItemGroup>
 
 	<ItemGroup>
 		<PackageReference Include="Coree.NET" Version="0.1.8945.20552" />
+	</ItemGroup>
+
+	<ItemGroup>
+	  <None Include="Middleware\Messages\MessageConstants.cs" />
 	</ItemGroup>
 
 </Project>

@@ -5,7 +5,7 @@ items:
   id: ProtocolFilteringMiddleware
   parent: Coree.NETASP.Middleware.ProtocolFiltering
   children:
-  - Coree.NETASP.Middleware.ProtocolFiltering.ProtocolFilteringMiddleware.#ctor(Microsoft.AspNetCore.Http.RequestDelegate,Microsoft.Extensions.Logging.ILogger{Coree.NETASP.Middleware.ProtocolFiltering.ProtocolFilteringMiddleware},Microsoft.Extensions.Options.IOptions{Coree.NETASP.Middleware.ProtocolFiltering.ProtocolFilteringOptions})
+  - Coree.NETASP.Middleware.ProtocolFiltering.ProtocolFilteringMiddleware.#ctor(Microsoft.AspNetCore.Http.RequestDelegate,Microsoft.Extensions.Logging.ILogger{Coree.NETASP.Middleware.ProtocolFiltering.ProtocolFilteringMiddleware},Microsoft.Extensions.Options.IOptions{Coree.NETASP.Middleware.ProtocolFiltering.ProtocolFilteringOptions},Coree.NETASP.Services.Points.IPointService)
   - Coree.NETASP.Middleware.ProtocolFiltering.ProtocolFilteringMiddleware.InvokeAsync(Microsoft.AspNetCore.Http.HttpContext)
   langs:
   - csharp
@@ -21,7 +21,7 @@ items:
       repo: https://github.com/carsten-riedel/Coree.NETASP
     id: ProtocolFilteringMiddleware
     path: ../../src/Projects/Coree.NETASP/Middleware/ProtocolFiltering/ProtocolFilteringMiddleware.cs
-    startLine: 17
+    startLine: 11
   assemblies:
   - Coree.NETASP
   namespace: Coree.NETASP.Middleware.ProtocolFiltering
@@ -40,16 +40,16 @@ items:
   - System.Object.MemberwiseClone
   - System.Object.ReferenceEquals(System.Object,System.Object)
   - System.Object.ToString
-- uid: Coree.NETASP.Middleware.ProtocolFiltering.ProtocolFilteringMiddleware.#ctor(Microsoft.AspNetCore.Http.RequestDelegate,Microsoft.Extensions.Logging.ILogger{Coree.NETASP.Middleware.ProtocolFiltering.ProtocolFilteringMiddleware},Microsoft.Extensions.Options.IOptions{Coree.NETASP.Middleware.ProtocolFiltering.ProtocolFilteringOptions})
-  commentId: M:Coree.NETASP.Middleware.ProtocolFiltering.ProtocolFilteringMiddleware.#ctor(Microsoft.AspNetCore.Http.RequestDelegate,Microsoft.Extensions.Logging.ILogger{Coree.NETASP.Middleware.ProtocolFiltering.ProtocolFilteringMiddleware},Microsoft.Extensions.Options.IOptions{Coree.NETASP.Middleware.ProtocolFiltering.ProtocolFilteringOptions})
-  id: '#ctor(Microsoft.AspNetCore.Http.RequestDelegate,Microsoft.Extensions.Logging.ILogger{Coree.NETASP.Middleware.ProtocolFiltering.ProtocolFilteringMiddleware},Microsoft.Extensions.Options.IOptions{Coree.NETASP.Middleware.ProtocolFiltering.ProtocolFilteringOptions})'
+- uid: Coree.NETASP.Middleware.ProtocolFiltering.ProtocolFilteringMiddleware.#ctor(Microsoft.AspNetCore.Http.RequestDelegate,Microsoft.Extensions.Logging.ILogger{Coree.NETASP.Middleware.ProtocolFiltering.ProtocolFilteringMiddleware},Microsoft.Extensions.Options.IOptions{Coree.NETASP.Middleware.ProtocolFiltering.ProtocolFilteringOptions},Coree.NETASP.Services.Points.IPointService)
+  commentId: M:Coree.NETASP.Middleware.ProtocolFiltering.ProtocolFilteringMiddleware.#ctor(Microsoft.AspNetCore.Http.RequestDelegate,Microsoft.Extensions.Logging.ILogger{Coree.NETASP.Middleware.ProtocolFiltering.ProtocolFilteringMiddleware},Microsoft.Extensions.Options.IOptions{Coree.NETASP.Middleware.ProtocolFiltering.ProtocolFilteringOptions},Coree.NETASP.Services.Points.IPointService)
+  id: '#ctor(Microsoft.AspNetCore.Http.RequestDelegate,Microsoft.Extensions.Logging.ILogger{Coree.NETASP.Middleware.ProtocolFiltering.ProtocolFilteringMiddleware},Microsoft.Extensions.Options.IOptions{Coree.NETASP.Middleware.ProtocolFiltering.ProtocolFilteringOptions},Coree.NETASP.Services.Points.IPointService)'
   parent: Coree.NETASP.Middleware.ProtocolFiltering.ProtocolFilteringMiddleware
   langs:
   - csharp
   - vb
-  name: ProtocolFilteringMiddleware(RequestDelegate, ILogger<ProtocolFilteringMiddleware>, IOptions<ProtocolFilteringOptions>)
-  nameWithType: ProtocolFilteringMiddleware.ProtocolFilteringMiddleware(RequestDelegate, ILogger<ProtocolFilteringMiddleware>, IOptions<ProtocolFilteringOptions>)
-  fullName: Coree.NETASP.Middleware.ProtocolFiltering.ProtocolFilteringMiddleware.ProtocolFilteringMiddleware(Microsoft.AspNetCore.Http.RequestDelegate, Microsoft.Extensions.Logging.ILogger<Coree.NETASP.Middleware.ProtocolFiltering.ProtocolFilteringMiddleware>, Microsoft.Extensions.Options.IOptions<Coree.NETASP.Middleware.ProtocolFiltering.ProtocolFilteringOptions>)
+  name: ProtocolFilteringMiddleware(RequestDelegate, ILogger<ProtocolFilteringMiddleware>, IOptions<ProtocolFilteringOptions>, IPointService)
+  nameWithType: ProtocolFilteringMiddleware.ProtocolFilteringMiddleware(RequestDelegate, ILogger<ProtocolFilteringMiddleware>, IOptions<ProtocolFilteringOptions>, IPointService)
+  fullName: Coree.NETASP.Middleware.ProtocolFiltering.ProtocolFilteringMiddleware.ProtocolFilteringMiddleware(Microsoft.AspNetCore.Http.RequestDelegate, Microsoft.Extensions.Logging.ILogger<Coree.NETASP.Middleware.ProtocolFiltering.ProtocolFilteringMiddleware>, Microsoft.Extensions.Options.IOptions<Coree.NETASP.Middleware.ProtocolFiltering.ProtocolFilteringOptions>, Coree.NETASP.Services.Points.IPointService)
   type: Constructor
   source:
     remote:
@@ -58,24 +58,26 @@ items:
       repo: https://github.com/carsten-riedel/Coree.NETASP
     id: .ctor
     path: ../../src/Projects/Coree.NETASP/Middleware/ProtocolFiltering/ProtocolFilteringMiddleware.cs
-    startLine: 23
+    startLine: 18
   assemblies:
   - Coree.NETASP
   namespace: Coree.NETASP.Middleware.ProtocolFiltering
   syntax:
-    content: public ProtocolFilteringMiddleware(RequestDelegate next, ILogger<ProtocolFilteringMiddleware> logger, IOptions<ProtocolFilteringOptions> options)
+    content: public ProtocolFilteringMiddleware(RequestDelegate nextMiddleware, ILogger<ProtocolFilteringMiddleware> logger, IOptions<ProtocolFilteringOptions> options, IPointService pointService)
     parameters:
-    - id: next
+    - id: nextMiddleware
       type: Microsoft.AspNetCore.Http.RequestDelegate
     - id: logger
       type: Microsoft.Extensions.Logging.ILogger{Coree.NETASP.Middleware.ProtocolFiltering.ProtocolFilteringMiddleware}
     - id: options
       type: Microsoft.Extensions.Options.IOptions{Coree.NETASP.Middleware.ProtocolFiltering.ProtocolFilteringOptions}
-    content.vb: Public Sub New([next] As RequestDelegate, logger As ILogger(Of ProtocolFilteringMiddleware), options As IOptions(Of ProtocolFilteringOptions))
+    - id: pointService
+      type: Coree.NETASP.Services.Points.IPointService
+    content.vb: Public Sub New(nextMiddleware As RequestDelegate, logger As ILogger(Of ProtocolFilteringMiddleware), options As IOptions(Of ProtocolFilteringOptions), pointService As IPointService)
   overload: Coree.NETASP.Middleware.ProtocolFiltering.ProtocolFilteringMiddleware.#ctor*
-  nameWithType.vb: ProtocolFilteringMiddleware.New(RequestDelegate, ILogger(Of ProtocolFilteringMiddleware), IOptions(Of ProtocolFilteringOptions))
-  fullName.vb: Coree.NETASP.Middleware.ProtocolFiltering.ProtocolFilteringMiddleware.New(Microsoft.AspNetCore.Http.RequestDelegate, Microsoft.Extensions.Logging.ILogger(Of Coree.NETASP.Middleware.ProtocolFiltering.ProtocolFilteringMiddleware), Microsoft.Extensions.Options.IOptions(Of Coree.NETASP.Middleware.ProtocolFiltering.ProtocolFilteringOptions))
-  name.vb: New(RequestDelegate, ILogger(Of ProtocolFilteringMiddleware), IOptions(Of ProtocolFilteringOptions))
+  nameWithType.vb: ProtocolFilteringMiddleware.New(RequestDelegate, ILogger(Of ProtocolFilteringMiddleware), IOptions(Of ProtocolFilteringOptions), IPointService)
+  fullName.vb: Coree.NETASP.Middleware.ProtocolFiltering.ProtocolFilteringMiddleware.New(Microsoft.AspNetCore.Http.RequestDelegate, Microsoft.Extensions.Logging.ILogger(Of Coree.NETASP.Middleware.ProtocolFiltering.ProtocolFilteringMiddleware), Microsoft.Extensions.Options.IOptions(Of Coree.NETASP.Middleware.ProtocolFiltering.ProtocolFilteringOptions), Coree.NETASP.Services.Points.IPointService)
+  name.vb: New(RequestDelegate, ILogger(Of ProtocolFilteringMiddleware), IOptions(Of ProtocolFilteringOptions), IPointService)
 - uid: Coree.NETASP.Middleware.ProtocolFiltering.ProtocolFilteringMiddleware.InvokeAsync(Microsoft.AspNetCore.Http.HttpContext)
   commentId: M:Coree.NETASP.Middleware.ProtocolFiltering.ProtocolFilteringMiddleware.InvokeAsync(Microsoft.AspNetCore.Http.HttpContext)
   id: InvokeAsync(Microsoft.AspNetCore.Http.HttpContext)
@@ -94,7 +96,7 @@ items:
       repo: https://github.com/carsten-riedel/Coree.NETASP
     id: InvokeAsync
     path: ../../src/Projects/Coree.NETASP/Middleware/ProtocolFiltering/ProtocolFilteringMiddleware.cs
-    startLine: 35
+    startLine: 31
   assemblies:
   - Coree.NETASP
   namespace: Coree.NETASP.Middleware.ProtocolFiltering
@@ -389,7 +391,7 @@ references:
   fullName: System
 - uid: Coree.NETASP.Middleware.ProtocolFiltering.ProtocolFilteringMiddleware.#ctor*
   commentId: Overload:Coree.NETASP.Middleware.ProtocolFiltering.ProtocolFilteringMiddleware.#ctor
-  href: Coree.NETASP.Middleware.ProtocolFiltering.ProtocolFilteringMiddleware.html#Coree_NETASP_Middleware_ProtocolFiltering_ProtocolFilteringMiddleware__ctor_Microsoft_AspNetCore_Http_RequestDelegate_Microsoft_Extensions_Logging_ILogger_Coree_NETASP_Middleware_ProtocolFiltering_ProtocolFilteringMiddleware__Microsoft_Extensions_Options_IOptions_Coree_NETASP_Middleware_ProtocolFiltering_ProtocolFilteringOptions__
+  href: Coree.NETASP.Middleware.ProtocolFiltering.ProtocolFilteringMiddleware.html#Coree_NETASP_Middleware_ProtocolFiltering_ProtocolFilteringMiddleware__ctor_Microsoft_AspNetCore_Http_RequestDelegate_Microsoft_Extensions_Logging_ILogger_Coree_NETASP_Middleware_ProtocolFiltering_ProtocolFilteringMiddleware__Microsoft_Extensions_Options_IOptions_Coree_NETASP_Middleware_ProtocolFiltering_ProtocolFilteringOptions__Coree_NETASP_Services_Points_IPointService_
   name: ProtocolFilteringMiddleware
   nameWithType: ProtocolFilteringMiddleware.ProtocolFilteringMiddleware
   fullName: Coree.NETASP.Middleware.ProtocolFiltering.ProtocolFilteringMiddleware.ProtocolFilteringMiddleware
@@ -470,6 +472,13 @@ references:
     name: ProtocolFilteringOptions
     href: Coree.NETASP.Middleware.ProtocolFiltering.ProtocolFilteringOptions.html
   - name: )
+- uid: Coree.NETASP.Services.Points.IPointService
+  commentId: T:Coree.NETASP.Services.Points.IPointService
+  parent: Coree.NETASP.Services.Points
+  href: Coree.NETASP.Services.Points.IPointService.html
+  name: IPointService
+  nameWithType: IPointService
+  fullName: Coree.NETASP.Services.Points.IPointService
 - uid: Microsoft.AspNetCore.Http
   commentId: N:Microsoft.AspNetCore.Http
   isExternal: true
@@ -637,6 +646,44 @@ references:
     name: Options
     isExternal: true
     href: https://learn.microsoft.com/dotnet/api/microsoft.extensions.options
+- uid: Coree.NETASP.Services.Points
+  commentId: N:Coree.NETASP.Services.Points
+  href: Coree.html
+  name: Coree.NETASP.Services.Points
+  nameWithType: Coree.NETASP.Services.Points
+  fullName: Coree.NETASP.Services.Points
+  spec.csharp:
+  - uid: Coree
+    name: Coree
+    href: Coree.html
+  - name: .
+  - uid: Coree.NETASP
+    name: NETASP
+    href: Coree.NETASP.html
+  - name: .
+  - uid: Coree.NETASP.Services
+    name: Services
+    href: Coree.NETASP.Services.html
+  - name: .
+  - uid: Coree.NETASP.Services.Points
+    name: Points
+    href: Coree.NETASP.Services.Points.html
+  spec.vb:
+  - uid: Coree
+    name: Coree
+    href: Coree.html
+  - name: .
+  - uid: Coree.NETASP
+    name: NETASP
+    href: Coree.NETASP.html
+  - name: .
+  - uid: Coree.NETASP.Services
+    name: Services
+    href: Coree.NETASP.Services.html
+  - name: .
+  - uid: Coree.NETASP.Services.Points
+    name: Points
+    href: Coree.NETASP.Services.Points.html
 - uid: Coree.NETASP.Middleware.ProtocolFiltering.ProtocolFilteringMiddleware.InvokeAsync*
   commentId: Overload:Coree.NETASP.Middleware.ProtocolFiltering.ProtocolFilteringMiddleware.InvokeAsync
   href: Coree.NETASP.Middleware.ProtocolFiltering.ProtocolFilteringMiddleware.html#Coree_NETASP_Middleware_ProtocolFiltering_ProtocolFilteringMiddleware_InvokeAsync_Microsoft_AspNetCore_Http_HttpContext_

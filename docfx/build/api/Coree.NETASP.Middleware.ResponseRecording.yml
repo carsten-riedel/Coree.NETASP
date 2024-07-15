@@ -1,0 +1,23 @@
+### YamlMime:ManagedReference
+items:
+- uid: Coree.NETASP.Middleware.ResponseRecording
+  commentId: N:Coree.NETASP.Middleware.ResponseRecording
+  id: Coree.NETASP.Middleware.ResponseRecording
+  children:
+  - Coree.NETASP.Middleware.ResponseRecording.ResponseRecordingMiddleware
+  langs:
+  - csharp
+  - vb
+  name: Coree.NETASP.Middleware.ResponseRecording
+  nameWithType: Coree.NETASP.Middleware.ResponseRecording
+  fullName: Coree.NETASP.Middleware.ResponseRecording
+  type: Namespace
+  assemblies:
+  - Coree.NETASP
+references:
+- uid: Coree.NETASP.Middleware.ResponseRecording.ResponseRecordingMiddleware
+  commentId: T:Coree.NETASP.Middleware.ResponseRecording.ResponseRecordingMiddleware
+  href: Coree.NETASP.Middleware.ResponseRecording.ResponseRecordingMiddleware.html
+  name: ResponseRecordingMiddleware
+  nameWithType: ResponseRecordingMiddleware
+  fullName: Coree.NETASP.Middleware.ResponseRecording.ResponseRecordingMiddleware

@@ -1,0 +1,90 @@
+### YamlMime:ManagedReference
+items:
+- uid: Coree.NETASP.Services.Points
+  commentId: N:Coree.NETASP.Services.Points
+  id: Coree.NETASP.Services.Points
+  children:
+  - Coree.NETASP.Services.Points.Entry
+  - Coree.NETASP.Services.Points.IPointService
+  - Coree.NETASP.Services.Points.PointEntry
+  - Coree.NETASP.Services.Points.PointService
+  - Coree.NETASP.Services.Points.PointServiceOptions
+  langs:
+  - csharp
+  - vb
+  name: Coree.NETASP.Services.Points
+  nameWithType: Coree.NETASP.Services.Points
+  fullName: Coree.NETASP.Services.Points
+  type: Namespace
+  assemblies:
+  - Coree.NETASP
+references:
+- uid: Coree.NETASP.Services.Points.Entry
+  commentId: T:Coree.NETASP.Services.Points.Entry
+  href: Coree.NETASP.Services.Points.Entry.html
+  name: Entry
+  nameWithType: Entry
+  fullName: Coree.NETASP.Services.Points.Entry
+- uid: Coree.NETASP.Services.Points.PointEntry
+  commentId: T:Coree.NETASP.Services.Points.PointEntry
+  href: Coree.NETASP.Services.Points.PointEntry.html
+  name: PointEntry
+  nameWithType: PointEntry
+  fullName: Coree.NETASP.Services.Points.PointEntry
+- uid: Coree.NETASP.Services.Points.IPointService
+  commentId: T:Coree.NETASP.Services.Points.IPointService
+  parent: Coree.NETASP.Services.Points
+  href: Coree.NETASP.Services.Points.IPointService.html
+  name: IPointService
+  nameWithType: IPointService
+  fullName: Coree.NETASP.Services.Points.IPointService
+- uid: Coree.NETASP.Services.Points.PointService
+  commentId: T:Coree.NETASP.Services.Points.PointService
+  href: Coree.NETASP.Services.Points.PointService.html
+  name: PointService
+  nameWithType: PointService
+  fullName: Coree.NETASP.Services.Points.PointService
+- uid: Coree.NETASP.Services.Points.PointServiceOptions
+  commentId: T:Coree.NETASP.Services.Points.PointServiceOptions
+  href: Coree.NETASP.Services.Points.PointServiceOptions.html
+  name: PointServiceOptions
+  nameWithType: PointServiceOptions
+  fullName: Coree.NETASP.Services.Points.PointServiceOptions
+- uid: Coree.NETASP.Services.Points
+  commentId: N:Coree.NETASP.Services.Points
+  href: Coree.html
+  name: Coree.NETASP.Services.Points
+  nameWithType: Coree.NETASP.Services.Points
+  fullName: Coree.NETASP.Services.Points
+  spec.csharp:
+  - uid: Coree
+    name: Coree
+    href: Coree.html
+  - name: .
+  - uid: Coree.NETASP
+    name: NETASP
+    href: Coree.NETASP.html
+  - name: .
+  - uid: Coree.NETASP.Services
+    name: Services
+    href: Coree.NETASP.Services.html
+  - name: .
+  - uid: Coree.NETASP.Services.Points
+    name: Points
+    href: Coree.NETASP.Services.Points.html
+  spec.vb:
+  - uid: Coree
+    name: Coree
+    href: Coree.html
+  - name: .
+  - uid: Coree.NETASP
+    name: NETASP
+    href: Coree.NETASP.html
+  - name: .
+  - uid: Coree.NETASP.Services
+    name: Services
+    href: Coree.NETASP.Services.html
+  - name: .
+  - uid: Coree.NETASP.Services.Points
+    name: Points
+    href: Coree.NETASP.Services.Points.html

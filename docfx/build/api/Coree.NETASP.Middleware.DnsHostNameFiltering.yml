@@ -17,12 +17,6 @@ items:
   assemblies:
   - Coree.NETASP
 references:
-- uid: Coree.NETASP.Middleware.DnsHostNameFiltering.DnsHostNameFilteringOptions
-  commentId: T:Coree.NETASP.Middleware.DnsHostNameFiltering.DnsHostNameFilteringOptions
-  href: Coree.NETASP.Middleware.DnsHostNameFiltering.DnsHostNameFilteringOptions.html
-  name: DnsHostNameFilteringOptions
-  nameWithType: DnsHostNameFilteringOptions
-  fullName: Coree.NETASP.Middleware.DnsHostNameFiltering.DnsHostNameFilteringOptions
 - uid: Coree.NETASP.Middleware.DnsHostNameFiltering.DnsHostNameFilteringMiddleware
   commentId: T:Coree.NETASP.Middleware.DnsHostNameFiltering.DnsHostNameFilteringMiddleware
   href: Coree.NETASP.Middleware.DnsHostNameFiltering.DnsHostNameFilteringMiddleware.html
@@ -35,3 +29,9 @@ references:
   name: DnsHostNameFilteringMiddlewareExtensions
   nameWithType: DnsHostNameFilteringMiddlewareExtensions
   fullName: Coree.NETASP.Middleware.DnsHostNameFiltering.DnsHostNameFilteringMiddlewareExtensions
+- uid: Coree.NETASP.Middleware.DnsHostNameFiltering.DnsHostNameFilteringOptions
+  commentId: T:Coree.NETASP.Middleware.DnsHostNameFiltering.DnsHostNameFilteringOptions
+  href: Coree.NETASP.Middleware.DnsHostNameFiltering.DnsHostNameFilteringOptions.html
+  name: DnsHostNameFilteringOptions
+  nameWithType: DnsHostNameFilteringOptions
+  fullName: Coree.NETASP.Middleware.DnsHostNameFiltering.DnsHostNameFilteringOptions

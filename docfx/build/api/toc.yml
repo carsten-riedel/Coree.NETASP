@@ -1,5 +1,21 @@
 ### YamlMime:TableOfContent
 items:
+- uid: Coree.NETASP.Extensions
+  name: Coree.NETASP.Extensions
+  items:
+  - uid: Coree.NETASP.Extensions.HttpResponseExtensions
+    name: HttpResponseExtensions
+- uid: Coree.NETASP.Extensions.KestrelOptions
+  name: Coree.NETASP.Extensions.KestrelOptions
+  items:
+  - uid: Coree.NETASP.Extensions.KestrelOptions.AuthenticationBuilderExtensions
+    name: AuthenticationBuilderExtensions
+  - uid: Coree.NETASP.Extensions.KestrelOptions.ConfigureWebHostBuilderExtensions
+    name: ConfigureWebHostBuilderExtensions
+  - uid: Coree.NETASP.Extensions.KestrelOptions.ConfigureWebHostBuilderExtensions.ListenType
+    name: ConfigureWebHostBuilderExtensions.ListenType
+  - uid: Coree.NETASP.Extensions.KestrelOptions.xExtensions
+    name: xExtensions
 - uid: Coree.NETASP.Extensions.WebApplicationBuilderExtensions
   name: Coree.NETASP.Extensions.WebApplicationBuilderExtensions
   items:
@@ -10,16 +26,14 @@ items:
 - uid: Coree.NETASP.Middleware
   name: Coree.NETASP.Middleware
   items:
-  - uid: Coree.NETASP.Middleware.RequestLoggingMiddleware
-    name: RequestLoggingMiddleware
-  - uid: Coree.NETASP.Middleware.ResponseRecordingMiddleware
-    name: ResponseRecordingMiddleware
-  - uid: Coree.NETASP.Middleware.SegmentBlacklistFilterOptions
-    name: SegmentBlacklistFilterOptions
-  - uid: Coree.NETASP.Middleware.SegmentBlacklistFilteringExtensions
-    name: SegmentBlacklistFilteringExtensions
-  - uid: Coree.NETASP.Middleware.SegmentBlacklistFilteringMiddleware
-    name: SegmentBlacklistFilteringMiddleware
+  - uid: Coree.NETASP.Middleware.FailurePointsMiddleware
+    name: FailurePointsMiddleware
+  - uid: Coree.NETASP.Middleware.FailurePointsMiddlewareExtensions
+    name: FailurePointsMiddlewareExtensions
+  - uid: Coree.NETASP.Middleware.FailurePointsMiddlewareOptions
+    name: FailurePointsMiddlewareOptions
+  - uid: Coree.NETASP.Middleware.RequestThrottlingMiddleware
+    name: RequestThrottlingMiddleware
 - uid: Coree.NETASP.Middleware.AcceptLanguageFiltering
   name: Coree.NETASP.Middleware.AcceptLanguageFiltering
   items:
@@ -47,11 +61,24 @@ items:
     name: HostNameFilteringExtensions
   - uid: Coree.NETASP.Middleware.HostNameFiltering.HostNameFilteringMiddleware
     name: HostNameFilteringMiddleware
+- uid: Coree.NETASP.Middleware.NewFolder
+  name: Coree.NETASP.Middleware.NewFolder
+  items:
+  - uid: Coree.NETASP.Middleware.NewFolder.PreMiddlewareHostedService
+    name: PreMiddlewareHostedService
+  - uid: Coree.NETASP.Middleware.NewFolder.WaitForPreMiddlewareHostedServiceMiddleware
+    name: WaitForPreMiddlewareHostedServiceMiddleware
+  - uid: Coree.NETASP.Middleware.NewFolder.fooExtensions
+    name: fooExtensions
 - uid: Coree.NETASP.Middleware.PathDeep
   name: Coree.NETASP.Middleware.PathDeep
   items:
+  - uid: Coree.NETASP.Middleware.PathDeep.PathDeepFilteringExtensions
+    name: PathDeepFilteringExtensions
   - uid: Coree.NETASP.Middleware.PathDeep.PathDeepFilteringMiddleware
     name: PathDeepFilteringMiddleware
+  - uid: Coree.NETASP.Middleware.PathDeep.PathDeepFilteringOptions
+    name: PathDeepFilteringOptions
 - uid: Coree.NETASP.Middleware.ProtocolFiltering
   name: Coree.NETASP.Middleware.ProtocolFiltering
   items:
@@ -61,6 +88,11 @@ items:
     name: ProtocolFilteringMiddlewareExtensions
   - uid: Coree.NETASP.Middleware.ProtocolFiltering.ProtocolFilteringOptions
     name: ProtocolFilteringOptions
+- uid: Coree.NETASP.Middleware.RequestLogging
+  name: Coree.NETASP.Middleware.RequestLogging
+  items:
+  - uid: Coree.NETASP.Middleware.RequestLogging.RequestLoggingMiddleware
+    name: RequestLoggingMiddleware
 - uid: Coree.NETASP.Middleware.RequestUrlFiltering
   name: Coree.NETASP.Middleware.RequestUrlFiltering
   items:
@@ -70,8 +102,20 @@ items:
     name: RequestUrlFilteringMiddleware
   - uid: Coree.NETASP.Middleware.RequestUrlFiltering.RequestUrlFilteringOptions
     name: RequestUrlFilteringOptions
-  - uid: Coree.NETASP.Middleware.RequestUrlFiltering.ValidationsStringExtensions
-    name: ValidationsStringExtensions
+- uid: Coree.NETASP.Middleware.ResponseRecording
+  name: Coree.NETASP.Middleware.ResponseRecording
+  items:
+  - uid: Coree.NETASP.Middleware.ResponseRecording.ResponseRecordingMiddleware
+    name: ResponseRecordingMiddleware
+- uid: Coree.NETASP.Middleware.SegmentBlacklistFiltering
+  name: Coree.NETASP.Middleware.SegmentBlacklistFiltering
+  items:
+  - uid: Coree.NETASP.Middleware.SegmentBlacklistFiltering.SegmentBlacklistFilterOptions
+    name: SegmentBlacklistFilterOptions
+  - uid: Coree.NETASP.Middleware.SegmentBlacklistFiltering.SegmentBlacklistFilteringExtensions
+    name: SegmentBlacklistFilteringExtensions
+  - uid: Coree.NETASP.Middleware.SegmentBlacklistFiltering.SegmentBlacklistFilteringMiddleware
+    name: SegmentBlacklistFilteringMiddleware
 - uid: Coree.NETASP.Middleware.UnwantedHeaderKeysFiltering
   name: Coree.NETASP.Middleware.UnwantedHeaderKeysFiltering
   items:
@@ -90,8 +134,6 @@ items:
     name: UserAgentFilteringExtensions
   - uid: Coree.NETASP.Middleware.UserAgentFiltering.UserAgentFilteringMiddleware
     name: UserAgentFilteringMiddleware
-  - uid: Coree.NETASP.Middleware.UserAgentFiltering.ValidationsStringExtensions
-    name: ValidationsStringExtensions
 - uid: Coree.NETASP.Services.CertificateManager
   name: Coree.NETASP.Services.CertificateManager
   items:
@@ -105,6 +147,37 @@ items:
     name: DistinguishedName
   - uid: Coree.NETASP.Services.CertificateManager.ICertificateManagerService
     name: ICertificateManagerService
+- uid: Coree.NETASP.Services.CookieAuth
+  name: Coree.NETASP.Services.CookieAuth
+  items:
+  - uid: Coree.NETASP.Services.CookieAuth.AuthExtensions
+    name: AuthExtensions
+  - uid: Coree.NETASP.Services.CookieAuth.CookieAuthHandler
+    name: CookieAuthHandler
+  - uid: Coree.NETASP.Services.CookieAuth.ICookieAuthHandler
+    name: ICookieAuthHandler
+- uid: Coree.NETASP.Services.Instancer
+  name: Coree.NETASP.Services.Instancer
+  items:
+  - uid: Coree.NETASP.Services.Instancer.IServerConfigurationAnalyzer
+    name: IServerConfigurationAnalyzer
+  - uid: Coree.NETASP.Services.Instancer.ServerConfigurationAnalyzer
+    name: ServerConfigurationAnalyzer
+  - uid: Coree.NETASP.Services.Instancer.ServerConfigurationAnalyzer.ServerListenDetail
+    name: ServerConfigurationAnalyzer.ServerListenDetail
+- uid: Coree.NETASP.Services.Points
+  name: Coree.NETASP.Services.Points
+  items:
+  - uid: Coree.NETASP.Services.Points.Entry
+    name: Entry
+  - uid: Coree.NETASP.Services.Points.IPointService
+    name: IPointService
+  - uid: Coree.NETASP.Services.Points.PointEntry
+    name: PointEntry
+  - uid: Coree.NETASP.Services.Points.PointService
+    name: PointService
+  - uid: Coree.NETASP.Services.Points.PointServiceOptions
+    name: PointServiceOptions
 - uid: Coree.NETASP.UnderConstruction
   name: Coree.NETASP.UnderConstruction
   items:

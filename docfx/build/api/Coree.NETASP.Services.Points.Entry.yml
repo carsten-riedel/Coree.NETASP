@@ -1,0 +1,661 @@
+### YamlMime:ManagedReference
+items:
+- uid: Coree.NETASP.Services.Points.Entry
+  commentId: T:Coree.NETASP.Services.Points.Entry
+  id: Entry
+  parent: Coree.NETASP.Services.Points
+  children:
+  - Coree.NETASP.Services.Points.Entry.#ctor
+  - Coree.NETASP.Services.Points.Entry.Created
+  - Coree.NETASP.Services.Points.Entry.LastUpdated
+  - Coree.NETASP.Services.Points.Entry.PointAllTime
+  - Coree.NETASP.Services.Points.Entry.PointEntries
+  - Coree.NETASP.Services.Points.Entry.PointEntriesAccumated
+  langs:
+  - csharp
+  - vb
+  name: Entry
+  nameWithType: Entry
+  fullName: Coree.NETASP.Services.Points.Entry
+  type: Class
+  source:
+    remote:
+      path: src/Projects/Coree.NETASP/Services/Points/PointService.cs
+      branch: master
+      repo: https://github.com/carsten-riedel/Coree.NETASP
+    id: Entry
+    path: ../../src/Projects/Coree.NETASP/Services/Points/PointService.cs
+    startLine: 9
+  assemblies:
+  - Coree.NETASP
+  namespace: Coree.NETASP.Services.Points
+  syntax:
+    content: public class Entry
+    content.vb: Public Class Entry
+  inheritance:
+  - System.Object
+  inheritedMembers:
+  - System.Object.Equals(System.Object)
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.GetHashCode
+  - System.Object.GetType
+  - System.Object.MemberwiseClone
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+  - System.Object.ToString
+- uid: Coree.NETASP.Services.Points.Entry.Created
+  commentId: P:Coree.NETASP.Services.Points.Entry.Created
+  id: Created
+  parent: Coree.NETASP.Services.Points.Entry
+  langs:
+  - csharp
+  - vb
+  name: Created
+  nameWithType: Entry.Created
+  fullName: Coree.NETASP.Services.Points.Entry.Created
+  type: Property
+  source:
+    remote:
+      path: src/Projects/Coree.NETASP/Services/Points/PointService.cs
+      branch: master
+      repo: https://github.com/carsten-riedel/Coree.NETASP
+    id: Created
+    path: ../../src/Projects/Coree.NETASP/Services/Points/PointService.cs
+    startLine: 11
+  assemblies:
+  - Coree.NETASP
+  namespace: Coree.NETASP.Services.Points
+  syntax:
+    content: public DateTime Created { get; set; }
+    parameters: []
+    return:
+      type: System.DateTime
+    content.vb: Public Property Created As Date
+  overload: Coree.NETASP.Services.Points.Entry.Created*
+- uid: Coree.NETASP.Services.Points.Entry.LastUpdated
+  commentId: P:Coree.NETASP.Services.Points.Entry.LastUpdated
+  id: LastUpdated
+  parent: Coree.NETASP.Services.Points.Entry
+  langs:
+  - csharp
+  - vb
+  name: LastUpdated
+  nameWithType: Entry.LastUpdated
+  fullName: Coree.NETASP.Services.Points.Entry.LastUpdated
+  type: Property
+  source:
+    remote:
+      path: src/Projects/Coree.NETASP/Services/Points/PointService.cs
+      branch: master
+      repo: https://github.com/carsten-riedel/Coree.NETASP
+    id: LastUpdated
+    path: ../../src/Projects/Coree.NETASP/Services/Points/PointService.cs
+    startLine: 12
+  assemblies:
+  - Coree.NETASP
+  namespace: Coree.NETASP.Services.Points
+  syntax:
+    content: public DateTime LastUpdated { get; set; }
+    parameters: []
+    return:
+      type: System.DateTime
+    content.vb: Public Property LastUpdated As Date
+  overload: Coree.NETASP.Services.Points.Entry.LastUpdated*
+- uid: Coree.NETASP.Services.Points.Entry.PointEntries
+  commentId: P:Coree.NETASP.Services.Points.Entry.PointEntries
+  id: PointEntries
+  parent: Coree.NETASP.Services.Points.Entry
+  langs:
+  - csharp
+  - vb
+  name: PointEntries
+  nameWithType: Entry.PointEntries
+  fullName: Coree.NETASP.Services.Points.Entry.PointEntries
+  type: Property
+  source:
+    remote:
+      path: src/Projects/Coree.NETASP/Services/Points/PointService.cs
+      branch: master
+      repo: https://github.com/carsten-riedel/Coree.NETASP
+    id: PointEntries
+    path: ../../src/Projects/Coree.NETASP/Services/Points/PointService.cs
+    startLine: 13
+  assemblies:
+  - Coree.NETASP
+  namespace: Coree.NETASP.Services.Points
+  syntax:
+    content: public List<PointEntry> PointEntries { get; set; }
+    parameters: []
+    return:
+      type: System.Collections.Generic.List{Coree.NETASP.Services.Points.PointEntry}
+    content.vb: Public Property PointEntries As List(Of PointEntry)
+  overload: Coree.NETASP.Services.Points.Entry.PointEntries*
+- uid: Coree.NETASP.Services.Points.Entry.PointEntriesAccumated
+  commentId: P:Coree.NETASP.Services.Points.Entry.PointEntriesAccumated
+  id: PointEntriesAccumated
+  parent: Coree.NETASP.Services.Points.Entry
+  langs:
+  - csharp
+  - vb
+  name: PointEntriesAccumated
+  nameWithType: Entry.PointEntriesAccumated
+  fullName: Coree.NETASP.Services.Points.Entry.PointEntriesAccumated
+  type: Property
+  source:
+    remote:
+      path: src/Projects/Coree.NETASP/Services/Points/PointService.cs
+      branch: master
+      repo: https://github.com/carsten-riedel/Coree.NETASP
+    id: PointEntriesAccumated
+    path: ../../src/Projects/Coree.NETASP/Services/Points/PointService.cs
+    startLine: 14
+  assemblies:
+  - Coree.NETASP
+  namespace: Coree.NETASP.Services.Points
+  syntax:
+    content: public ulong PointEntriesAccumated { get; set; }
+    parameters: []
+    return:
+      type: System.UInt64
+    content.vb: Public Property PointEntriesAccumated As ULong
+  overload: Coree.NETASP.Services.Points.Entry.PointEntriesAccumated*
+- uid: Coree.NETASP.Services.Points.Entry.PointAllTime
+  commentId: P:Coree.NETASP.Services.Points.Entry.PointAllTime
+  id: PointAllTime
+  parent: Coree.NETASP.Services.Points.Entry
+  langs:
+  - csharp
+  - vb
+  name: PointAllTime
+  nameWithType: Entry.PointAllTime
+  fullName: Coree.NETASP.Services.Points.Entry.PointAllTime
+  type: Property
+  source:
+    remote:
+      path: src/Projects/Coree.NETASP/Services/Points/PointService.cs
+      branch: master
+      repo: https://github.com/carsten-riedel/Coree.NETASP
+    id: PointAllTime
+    path: ../../src/Projects/Coree.NETASP/Services/Points/PointService.cs
+    startLine: 15
+  assemblies:
+  - Coree.NETASP
+  namespace: Coree.NETASP.Services.Points
+  syntax:
+    content: public ulong PointAllTime { get; set; }
+    parameters: []
+    return:
+      type: System.UInt64
+    content.vb: Public Property PointAllTime As ULong
+  overload: Coree.NETASP.Services.Points.Entry.PointAllTime*
+- uid: Coree.NETASP.Services.Points.Entry.#ctor
+  commentId: M:Coree.NETASP.Services.Points.Entry.#ctor
+  id: '#ctor'
+  parent: Coree.NETASP.Services.Points.Entry
+  langs:
+  - csharp
+  - vb
+  name: Entry()
+  nameWithType: Entry.Entry()
+  fullName: Coree.NETASP.Services.Points.Entry.Entry()
+  type: Constructor
+  source:
+    remote:
+      path: src/Projects/Coree.NETASP/Services/Points/PointService.cs
+      branch: master
+      repo: https://github.com/carsten-riedel/Coree.NETASP
+    id: .ctor
+    path: ../../src/Projects/Coree.NETASP/Services/Points/PointService.cs
+    startLine: 21
+  assemblies:
+  - Coree.NETASP
+  namespace: Coree.NETASP.Services.Points
+  summary: Initializes a new instance of the <xref href="Coree.NETASP.Services.Points.Entry" data-throw-if-not-resolved="false"></xref> class.
+  example: []
+  syntax:
+    content: public Entry()
+    content.vb: Public Sub New()
+  overload: Coree.NETASP.Services.Points.Entry.#ctor*
+  nameWithType.vb: Entry.New()
+  fullName.vb: Coree.NETASP.Services.Points.Entry.New()
+  name.vb: New()
+references:
+- uid: Coree.NETASP.Services.Points
+  commentId: N:Coree.NETASP.Services.Points
+  href: Coree.html
+  name: Coree.NETASP.Services.Points
+  nameWithType: Coree.NETASP.Services.Points
+  fullName: Coree.NETASP.Services.Points
+  spec.csharp:
+  - uid: Coree
+    name: Coree
+    href: Coree.html
+  - name: .
+  - uid: Coree.NETASP
+    name: NETASP
+    href: Coree.NETASP.html
+  - name: .
+  - uid: Coree.NETASP.Services
+    name: Services
+    href: Coree.NETASP.Services.html
+  - name: .
+  - uid: Coree.NETASP.Services.Points
+    name: Points
+    href: Coree.NETASP.Services.Points.html
+  spec.vb:
+  - uid: Coree
+    name: Coree
+    href: Coree.html
+  - name: .
+  - uid: Coree.NETASP
+    name: NETASP
+    href: Coree.NETASP.html
+  - name: .
+  - uid: Coree.NETASP.Services
+    name: Services
+    href: Coree.NETASP.Services.html
+  - name: .
+  - uid: Coree.NETASP.Services.Points
+    name: Points
+    href: Coree.NETASP.Services.Points.html
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object
+  name: object
+  nameWithType: object
+  fullName: object
+  nameWithType.vb: Object
+  fullName.vb: Object
+  name.vb: Object
+- uid: System.Object.Equals(System.Object)
+  commentId: M:System.Object.Equals(System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  name: Equals(object)
+  nameWithType: object.Equals(object)
+  fullName: object.Equals(object)
+  nameWithType.vb: Object.Equals(Object)
+  fullName.vb: Object.Equals(Object)
+  name.vb: Equals(Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  name: Equals(object, object)
+  nameWithType: object.Equals(object, object)
+  fullName: object.Equals(object, object)
+  nameWithType.vb: Object.Equals(Object, Object)
+  fullName.vb: Object.Equals(Object, Object)
+  name.vb: Equals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.GetHashCode
+  commentId: M:System.Object.GetHashCode
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  name: GetHashCode()
+  nameWithType: object.GetHashCode()
+  fullName: object.GetHashCode()
+  nameWithType.vb: Object.GetHashCode()
+  fullName.vb: Object.GetHashCode()
+  spec.csharp:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  - name: (
+  - name: )
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  name: GetType()
+  nameWithType: object.GetType()
+  fullName: object.GetType()
+  nameWithType.vb: Object.GetType()
+  fullName.vb: Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+- uid: System.Object.MemberwiseClone
+  commentId: M:System.Object.MemberwiseClone
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  name: MemberwiseClone()
+  nameWithType: object.MemberwiseClone()
+  fullName: object.MemberwiseClone()
+  nameWithType.vb: Object.MemberwiseClone()
+  fullName.vb: Object.MemberwiseClone()
+  spec.csharp:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  - name: (
+  - name: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  name: ReferenceEquals(object, object)
+  nameWithType: object.ReferenceEquals(object, object)
+  fullName: object.ReferenceEquals(object, object)
+  nameWithType.vb: Object.ReferenceEquals(Object, Object)
+  fullName.vb: Object.ReferenceEquals(Object, Object)
+  name.vb: ReferenceEquals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.ToString
+  commentId: M:System.Object.ToString
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  name: ToString()
+  nameWithType: object.ToString()
+  fullName: object.ToString()
+  nameWithType.vb: Object.ToString()
+  fullName.vb: Object.ToString()
+  spec.csharp:
+  - uid: System.Object.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  - name: (
+  - name: )
+- uid: System
+  commentId: N:System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: Coree.NETASP.Services.Points.Entry.Created*
+  commentId: Overload:Coree.NETASP.Services.Points.Entry.Created
+  href: Coree.NETASP.Services.Points.Entry.html#Coree_NETASP_Services_Points_Entry_Created
+  name: Created
+  nameWithType: Entry.Created
+  fullName: Coree.NETASP.Services.Points.Entry.Created
+- uid: System.DateTime
+  commentId: T:System.DateTime
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.datetime
+  name: DateTime
+  nameWithType: DateTime
+  fullName: System.DateTime
+  nameWithType.vb: Date
+  fullName.vb: Date
+  name.vb: Date
+- uid: Coree.NETASP.Services.Points.Entry.LastUpdated*
+  commentId: Overload:Coree.NETASP.Services.Points.Entry.LastUpdated
+  href: Coree.NETASP.Services.Points.Entry.html#Coree_NETASP_Services_Points_Entry_LastUpdated
+  name: LastUpdated
+  nameWithType: Entry.LastUpdated
+  fullName: Coree.NETASP.Services.Points.Entry.LastUpdated
+- uid: Coree.NETASP.Services.Points.Entry.PointEntries*
+  commentId: Overload:Coree.NETASP.Services.Points.Entry.PointEntries
+  href: Coree.NETASP.Services.Points.Entry.html#Coree_NETASP_Services_Points_Entry_PointEntries
+  name: PointEntries
+  nameWithType: Entry.PointEntries
+  fullName: Coree.NETASP.Services.Points.Entry.PointEntries
+- uid: System.Collections.Generic.List{Coree.NETASP.Services.Points.PointEntry}
+  commentId: T:System.Collections.Generic.List{Coree.NETASP.Services.Points.PointEntry}
+  parent: System.Collections.Generic
+  definition: System.Collections.Generic.List`1
+  href: https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1
+  name: List<PointEntry>
+  nameWithType: List<PointEntry>
+  fullName: System.Collections.Generic.List<Coree.NETASP.Services.Points.PointEntry>
+  nameWithType.vb: List(Of PointEntry)
+  fullName.vb: System.Collections.Generic.List(Of Coree.NETASP.Services.Points.PointEntry)
+  name.vb: List(Of PointEntry)
+  spec.csharp:
+  - uid: System.Collections.Generic.List`1
+    name: List
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1
+  - name: <
+  - uid: Coree.NETASP.Services.Points.PointEntry
+    name: PointEntry
+    href: Coree.NETASP.Services.Points.PointEntry.html
+  - name: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.List`1
+    name: List
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: Coree.NETASP.Services.Points.PointEntry
+    name: PointEntry
+    href: Coree.NETASP.Services.Points.PointEntry.html
+  - name: )
+- uid: System.Collections.Generic.List`1
+  commentId: T:System.Collections.Generic.List`1
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1
+  name: List<T>
+  nameWithType: List<T>
+  fullName: System.Collections.Generic.List<T>
+  nameWithType.vb: List(Of T)
+  fullName.vb: System.Collections.Generic.List(Of T)
+  name.vb: List(Of T)
+  spec.csharp:
+  - uid: System.Collections.Generic.List`1
+    name: List
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1
+  - name: <
+  - name: T
+  - name: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.List`1
+    name: List
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+- uid: System.Collections.Generic
+  commentId: N:System.Collections.Generic
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System.Collections.Generic
+  nameWithType: System.Collections.Generic
+  fullName: System.Collections.Generic
+  spec.csharp:
+  - uid: System
+    name: System
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system
+  - name: .
+  - uid: System.Collections
+    name: Collections
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections
+  - name: .
+  - uid: System.Collections.Generic
+    name: Generic
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic
+  spec.vb:
+  - uid: System
+    name: System
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system
+  - name: .
+  - uid: System.Collections
+    name: Collections
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections
+  - name: .
+  - uid: System.Collections.Generic
+    name: Generic
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic
+- uid: Coree.NETASP.Services.Points.Entry.PointEntriesAccumated*
+  commentId: Overload:Coree.NETASP.Services.Points.Entry.PointEntriesAccumated
+  href: Coree.NETASP.Services.Points.Entry.html#Coree_NETASP_Services_Points_Entry_PointEntriesAccumated
+  name: PointEntriesAccumated
+  nameWithType: Entry.PointEntriesAccumated
+  fullName: Coree.NETASP.Services.Points.Entry.PointEntriesAccumated
+- uid: System.UInt64
+  commentId: T:System.UInt64
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.uint64
+  name: ulong
+  nameWithType: ulong
+  fullName: ulong
+  nameWithType.vb: ULong
+  fullName.vb: ULong
+  name.vb: ULong
+- uid: Coree.NETASP.Services.Points.Entry.PointAllTime*
+  commentId: Overload:Coree.NETASP.Services.Points.Entry.PointAllTime
+  href: Coree.NETASP.Services.Points.Entry.html#Coree_NETASP_Services_Points_Entry_PointAllTime
+  name: PointAllTime
+  nameWithType: Entry.PointAllTime
+  fullName: Coree.NETASP.Services.Points.Entry.PointAllTime
+- uid: Coree.NETASP.Services.Points.Entry
+  commentId: T:Coree.NETASP.Services.Points.Entry
+  href: Coree.NETASP.Services.Points.Entry.html
+  name: Entry
+  nameWithType: Entry
+  fullName: Coree.NETASP.Services.Points.Entry
+- uid: Coree.NETASP.Services.Points.Entry.#ctor*
+  commentId: Overload:Coree.NETASP.Services.Points.Entry.#ctor
+  href: Coree.NETASP.Services.Points.Entry.html#Coree_NETASP_Services_Points_Entry__ctor
+  name: Entry
+  nameWithType: Entry.Entry
+  fullName: Coree.NETASP.Services.Points.Entry.Entry
+  nameWithType.vb: Entry.New
+  fullName.vb: Coree.NETASP.Services.Points.Entry.New
+  name.vb: New

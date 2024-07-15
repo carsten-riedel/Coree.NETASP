@@ -1,0 +1,626 @@
+### YamlMime:ManagedReference
+items:
+- uid: Coree.NETASP.Middleware.NewFolder.PreMiddlewareHostedService
+  commentId: T:Coree.NETASP.Middleware.NewFolder.PreMiddlewareHostedService
+  id: PreMiddlewareHostedService
+  parent: Coree.NETASP.Middleware.NewFolder
+  children:
+  - Coree.NETASP.Middleware.NewFolder.PreMiddlewareHostedService.StartAsync(System.Threading.CancellationToken)
+  - Coree.NETASP.Middleware.NewFolder.PreMiddlewareHostedService.StartupCompleted
+  - Coree.NETASP.Middleware.NewFolder.PreMiddlewareHostedService.StopAsync(System.Threading.CancellationToken)
+  langs:
+  - csharp
+  - vb
+  name: PreMiddlewareHostedService
+  nameWithType: PreMiddlewareHostedService
+  fullName: Coree.NETASP.Middleware.NewFolder.PreMiddlewareHostedService
+  type: Class
+  source:
+    remote:
+      path: src/Projects/Coree.NETASP/Middleware/NewFolder/Class.cs
+      branch: master
+      repo: https://github.com/carsten-riedel/Coree.NETASP
+    id: PreMiddlewareHostedService
+    path: ../../src/Projects/Coree.NETASP/Middleware/NewFolder/Class.cs
+    startLine: 2
+  assemblies:
+  - Coree.NETASP
+  namespace: Coree.NETASP.Middleware.NewFolder
+  syntax:
+    content: 'public class PreMiddlewareHostedService : IHostedService'
+    content.vb: Public Class PreMiddlewareHostedService Implements IHostedService
+  inheritance:
+  - System.Object
+  implements:
+  - Microsoft.Extensions.Hosting.IHostedService
+  inheritedMembers:
+  - System.Object.Equals(System.Object)
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.GetHashCode
+  - System.Object.GetType
+  - System.Object.MemberwiseClone
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+  - System.Object.ToString
+- uid: Coree.NETASP.Middleware.NewFolder.PreMiddlewareHostedService.StartupCompleted
+  commentId: P:Coree.NETASP.Middleware.NewFolder.PreMiddlewareHostedService.StartupCompleted
+  id: StartupCompleted
+  parent: Coree.NETASP.Middleware.NewFolder.PreMiddlewareHostedService
+  langs:
+  - csharp
+  - vb
+  name: StartupCompleted
+  nameWithType: PreMiddlewareHostedService.StartupCompleted
+  fullName: Coree.NETASP.Middleware.NewFolder.PreMiddlewareHostedService.StartupCompleted
+  type: Property
+  source:
+    remote:
+      path: src/Projects/Coree.NETASP/Middleware/NewFolder/Class.cs
+      branch: master
+      repo: https://github.com/carsten-riedel/Coree.NETASP
+    id: StartupCompleted
+    path: ../../src/Projects/Coree.NETASP/Middleware/NewFolder/Class.cs
+    startLine: 9
+  assemblies:
+  - Coree.NETASP
+  namespace: Coree.NETASP.Middleware.NewFolder
+  summary: Gets a task that completes when the startup process is done.
+  example: []
+  syntax:
+    content: public Task StartupCompleted { get; }
+    parameters: []
+    return:
+      type: System.Threading.Tasks.Task
+    content.vb: Public ReadOnly Property StartupCompleted As Task
+  overload: Coree.NETASP.Middleware.NewFolder.PreMiddlewareHostedService.StartupCompleted*
+- uid: Coree.NETASP.Middleware.NewFolder.PreMiddlewareHostedService.StartAsync(System.Threading.CancellationToken)
+  commentId: M:Coree.NETASP.Middleware.NewFolder.PreMiddlewareHostedService.StartAsync(System.Threading.CancellationToken)
+  id: StartAsync(System.Threading.CancellationToken)
+  parent: Coree.NETASP.Middleware.NewFolder.PreMiddlewareHostedService
+  langs:
+  - csharp
+  - vb
+  name: StartAsync(CancellationToken)
+  nameWithType: PreMiddlewareHostedService.StartAsync(CancellationToken)
+  fullName: Coree.NETASP.Middleware.NewFolder.PreMiddlewareHostedService.StartAsync(System.Threading.CancellationToken)
+  type: Method
+  source:
+    remote:
+      path: src/Projects/Coree.NETASP/Middleware/NewFolder/Class.cs
+      branch: master
+      repo: https://github.com/carsten-riedel/Coree.NETASP
+    id: StartAsync
+    path: ../../src/Projects/Coree.NETASP/Middleware/NewFolder/Class.cs
+    startLine: 16
+  assemblies:
+  - Coree.NETASP
+  namespace: Coree.NETASP.Middleware.NewFolder
+  summary: Executes the background service task.
+  example: []
+  syntax:
+    content: public Task StartAsync(CancellationToken stoppingToken)
+    parameters:
+    - id: stoppingToken
+      type: System.Threading.CancellationToken
+      description: Token that indicates when to stop the task.
+    return:
+      type: System.Threading.Tasks.Task
+      description: A Task representing the asynchronous operation.
+    content.vb: Public Function StartAsync(stoppingToken As CancellationToken) As Task
+  overload: Coree.NETASP.Middleware.NewFolder.PreMiddlewareHostedService.StartAsync*
+  implements:
+  - Microsoft.Extensions.Hosting.IHostedService.StartAsync(System.Threading.CancellationToken)
+- uid: Coree.NETASP.Middleware.NewFolder.PreMiddlewareHostedService.StopAsync(System.Threading.CancellationToken)
+  commentId: M:Coree.NETASP.Middleware.NewFolder.PreMiddlewareHostedService.StopAsync(System.Threading.CancellationToken)
+  id: StopAsync(System.Threading.CancellationToken)
+  parent: Coree.NETASP.Middleware.NewFolder.PreMiddlewareHostedService
+  langs:
+  - csharp
+  - vb
+  name: StopAsync(CancellationToken)
+  nameWithType: PreMiddlewareHostedService.StopAsync(CancellationToken)
+  fullName: Coree.NETASP.Middleware.NewFolder.PreMiddlewareHostedService.StopAsync(System.Threading.CancellationToken)
+  type: Method
+  source:
+    remote:
+      path: src/Projects/Coree.NETASP/Middleware/NewFolder/Class.cs
+      branch: master
+      repo: https://github.com/carsten-riedel/Coree.NETASP
+    id: StopAsync
+    path: ../../src/Projects/Coree.NETASP/Middleware/NewFolder/Class.cs
+    startLine: 28
+  assemblies:
+  - Coree.NETASP
+  namespace: Coree.NETASP.Middleware.NewFolder
+  summary: Triggered when the application host is performing a graceful shutdown.
+  example: []
+  syntax:
+    content: public Task StopAsync(CancellationToken stoppingToken)
+    parameters:
+    - id: stoppingToken
+      type: System.Threading.CancellationToken
+    return:
+      type: System.Threading.Tasks.Task
+      description: A <xref href="System.Threading.Tasks.Task" data-throw-if-not-resolved="false"></xref> that represents the asynchronous Stop operation.
+    content.vb: Public Function StopAsync(stoppingToken As CancellationToken) As Task
+  overload: Coree.NETASP.Middleware.NewFolder.PreMiddlewareHostedService.StopAsync*
+  implements:
+  - Microsoft.Extensions.Hosting.IHostedService.StopAsync(System.Threading.CancellationToken)
+references:
+- uid: Coree.NETASP.Middleware.NewFolder
+  commentId: N:Coree.NETASP.Middleware.NewFolder
+  href: Coree.html
+  name: Coree.NETASP.Middleware.NewFolder
+  nameWithType: Coree.NETASP.Middleware.NewFolder
+  fullName: Coree.NETASP.Middleware.NewFolder
+  spec.csharp:
+  - uid: Coree
+    name: Coree
+    href: Coree.html
+  - name: .
+  - uid: Coree.NETASP
+    name: NETASP
+    href: Coree.NETASP.html
+  - name: .
+  - uid: Coree.NETASP.Middleware
+    name: Middleware
+    href: Coree.NETASP.Middleware.html
+  - name: .
+  - uid: Coree.NETASP.Middleware.NewFolder
+    name: NewFolder
+    href: Coree.NETASP.Middleware.NewFolder.html
+  spec.vb:
+  - uid: Coree
+    name: Coree
+    href: Coree.html
+  - name: .
+  - uid: Coree.NETASP
+    name: NETASP
+    href: Coree.NETASP.html
+  - name: .
+  - uid: Coree.NETASP.Middleware
+    name: Middleware
+    href: Coree.NETASP.Middleware.html
+  - name: .
+  - uid: Coree.NETASP.Middleware.NewFolder
+    name: NewFolder
+    href: Coree.NETASP.Middleware.NewFolder.html
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object
+  name: object
+  nameWithType: object
+  fullName: object
+  nameWithType.vb: Object
+  fullName.vb: Object
+  name.vb: Object
+- uid: Microsoft.Extensions.Hosting.IHostedService
+  commentId: T:Microsoft.Extensions.Hosting.IHostedService
+  parent: Microsoft.Extensions.Hosting
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/microsoft.extensions.hosting.ihostedservice
+  name: IHostedService
+  nameWithType: IHostedService
+  fullName: Microsoft.Extensions.Hosting.IHostedService
+- uid: System.Object.Equals(System.Object)
+  commentId: M:System.Object.Equals(System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  name: Equals(object)
+  nameWithType: object.Equals(object)
+  fullName: object.Equals(object)
+  nameWithType.vb: Object.Equals(Object)
+  fullName.vb: Object.Equals(Object)
+  name.vb: Equals(Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  name: Equals(object, object)
+  nameWithType: object.Equals(object, object)
+  fullName: object.Equals(object, object)
+  nameWithType.vb: Object.Equals(Object, Object)
+  fullName.vb: Object.Equals(Object, Object)
+  name.vb: Equals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.GetHashCode
+  commentId: M:System.Object.GetHashCode
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  name: GetHashCode()
+  nameWithType: object.GetHashCode()
+  fullName: object.GetHashCode()
+  nameWithType.vb: Object.GetHashCode()
+  fullName.vb: Object.GetHashCode()
+  spec.csharp:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  - name: (
+  - name: )
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  name: GetType()
+  nameWithType: object.GetType()
+  fullName: object.GetType()
+  nameWithType.vb: Object.GetType()
+  fullName.vb: Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+- uid: System.Object.MemberwiseClone
+  commentId: M:System.Object.MemberwiseClone
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  name: MemberwiseClone()
+  nameWithType: object.MemberwiseClone()
+  fullName: object.MemberwiseClone()
+  nameWithType.vb: Object.MemberwiseClone()
+  fullName.vb: Object.MemberwiseClone()
+  spec.csharp:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  - name: (
+  - name: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  name: ReferenceEquals(object, object)
+  nameWithType: object.ReferenceEquals(object, object)
+  fullName: object.ReferenceEquals(object, object)
+  nameWithType.vb: Object.ReferenceEquals(Object, Object)
+  fullName.vb: Object.ReferenceEquals(Object, Object)
+  name.vb: ReferenceEquals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.ToString
+  commentId: M:System.Object.ToString
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  name: ToString()
+  nameWithType: object.ToString()
+  fullName: object.ToString()
+  nameWithType.vb: Object.ToString()
+  fullName.vb: Object.ToString()
+  spec.csharp:
+  - uid: System.Object.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  - name: (
+  - name: )
+- uid: System
+  commentId: N:System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: Microsoft.Extensions.Hosting
+  commentId: N:Microsoft.Extensions.Hosting
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/microsoft
+  name: Microsoft.Extensions.Hosting
+  nameWithType: Microsoft.Extensions.Hosting
+  fullName: Microsoft.Extensions.Hosting
+  spec.csharp:
+  - uid: Microsoft
+    name: Microsoft
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/microsoft
+  - name: .
+  - uid: Microsoft.Extensions
+    name: Extensions
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/microsoft.extensions
+  - name: .
+  - uid: Microsoft.Extensions.Hosting
+    name: Hosting
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/microsoft.extensions.hosting
+  spec.vb:
+  - uid: Microsoft
+    name: Microsoft
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/microsoft
+  - name: .
+  - uid: Microsoft.Extensions
+    name: Extensions
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/microsoft.extensions
+  - name: .
+  - uid: Microsoft.Extensions.Hosting
+    name: Hosting
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/microsoft.extensions.hosting
+- uid: Coree.NETASP.Middleware.NewFolder.PreMiddlewareHostedService.StartupCompleted*
+  commentId: Overload:Coree.NETASP.Middleware.NewFolder.PreMiddlewareHostedService.StartupCompleted
+  href: Coree.NETASP.Middleware.NewFolder.PreMiddlewareHostedService.html#Coree_NETASP_Middleware_NewFolder_PreMiddlewareHostedService_StartupCompleted
+  name: StartupCompleted
+  nameWithType: PreMiddlewareHostedService.StartupCompleted
+  fullName: Coree.NETASP.Middleware.NewFolder.PreMiddlewareHostedService.StartupCompleted
+- uid: System.Threading.Tasks.Task
+  commentId: T:System.Threading.Tasks.Task
+  parent: System.Threading.Tasks
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.threading.tasks.task
+  name: Task
+  nameWithType: Task
+  fullName: System.Threading.Tasks.Task
+- uid: System.Threading.Tasks
+  commentId: N:System.Threading.Tasks
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System.Threading.Tasks
+  nameWithType: System.Threading.Tasks
+  fullName: System.Threading.Tasks
+  spec.csharp:
+  - uid: System
+    name: System
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system
+  - name: .
+  - uid: System.Threading
+    name: Threading
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading
+  - name: .
+  - uid: System.Threading.Tasks
+    name: Tasks
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading.tasks
+  spec.vb:
+  - uid: System
+    name: System
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system
+  - name: .
+  - uid: System.Threading
+    name: Threading
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading
+  - name: .
+  - uid: System.Threading.Tasks
+    name: Tasks
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading.tasks
+- uid: Coree.NETASP.Middleware.NewFolder.PreMiddlewareHostedService.StartAsync*
+  commentId: Overload:Coree.NETASP.Middleware.NewFolder.PreMiddlewareHostedService.StartAsync
+  href: Coree.NETASP.Middleware.NewFolder.PreMiddlewareHostedService.html#Coree_NETASP_Middleware_NewFolder_PreMiddlewareHostedService_StartAsync_System_Threading_CancellationToken_
+  name: StartAsync
+  nameWithType: PreMiddlewareHostedService.StartAsync
+  fullName: Coree.NETASP.Middleware.NewFolder.PreMiddlewareHostedService.StartAsync
+- uid: Microsoft.Extensions.Hosting.IHostedService.StartAsync(System.Threading.CancellationToken)
+  commentId: M:Microsoft.Extensions.Hosting.IHostedService.StartAsync(System.Threading.CancellationToken)
+  parent: Microsoft.Extensions.Hosting.IHostedService
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/microsoft.extensions.hosting.ihostedservice.startasync
+  name: StartAsync(CancellationToken)
+  nameWithType: IHostedService.StartAsync(CancellationToken)
+  fullName: Microsoft.Extensions.Hosting.IHostedService.StartAsync(System.Threading.CancellationToken)
+  spec.csharp:
+  - uid: Microsoft.Extensions.Hosting.IHostedService.StartAsync(System.Threading.CancellationToken)
+    name: StartAsync
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/microsoft.extensions.hosting.ihostedservice.startasync
+  - name: (
+  - uid: System.Threading.CancellationToken
+    name: CancellationToken
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading.cancellationtoken
+  - name: )
+  spec.vb:
+  - uid: Microsoft.Extensions.Hosting.IHostedService.StartAsync(System.Threading.CancellationToken)
+    name: StartAsync
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/microsoft.extensions.hosting.ihostedservice.startasync
+  - name: (
+  - uid: System.Threading.CancellationToken
+    name: CancellationToken
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading.cancellationtoken
+  - name: )
+- uid: System.Threading.CancellationToken
+  commentId: T:System.Threading.CancellationToken
+  parent: System.Threading
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.threading.cancellationtoken
+  name: CancellationToken
+  nameWithType: CancellationToken
+  fullName: System.Threading.CancellationToken
+- uid: System.Threading
+  commentId: N:System.Threading
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System.Threading
+  nameWithType: System.Threading
+  fullName: System.Threading
+  spec.csharp:
+  - uid: System
+    name: System
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system
+  - name: .
+  - uid: System.Threading
+    name: Threading
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading
+  spec.vb:
+  - uid: System
+    name: System
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system
+  - name: .
+  - uid: System.Threading
+    name: Threading
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading
+- uid: Coree.NETASP.Middleware.NewFolder.PreMiddlewareHostedService.StopAsync*
+  commentId: Overload:Coree.NETASP.Middleware.NewFolder.PreMiddlewareHostedService.StopAsync
+  href: Coree.NETASP.Middleware.NewFolder.PreMiddlewareHostedService.html#Coree_NETASP_Middleware_NewFolder_PreMiddlewareHostedService_StopAsync_System_Threading_CancellationToken_
+  name: StopAsync
+  nameWithType: PreMiddlewareHostedService.StopAsync
+  fullName: Coree.NETASP.Middleware.NewFolder.PreMiddlewareHostedService.StopAsync
+- uid: Microsoft.Extensions.Hosting.IHostedService.StopAsync(System.Threading.CancellationToken)
+  commentId: M:Microsoft.Extensions.Hosting.IHostedService.StopAsync(System.Threading.CancellationToken)
+  parent: Microsoft.Extensions.Hosting.IHostedService
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/microsoft.extensions.hosting.ihostedservice.stopasync
+  name: StopAsync(CancellationToken)
+  nameWithType: IHostedService.StopAsync(CancellationToken)
+  fullName: Microsoft.Extensions.Hosting.IHostedService.StopAsync(System.Threading.CancellationToken)
+  spec.csharp:
+  - uid: Microsoft.Extensions.Hosting.IHostedService.StopAsync(System.Threading.CancellationToken)
+    name: StopAsync
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/microsoft.extensions.hosting.ihostedservice.stopasync
+  - name: (
+  - uid: System.Threading.CancellationToken
+    name: CancellationToken
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading.cancellationtoken
+  - name: )
+  spec.vb:
+  - uid: Microsoft.Extensions.Hosting.IHostedService.StopAsync(System.Threading.CancellationToken)
+    name: StopAsync
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/microsoft.extensions.hosting.ihostedservice.stopasync
+  - name: (
+  - uid: System.Threading.CancellationToken
+    name: CancellationToken
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading.cancellationtoken
+  - name: )

@@ -1,0 +1,76 @@
+### YamlMime:ManagedReference
+items:
+- uid: Coree.NETASP.Middleware.NewFolder
+  commentId: N:Coree.NETASP.Middleware.NewFolder
+  id: Coree.NETASP.Middleware.NewFolder
+  children:
+  - Coree.NETASP.Middleware.NewFolder.PreMiddlewareHostedService
+  - Coree.NETASP.Middleware.NewFolder.WaitForPreMiddlewareHostedServiceMiddleware
+  - Coree.NETASP.Middleware.NewFolder.fooExtensions
+  langs:
+  - csharp
+  - vb
+  name: Coree.NETASP.Middleware.NewFolder
+  nameWithType: Coree.NETASP.Middleware.NewFolder
+  fullName: Coree.NETASP.Middleware.NewFolder
+  type: Namespace
+  assemblies:
+  - Coree.NETASP
+references:
+- uid: Coree.NETASP.Middleware.NewFolder.PreMiddlewareHostedService
+  commentId: T:Coree.NETASP.Middleware.NewFolder.PreMiddlewareHostedService
+  parent: Coree.NETASP.Middleware.NewFolder
+  href: Coree.NETASP.Middleware.NewFolder.PreMiddlewareHostedService.html
+  name: PreMiddlewareHostedService
+  nameWithType: PreMiddlewareHostedService
+  fullName: Coree.NETASP.Middleware.NewFolder.PreMiddlewareHostedService
+- uid: Coree.NETASP.Middleware.NewFolder.WaitForPreMiddlewareHostedServiceMiddleware
+  commentId: T:Coree.NETASP.Middleware.NewFolder.WaitForPreMiddlewareHostedServiceMiddleware
+  href: Coree.NETASP.Middleware.NewFolder.WaitForPreMiddlewareHostedServiceMiddleware.html
+  name: WaitForPreMiddlewareHostedServiceMiddleware
+  nameWithType: WaitForPreMiddlewareHostedServiceMiddleware
+  fullName: Coree.NETASP.Middleware.NewFolder.WaitForPreMiddlewareHostedServiceMiddleware
+- uid: Coree.NETASP.Middleware.NewFolder.fooExtensions
+  commentId: T:Coree.NETASP.Middleware.NewFolder.fooExtensions
+  href: Coree.NETASP.Middleware.NewFolder.fooExtensions.html
+  name: fooExtensions
+  nameWithType: fooExtensions
+  fullName: Coree.NETASP.Middleware.NewFolder.fooExtensions
+- uid: Coree.NETASP.Middleware.NewFolder
+  commentId: N:Coree.NETASP.Middleware.NewFolder
+  href: Coree.html
+  name: Coree.NETASP.Middleware.NewFolder
+  nameWithType: Coree.NETASP.Middleware.NewFolder
+  fullName: Coree.NETASP.Middleware.NewFolder
+  spec.csharp:
+  - uid: Coree
+    name: Coree
+    href: Coree.html
+  - name: .
+  - uid: Coree.NETASP
+    name: NETASP
+    href: Coree.NETASP.html
+  - name: .
+  - uid: Coree.NETASP.Middleware
+    name: Middleware
+    href: Coree.NETASP.Middleware.html
+  - name: .
+  - uid: Coree.NETASP.Middleware.NewFolder
+    name: NewFolder
+    href: Coree.NETASP.Middleware.NewFolder.html
+  spec.vb:
+  - uid: Coree
+    name: Coree
+    href: Coree.html
+  - name: .
+  - uid: Coree.NETASP
+    name: NETASP
+    href: Coree.NETASP.html
+  - name: .
+  - uid: Coree.NETASP.Middleware
+    name: Middleware
+    href: Coree.NETASP.Middleware.html
+  - name: .
+  - uid: Coree.NETASP.Middleware.NewFolder
+    name: NewFolder
+    href: Coree.NETASP.Middleware.NewFolder.html

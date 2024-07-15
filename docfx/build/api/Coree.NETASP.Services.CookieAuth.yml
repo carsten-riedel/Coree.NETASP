@@ -1,0 +1,76 @@
+### YamlMime:ManagedReference
+items:
+- uid: Coree.NETASP.Services.CookieAuth
+  commentId: N:Coree.NETASP.Services.CookieAuth
+  id: Coree.NETASP.Services.CookieAuth
+  children:
+  - Coree.NETASP.Services.CookieAuth.AuthExtensions
+  - Coree.NETASP.Services.CookieAuth.CookieAuthHandler
+  - Coree.NETASP.Services.CookieAuth.ICookieAuthHandler
+  langs:
+  - csharp
+  - vb
+  name: Coree.NETASP.Services.CookieAuth
+  nameWithType: Coree.NETASP.Services.CookieAuth
+  fullName: Coree.NETASP.Services.CookieAuth
+  type: Namespace
+  assemblies:
+  - Coree.NETASP
+references:
+- uid: Coree.NETASP.Services.CookieAuth.ICookieAuthHandler
+  commentId: T:Coree.NETASP.Services.CookieAuth.ICookieAuthHandler
+  parent: Coree.NETASP.Services.CookieAuth
+  href: Coree.NETASP.Services.CookieAuth.ICookieAuthHandler.html
+  name: ICookieAuthHandler
+  nameWithType: ICookieAuthHandler
+  fullName: Coree.NETASP.Services.CookieAuth.ICookieAuthHandler
+- uid: Coree.NETASP.Services.CookieAuth.AuthExtensions
+  commentId: T:Coree.NETASP.Services.CookieAuth.AuthExtensions
+  href: Coree.NETASP.Services.CookieAuth.AuthExtensions.html
+  name: AuthExtensions
+  nameWithType: AuthExtensions
+  fullName: Coree.NETASP.Services.CookieAuth.AuthExtensions
+- uid: Coree.NETASP.Services.CookieAuth.CookieAuthHandler
+  commentId: T:Coree.NETASP.Services.CookieAuth.CookieAuthHandler
+  href: Coree.NETASP.Services.CookieAuth.CookieAuthHandler.html
+  name: CookieAuthHandler
+  nameWithType: CookieAuthHandler
+  fullName: Coree.NETASP.Services.CookieAuth.CookieAuthHandler
+- uid: Coree.NETASP.Services.CookieAuth
+  commentId: N:Coree.NETASP.Services.CookieAuth
+  href: Coree.html
+  name: Coree.NETASP.Services.CookieAuth
+  nameWithType: Coree.NETASP.Services.CookieAuth
+  fullName: Coree.NETASP.Services.CookieAuth
+  spec.csharp:
+  - uid: Coree
+    name: Coree
+    href: Coree.html
+  - name: .
+  - uid: Coree.NETASP
+    name: NETASP
+    href: Coree.NETASP.html
+  - name: .
+  - uid: Coree.NETASP.Services
+    name: Services
+    href: Coree.NETASP.Services.html
+  - name: .
+  - uid: Coree.NETASP.Services.CookieAuth
+    name: CookieAuth
+    href: Coree.NETASP.Services.CookieAuth.html
+  spec.vb:
+  - uid: Coree
+    name: Coree
+    href: Coree.html
+  - name: .
+  - uid: Coree.NETASP
+    name: NETASP
+    href: Coree.NETASP.html
+  - name: .
+  - uid: Coree.NETASP.Services
+    name: Services
+    href: Coree.NETASP.Services.html
+  - name: .
+  - uid: Coree.NETASP.Services.CookieAuth
+    name: CookieAuth
+    href: Coree.NETASP.Services.CookieAuth.html

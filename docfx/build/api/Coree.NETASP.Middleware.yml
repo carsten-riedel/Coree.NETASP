@@ -4,11 +4,10 @@ items:
   commentId: N:Coree.NETASP.Middleware
   id: Coree.NETASP.Middleware
   children:
-  - Coree.NETASP.Middleware.RequestLoggingMiddleware
-  - Coree.NETASP.Middleware.ResponseRecordingMiddleware
-  - Coree.NETASP.Middleware.SegmentBlacklistFilterOptions
-  - Coree.NETASP.Middleware.SegmentBlacklistFilteringExtensions
-  - Coree.NETASP.Middleware.SegmentBlacklistFilteringMiddleware
+  - Coree.NETASP.Middleware.FailurePointsMiddleware
+  - Coree.NETASP.Middleware.FailurePointsMiddlewareExtensions
+  - Coree.NETASP.Middleware.FailurePointsMiddlewareOptions
+  - Coree.NETASP.Middleware.RequestThrottlingMiddleware
   langs:
   - csharp
   - vb
@@ -19,33 +18,27 @@ items:
   assemblies:
   - Coree.NETASP
 references:
-- uid: Coree.NETASP.Middleware.RequestLoggingMiddleware
-  commentId: T:Coree.NETASP.Middleware.RequestLoggingMiddleware
-  href: Coree.NETASP.Middleware.RequestLoggingMiddleware.html
-  name: RequestLoggingMiddleware
-  nameWithType: RequestLoggingMiddleware
-  fullName: Coree.NETASP.Middleware.RequestLoggingMiddleware
-- uid: Coree.NETASP.Middleware.ResponseRecordingMiddleware
-  commentId: T:Coree.NETASP.Middleware.ResponseRecordingMiddleware
-  href: Coree.NETASP.Middleware.ResponseRecordingMiddleware.html
-  name: ResponseRecordingMiddleware
-  nameWithType: ResponseRecordingMiddleware
-  fullName: Coree.NETASP.Middleware.ResponseRecordingMiddleware
-- uid: Coree.NETASP.Middleware.SegmentBlacklistFilterOptions
-  commentId: T:Coree.NETASP.Middleware.SegmentBlacklistFilterOptions
-  href: Coree.NETASP.Middleware.SegmentBlacklistFilterOptions.html
-  name: SegmentBlacklistFilterOptions
-  nameWithType: SegmentBlacklistFilterOptions
-  fullName: Coree.NETASP.Middleware.SegmentBlacklistFilterOptions
-- uid: Coree.NETASP.Middleware.SegmentBlacklistFilteringExtensions
-  commentId: T:Coree.NETASP.Middleware.SegmentBlacklistFilteringExtensions
-  href: Coree.NETASP.Middleware.SegmentBlacklistFilteringExtensions.html
-  name: SegmentBlacklistFilteringExtensions
-  nameWithType: SegmentBlacklistFilteringExtensions
-  fullName: Coree.NETASP.Middleware.SegmentBlacklistFilteringExtensions
-- uid: Coree.NETASP.Middleware.SegmentBlacklistFilteringMiddleware
-  commentId: T:Coree.NETASP.Middleware.SegmentBlacklistFilteringMiddleware
-  href: Coree.NETASP.Middleware.SegmentBlacklistFilteringMiddleware.html
-  name: SegmentBlacklistFilteringMiddleware
-  nameWithType: SegmentBlacklistFilteringMiddleware
-  fullName: Coree.NETASP.Middleware.SegmentBlacklistFilteringMiddleware
+- uid: Coree.NETASP.Middleware.FailurePointsMiddleware
+  commentId: T:Coree.NETASP.Middleware.FailurePointsMiddleware
+  href: Coree.NETASP.Middleware.FailurePointsMiddleware.html
+  name: FailurePointsMiddleware
+  nameWithType: FailurePointsMiddleware
+  fullName: Coree.NETASP.Middleware.FailurePointsMiddleware
+- uid: Coree.NETASP.Middleware.FailurePointsMiddlewareExtensions
+  commentId: T:Coree.NETASP.Middleware.FailurePointsMiddlewareExtensions
+  href: Coree.NETASP.Middleware.FailurePointsMiddlewareExtensions.html
+  name: FailurePointsMiddlewareExtensions
+  nameWithType: FailurePointsMiddlewareExtensions
+  fullName: Coree.NETASP.Middleware.FailurePointsMiddlewareExtensions
+- uid: Coree.NETASP.Middleware.FailurePointsMiddlewareOptions
+  commentId: T:Coree.NETASP.Middleware.FailurePointsMiddlewareOptions
+  href: Coree.NETASP.Middleware.FailurePointsMiddlewareOptions.html
+  name: FailurePointsMiddlewareOptions
+  nameWithType: FailurePointsMiddlewareOptions
+  fullName: Coree.NETASP.Middleware.FailurePointsMiddlewareOptions
+- uid: Coree.NETASP.Middleware.RequestThrottlingMiddleware
+  commentId: T:Coree.NETASP.Middleware.RequestThrottlingMiddleware
+  href: Coree.NETASP.Middleware.RequestThrottlingMiddleware.html
+  name: RequestThrottlingMiddleware
+  nameWithType: RequestThrottlingMiddleware
+  fullName: Coree.NETASP.Middleware.RequestThrottlingMiddleware

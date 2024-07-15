@@ -1,0 +1,454 @@
+### YamlMime:ManagedReference
+items:
+- uid: Coree.NETASP.Middleware.SegmentBlacklistFiltering.SegmentBlacklistFilteringExtensions
+  commentId: T:Coree.NETASP.Middleware.SegmentBlacklistFiltering.SegmentBlacklistFilteringExtensions
+  id: SegmentBlacklistFilteringExtensions
+  parent: Coree.NETASP.Middleware.SegmentBlacklistFiltering
+  children:
+  - Coree.NETASP.Middleware.SegmentBlacklistFiltering.SegmentBlacklistFilteringExtensions.AddSegmentBlacklistFiltering(Microsoft.Extensions.DependencyInjection.IServiceCollection,System.String[],System.Boolean,System.Int32,System.Int32)
+  langs:
+  - csharp
+  - vb
+  name: SegmentBlacklistFilteringExtensions
+  nameWithType: SegmentBlacklistFilteringExtensions
+  fullName: Coree.NETASP.Middleware.SegmentBlacklistFiltering.SegmentBlacklistFilteringExtensions
+  type: Class
+  source:
+    remote:
+      path: src/Projects/Coree.NETASP/Middleware/SegmentBlacklistFiltering/SegmentBlacklistFilteringMiddleware.cs
+      branch: master
+      repo: https://github.com/carsten-riedel/Coree.NETASP
+    id: SegmentBlacklistFilteringExtensions
+    path: ../../src/Projects/Coree.NETASP/Middleware/SegmentBlacklistFiltering/SegmentBlacklistFilteringMiddleware.cs
+    startLine: 181
+  assemblies:
+  - Coree.NETASP
+  namespace: Coree.NETASP.Middleware.SegmentBlacklistFiltering
+  syntax:
+    content: public static class SegmentBlacklistFilteringExtensions
+    content.vb: Public Module SegmentBlacklistFilteringExtensions
+  inheritance:
+  - System.Object
+  inheritedMembers:
+  - System.Object.Equals(System.Object)
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.GetHashCode
+  - System.Object.GetType
+  - System.Object.MemberwiseClone
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+  - System.Object.ToString
+- uid: Coree.NETASP.Middleware.SegmentBlacklistFiltering.SegmentBlacklistFilteringExtensions.AddSegmentBlacklistFiltering(Microsoft.Extensions.DependencyInjection.IServiceCollection,System.String[],System.Boolean,System.Int32,System.Int32)
+  commentId: M:Coree.NETASP.Middleware.SegmentBlacklistFiltering.SegmentBlacklistFilteringExtensions.AddSegmentBlacklistFiltering(Microsoft.Extensions.DependencyInjection.IServiceCollection,System.String[],System.Boolean,System.Int32,System.Int32)
+  id: AddSegmentBlacklistFiltering(Microsoft.Extensions.DependencyInjection.IServiceCollection,System.String[],System.Boolean,System.Int32,System.Int32)
+  isExtensionMethod: true
+  parent: Coree.NETASP.Middleware.SegmentBlacklistFiltering.SegmentBlacklistFilteringExtensions
+  langs:
+  - csharp
+  - vb
+  name: AddSegmentBlacklistFiltering(IServiceCollection, string[]?, bool, int, int)
+  nameWithType: SegmentBlacklistFilteringExtensions.AddSegmentBlacklistFiltering(IServiceCollection, string[]?, bool, int, int)
+  fullName: Coree.NETASP.Middleware.SegmentBlacklistFiltering.SegmentBlacklistFilteringExtensions.AddSegmentBlacklistFiltering(Microsoft.Extensions.DependencyInjection.IServiceCollection, string[]?, bool, int, int)
+  type: Method
+  source:
+    remote:
+      path: src/Projects/Coree.NETASP/Middleware/SegmentBlacklistFiltering/SegmentBlacklistFilteringMiddleware.cs
+      branch: master
+      repo: https://github.com/carsten-riedel/Coree.NETASP
+    id: AddSegmentBlacklistFiltering
+    path: ../../src/Projects/Coree.NETASP/Middleware/SegmentBlacklistFiltering/SegmentBlacklistFilteringMiddleware.cs
+    startLine: 183
+  assemblies:
+  - Coree.NETASP
+  namespace: Coree.NETASP.Middleware.SegmentBlacklistFiltering
+  syntax:
+    content: public static IServiceCollection AddSegmentBlacklistFiltering(this IServiceCollection services, string[]? deniedSegment, bool continueOnDisallowed = false, int disallowedFailureRating = 10, int disallowedStatusCode = 400)
+    parameters:
+    - id: services
+      type: Microsoft.Extensions.DependencyInjection.IServiceCollection
+    - id: deniedSegment
+      type: System.String[]
+    - id: continueOnDisallowed
+      type: System.Boolean
+    - id: disallowedFailureRating
+      type: System.Int32
+    - id: disallowedStatusCode
+      type: System.Int32
+    return:
+      type: Microsoft.Extensions.DependencyInjection.IServiceCollection
+    content.vb: Public Shared Function AddSegmentBlacklistFiltering(services As IServiceCollection, deniedSegment As String(), continueOnDisallowed As Boolean = False, disallowedFailureRating As Integer = 10, disallowedStatusCode As Integer = 400) As IServiceCollection
+  overload: Coree.NETASP.Middleware.SegmentBlacklistFiltering.SegmentBlacklistFilteringExtensions.AddSegmentBlacklistFiltering*
+  nameWithType.vb: SegmentBlacklistFilteringExtensions.AddSegmentBlacklistFiltering(IServiceCollection, String(), Boolean, Integer, Integer)
+  fullName.vb: Coree.NETASP.Middleware.SegmentBlacklistFiltering.SegmentBlacklistFilteringExtensions.AddSegmentBlacklistFiltering(Microsoft.Extensions.DependencyInjection.IServiceCollection, String(), Boolean, Integer, Integer)
+  name.vb: AddSegmentBlacklistFiltering(IServiceCollection, String(), Boolean, Integer, Integer)
+references:
+- uid: Coree.NETASP.Middleware.SegmentBlacklistFiltering
+  commentId: N:Coree.NETASP.Middleware.SegmentBlacklistFiltering
+  href: Coree.html
+  name: Coree.NETASP.Middleware.SegmentBlacklistFiltering
+  nameWithType: Coree.NETASP.Middleware.SegmentBlacklistFiltering
+  fullName: Coree.NETASP.Middleware.SegmentBlacklistFiltering
+  spec.csharp:
+  - uid: Coree
+    name: Coree
+    href: Coree.html
+  - name: .
+  - uid: Coree.NETASP
+    name: NETASP
+    href: Coree.NETASP.html
+  - name: .
+  - uid: Coree.NETASP.Middleware
+    name: Middleware
+    href: Coree.NETASP.Middleware.html
+  - name: .
+  - uid: Coree.NETASP.Middleware.SegmentBlacklistFiltering
+    name: SegmentBlacklistFiltering
+    href: Coree.NETASP.Middleware.SegmentBlacklistFiltering.html
+  spec.vb:
+  - uid: Coree
+    name: Coree
+    href: Coree.html
+  - name: .
+  - uid: Coree.NETASP
+    name: NETASP
+    href: Coree.NETASP.html
+  - name: .
+  - uid: Coree.NETASP.Middleware
+    name: Middleware
+    href: Coree.NETASP.Middleware.html
+  - name: .
+  - uid: Coree.NETASP.Middleware.SegmentBlacklistFiltering
+    name: SegmentBlacklistFiltering
+    href: Coree.NETASP.Middleware.SegmentBlacklistFiltering.html
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object
+  name: object
+  nameWithType: object
+  fullName: object
+  nameWithType.vb: Object
+  fullName.vb: Object
+  name.vb: Object
+- uid: System.Object.Equals(System.Object)
+  commentId: M:System.Object.Equals(System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  name: Equals(object)
+  nameWithType: object.Equals(object)
+  fullName: object.Equals(object)
+  nameWithType.vb: Object.Equals(Object)
+  fullName.vb: Object.Equals(Object)
+  name.vb: Equals(Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  name: Equals(object, object)
+  nameWithType: object.Equals(object, object)
+  fullName: object.Equals(object, object)
+  nameWithType.vb: Object.Equals(Object, Object)
+  fullName.vb: Object.Equals(Object, Object)
+  name.vb: Equals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.GetHashCode
+  commentId: M:System.Object.GetHashCode
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  name: GetHashCode()
+  nameWithType: object.GetHashCode()
+  fullName: object.GetHashCode()
+  nameWithType.vb: Object.GetHashCode()
+  fullName.vb: Object.GetHashCode()
+  spec.csharp:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  - name: (
+  - name: )
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  name: GetType()
+  nameWithType: object.GetType()
+  fullName: object.GetType()
+  nameWithType.vb: Object.GetType()
+  fullName.vb: Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+- uid: System.Object.MemberwiseClone
+  commentId: M:System.Object.MemberwiseClone
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  name: MemberwiseClone()
+  nameWithType: object.MemberwiseClone()
+  fullName: object.MemberwiseClone()
+  nameWithType.vb: Object.MemberwiseClone()
+  fullName.vb: Object.MemberwiseClone()
+  spec.csharp:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  - name: (
+  - name: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  name: ReferenceEquals(object, object)
+  nameWithType: object.ReferenceEquals(object, object)
+  fullName: object.ReferenceEquals(object, object)
+  nameWithType.vb: Object.ReferenceEquals(Object, Object)
+  fullName.vb: Object.ReferenceEquals(Object, Object)
+  name.vb: ReferenceEquals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.ToString
+  commentId: M:System.Object.ToString
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  name: ToString()
+  nameWithType: object.ToString()
+  fullName: object.ToString()
+  nameWithType.vb: Object.ToString()
+  fullName.vb: Object.ToString()
+  spec.csharp:
+  - uid: System.Object.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  - name: (
+  - name: )
+- uid: System
+  commentId: N:System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: Coree.NETASP.Middleware.SegmentBlacklistFiltering.SegmentBlacklistFilteringExtensions.AddSegmentBlacklistFiltering*
+  commentId: Overload:Coree.NETASP.Middleware.SegmentBlacklistFiltering.SegmentBlacklistFilteringExtensions.AddSegmentBlacklistFiltering
+  href: Coree.NETASP.Middleware.SegmentBlacklistFiltering.SegmentBlacklistFilteringExtensions.html#Coree_NETASP_Middleware_SegmentBlacklistFiltering_SegmentBlacklistFilteringExtensions_AddSegmentBlacklistFiltering_Microsoft_Extensions_DependencyInjection_IServiceCollection_System_String___System_Boolean_System_Int32_System_Int32_
+  name: AddSegmentBlacklistFiltering
+  nameWithType: SegmentBlacklistFilteringExtensions.AddSegmentBlacklistFiltering
+  fullName: Coree.NETASP.Middleware.SegmentBlacklistFiltering.SegmentBlacklistFilteringExtensions.AddSegmentBlacklistFiltering
+- uid: Microsoft.Extensions.DependencyInjection.IServiceCollection
+  commentId: T:Microsoft.Extensions.DependencyInjection.IServiceCollection
+  parent: Microsoft.Extensions.DependencyInjection
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/microsoft.extensions.dependencyinjection.iservicecollection
+  name: IServiceCollection
+  nameWithType: IServiceCollection
+  fullName: Microsoft.Extensions.DependencyInjection.IServiceCollection
+- uid: System.String[]
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.string
+  name: string[]
+  nameWithType: string[]
+  fullName: string[]
+  nameWithType.vb: String()
+  fullName.vb: String()
+  name.vb: String()
+  spec.csharp:
+  - uid: System.String
+    name: string
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: '['
+  - name: ']'
+  spec.vb:
+  - uid: System.String
+    name: String
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: (
+  - name: )
+- uid: System.Boolean
+  commentId: T:System.Boolean
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.boolean
+  name: bool
+  nameWithType: bool
+  fullName: bool
+  nameWithType.vb: Boolean
+  fullName.vb: Boolean
+  name.vb: Boolean
+- uid: System.Int32
+  commentId: T:System.Int32
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.int32
+  name: int
+  nameWithType: int
+  fullName: int
+  nameWithType.vb: Integer
+  fullName.vb: Integer
+  name.vb: Integer
+- uid: Microsoft.Extensions.DependencyInjection
+  commentId: N:Microsoft.Extensions.DependencyInjection
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/microsoft
+  name: Microsoft.Extensions.DependencyInjection
+  nameWithType: Microsoft.Extensions.DependencyInjection
+  fullName: Microsoft.Extensions.DependencyInjection
+  spec.csharp:
+  - uid: Microsoft
+    name: Microsoft
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/microsoft
+  - name: .
+  - uid: Microsoft.Extensions
+    name: Extensions
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/microsoft.extensions
+  - name: .
+  - uid: Microsoft.Extensions.DependencyInjection
+    name: DependencyInjection
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/microsoft.extensions.dependencyinjection
+  spec.vb:
+  - uid: Microsoft
+    name: Microsoft
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/microsoft
+  - name: .
+  - uid: Microsoft.Extensions
+    name: Extensions
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/microsoft.extensions
+  - name: .
+  - uid: Microsoft.Extensions.DependencyInjection
+    name: DependencyInjection
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/microsoft.extensions.dependencyinjection

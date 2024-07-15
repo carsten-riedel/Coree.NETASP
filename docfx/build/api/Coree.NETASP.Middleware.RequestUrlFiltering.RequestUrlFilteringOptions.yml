@@ -6,6 +6,9 @@ items:
   parent: Coree.NETASP.Middleware.RequestUrlFiltering
   children:
   - Coree.NETASP.Middleware.RequestUrlFiltering.RequestUrlFilteringOptions.Blacklist
+  - Coree.NETASP.Middleware.RequestUrlFiltering.RequestUrlFilteringOptions.ContinueOnDisallowed
+  - Coree.NETASP.Middleware.RequestUrlFiltering.RequestUrlFilteringOptions.DisallowedFailureRating
+  - Coree.NETASP.Middleware.RequestUrlFiltering.RequestUrlFilteringOptions.DisallowedStatusCode
   - Coree.NETASP.Middleware.RequestUrlFiltering.RequestUrlFilteringOptions.Whitelist
   langs:
   - csharp
@@ -16,12 +19,12 @@ items:
   type: Class
   source:
     remote:
-      path: src/Projects/Coree.NETASP/Middleware/RequestUrlFiltering/RequestUrlFilteringOptions.cs
+      path: src/Projects/Coree.NETASP/Middleware/RequestUrlFiltering/RequestUrlFilteringMiddleware.cs
       branch: master
       repo: https://github.com/carsten-riedel/Coree.NETASP
     id: RequestUrlFilteringOptions
-    path: ../../src/Projects/Coree.NETASP/Middleware/RequestUrlFiltering/RequestUrlFilteringOptions.cs
-    startLine: 2
+    path: ../../src/Projects/Coree.NETASP/Middleware/RequestUrlFiltering/RequestUrlFilteringMiddleware.cs
+    startLine: 138
   assemblies:
   - Coree.NETASP
   namespace: Coree.NETASP.Middleware.RequestUrlFiltering
@@ -51,12 +54,12 @@ items:
   type: Property
   source:
     remote:
-      path: src/Projects/Coree.NETASP/Middleware/RequestUrlFiltering/RequestUrlFilteringOptions.cs
+      path: src/Projects/Coree.NETASP/Middleware/RequestUrlFiltering/RequestUrlFilteringMiddleware.cs
       branch: master
       repo: https://github.com/carsten-riedel/Coree.NETASP
     id: Whitelist
-    path: ../../src/Projects/Coree.NETASP/Middleware/RequestUrlFiltering/RequestUrlFilteringOptions.cs
-    startLine: 4
+    path: ../../src/Projects/Coree.NETASP/Middleware/RequestUrlFiltering/RequestUrlFilteringMiddleware.cs
+    startLine: 140
   assemblies:
   - Coree.NETASP
   namespace: Coree.NETASP.Middleware.RequestUrlFiltering
@@ -80,12 +83,12 @@ items:
   type: Property
   source:
     remote:
-      path: src/Projects/Coree.NETASP/Middleware/RequestUrlFiltering/RequestUrlFilteringOptions.cs
+      path: src/Projects/Coree.NETASP/Middleware/RequestUrlFiltering/RequestUrlFilteringMiddleware.cs
       branch: master
       repo: https://github.com/carsten-riedel/Coree.NETASP
     id: Blacklist
-    path: ../../src/Projects/Coree.NETASP/Middleware/RequestUrlFiltering/RequestUrlFilteringOptions.cs
-    startLine: 5
+    path: ../../src/Projects/Coree.NETASP/Middleware/RequestUrlFiltering/RequestUrlFilteringMiddleware.cs
+    startLine: 141
   assemblies:
   - Coree.NETASP
   namespace: Coree.NETASP.Middleware.RequestUrlFiltering
@@ -96,6 +99,93 @@ items:
       type: System.String[]
     content.vb: Public Property Blacklist As String()
   overload: Coree.NETASP.Middleware.RequestUrlFiltering.RequestUrlFilteringOptions.Blacklist*
+- uid: Coree.NETASP.Middleware.RequestUrlFiltering.RequestUrlFilteringOptions.DisallowedStatusCode
+  commentId: P:Coree.NETASP.Middleware.RequestUrlFiltering.RequestUrlFilteringOptions.DisallowedStatusCode
+  id: DisallowedStatusCode
+  parent: Coree.NETASP.Middleware.RequestUrlFiltering.RequestUrlFilteringOptions
+  langs:
+  - csharp
+  - vb
+  name: DisallowedStatusCode
+  nameWithType: RequestUrlFilteringOptions.DisallowedStatusCode
+  fullName: Coree.NETASP.Middleware.RequestUrlFiltering.RequestUrlFilteringOptions.DisallowedStatusCode
+  type: Property
+  source:
+    remote:
+      path: src/Projects/Coree.NETASP/Middleware/RequestUrlFiltering/RequestUrlFilteringMiddleware.cs
+      branch: master
+      repo: https://github.com/carsten-riedel/Coree.NETASP
+    id: DisallowedStatusCode
+    path: ../../src/Projects/Coree.NETASP/Middleware/RequestUrlFiltering/RequestUrlFilteringMiddleware.cs
+    startLine: 142
+  assemblies:
+  - Coree.NETASP
+  namespace: Coree.NETASP.Middleware.RequestUrlFiltering
+  syntax:
+    content: public int DisallowedStatusCode { get; set; }
+    parameters: []
+    return:
+      type: System.Int32
+    content.vb: Public Property DisallowedStatusCode As Integer
+  overload: Coree.NETASP.Middleware.RequestUrlFiltering.RequestUrlFilteringOptions.DisallowedStatusCode*
+- uid: Coree.NETASP.Middleware.RequestUrlFiltering.RequestUrlFilteringOptions.DisallowedFailureRating
+  commentId: P:Coree.NETASP.Middleware.RequestUrlFiltering.RequestUrlFilteringOptions.DisallowedFailureRating
+  id: DisallowedFailureRating
+  parent: Coree.NETASP.Middleware.RequestUrlFiltering.RequestUrlFilteringOptions
+  langs:
+  - csharp
+  - vb
+  name: DisallowedFailureRating
+  nameWithType: RequestUrlFilteringOptions.DisallowedFailureRating
+  fullName: Coree.NETASP.Middleware.RequestUrlFiltering.RequestUrlFilteringOptions.DisallowedFailureRating
+  type: Property
+  source:
+    remote:
+      path: src/Projects/Coree.NETASP/Middleware/RequestUrlFiltering/RequestUrlFilteringMiddleware.cs
+      branch: master
+      repo: https://github.com/carsten-riedel/Coree.NETASP
+    id: DisallowedFailureRating
+    path: ../../src/Projects/Coree.NETASP/Middleware/RequestUrlFiltering/RequestUrlFilteringMiddleware.cs
+    startLine: 143
+  assemblies:
+  - Coree.NETASP
+  namespace: Coree.NETASP.Middleware.RequestUrlFiltering
+  syntax:
+    content: public int DisallowedFailureRating { get; set; }
+    parameters: []
+    return:
+      type: System.Int32
+    content.vb: Public Property DisallowedFailureRating As Integer
+  overload: Coree.NETASP.Middleware.RequestUrlFiltering.RequestUrlFilteringOptions.DisallowedFailureRating*
+- uid: Coree.NETASP.Middleware.RequestUrlFiltering.RequestUrlFilteringOptions.ContinueOnDisallowed
+  commentId: P:Coree.NETASP.Middleware.RequestUrlFiltering.RequestUrlFilteringOptions.ContinueOnDisallowed
+  id: ContinueOnDisallowed
+  parent: Coree.NETASP.Middleware.RequestUrlFiltering.RequestUrlFilteringOptions
+  langs:
+  - csharp
+  - vb
+  name: ContinueOnDisallowed
+  nameWithType: RequestUrlFilteringOptions.ContinueOnDisallowed
+  fullName: Coree.NETASP.Middleware.RequestUrlFiltering.RequestUrlFilteringOptions.ContinueOnDisallowed
+  type: Property
+  source:
+    remote:
+      path: src/Projects/Coree.NETASP/Middleware/RequestUrlFiltering/RequestUrlFilteringMiddleware.cs
+      branch: master
+      repo: https://github.com/carsten-riedel/Coree.NETASP
+    id: ContinueOnDisallowed
+    path: ../../src/Projects/Coree.NETASP/Middleware/RequestUrlFiltering/RequestUrlFilteringMiddleware.cs
+    startLine: 144
+  assemblies:
+  - Coree.NETASP
+  namespace: Coree.NETASP.Middleware.RequestUrlFiltering
+  syntax:
+    content: public bool ContinueOnDisallowed { get; set; }
+    parameters: []
+    return:
+      type: System.Boolean
+    content.vb: Public Property ContinueOnDisallowed As Boolean
+  overload: Coree.NETASP.Middleware.RequestUrlFiltering.RequestUrlFilteringOptions.ContinueOnDisallowed*
 references:
 - uid: Coree.NETASP.Middleware.RequestUrlFiltering
   commentId: N:Coree.NETASP.Middleware.RequestUrlFiltering
@@ -407,3 +497,43 @@ references:
   name: Blacklist
   nameWithType: RequestUrlFilteringOptions.Blacklist
   fullName: Coree.NETASP.Middleware.RequestUrlFiltering.RequestUrlFilteringOptions.Blacklist
+- uid: Coree.NETASP.Middleware.RequestUrlFiltering.RequestUrlFilteringOptions.DisallowedStatusCode*
+  commentId: Overload:Coree.NETASP.Middleware.RequestUrlFiltering.RequestUrlFilteringOptions.DisallowedStatusCode
+  href: Coree.NETASP.Middleware.RequestUrlFiltering.RequestUrlFilteringOptions.html#Coree_NETASP_Middleware_RequestUrlFiltering_RequestUrlFilteringOptions_DisallowedStatusCode
+  name: DisallowedStatusCode
+  nameWithType: RequestUrlFilteringOptions.DisallowedStatusCode
+  fullName: Coree.NETASP.Middleware.RequestUrlFiltering.RequestUrlFilteringOptions.DisallowedStatusCode
+- uid: System.Int32
+  commentId: T:System.Int32
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.int32
+  name: int
+  nameWithType: int
+  fullName: int
+  nameWithType.vb: Integer
+  fullName.vb: Integer
+  name.vb: Integer
+- uid: Coree.NETASP.Middleware.RequestUrlFiltering.RequestUrlFilteringOptions.DisallowedFailureRating*
+  commentId: Overload:Coree.NETASP.Middleware.RequestUrlFiltering.RequestUrlFilteringOptions.DisallowedFailureRating
+  href: Coree.NETASP.Middleware.RequestUrlFiltering.RequestUrlFilteringOptions.html#Coree_NETASP_Middleware_RequestUrlFiltering_RequestUrlFilteringOptions_DisallowedFailureRating
+  name: DisallowedFailureRating
+  nameWithType: RequestUrlFilteringOptions.DisallowedFailureRating
+  fullName: Coree.NETASP.Middleware.RequestUrlFiltering.RequestUrlFilteringOptions.DisallowedFailureRating
+- uid: Coree.NETASP.Middleware.RequestUrlFiltering.RequestUrlFilteringOptions.ContinueOnDisallowed*
+  commentId: Overload:Coree.NETASP.Middleware.RequestUrlFiltering.RequestUrlFilteringOptions.ContinueOnDisallowed
+  href: Coree.NETASP.Middleware.RequestUrlFiltering.RequestUrlFilteringOptions.html#Coree_NETASP_Middleware_RequestUrlFiltering_RequestUrlFilteringOptions_ContinueOnDisallowed
+  name: ContinueOnDisallowed
+  nameWithType: RequestUrlFilteringOptions.ContinueOnDisallowed
+  fullName: Coree.NETASP.Middleware.RequestUrlFiltering.RequestUrlFilteringOptions.ContinueOnDisallowed
+- uid: System.Boolean
+  commentId: T:System.Boolean
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.boolean
+  name: bool
+  nameWithType: bool
+  fullName: bool
+  nameWithType.vb: Boolean
+  fullName.vb: Boolean
+  name.vb: Boolean

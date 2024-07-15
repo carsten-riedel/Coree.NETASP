@@ -5,7 +5,7 @@ items:
   id: PathDeepFilteringMiddleware
   parent: Coree.NETASP.Middleware.PathDeep
   children:
-  - Coree.NETASP.Middleware.PathDeep.PathDeepFilteringMiddleware.#ctor(Microsoft.AspNetCore.Http.RequestDelegate,Microsoft.Extensions.Logging.ILogger{Coree.NETASP.Middleware.PathDeep.PathDeepFilteringMiddleware},System.Int32)
+  - Coree.NETASP.Middleware.PathDeep.PathDeepFilteringMiddleware.#ctor(Microsoft.AspNetCore.Http.RequestDelegate,Microsoft.Extensions.Options.IOptions{Coree.NETASP.Middleware.PathDeep.PathDeepFilteringOptions},Microsoft.Extensions.Logging.ILogger{Coree.NETASP.Middleware.PathDeep.PathDeepFilteringMiddleware},Coree.NETASP.Services.Points.IPointService)
   - Coree.NETASP.Middleware.PathDeep.PathDeepFilteringMiddleware.InvokeAsync(Microsoft.AspNetCore.Http.HttpContext)
   - Coree.NETASP.Middleware.PathDeep.PathDeepFilteringMiddleware.TrimSpecific(System.String,System.Char,System.Int32,System.Int32)
   langs:
@@ -22,7 +22,7 @@ items:
       repo: https://github.com/carsten-riedel/Coree.NETASP
     id: PathDeepFilteringMiddleware
     path: ../../src/Projects/Coree.NETASP/Middleware/PathDeepFiltering/PathDeepFilteringMiddleware.cs
-    startLine: 4
+    startLine: 8
   assemblies:
   - Coree.NETASP
   namespace: Coree.NETASP.Middleware.PathDeep
@@ -39,16 +39,16 @@ items:
   - System.Object.MemberwiseClone
   - System.Object.ReferenceEquals(System.Object,System.Object)
   - System.Object.ToString
-- uid: Coree.NETASP.Middleware.PathDeep.PathDeepFilteringMiddleware.#ctor(Microsoft.AspNetCore.Http.RequestDelegate,Microsoft.Extensions.Logging.ILogger{Coree.NETASP.Middleware.PathDeep.PathDeepFilteringMiddleware},System.Int32)
-  commentId: M:Coree.NETASP.Middleware.PathDeep.PathDeepFilteringMiddleware.#ctor(Microsoft.AspNetCore.Http.RequestDelegate,Microsoft.Extensions.Logging.ILogger{Coree.NETASP.Middleware.PathDeep.PathDeepFilteringMiddleware},System.Int32)
-  id: '#ctor(Microsoft.AspNetCore.Http.RequestDelegate,Microsoft.Extensions.Logging.ILogger{Coree.NETASP.Middleware.PathDeep.PathDeepFilteringMiddleware},System.Int32)'
+- uid: Coree.NETASP.Middleware.PathDeep.PathDeepFilteringMiddleware.#ctor(Microsoft.AspNetCore.Http.RequestDelegate,Microsoft.Extensions.Options.IOptions{Coree.NETASP.Middleware.PathDeep.PathDeepFilteringOptions},Microsoft.Extensions.Logging.ILogger{Coree.NETASP.Middleware.PathDeep.PathDeepFilteringMiddleware},Coree.NETASP.Services.Points.IPointService)
+  commentId: M:Coree.NETASP.Middleware.PathDeep.PathDeepFilteringMiddleware.#ctor(Microsoft.AspNetCore.Http.RequestDelegate,Microsoft.Extensions.Options.IOptions{Coree.NETASP.Middleware.PathDeep.PathDeepFilteringOptions},Microsoft.Extensions.Logging.ILogger{Coree.NETASP.Middleware.PathDeep.PathDeepFilteringMiddleware},Coree.NETASP.Services.Points.IPointService)
+  id: '#ctor(Microsoft.AspNetCore.Http.RequestDelegate,Microsoft.Extensions.Options.IOptions{Coree.NETASP.Middleware.PathDeep.PathDeepFilteringOptions},Microsoft.Extensions.Logging.ILogger{Coree.NETASP.Middleware.PathDeep.PathDeepFilteringMiddleware},Coree.NETASP.Services.Points.IPointService)'
   parent: Coree.NETASP.Middleware.PathDeep.PathDeepFilteringMiddleware
   langs:
   - csharp
   - vb
-  name: PathDeepFilteringMiddleware(RequestDelegate, ILogger<PathDeepFilteringMiddleware>, int)
-  nameWithType: PathDeepFilteringMiddleware.PathDeepFilteringMiddleware(RequestDelegate, ILogger<PathDeepFilteringMiddleware>, int)
-  fullName: Coree.NETASP.Middleware.PathDeep.PathDeepFilteringMiddleware.PathDeepFilteringMiddleware(Microsoft.AspNetCore.Http.RequestDelegate, Microsoft.Extensions.Logging.ILogger<Coree.NETASP.Middleware.PathDeep.PathDeepFilteringMiddleware>, int)
+  name: PathDeepFilteringMiddleware(RequestDelegate, IOptions<PathDeepFilteringOptions>, ILogger<PathDeepFilteringMiddleware>, IPointService)
+  nameWithType: PathDeepFilteringMiddleware.PathDeepFilteringMiddleware(RequestDelegate, IOptions<PathDeepFilteringOptions>, ILogger<PathDeepFilteringMiddleware>, IPointService)
+  fullName: Coree.NETASP.Middleware.PathDeep.PathDeepFilteringMiddleware.PathDeepFilteringMiddleware(Microsoft.AspNetCore.Http.RequestDelegate, Microsoft.Extensions.Options.IOptions<Coree.NETASP.Middleware.PathDeep.PathDeepFilteringOptions>, Microsoft.Extensions.Logging.ILogger<Coree.NETASP.Middleware.PathDeep.PathDeepFilteringMiddleware>, Coree.NETASP.Services.Points.IPointService)
   type: Constructor
   source:
     remote:
@@ -57,24 +57,26 @@ items:
       repo: https://github.com/carsten-riedel/Coree.NETASP
     id: .ctor
     path: ../../src/Projects/Coree.NETASP/Middleware/PathDeepFiltering/PathDeepFilteringMiddleware.cs
-    startLine: 12
+    startLine: 15
   assemblies:
   - Coree.NETASP
   namespace: Coree.NETASP.Middleware.PathDeep
   syntax:
-    content: public PathDeepFilteringMiddleware(RequestDelegate next, ILogger<PathDeepFilteringMiddleware> logger, int blockDurationInSeconds = 300)
+    content: public PathDeepFilteringMiddleware(RequestDelegate nextMiddleware, IOptions<PathDeepFilteringOptions> options, ILogger<PathDeepFilteringMiddleware> logger, IPointService pointService)
     parameters:
-    - id: next
+    - id: nextMiddleware
       type: Microsoft.AspNetCore.Http.RequestDelegate
+    - id: options
+      type: Microsoft.Extensions.Options.IOptions{Coree.NETASP.Middleware.PathDeep.PathDeepFilteringOptions}
     - id: logger
       type: Microsoft.Extensions.Logging.ILogger{Coree.NETASP.Middleware.PathDeep.PathDeepFilteringMiddleware}
-    - id: blockDurationInSeconds
-      type: System.Int32
-    content.vb: Public Sub New([next] As RequestDelegate, logger As ILogger(Of PathDeepFilteringMiddleware), blockDurationInSeconds As Integer = 300)
+    - id: pointService
+      type: Coree.NETASP.Services.Points.IPointService
+    content.vb: Public Sub New(nextMiddleware As RequestDelegate, options As IOptions(Of PathDeepFilteringOptions), logger As ILogger(Of PathDeepFilteringMiddleware), pointService As IPointService)
   overload: Coree.NETASP.Middleware.PathDeep.PathDeepFilteringMiddleware.#ctor*
-  nameWithType.vb: PathDeepFilteringMiddleware.New(RequestDelegate, ILogger(Of PathDeepFilteringMiddleware), Integer)
-  fullName.vb: Coree.NETASP.Middleware.PathDeep.PathDeepFilteringMiddleware.New(Microsoft.AspNetCore.Http.RequestDelegate, Microsoft.Extensions.Logging.ILogger(Of Coree.NETASP.Middleware.PathDeep.PathDeepFilteringMiddleware), Integer)
-  name.vb: New(RequestDelegate, ILogger(Of PathDeepFilteringMiddleware), Integer)
+  nameWithType.vb: PathDeepFilteringMiddleware.New(RequestDelegate, IOptions(Of PathDeepFilteringOptions), ILogger(Of PathDeepFilteringMiddleware), IPointService)
+  fullName.vb: Coree.NETASP.Middleware.PathDeep.PathDeepFilteringMiddleware.New(Microsoft.AspNetCore.Http.RequestDelegate, Microsoft.Extensions.Options.IOptions(Of Coree.NETASP.Middleware.PathDeep.PathDeepFilteringOptions), Microsoft.Extensions.Logging.ILogger(Of Coree.NETASP.Middleware.PathDeep.PathDeepFilteringMiddleware), Coree.NETASP.Services.Points.IPointService)
+  name.vb: New(RequestDelegate, IOptions(Of PathDeepFilteringOptions), ILogger(Of PathDeepFilteringMiddleware), IPointService)
 - uid: Coree.NETASP.Middleware.PathDeep.PathDeepFilteringMiddleware.InvokeAsync(Microsoft.AspNetCore.Http.HttpContext)
   commentId: M:Coree.NETASP.Middleware.PathDeep.PathDeepFilteringMiddleware.InvokeAsync(Microsoft.AspNetCore.Http.HttpContext)
   id: InvokeAsync(Microsoft.AspNetCore.Http.HttpContext)
@@ -93,7 +95,7 @@ items:
       repo: https://github.com/carsten-riedel/Coree.NETASP
     id: InvokeAsync
     path: ../../src/Projects/Coree.NETASP/Middleware/PathDeepFiltering/PathDeepFilteringMiddleware.cs
-    startLine: 22
+    startLine: 23
   assemblies:
   - Coree.NETASP
   namespace: Coree.NETASP.Middleware.PathDeep
@@ -124,7 +126,7 @@ items:
       repo: https://github.com/carsten-riedel/Coree.NETASP
     id: TrimSpecific
     path: ../../src/Projects/Coree.NETASP/Middleware/PathDeepFiltering/PathDeepFilteringMiddleware.cs
-    startLine: 86
+    startLine: 78
   assemblies:
   - Coree.NETASP
   namespace: Coree.NETASP.Middleware.PathDeep
@@ -424,7 +426,7 @@ references:
   fullName: System
 - uid: Coree.NETASP.Middleware.PathDeep.PathDeepFilteringMiddleware.#ctor*
   commentId: Overload:Coree.NETASP.Middleware.PathDeep.PathDeepFilteringMiddleware.#ctor
-  href: Coree.NETASP.Middleware.PathDeep.PathDeepFilteringMiddleware.html#Coree_NETASP_Middleware_PathDeep_PathDeepFilteringMiddleware__ctor_Microsoft_AspNetCore_Http_RequestDelegate_Microsoft_Extensions_Logging_ILogger_Coree_NETASP_Middleware_PathDeep_PathDeepFilteringMiddleware__System_Int32_
+  href: Coree.NETASP.Middleware.PathDeep.PathDeepFilteringMiddleware.html#Coree_NETASP_Middleware_PathDeep_PathDeepFilteringMiddleware__ctor_Microsoft_AspNetCore_Http_RequestDelegate_Microsoft_Extensions_Options_IOptions_Coree_NETASP_Middleware_PathDeep_PathDeepFilteringOptions__Microsoft_Extensions_Logging_ILogger_Coree_NETASP_Middleware_PathDeep_PathDeepFilteringMiddleware__Coree_NETASP_Services_Points_IPointService_
   name: PathDeepFilteringMiddleware
   nameWithType: PathDeepFilteringMiddleware.PathDeepFilteringMiddleware
   fullName: Coree.NETASP.Middleware.PathDeep.PathDeepFilteringMiddleware.PathDeepFilteringMiddleware
@@ -439,6 +441,39 @@ references:
   name: RequestDelegate
   nameWithType: RequestDelegate
   fullName: Microsoft.AspNetCore.Http.RequestDelegate
+- uid: Microsoft.Extensions.Options.IOptions{Coree.NETASP.Middleware.PathDeep.PathDeepFilteringOptions}
+  commentId: T:Microsoft.Extensions.Options.IOptions{Coree.NETASP.Middleware.PathDeep.PathDeepFilteringOptions}
+  parent: Microsoft.Extensions.Options
+  definition: Microsoft.Extensions.Options.IOptions`1
+  href: https://learn.microsoft.com/dotnet/api/microsoft.extensions.options.ioptions-1
+  name: IOptions<PathDeepFilteringOptions>
+  nameWithType: IOptions<PathDeepFilteringOptions>
+  fullName: Microsoft.Extensions.Options.IOptions<Coree.NETASP.Middleware.PathDeep.PathDeepFilteringOptions>
+  nameWithType.vb: IOptions(Of PathDeepFilteringOptions)
+  fullName.vb: Microsoft.Extensions.Options.IOptions(Of Coree.NETASP.Middleware.PathDeep.PathDeepFilteringOptions)
+  name.vb: IOptions(Of PathDeepFilteringOptions)
+  spec.csharp:
+  - uid: Microsoft.Extensions.Options.IOptions`1
+    name: IOptions
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/microsoft.extensions.options.ioptions-1
+  - name: <
+  - uid: Coree.NETASP.Middleware.PathDeep.PathDeepFilteringOptions
+    name: PathDeepFilteringOptions
+    href: Coree.NETASP.Middleware.PathDeep.PathDeepFilteringOptions.html
+  - name: '>'
+  spec.vb:
+  - uid: Microsoft.Extensions.Options.IOptions`1
+    name: IOptions
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/microsoft.extensions.options.ioptions-1
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: Coree.NETASP.Middleware.PathDeep.PathDeepFilteringOptions
+    name: PathDeepFilteringOptions
+    href: Coree.NETASP.Middleware.PathDeep.PathDeepFilteringOptions.html
+  - name: )
 - uid: Microsoft.Extensions.Logging.ILogger{Coree.NETASP.Middleware.PathDeep.PathDeepFilteringMiddleware}
   commentId: T:Microsoft.Extensions.Logging.ILogger{Coree.NETASP.Middleware.PathDeep.PathDeepFilteringMiddleware}
   parent: Microsoft.Extensions.Logging
@@ -472,17 +507,13 @@ references:
     name: PathDeepFilteringMiddleware
     href: Coree.NETASP.Middleware.PathDeep.PathDeepFilteringMiddleware.html
   - name: )
-- uid: System.Int32
-  commentId: T:System.Int32
-  parent: System
-  isExternal: true
-  href: https://learn.microsoft.com/dotnet/api/system.int32
-  name: int
-  nameWithType: int
-  fullName: int
-  nameWithType.vb: Integer
-  fullName.vb: Integer
-  name.vb: Integer
+- uid: Coree.NETASP.Services.Points.IPointService
+  commentId: T:Coree.NETASP.Services.Points.IPointService
+  parent: Coree.NETASP.Services.Points
+  href: Coree.NETASP.Services.Points.IPointService.html
+  name: IPointService
+  nameWithType: IPointService
+  fullName: Coree.NETASP.Services.Points.IPointService
 - uid: Microsoft.AspNetCore.Http
   commentId: N:Microsoft.AspNetCore.Http
   isExternal: true
@@ -520,6 +551,71 @@ references:
     name: Http
     isExternal: true
     href: https://learn.microsoft.com/dotnet/api/microsoft.aspnetcore.http
+- uid: Microsoft.Extensions.Options.IOptions`1
+  commentId: T:Microsoft.Extensions.Options.IOptions`1
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/microsoft.extensions.options.ioptions-1
+  name: IOptions<TOptions>
+  nameWithType: IOptions<TOptions>
+  fullName: Microsoft.Extensions.Options.IOptions<TOptions>
+  nameWithType.vb: IOptions(Of TOptions)
+  fullName.vb: Microsoft.Extensions.Options.IOptions(Of TOptions)
+  name.vb: IOptions(Of TOptions)
+  spec.csharp:
+  - uid: Microsoft.Extensions.Options.IOptions`1
+    name: IOptions
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/microsoft.extensions.options.ioptions-1
+  - name: <
+  - name: TOptions
+  - name: '>'
+  spec.vb:
+  - uid: Microsoft.Extensions.Options.IOptions`1
+    name: IOptions
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/microsoft.extensions.options.ioptions-1
+  - name: (
+  - name: Of
+  - name: " "
+  - name: TOptions
+  - name: )
+- uid: Microsoft.Extensions.Options
+  commentId: N:Microsoft.Extensions.Options
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/microsoft
+  name: Microsoft.Extensions.Options
+  nameWithType: Microsoft.Extensions.Options
+  fullName: Microsoft.Extensions.Options
+  spec.csharp:
+  - uid: Microsoft
+    name: Microsoft
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/microsoft
+  - name: .
+  - uid: Microsoft.Extensions
+    name: Extensions
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/microsoft.extensions
+  - name: .
+  - uid: Microsoft.Extensions.Options
+    name: Options
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/microsoft.extensions.options
+  spec.vb:
+  - uid: Microsoft
+    name: Microsoft
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/microsoft
+  - name: .
+  - uid: Microsoft.Extensions
+    name: Extensions
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/microsoft.extensions
+  - name: .
+  - uid: Microsoft.Extensions.Options
+    name: Options
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/microsoft.extensions.options
 - uid: Microsoft.Extensions.Logging.ILogger`1
   commentId: T:Microsoft.Extensions.Logging.ILogger`1
   isExternal: true
@@ -585,6 +681,44 @@ references:
     name: Logging
     isExternal: true
     href: https://learn.microsoft.com/dotnet/api/microsoft.extensions.logging
+- uid: Coree.NETASP.Services.Points
+  commentId: N:Coree.NETASP.Services.Points
+  href: Coree.html
+  name: Coree.NETASP.Services.Points
+  nameWithType: Coree.NETASP.Services.Points
+  fullName: Coree.NETASP.Services.Points
+  spec.csharp:
+  - uid: Coree
+    name: Coree
+    href: Coree.html
+  - name: .
+  - uid: Coree.NETASP
+    name: NETASP
+    href: Coree.NETASP.html
+  - name: .
+  - uid: Coree.NETASP.Services
+    name: Services
+    href: Coree.NETASP.Services.html
+  - name: .
+  - uid: Coree.NETASP.Services.Points
+    name: Points
+    href: Coree.NETASP.Services.Points.html
+  spec.vb:
+  - uid: Coree
+    name: Coree
+    href: Coree.html
+  - name: .
+  - uid: Coree.NETASP
+    name: NETASP
+    href: Coree.NETASP.html
+  - name: .
+  - uid: Coree.NETASP.Services
+    name: Services
+    href: Coree.NETASP.Services.html
+  - name: .
+  - uid: Coree.NETASP.Services.Points
+    name: Points
+    href: Coree.NETASP.Services.Points.html
 - uid: Coree.NETASP.Middleware.PathDeep.PathDeepFilteringMiddleware.InvokeAsync*
   commentId: Overload:Coree.NETASP.Middleware.PathDeep.PathDeepFilteringMiddleware.InvokeAsync
   href: Coree.NETASP.Middleware.PathDeep.PathDeepFilteringMiddleware.html#Coree_NETASP_Middleware_PathDeep_PathDeepFilteringMiddleware_InvokeAsync_Microsoft_AspNetCore_Http_HttpContext_
@@ -672,3 +806,14 @@ references:
   nameWithType.vb: Char
   fullName.vb: Char
   name.vb: Char
+- uid: System.Int32
+  commentId: T:System.Int32
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.int32
+  name: int
+  nameWithType: int
+  fullName: int
+  nameWithType.vb: Integer
+  fullName.vb: Integer
+  name.vb: Integer

@@ -1,0 +1,449 @@
+### YamlMime:ManagedReference
+items:
+- uid: Coree.NETASP.Services.Points.IPointService
+  commentId: T:Coree.NETASP.Services.Points.IPointService
+  id: IPointService
+  parent: Coree.NETASP.Services.Points
+  children:
+  - Coree.NETASP.Services.Points.IPointService.AddOrUpdateEntry(System.String,System.Int32,System.String)
+  - Coree.NETASP.Services.Points.IPointService.DeleteEntry(System.String)
+  - Coree.NETASP.Services.Points.IPointService.GetEntry(System.String)
+  - Coree.NETASP.Services.Points.IPointService.LoadData
+  - Coree.NETASP.Services.Points.IPointService.SaveData
+  - Coree.NETASP.Services.Points.IPointService.ShrinkEntrys(System.String)
+  langs:
+  - csharp
+  - vb
+  name: IPointService
+  nameWithType: IPointService
+  fullName: Coree.NETASP.Services.Points.IPointService
+  type: Interface
+  source:
+    remote:
+      path: src/Projects/Coree.NETASP/Services/Points/PointService.cs
+      branch: master
+      repo: https://github.com/carsten-riedel/Coree.NETASP
+    id: IPointService
+    path: ../../src/Projects/Coree.NETASP/Services/Points/PointService.cs
+    startLine: 47
+  assemblies:
+  - Coree.NETASP
+  namespace: Coree.NETASP.Services.Points
+  syntax:
+    content: public interface IPointService
+    content.vb: Public Interface IPointService
+- uid: Coree.NETASP.Services.Points.IPointService.AddOrUpdateEntry(System.String,System.Int32,System.String)
+  commentId: M:Coree.NETASP.Services.Points.IPointService.AddOrUpdateEntry(System.String,System.Int32,System.String)
+  id: AddOrUpdateEntry(System.String,System.Int32,System.String)
+  parent: Coree.NETASP.Services.Points.IPointService
+  langs:
+  - csharp
+  - vb
+  name: AddOrUpdateEntry(string, int, string)
+  nameWithType: IPointService.AddOrUpdateEntry(string, int, string)
+  fullName: Coree.NETASP.Services.Points.IPointService.AddOrUpdateEntry(string, int, string)
+  type: Method
+  source:
+    remote:
+      path: src/Projects/Coree.NETASP/Services/Points/PointService.cs
+      branch: master
+      repo: https://github.com/carsten-riedel/Coree.NETASP
+    id: AddOrUpdateEntry
+    path: ../../src/Projects/Coree.NETASP/Services/Points/PointService.cs
+    startLine: 55
+  assemblies:
+  - Coree.NETASP
+  namespace: Coree.NETASP.Services.Points
+  summary: Assigns points to a specific IP address.
+  example: []
+  syntax:
+    content: Task AddOrUpdateEntry(string key, int points, string reason)
+    parameters:
+    - id: key
+      type: System.String
+    - id: points
+      type: System.Int32
+      description: The number of points to assign.
+    - id: reason
+      type: System.String
+      description: The reason for assigning points.
+    return:
+      type: System.Threading.Tasks.Task
+    content.vb: Function AddOrUpdateEntry(key As String, points As Integer, reason As String) As Task
+  overload: Coree.NETASP.Services.Points.IPointService.AddOrUpdateEntry*
+  nameWithType.vb: IPointService.AddOrUpdateEntry(String, Integer, String)
+  fullName.vb: Coree.NETASP.Services.Points.IPointService.AddOrUpdateEntry(String, Integer, String)
+  name.vb: AddOrUpdateEntry(String, Integer, String)
+- uid: Coree.NETASP.Services.Points.IPointService.GetEntry(System.String)
+  commentId: M:Coree.NETASP.Services.Points.IPointService.GetEntry(System.String)
+  id: GetEntry(System.String)
+  parent: Coree.NETASP.Services.Points.IPointService
+  langs:
+  - csharp
+  - vb
+  name: GetEntry(string)
+  nameWithType: IPointService.GetEntry(string)
+  fullName: Coree.NETASP.Services.Points.IPointService.GetEntry(string)
+  type: Method
+  source:
+    remote:
+      path: src/Projects/Coree.NETASP/Services/Points/PointService.cs
+      branch: master
+      repo: https://github.com/carsten-riedel/Coree.NETASP
+    id: GetEntry
+    path: ../../src/Projects/Coree.NETASP/Services/Points/PointService.cs
+    startLine: 62
+  assemblies:
+  - Coree.NETASP
+  namespace: Coree.NETASP.Services.Points
+  summary: Gets all point entries for a specific IP address.
+  example: []
+  syntax:
+    content: Task<Entry?> GetEntry(string key)
+    parameters:
+    - id: key
+      type: System.String
+    return:
+      type: System.Threading.Tasks.Task{Coree.NETASP.Services.Points.Entry}
+      description: An Entry object containing point entries.
+    content.vb: Function GetEntry(key As String) As Task(Of Entry)
+  overload: Coree.NETASP.Services.Points.IPointService.GetEntry*
+  nameWithType.vb: IPointService.GetEntry(String)
+  fullName.vb: Coree.NETASP.Services.Points.IPointService.GetEntry(String)
+  name.vb: GetEntry(String)
+- uid: Coree.NETASP.Services.Points.IPointService.ShrinkEntrys(System.String)
+  commentId: M:Coree.NETASP.Services.Points.IPointService.ShrinkEntrys(System.String)
+  id: ShrinkEntrys(System.String)
+  parent: Coree.NETASP.Services.Points.IPointService
+  langs:
+  - csharp
+  - vb
+  name: ShrinkEntrys(string)
+  nameWithType: IPointService.ShrinkEntrys(string)
+  fullName: Coree.NETASP.Services.Points.IPointService.ShrinkEntrys(string)
+  type: Method
+  source:
+    remote:
+      path: src/Projects/Coree.NETASP/Services/Points/PointService.cs
+      branch: master
+      repo: https://github.com/carsten-riedel/Coree.NETASP
+    id: ShrinkEntrys
+    path: ../../src/Projects/Coree.NETASP/Services/Points/PointService.cs
+    startLine: 64
+  assemblies:
+  - Coree.NETASP
+  namespace: Coree.NETASP.Services.Points
+  syntax:
+    content: Task ShrinkEntrys(string key)
+    parameters:
+    - id: key
+      type: System.String
+    return:
+      type: System.Threading.Tasks.Task
+    content.vb: Function ShrinkEntrys(key As String) As Task
+  overload: Coree.NETASP.Services.Points.IPointService.ShrinkEntrys*
+  nameWithType.vb: IPointService.ShrinkEntrys(String)
+  fullName.vb: Coree.NETASP.Services.Points.IPointService.ShrinkEntrys(String)
+  name.vb: ShrinkEntrys(String)
+- uid: Coree.NETASP.Services.Points.IPointService.DeleteEntry(System.String)
+  commentId: M:Coree.NETASP.Services.Points.IPointService.DeleteEntry(System.String)
+  id: DeleteEntry(System.String)
+  parent: Coree.NETASP.Services.Points.IPointService
+  langs:
+  - csharp
+  - vb
+  name: DeleteEntry(string)
+  nameWithType: IPointService.DeleteEntry(string)
+  fullName: Coree.NETASP.Services.Points.IPointService.DeleteEntry(string)
+  type: Method
+  source:
+    remote:
+      path: src/Projects/Coree.NETASP/Services/Points/PointService.cs
+      branch: master
+      repo: https://github.com/carsten-riedel/Coree.NETASP
+    id: DeleteEntry
+    path: ../../src/Projects/Coree.NETASP/Services/Points/PointService.cs
+    startLine: 66
+  assemblies:
+  - Coree.NETASP
+  namespace: Coree.NETASP.Services.Points
+  syntax:
+    content: Task DeleteEntry(string key)
+    parameters:
+    - id: key
+      type: System.String
+    return:
+      type: System.Threading.Tasks.Task
+    content.vb: Function DeleteEntry(key As String) As Task
+  overload: Coree.NETASP.Services.Points.IPointService.DeleteEntry*
+  nameWithType.vb: IPointService.DeleteEntry(String)
+  fullName.vb: Coree.NETASP.Services.Points.IPointService.DeleteEntry(String)
+  name.vb: DeleteEntry(String)
+- uid: Coree.NETASP.Services.Points.IPointService.LoadData
+  commentId: M:Coree.NETASP.Services.Points.IPointService.LoadData
+  id: LoadData
+  parent: Coree.NETASP.Services.Points.IPointService
+  langs:
+  - csharp
+  - vb
+  name: LoadData()
+  nameWithType: IPointService.LoadData()
+  fullName: Coree.NETASP.Services.Points.IPointService.LoadData()
+  type: Method
+  source:
+    remote:
+      path: src/Projects/Coree.NETASP/Services/Points/PointService.cs
+      branch: master
+      repo: https://github.com/carsten-riedel/Coree.NETASP
+    id: LoadData
+    path: ../../src/Projects/Coree.NETASP/Services/Points/PointService.cs
+    startLine: 71
+  assemblies:
+  - Coree.NETASP
+  namespace: Coree.NETASP.Services.Points
+  summary: Loads the point data from disk.
+  example: []
+  syntax:
+    content: void LoadData()
+    content.vb: Sub LoadData()
+  overload: Coree.NETASP.Services.Points.IPointService.LoadData*
+- uid: Coree.NETASP.Services.Points.IPointService.SaveData
+  commentId: M:Coree.NETASP.Services.Points.IPointService.SaveData
+  id: SaveData
+  parent: Coree.NETASP.Services.Points.IPointService
+  langs:
+  - csharp
+  - vb
+  name: SaveData()
+  nameWithType: IPointService.SaveData()
+  fullName: Coree.NETASP.Services.Points.IPointService.SaveData()
+  type: Method
+  source:
+    remote:
+      path: src/Projects/Coree.NETASP/Services/Points/PointService.cs
+      branch: master
+      repo: https://github.com/carsten-riedel/Coree.NETASP
+    id: SaveData
+    path: ../../src/Projects/Coree.NETASP/Services/Points/PointService.cs
+    startLine: 76
+  assemblies:
+  - Coree.NETASP
+  namespace: Coree.NETASP.Services.Points
+  summary: Saves the point data to disk.
+  example: []
+  syntax:
+    content: Task SaveData()
+    return:
+      type: System.Threading.Tasks.Task
+    content.vb: Function SaveData() As Task
+  overload: Coree.NETASP.Services.Points.IPointService.SaveData*
+references:
+- uid: Coree.NETASP.Services.Points
+  commentId: N:Coree.NETASP.Services.Points
+  href: Coree.html
+  name: Coree.NETASP.Services.Points
+  nameWithType: Coree.NETASP.Services.Points
+  fullName: Coree.NETASP.Services.Points
+  spec.csharp:
+  - uid: Coree
+    name: Coree
+    href: Coree.html
+  - name: .
+  - uid: Coree.NETASP
+    name: NETASP
+    href: Coree.NETASP.html
+  - name: .
+  - uid: Coree.NETASP.Services
+    name: Services
+    href: Coree.NETASP.Services.html
+  - name: .
+  - uid: Coree.NETASP.Services.Points
+    name: Points
+    href: Coree.NETASP.Services.Points.html
+  spec.vb:
+  - uid: Coree
+    name: Coree
+    href: Coree.html
+  - name: .
+  - uid: Coree.NETASP
+    name: NETASP
+    href: Coree.NETASP.html
+  - name: .
+  - uid: Coree.NETASP.Services
+    name: Services
+    href: Coree.NETASP.Services.html
+  - name: .
+  - uid: Coree.NETASP.Services.Points
+    name: Points
+    href: Coree.NETASP.Services.Points.html
+- uid: Coree.NETASP.Services.Points.IPointService.AddOrUpdateEntry*
+  commentId: Overload:Coree.NETASP.Services.Points.IPointService.AddOrUpdateEntry
+  href: Coree.NETASP.Services.Points.IPointService.html#Coree_NETASP_Services_Points_IPointService_AddOrUpdateEntry_System_String_System_Int32_System_String_
+  name: AddOrUpdateEntry
+  nameWithType: IPointService.AddOrUpdateEntry
+  fullName: Coree.NETASP.Services.Points.IPointService.AddOrUpdateEntry
+- uid: System.String
+  commentId: T:System.String
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.string
+  name: string
+  nameWithType: string
+  fullName: string
+  nameWithType.vb: String
+  fullName.vb: String
+  name.vb: String
+- uid: System.Int32
+  commentId: T:System.Int32
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.int32
+  name: int
+  nameWithType: int
+  fullName: int
+  nameWithType.vb: Integer
+  fullName.vb: Integer
+  name.vb: Integer
+- uid: System.Threading.Tasks.Task
+  commentId: T:System.Threading.Tasks.Task
+  parent: System.Threading.Tasks
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.threading.tasks.task
+  name: Task
+  nameWithType: Task
+  fullName: System.Threading.Tasks.Task
+- uid: System
+  commentId: N:System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: System.Threading.Tasks
+  commentId: N:System.Threading.Tasks
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System.Threading.Tasks
+  nameWithType: System.Threading.Tasks
+  fullName: System.Threading.Tasks
+  spec.csharp:
+  - uid: System
+    name: System
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system
+  - name: .
+  - uid: System.Threading
+    name: Threading
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading
+  - name: .
+  - uid: System.Threading.Tasks
+    name: Tasks
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading.tasks
+  spec.vb:
+  - uid: System
+    name: System
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system
+  - name: .
+  - uid: System.Threading
+    name: Threading
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading
+  - name: .
+  - uid: System.Threading.Tasks
+    name: Tasks
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading.tasks
+- uid: Coree.NETASP.Services.Points.IPointService.GetEntry*
+  commentId: Overload:Coree.NETASP.Services.Points.IPointService.GetEntry
+  href: Coree.NETASP.Services.Points.IPointService.html#Coree_NETASP_Services_Points_IPointService_GetEntry_System_String_
+  name: GetEntry
+  nameWithType: IPointService.GetEntry
+  fullName: Coree.NETASP.Services.Points.IPointService.GetEntry
+- uid: System.Threading.Tasks.Task{Coree.NETASP.Services.Points.Entry}
+  commentId: T:System.Threading.Tasks.Task{Coree.NETASP.Services.Points.Entry}
+  parent: System.Threading.Tasks
+  definition: System.Threading.Tasks.Task`1
+  href: https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1
+  name: Task<Entry>
+  nameWithType: Task<Entry>
+  fullName: System.Threading.Tasks.Task<Coree.NETASP.Services.Points.Entry>
+  nameWithType.vb: Task(Of Entry)
+  fullName.vb: System.Threading.Tasks.Task(Of Coree.NETASP.Services.Points.Entry)
+  name.vb: Task(Of Entry)
+  spec.csharp:
+  - uid: System.Threading.Tasks.Task`1
+    name: Task
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1
+  - name: <
+  - uid: Coree.NETASP.Services.Points.Entry
+    name: Entry
+    href: Coree.NETASP.Services.Points.Entry.html
+  - name: '>'
+  spec.vb:
+  - uid: System.Threading.Tasks.Task`1
+    name: Task
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: Coree.NETASP.Services.Points.Entry
+    name: Entry
+    href: Coree.NETASP.Services.Points.Entry.html
+  - name: )
+- uid: System.Threading.Tasks.Task`1
+  commentId: T:System.Threading.Tasks.Task`1
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1
+  name: Task<TResult>
+  nameWithType: Task<TResult>
+  fullName: System.Threading.Tasks.Task<TResult>
+  nameWithType.vb: Task(Of TResult)
+  fullName.vb: System.Threading.Tasks.Task(Of TResult)
+  name.vb: Task(Of TResult)
+  spec.csharp:
+  - uid: System.Threading.Tasks.Task`1
+    name: Task
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1
+  - name: <
+  - name: TResult
+  - name: '>'
+  spec.vb:
+  - uid: System.Threading.Tasks.Task`1
+    name: Task
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1
+  - name: (
+  - name: Of
+  - name: " "
+  - name: TResult
+  - name: )
+- uid: Coree.NETASP.Services.Points.IPointService.ShrinkEntrys*
+  commentId: Overload:Coree.NETASP.Services.Points.IPointService.ShrinkEntrys
+  href: Coree.NETASP.Services.Points.IPointService.html#Coree_NETASP_Services_Points_IPointService_ShrinkEntrys_System_String_
+  name: ShrinkEntrys
+  nameWithType: IPointService.ShrinkEntrys
+  fullName: Coree.NETASP.Services.Points.IPointService.ShrinkEntrys
+- uid: Coree.NETASP.Services.Points.IPointService.DeleteEntry*
+  commentId: Overload:Coree.NETASP.Services.Points.IPointService.DeleteEntry
+  href: Coree.NETASP.Services.Points.IPointService.html#Coree_NETASP_Services_Points_IPointService_DeleteEntry_System_String_
+  name: DeleteEntry
+  nameWithType: IPointService.DeleteEntry
+  fullName: Coree.NETASP.Services.Points.IPointService.DeleteEntry
+- uid: Coree.NETASP.Services.Points.IPointService.LoadData*
+  commentId: Overload:Coree.NETASP.Services.Points.IPointService.LoadData
+  href: Coree.NETASP.Services.Points.IPointService.html#Coree_NETASP_Services_Points_IPointService_LoadData
+  name: LoadData
+  nameWithType: IPointService.LoadData
+  fullName: Coree.NETASP.Services.Points.IPointService.LoadData
+- uid: Coree.NETASP.Services.Points.IPointService.SaveData*
+  commentId: Overload:Coree.NETASP.Services.Points.IPointService.SaveData
+  href: Coree.NETASP.Services.Points.IPointService.html#Coree_NETASP_Services_Points_IPointService_SaveData
+  name: SaveData
+  nameWithType: IPointService.SaveData
+  fullName: Coree.NETASP.Services.Points.IPointService.SaveData

@@ -1,0 +1,37 @@
+### YamlMime:ManagedReference
+items:
+- uid: Coree.NETASP.Middleware.SegmentBlacklistFiltering
+  commentId: N:Coree.NETASP.Middleware.SegmentBlacklistFiltering
+  id: Coree.NETASP.Middleware.SegmentBlacklistFiltering
+  children:
+  - Coree.NETASP.Middleware.SegmentBlacklistFiltering.SegmentBlacklistFilterOptions
+  - Coree.NETASP.Middleware.SegmentBlacklistFiltering.SegmentBlacklistFilteringExtensions
+  - Coree.NETASP.Middleware.SegmentBlacklistFiltering.SegmentBlacklistFilteringMiddleware
+  langs:
+  - csharp
+  - vb
+  name: Coree.NETASP.Middleware.SegmentBlacklistFiltering
+  nameWithType: Coree.NETASP.Middleware.SegmentBlacklistFiltering
+  fullName: Coree.NETASP.Middleware.SegmentBlacklistFiltering
+  type: Namespace
+  assemblies:
+  - Coree.NETASP
+references:
+- uid: Coree.NETASP.Middleware.SegmentBlacklistFiltering.SegmentBlacklistFilteringMiddleware
+  commentId: T:Coree.NETASP.Middleware.SegmentBlacklistFiltering.SegmentBlacklistFilteringMiddleware
+  href: Coree.NETASP.Middleware.SegmentBlacklistFiltering.SegmentBlacklistFilteringMiddleware.html
+  name: SegmentBlacklistFilteringMiddleware
+  nameWithType: SegmentBlacklistFilteringMiddleware
+  fullName: Coree.NETASP.Middleware.SegmentBlacklistFiltering.SegmentBlacklistFilteringMiddleware
+- uid: Coree.NETASP.Middleware.SegmentBlacklistFiltering.SegmentBlacklistFilterOptions
+  commentId: T:Coree.NETASP.Middleware.SegmentBlacklistFiltering.SegmentBlacklistFilterOptions
+  href: Coree.NETASP.Middleware.SegmentBlacklistFiltering.SegmentBlacklistFilterOptions.html
+  name: SegmentBlacklistFilterOptions
+  nameWithType: SegmentBlacklistFilterOptions
+  fullName: Coree.NETASP.Middleware.SegmentBlacklistFiltering.SegmentBlacklistFilterOptions
+- uid: Coree.NETASP.Middleware.SegmentBlacklistFiltering.SegmentBlacklistFilteringExtensions
+  commentId: T:Coree.NETASP.Middleware.SegmentBlacklistFiltering.SegmentBlacklistFilteringExtensions
+  href: Coree.NETASP.Middleware.SegmentBlacklistFiltering.SegmentBlacklistFilteringExtensions.html
+  name: SegmentBlacklistFilteringExtensions
+  nameWithType: SegmentBlacklistFilteringExtensions
+  fullName: Coree.NETASP.Middleware.SegmentBlacklistFiltering.SegmentBlacklistFilteringExtensions

@@ -5,7 +5,7 @@ items:
   id: UnwantedHeaderKeysMiddleware
   parent: Coree.NETASP.Middleware.UnwantedHeaderKeysFiltering
   children:
-  - Coree.NETASP.Middleware.UnwantedHeaderKeysFiltering.UnwantedHeaderKeysMiddleware.#ctor(Microsoft.AspNetCore.Http.RequestDelegate,Microsoft.Extensions.Logging.ILogger{Coree.NETASP.Middleware.UnwantedHeaderKeysFiltering.UnwantedHeaderKeysMiddleware},Microsoft.Extensions.Options.IOptions{Coree.NETASP.Middleware.UnwantedHeaderKeysFiltering.UnwantedHeaderKeysOptions})
+  - Coree.NETASP.Middleware.UnwantedHeaderKeysFiltering.UnwantedHeaderKeysMiddleware.#ctor(Microsoft.AspNetCore.Http.RequestDelegate,Microsoft.Extensions.Logging.ILogger{Coree.NETASP.Middleware.UnwantedHeaderKeysFiltering.UnwantedHeaderKeysMiddleware},Microsoft.Extensions.Options.IOptions{Coree.NETASP.Middleware.UnwantedHeaderKeysFiltering.UnwantedHeaderKeysOptions},Coree.NETASP.Services.Points.IPointService)
   - Coree.NETASP.Middleware.UnwantedHeaderKeysFiltering.UnwantedHeaderKeysMiddleware.InvokeAsync(Microsoft.AspNetCore.Http.HttpContext)
   langs:
   - csharp
@@ -21,7 +21,7 @@ items:
       repo: https://github.com/carsten-riedel/Coree.NETASP
     id: UnwantedHeaderKeysMiddleware
     path: ../../src/Projects/Coree.NETASP/Middleware/UnwantedHeaderKeysFiltering/UnwantedHeaderKeysMiddleware.cs
-    startLine: 14
+    startLine: 13
   assemblies:
   - Coree.NETASP
   namespace: Coree.NETASP.Middleware.UnwantedHeaderKeysFiltering
@@ -40,16 +40,16 @@ items:
   - System.Object.MemberwiseClone
   - System.Object.ReferenceEquals(System.Object,System.Object)
   - System.Object.ToString
-- uid: Coree.NETASP.Middleware.UnwantedHeaderKeysFiltering.UnwantedHeaderKeysMiddleware.#ctor(Microsoft.AspNetCore.Http.RequestDelegate,Microsoft.Extensions.Logging.ILogger{Coree.NETASP.Middleware.UnwantedHeaderKeysFiltering.UnwantedHeaderKeysMiddleware},Microsoft.Extensions.Options.IOptions{Coree.NETASP.Middleware.UnwantedHeaderKeysFiltering.UnwantedHeaderKeysOptions})
-  commentId: M:Coree.NETASP.Middleware.UnwantedHeaderKeysFiltering.UnwantedHeaderKeysMiddleware.#ctor(Microsoft.AspNetCore.Http.RequestDelegate,Microsoft.Extensions.Logging.ILogger{Coree.NETASP.Middleware.UnwantedHeaderKeysFiltering.UnwantedHeaderKeysMiddleware},Microsoft.Extensions.Options.IOptions{Coree.NETASP.Middleware.UnwantedHeaderKeysFiltering.UnwantedHeaderKeysOptions})
-  id: '#ctor(Microsoft.AspNetCore.Http.RequestDelegate,Microsoft.Extensions.Logging.ILogger{Coree.NETASP.Middleware.UnwantedHeaderKeysFiltering.UnwantedHeaderKeysMiddleware},Microsoft.Extensions.Options.IOptions{Coree.NETASP.Middleware.UnwantedHeaderKeysFiltering.UnwantedHeaderKeysOptions})'
+- uid: Coree.NETASP.Middleware.UnwantedHeaderKeysFiltering.UnwantedHeaderKeysMiddleware.#ctor(Microsoft.AspNetCore.Http.RequestDelegate,Microsoft.Extensions.Logging.ILogger{Coree.NETASP.Middleware.UnwantedHeaderKeysFiltering.UnwantedHeaderKeysMiddleware},Microsoft.Extensions.Options.IOptions{Coree.NETASP.Middleware.UnwantedHeaderKeysFiltering.UnwantedHeaderKeysOptions},Coree.NETASP.Services.Points.IPointService)
+  commentId: M:Coree.NETASP.Middleware.UnwantedHeaderKeysFiltering.UnwantedHeaderKeysMiddleware.#ctor(Microsoft.AspNetCore.Http.RequestDelegate,Microsoft.Extensions.Logging.ILogger{Coree.NETASP.Middleware.UnwantedHeaderKeysFiltering.UnwantedHeaderKeysMiddleware},Microsoft.Extensions.Options.IOptions{Coree.NETASP.Middleware.UnwantedHeaderKeysFiltering.UnwantedHeaderKeysOptions},Coree.NETASP.Services.Points.IPointService)
+  id: '#ctor(Microsoft.AspNetCore.Http.RequestDelegate,Microsoft.Extensions.Logging.ILogger{Coree.NETASP.Middleware.UnwantedHeaderKeysFiltering.UnwantedHeaderKeysMiddleware},Microsoft.Extensions.Options.IOptions{Coree.NETASP.Middleware.UnwantedHeaderKeysFiltering.UnwantedHeaderKeysOptions},Coree.NETASP.Services.Points.IPointService)'
   parent: Coree.NETASP.Middleware.UnwantedHeaderKeysFiltering.UnwantedHeaderKeysMiddleware
   langs:
   - csharp
   - vb
-  name: UnwantedHeaderKeysMiddleware(RequestDelegate, ILogger<UnwantedHeaderKeysMiddleware>, IOptions<UnwantedHeaderKeysOptions>)
-  nameWithType: UnwantedHeaderKeysMiddleware.UnwantedHeaderKeysMiddleware(RequestDelegate, ILogger<UnwantedHeaderKeysMiddleware>, IOptions<UnwantedHeaderKeysOptions>)
-  fullName: Coree.NETASP.Middleware.UnwantedHeaderKeysFiltering.UnwantedHeaderKeysMiddleware.UnwantedHeaderKeysMiddleware(Microsoft.AspNetCore.Http.RequestDelegate, Microsoft.Extensions.Logging.ILogger<Coree.NETASP.Middleware.UnwantedHeaderKeysFiltering.UnwantedHeaderKeysMiddleware>, Microsoft.Extensions.Options.IOptions<Coree.NETASP.Middleware.UnwantedHeaderKeysFiltering.UnwantedHeaderKeysOptions>)
+  name: UnwantedHeaderKeysMiddleware(RequestDelegate, ILogger<UnwantedHeaderKeysMiddleware>, IOptions<UnwantedHeaderKeysOptions>, IPointService)
+  nameWithType: UnwantedHeaderKeysMiddleware.UnwantedHeaderKeysMiddleware(RequestDelegate, ILogger<UnwantedHeaderKeysMiddleware>, IOptions<UnwantedHeaderKeysOptions>, IPointService)
+  fullName: Coree.NETASP.Middleware.UnwantedHeaderKeysFiltering.UnwantedHeaderKeysMiddleware.UnwantedHeaderKeysMiddleware(Microsoft.AspNetCore.Http.RequestDelegate, Microsoft.Extensions.Logging.ILogger<Coree.NETASP.Middleware.UnwantedHeaderKeysFiltering.UnwantedHeaderKeysMiddleware>, Microsoft.Extensions.Options.IOptions<Coree.NETASP.Middleware.UnwantedHeaderKeysFiltering.UnwantedHeaderKeysOptions>, Coree.NETASP.Services.Points.IPointService)
   type: Constructor
   source:
     remote:
@@ -63,19 +63,21 @@ items:
   - Coree.NETASP
   namespace: Coree.NETASP.Middleware.UnwantedHeaderKeysFiltering
   syntax:
-    content: public UnwantedHeaderKeysMiddleware(RequestDelegate next, ILogger<UnwantedHeaderKeysMiddleware> logger, IOptions<UnwantedHeaderKeysOptions> options)
+    content: public UnwantedHeaderKeysMiddleware(RequestDelegate nextMiddleware, ILogger<UnwantedHeaderKeysMiddleware> logger, IOptions<UnwantedHeaderKeysOptions> options, IPointService pointService)
     parameters:
-    - id: next
+    - id: nextMiddleware
       type: Microsoft.AspNetCore.Http.RequestDelegate
     - id: logger
       type: Microsoft.Extensions.Logging.ILogger{Coree.NETASP.Middleware.UnwantedHeaderKeysFiltering.UnwantedHeaderKeysMiddleware}
     - id: options
       type: Microsoft.Extensions.Options.IOptions{Coree.NETASP.Middleware.UnwantedHeaderKeysFiltering.UnwantedHeaderKeysOptions}
-    content.vb: Public Sub New([next] As RequestDelegate, logger As ILogger(Of UnwantedHeaderKeysMiddleware), options As IOptions(Of UnwantedHeaderKeysOptions))
+    - id: pointService
+      type: Coree.NETASP.Services.Points.IPointService
+    content.vb: Public Sub New(nextMiddleware As RequestDelegate, logger As ILogger(Of UnwantedHeaderKeysMiddleware), options As IOptions(Of UnwantedHeaderKeysOptions), pointService As IPointService)
   overload: Coree.NETASP.Middleware.UnwantedHeaderKeysFiltering.UnwantedHeaderKeysMiddleware.#ctor*
-  nameWithType.vb: UnwantedHeaderKeysMiddleware.New(RequestDelegate, ILogger(Of UnwantedHeaderKeysMiddleware), IOptions(Of UnwantedHeaderKeysOptions))
-  fullName.vb: Coree.NETASP.Middleware.UnwantedHeaderKeysFiltering.UnwantedHeaderKeysMiddleware.New(Microsoft.AspNetCore.Http.RequestDelegate, Microsoft.Extensions.Logging.ILogger(Of Coree.NETASP.Middleware.UnwantedHeaderKeysFiltering.UnwantedHeaderKeysMiddleware), Microsoft.Extensions.Options.IOptions(Of Coree.NETASP.Middleware.UnwantedHeaderKeysFiltering.UnwantedHeaderKeysOptions))
-  name.vb: New(RequestDelegate, ILogger(Of UnwantedHeaderKeysMiddleware), IOptions(Of UnwantedHeaderKeysOptions))
+  nameWithType.vb: UnwantedHeaderKeysMiddleware.New(RequestDelegate, ILogger(Of UnwantedHeaderKeysMiddleware), IOptions(Of UnwantedHeaderKeysOptions), IPointService)
+  fullName.vb: Coree.NETASP.Middleware.UnwantedHeaderKeysFiltering.UnwantedHeaderKeysMiddleware.New(Microsoft.AspNetCore.Http.RequestDelegate, Microsoft.Extensions.Logging.ILogger(Of Coree.NETASP.Middleware.UnwantedHeaderKeysFiltering.UnwantedHeaderKeysMiddleware), Microsoft.Extensions.Options.IOptions(Of Coree.NETASP.Middleware.UnwantedHeaderKeysFiltering.UnwantedHeaderKeysOptions), Coree.NETASP.Services.Points.IPointService)
+  name.vb: New(RequestDelegate, ILogger(Of UnwantedHeaderKeysMiddleware), IOptions(Of UnwantedHeaderKeysOptions), IPointService)
 - uid: Coree.NETASP.Middleware.UnwantedHeaderKeysFiltering.UnwantedHeaderKeysMiddleware.InvokeAsync(Microsoft.AspNetCore.Http.HttpContext)
   commentId: M:Coree.NETASP.Middleware.UnwantedHeaderKeysFiltering.UnwantedHeaderKeysMiddleware.InvokeAsync(Microsoft.AspNetCore.Http.HttpContext)
   id: InvokeAsync(Microsoft.AspNetCore.Http.HttpContext)
@@ -94,7 +96,7 @@ items:
       repo: https://github.com/carsten-riedel/Coree.NETASP
     id: InvokeAsync
     path: ../../src/Projects/Coree.NETASP/Middleware/UnwantedHeaderKeysFiltering/UnwantedHeaderKeysMiddleware.cs
-    startLine: 32
+    startLine: 33
   assemblies:
   - Coree.NETASP
   namespace: Coree.NETASP.Middleware.UnwantedHeaderKeysFiltering
@@ -389,7 +391,7 @@ references:
   fullName: System
 - uid: Coree.NETASP.Middleware.UnwantedHeaderKeysFiltering.UnwantedHeaderKeysMiddleware.#ctor*
   commentId: Overload:Coree.NETASP.Middleware.UnwantedHeaderKeysFiltering.UnwantedHeaderKeysMiddleware.#ctor
-  href: Coree.NETASP.Middleware.UnwantedHeaderKeysFiltering.UnwantedHeaderKeysMiddleware.html#Coree_NETASP_Middleware_UnwantedHeaderKeysFiltering_UnwantedHeaderKeysMiddleware__ctor_Microsoft_AspNetCore_Http_RequestDelegate_Microsoft_Extensions_Logging_ILogger_Coree_NETASP_Middleware_UnwantedHeaderKeysFiltering_UnwantedHeaderKeysMiddleware__Microsoft_Extensions_Options_IOptions_Coree_NETASP_Middleware_UnwantedHeaderKeysFiltering_UnwantedHeaderKeysOptions__
+  href: Coree.NETASP.Middleware.UnwantedHeaderKeysFiltering.UnwantedHeaderKeysMiddleware.html#Coree_NETASP_Middleware_UnwantedHeaderKeysFiltering_UnwantedHeaderKeysMiddleware__ctor_Microsoft_AspNetCore_Http_RequestDelegate_Microsoft_Extensions_Logging_ILogger_Coree_NETASP_Middleware_UnwantedHeaderKeysFiltering_UnwantedHeaderKeysMiddleware__Microsoft_Extensions_Options_IOptions_Coree_NETASP_Middleware_UnwantedHeaderKeysFiltering_UnwantedHeaderKeysOptions__Coree_NETASP_Services_Points_IPointService_
   name: UnwantedHeaderKeysMiddleware
   nameWithType: UnwantedHeaderKeysMiddleware.UnwantedHeaderKeysMiddleware
   fullName: Coree.NETASP.Middleware.UnwantedHeaderKeysFiltering.UnwantedHeaderKeysMiddleware.UnwantedHeaderKeysMiddleware
@@ -470,6 +472,13 @@ references:
     name: UnwantedHeaderKeysOptions
     href: Coree.NETASP.Middleware.UnwantedHeaderKeysFiltering.UnwantedHeaderKeysOptions.html
   - name: )
+- uid: Coree.NETASP.Services.Points.IPointService
+  commentId: T:Coree.NETASP.Services.Points.IPointService
+  parent: Coree.NETASP.Services.Points
+  href: Coree.NETASP.Services.Points.IPointService.html
+  name: IPointService
+  nameWithType: IPointService
+  fullName: Coree.NETASP.Services.Points.IPointService
 - uid: Microsoft.AspNetCore.Http
   commentId: N:Microsoft.AspNetCore.Http
   isExternal: true
@@ -637,6 +646,44 @@ references:
     name: Options
     isExternal: true
     href: https://learn.microsoft.com/dotnet/api/microsoft.extensions.options
+- uid: Coree.NETASP.Services.Points
+  commentId: N:Coree.NETASP.Services.Points
+  href: Coree.html
+  name: Coree.NETASP.Services.Points
+  nameWithType: Coree.NETASP.Services.Points
+  fullName: Coree.NETASP.Services.Points
+  spec.csharp:
+  - uid: Coree
+    name: Coree
+    href: Coree.html
+  - name: .
+  - uid: Coree.NETASP
+    name: NETASP
+    href: Coree.NETASP.html
+  - name: .
+  - uid: Coree.NETASP.Services
+    name: Services
+    href: Coree.NETASP.Services.html
+  - name: .
+  - uid: Coree.NETASP.Services.Points
+    name: Points
+    href: Coree.NETASP.Services.Points.html
+  spec.vb:
+  - uid: Coree
+    name: Coree
+    href: Coree.html
+  - name: .
+  - uid: Coree.NETASP
+    name: NETASP
+    href: Coree.NETASP.html
+  - name: .
+  - uid: Coree.NETASP.Services
+    name: Services
+    href: Coree.NETASP.Services.html
+  - name: .
+  - uid: Coree.NETASP.Services.Points
+    name: Points
+    href: Coree.NETASP.Services.Points.html
 - uid: Coree.NETASP.Middleware.UnwantedHeaderKeysFiltering.UnwantedHeaderKeysMiddleware.InvokeAsync*
   commentId: Overload:Coree.NETASP.Middleware.UnwantedHeaderKeysFiltering.UnwantedHeaderKeysMiddleware.InvokeAsync
   href: Coree.NETASP.Middleware.UnwantedHeaderKeysFiltering.UnwantedHeaderKeysMiddleware.html#Coree_NETASP_Middleware_UnwantedHeaderKeysFiltering_UnwantedHeaderKeysMiddleware_InvokeAsync_Microsoft_AspNetCore_Http_HttpContext_

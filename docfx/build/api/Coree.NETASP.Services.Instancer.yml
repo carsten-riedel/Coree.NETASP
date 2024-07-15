@@ -1,0 +1,92 @@
+### YamlMime:ManagedReference
+items:
+- uid: Coree.NETASP.Services.Instancer
+  commentId: N:Coree.NETASP.Services.Instancer
+  id: Coree.NETASP.Services.Instancer
+  children:
+  - Coree.NETASP.Services.Instancer.IServerConfigurationAnalyzer
+  - Coree.NETASP.Services.Instancer.ServerConfigurationAnalyzer
+  - Coree.NETASP.Services.Instancer.ServerConfigurationAnalyzer.ServerListenDetail
+  langs:
+  - csharp
+  - vb
+  name: Coree.NETASP.Services.Instancer
+  nameWithType: Coree.NETASP.Services.Instancer
+  fullName: Coree.NETASP.Services.Instancer
+  type: Namespace
+  assemblies:
+  - Coree.NETASP
+references:
+- uid: Coree.NETASP.Services.Instancer.IServerConfigurationAnalyzer
+  commentId: T:Coree.NETASP.Services.Instancer.IServerConfigurationAnalyzer
+  parent: Coree.NETASP.Services.Instancer
+  href: Coree.NETASP.Services.Instancer.IServerConfigurationAnalyzer.html
+  name: IServerConfigurationAnalyzer
+  nameWithType: IServerConfigurationAnalyzer
+  fullName: Coree.NETASP.Services.Instancer.IServerConfigurationAnalyzer
+- uid: Coree.NETASP.Services.Instancer.ServerConfigurationAnalyzer
+  commentId: T:Coree.NETASP.Services.Instancer.ServerConfigurationAnalyzer
+  href: Coree.NETASP.Services.Instancer.ServerConfigurationAnalyzer.html
+  name: ServerConfigurationAnalyzer
+  nameWithType: ServerConfigurationAnalyzer
+  fullName: Coree.NETASP.Services.Instancer.ServerConfigurationAnalyzer
+- uid: Coree.NETASP.Services.Instancer.ServerConfigurationAnalyzer.ServerListenDetail
+  commentId: T:Coree.NETASP.Services.Instancer.ServerConfigurationAnalyzer.ServerListenDetail
+  href: Coree.NETASP.Services.Instancer.ServerConfigurationAnalyzer.html
+  name: ServerConfigurationAnalyzer.ServerListenDetail
+  nameWithType: ServerConfigurationAnalyzer.ServerListenDetail
+  fullName: Coree.NETASP.Services.Instancer.ServerConfigurationAnalyzer.ServerListenDetail
+  spec.csharp:
+  - uid: Coree.NETASP.Services.Instancer.ServerConfigurationAnalyzer
+    name: ServerConfigurationAnalyzer
+    href: Coree.NETASP.Services.Instancer.ServerConfigurationAnalyzer.html
+  - name: .
+  - uid: Coree.NETASP.Services.Instancer.ServerConfigurationAnalyzer.ServerListenDetail
+    name: ServerListenDetail
+    href: Coree.NETASP.Services.Instancer.ServerConfigurationAnalyzer.ServerListenDetail.html
+  spec.vb:
+  - uid: Coree.NETASP.Services.Instancer.ServerConfigurationAnalyzer
+    name: ServerConfigurationAnalyzer
+    href: Coree.NETASP.Services.Instancer.ServerConfigurationAnalyzer.html
+  - name: .
+  - uid: Coree.NETASP.Services.Instancer.ServerConfigurationAnalyzer.ServerListenDetail
+    name: ServerListenDetail
+    href: Coree.NETASP.Services.Instancer.ServerConfigurationAnalyzer.ServerListenDetail.html
+- uid: Coree.NETASP.Services.Instancer
+  commentId: N:Coree.NETASP.Services.Instancer
+  href: Coree.html
+  name: Coree.NETASP.Services.Instancer
+  nameWithType: Coree.NETASP.Services.Instancer
+  fullName: Coree.NETASP.Services.Instancer
+  spec.csharp:
+  - uid: Coree
+    name: Coree
+    href: Coree.html
+  - name: .
+  - uid: Coree.NETASP
+    name: NETASP
+    href: Coree.NETASP.html
+  - name: .
+  - uid: Coree.NETASP.Services
+    name: Services
+    href: Coree.NETASP.Services.html
+  - name: .
+  - uid: Coree.NETASP.Services.Instancer
+    name: Instancer
+    href: Coree.NETASP.Services.Instancer.html
+  spec.vb:
+  - uid: Coree
+    name: Coree
+    href: Coree.html
+  - name: .
+  - uid: Coree.NETASP
+    name: NETASP
+    href: Coree.NETASP.html
+  - name: .
+  - uid: Coree.NETASP.Services
+    name: Services
+    href: Coree.NETASP.Services.html
+  - name: .
+  - uid: Coree.NETASP.Services.Instancer
+    name: Instancer
+    href: Coree.NETASP.Services.Instancer.html

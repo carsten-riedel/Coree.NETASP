@@ -1,0 +1,204 @@
+### YamlMime:ManagedReference
+items:
+- uid: Coree.NETASP.Services.Instancer.IServerConfigurationAnalyzer
+  commentId: T:Coree.NETASP.Services.Instancer.IServerConfigurationAnalyzer
+  id: IServerConfigurationAnalyzer
+  parent: Coree.NETASP.Services.Instancer
+  children:
+  - Coree.NETASP.Services.Instancer.IServerConfigurationAnalyzer.IsAnyIpWithDefaultPortAsync
+  langs:
+  - csharp
+  - vb
+  name: IServerConfigurationAnalyzer
+  nameWithType: IServerConfigurationAnalyzer
+  fullName: Coree.NETASP.Services.Instancer.IServerConfigurationAnalyzer
+  type: Interface
+  source:
+    remote:
+      path: src/Projects/Coree.NETASP/Services/Instancer/ServerConfigurationAnalyzer.cs
+      branch: master
+      repo: https://github.com/carsten-riedel/Coree.NETASP
+    id: IServerConfigurationAnalyzer
+    path: ../../src/Projects/Coree.NETASP/Services/Instancer/ServerConfigurationAnalyzer.cs
+    startLine: 6
+  assemblies:
+  - Coree.NETASP
+  namespace: Coree.NETASP.Services.Instancer
+  syntax:
+    content: public interface IServerConfigurationAnalyzer
+    content.vb: Public Interface IServerConfigurationAnalyzer
+- uid: Coree.NETASP.Services.Instancer.IServerConfigurationAnalyzer.IsAnyIpWithDefaultPortAsync
+  commentId: M:Coree.NETASP.Services.Instancer.IServerConfigurationAnalyzer.IsAnyIpWithDefaultPortAsync
+  id: IsAnyIpWithDefaultPortAsync
+  parent: Coree.NETASP.Services.Instancer.IServerConfigurationAnalyzer
+  langs:
+  - csharp
+  - vb
+  name: IsAnyIpWithDefaultPortAsync()
+  nameWithType: IServerConfigurationAnalyzer.IsAnyIpWithDefaultPortAsync()
+  fullName: Coree.NETASP.Services.Instancer.IServerConfigurationAnalyzer.IsAnyIpWithDefaultPortAsync()
+  type: Method
+  source:
+    remote:
+      path: src/Projects/Coree.NETASP/Services/Instancer/ServerConfigurationAnalyzer.cs
+      branch: master
+      repo: https://github.com/carsten-riedel/Coree.NETASP
+    id: IsAnyIpWithDefaultPortAsync
+    path: ../../src/Projects/Coree.NETASP/Services/Instancer/ServerConfigurationAnalyzer.cs
+    startLine: 8
+  assemblies:
+  - Coree.NETASP
+  namespace: Coree.NETASP.Services.Instancer
+  syntax:
+    content: Task<bool?> IsAnyIpWithDefaultPortAsync()
+    return:
+      type: System.Threading.Tasks.Task{System.Nullable{System.Boolean}}
+    content.vb: Function IsAnyIpWithDefaultPortAsync() As Task(Of Boolean?)
+  overload: Coree.NETASP.Services.Instancer.IServerConfigurationAnalyzer.IsAnyIpWithDefaultPortAsync*
+references:
+- uid: Coree.NETASP.Services.Instancer
+  commentId: N:Coree.NETASP.Services.Instancer
+  href: Coree.html
+  name: Coree.NETASP.Services.Instancer
+  nameWithType: Coree.NETASP.Services.Instancer
+  fullName: Coree.NETASP.Services.Instancer
+  spec.csharp:
+  - uid: Coree
+    name: Coree
+    href: Coree.html
+  - name: .
+  - uid: Coree.NETASP
+    name: NETASP
+    href: Coree.NETASP.html
+  - name: .
+  - uid: Coree.NETASP.Services
+    name: Services
+    href: Coree.NETASP.Services.html
+  - name: .
+  - uid: Coree.NETASP.Services.Instancer
+    name: Instancer
+    href: Coree.NETASP.Services.Instancer.html
+  spec.vb:
+  - uid: Coree
+    name: Coree
+    href: Coree.html
+  - name: .
+  - uid: Coree.NETASP
+    name: NETASP
+    href: Coree.NETASP.html
+  - name: .
+  - uid: Coree.NETASP.Services
+    name: Services
+    href: Coree.NETASP.Services.html
+  - name: .
+  - uid: Coree.NETASP.Services.Instancer
+    name: Instancer
+    href: Coree.NETASP.Services.Instancer.html
+- uid: Coree.NETASP.Services.Instancer.IServerConfigurationAnalyzer.IsAnyIpWithDefaultPortAsync*
+  commentId: Overload:Coree.NETASP.Services.Instancer.IServerConfigurationAnalyzer.IsAnyIpWithDefaultPortAsync
+  href: Coree.NETASP.Services.Instancer.IServerConfigurationAnalyzer.html#Coree_NETASP_Services_Instancer_IServerConfigurationAnalyzer_IsAnyIpWithDefaultPortAsync
+  name: IsAnyIpWithDefaultPortAsync
+  nameWithType: IServerConfigurationAnalyzer.IsAnyIpWithDefaultPortAsync
+  fullName: Coree.NETASP.Services.Instancer.IServerConfigurationAnalyzer.IsAnyIpWithDefaultPortAsync
+- uid: System.Threading.Tasks.Task{System.Nullable{System.Boolean}}
+  commentId: T:System.Threading.Tasks.Task{System.Nullable{System.Boolean}}
+  parent: System.Threading.Tasks
+  definition: System.Threading.Tasks.Task`1
+  href: https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1
+  name: Task<bool?>
+  nameWithType: Task<bool?>
+  fullName: System.Threading.Tasks.Task<bool?>
+  nameWithType.vb: Task(Of Boolean?)
+  fullName.vb: System.Threading.Tasks.Task(Of Boolean?)
+  name.vb: Task(Of Boolean?)
+  spec.csharp:
+  - uid: System.Threading.Tasks.Task`1
+    name: Task
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1
+  - name: <
+  - uid: System.Boolean
+    name: bool
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.boolean
+  - name: '?'
+  - name: '>'
+  spec.vb:
+  - uid: System.Threading.Tasks.Task`1
+    name: Task
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: System.Boolean
+    name: Boolean
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.boolean
+  - name: '?'
+  - name: )
+- uid: System.Threading.Tasks.Task`1
+  commentId: T:System.Threading.Tasks.Task`1
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1
+  name: Task<TResult>
+  nameWithType: Task<TResult>
+  fullName: System.Threading.Tasks.Task<TResult>
+  nameWithType.vb: Task(Of TResult)
+  fullName.vb: System.Threading.Tasks.Task(Of TResult)
+  name.vb: Task(Of TResult)
+  spec.csharp:
+  - uid: System.Threading.Tasks.Task`1
+    name: Task
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1
+  - name: <
+  - name: TResult
+  - name: '>'
+  spec.vb:
+  - uid: System.Threading.Tasks.Task`1
+    name: Task
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1
+  - name: (
+  - name: Of
+  - name: " "
+  - name: TResult
+  - name: )
+- uid: System.Threading.Tasks
+  commentId: N:System.Threading.Tasks
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System.Threading.Tasks
+  nameWithType: System.Threading.Tasks
+  fullName: System.Threading.Tasks
+  spec.csharp:
+  - uid: System
+    name: System
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system
+  - name: .
+  - uid: System.Threading
+    name: Threading
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading
+  - name: .
+  - uid: System.Threading.Tasks
+    name: Tasks
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading.tasks
+  spec.vb:
+  - uid: System
+    name: System
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system
+  - name: .
+  - uid: System.Threading
+    name: Threading
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading
+  - name: .
+  - uid: System.Threading.Tasks
+    name: Tasks
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading.tasks

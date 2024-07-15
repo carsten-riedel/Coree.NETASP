@@ -5,7 +5,7 @@ items:
   id: RequestUrlFilteringMiddleware
   parent: Coree.NETASP.Middleware.RequestUrlFiltering
   children:
-  - Coree.NETASP.Middleware.RequestUrlFiltering.RequestUrlFilteringMiddleware.#ctor(Microsoft.AspNetCore.Http.RequestDelegate,Microsoft.Extensions.Options.IOptions{Coree.NETASP.Middleware.RequestUrlFiltering.RequestUrlFilteringOptions},Microsoft.Extensions.Logging.ILogger{Coree.NETASP.Middleware.RequestUrlFiltering.RequestUrlFilteringMiddleware})
+  - Coree.NETASP.Middleware.RequestUrlFiltering.RequestUrlFilteringMiddleware.#ctor(Microsoft.AspNetCore.Http.RequestDelegate,Microsoft.Extensions.Options.IOptions{Coree.NETASP.Middleware.RequestUrlFiltering.RequestUrlFilteringOptions},Microsoft.Extensions.Logging.ILogger{Coree.NETASP.Middleware.RequestUrlFiltering.RequestUrlFilteringMiddleware},Coree.NETASP.Services.Points.IPointService)
   - Coree.NETASP.Middleware.RequestUrlFiltering.RequestUrlFilteringMiddleware.GetFullRequestUri(Microsoft.AspNetCore.Http.HttpContext)
   - Coree.NETASP.Middleware.RequestUrlFiltering.RequestUrlFilteringMiddleware.InvokeAsync(Microsoft.AspNetCore.Http.HttpContext)
   langs:
@@ -22,7 +22,7 @@ items:
       repo: https://github.com/carsten-riedel/Coree.NETASP
     id: RequestUrlFilteringMiddleware
     path: ../../src/Projects/Coree.NETASP/Middleware/RequestUrlFiltering/RequestUrlFilteringMiddleware.cs
-    startLine: 9
+    startLine: 12
   assemblies:
   - Coree.NETASP
   namespace: Coree.NETASP.Middleware.RequestUrlFiltering
@@ -41,16 +41,16 @@ items:
   - System.Object.MemberwiseClone
   - System.Object.ReferenceEquals(System.Object,System.Object)
   - System.Object.ToString
-- uid: Coree.NETASP.Middleware.RequestUrlFiltering.RequestUrlFilteringMiddleware.#ctor(Microsoft.AspNetCore.Http.RequestDelegate,Microsoft.Extensions.Options.IOptions{Coree.NETASP.Middleware.RequestUrlFiltering.RequestUrlFilteringOptions},Microsoft.Extensions.Logging.ILogger{Coree.NETASP.Middleware.RequestUrlFiltering.RequestUrlFilteringMiddleware})
-  commentId: M:Coree.NETASP.Middleware.RequestUrlFiltering.RequestUrlFilteringMiddleware.#ctor(Microsoft.AspNetCore.Http.RequestDelegate,Microsoft.Extensions.Options.IOptions{Coree.NETASP.Middleware.RequestUrlFiltering.RequestUrlFilteringOptions},Microsoft.Extensions.Logging.ILogger{Coree.NETASP.Middleware.RequestUrlFiltering.RequestUrlFilteringMiddleware})
-  id: '#ctor(Microsoft.AspNetCore.Http.RequestDelegate,Microsoft.Extensions.Options.IOptions{Coree.NETASP.Middleware.RequestUrlFiltering.RequestUrlFilteringOptions},Microsoft.Extensions.Logging.ILogger{Coree.NETASP.Middleware.RequestUrlFiltering.RequestUrlFilteringMiddleware})'
+- uid: Coree.NETASP.Middleware.RequestUrlFiltering.RequestUrlFilteringMiddleware.#ctor(Microsoft.AspNetCore.Http.RequestDelegate,Microsoft.Extensions.Options.IOptions{Coree.NETASP.Middleware.RequestUrlFiltering.RequestUrlFilteringOptions},Microsoft.Extensions.Logging.ILogger{Coree.NETASP.Middleware.RequestUrlFiltering.RequestUrlFilteringMiddleware},Coree.NETASP.Services.Points.IPointService)
+  commentId: M:Coree.NETASP.Middleware.RequestUrlFiltering.RequestUrlFilteringMiddleware.#ctor(Microsoft.AspNetCore.Http.RequestDelegate,Microsoft.Extensions.Options.IOptions{Coree.NETASP.Middleware.RequestUrlFiltering.RequestUrlFilteringOptions},Microsoft.Extensions.Logging.ILogger{Coree.NETASP.Middleware.RequestUrlFiltering.RequestUrlFilteringMiddleware},Coree.NETASP.Services.Points.IPointService)
+  id: '#ctor(Microsoft.AspNetCore.Http.RequestDelegate,Microsoft.Extensions.Options.IOptions{Coree.NETASP.Middleware.RequestUrlFiltering.RequestUrlFilteringOptions},Microsoft.Extensions.Logging.ILogger{Coree.NETASP.Middleware.RequestUrlFiltering.RequestUrlFilteringMiddleware},Coree.NETASP.Services.Points.IPointService)'
   parent: Coree.NETASP.Middleware.RequestUrlFiltering.RequestUrlFilteringMiddleware
   langs:
   - csharp
   - vb
-  name: RequestUrlFilteringMiddleware(RequestDelegate, IOptions<RequestUrlFilteringOptions>, ILogger<RequestUrlFilteringMiddleware>)
-  nameWithType: RequestUrlFilteringMiddleware.RequestUrlFilteringMiddleware(RequestDelegate, IOptions<RequestUrlFilteringOptions>, ILogger<RequestUrlFilteringMiddleware>)
-  fullName: Coree.NETASP.Middleware.RequestUrlFiltering.RequestUrlFilteringMiddleware.RequestUrlFilteringMiddleware(Microsoft.AspNetCore.Http.RequestDelegate, Microsoft.Extensions.Options.IOptions<Coree.NETASP.Middleware.RequestUrlFiltering.RequestUrlFilteringOptions>, Microsoft.Extensions.Logging.ILogger<Coree.NETASP.Middleware.RequestUrlFiltering.RequestUrlFilteringMiddleware>)
+  name: RequestUrlFilteringMiddleware(RequestDelegate, IOptions<RequestUrlFilteringOptions>, ILogger<RequestUrlFilteringMiddleware>, IPointService)
+  nameWithType: RequestUrlFilteringMiddleware.RequestUrlFilteringMiddleware(RequestDelegate, IOptions<RequestUrlFilteringOptions>, ILogger<RequestUrlFilteringMiddleware>, IPointService)
+  fullName: Coree.NETASP.Middleware.RequestUrlFiltering.RequestUrlFilteringMiddleware.RequestUrlFilteringMiddleware(Microsoft.AspNetCore.Http.RequestDelegate, Microsoft.Extensions.Options.IOptions<Coree.NETASP.Middleware.RequestUrlFiltering.RequestUrlFilteringOptions>, Microsoft.Extensions.Logging.ILogger<Coree.NETASP.Middleware.RequestUrlFiltering.RequestUrlFilteringMiddleware>, Coree.NETASP.Services.Points.IPointService)
   type: Constructor
   source:
     remote:
@@ -59,24 +59,26 @@ items:
       repo: https://github.com/carsten-riedel/Coree.NETASP
     id: .ctor
     path: ../../src/Projects/Coree.NETASP/Middleware/RequestUrlFiltering/RequestUrlFilteringMiddleware.cs
-    startLine: 15
+    startLine: 19
   assemblies:
   - Coree.NETASP
   namespace: Coree.NETASP.Middleware.RequestUrlFiltering
   syntax:
-    content: public RequestUrlFilteringMiddleware(RequestDelegate next, IOptions<RequestUrlFilteringOptions> options, ILogger<RequestUrlFilteringMiddleware> logger)
+    content: public RequestUrlFilteringMiddleware(RequestDelegate nextMiddleware, IOptions<RequestUrlFilteringOptions> options, ILogger<RequestUrlFilteringMiddleware> logger, IPointService pointService)
     parameters:
-    - id: next
+    - id: nextMiddleware
       type: Microsoft.AspNetCore.Http.RequestDelegate
     - id: options
       type: Microsoft.Extensions.Options.IOptions{Coree.NETASP.Middleware.RequestUrlFiltering.RequestUrlFilteringOptions}
     - id: logger
       type: Microsoft.Extensions.Logging.ILogger{Coree.NETASP.Middleware.RequestUrlFiltering.RequestUrlFilteringMiddleware}
-    content.vb: Public Sub New([next] As RequestDelegate, options As IOptions(Of RequestUrlFilteringOptions), logger As ILogger(Of RequestUrlFilteringMiddleware))
+    - id: pointService
+      type: Coree.NETASP.Services.Points.IPointService
+    content.vb: Public Sub New(nextMiddleware As RequestDelegate, options As IOptions(Of RequestUrlFilteringOptions), logger As ILogger(Of RequestUrlFilteringMiddleware), pointService As IPointService)
   overload: Coree.NETASP.Middleware.RequestUrlFiltering.RequestUrlFilteringMiddleware.#ctor*
-  nameWithType.vb: RequestUrlFilteringMiddleware.New(RequestDelegate, IOptions(Of RequestUrlFilteringOptions), ILogger(Of RequestUrlFilteringMiddleware))
-  fullName.vb: Coree.NETASP.Middleware.RequestUrlFiltering.RequestUrlFilteringMiddleware.New(Microsoft.AspNetCore.Http.RequestDelegate, Microsoft.Extensions.Options.IOptions(Of Coree.NETASP.Middleware.RequestUrlFiltering.RequestUrlFilteringOptions), Microsoft.Extensions.Logging.ILogger(Of Coree.NETASP.Middleware.RequestUrlFiltering.RequestUrlFilteringMiddleware))
-  name.vb: New(RequestDelegate, IOptions(Of RequestUrlFilteringOptions), ILogger(Of RequestUrlFilteringMiddleware))
+  nameWithType.vb: RequestUrlFilteringMiddleware.New(RequestDelegate, IOptions(Of RequestUrlFilteringOptions), ILogger(Of RequestUrlFilteringMiddleware), IPointService)
+  fullName.vb: Coree.NETASP.Middleware.RequestUrlFiltering.RequestUrlFilteringMiddleware.New(Microsoft.AspNetCore.Http.RequestDelegate, Microsoft.Extensions.Options.IOptions(Of Coree.NETASP.Middleware.RequestUrlFiltering.RequestUrlFilteringOptions), Microsoft.Extensions.Logging.ILogger(Of Coree.NETASP.Middleware.RequestUrlFiltering.RequestUrlFilteringMiddleware), Coree.NETASP.Services.Points.IPointService)
+  name.vb: New(RequestDelegate, IOptions(Of RequestUrlFilteringOptions), ILogger(Of RequestUrlFilteringMiddleware), IPointService)
 - uid: Coree.NETASP.Middleware.RequestUrlFiltering.RequestUrlFilteringMiddleware.InvokeAsync(Microsoft.AspNetCore.Http.HttpContext)
   commentId: M:Coree.NETASP.Middleware.RequestUrlFiltering.RequestUrlFilteringMiddleware.InvokeAsync(Microsoft.AspNetCore.Http.HttpContext)
   id: InvokeAsync(Microsoft.AspNetCore.Http.HttpContext)
@@ -95,7 +97,7 @@ items:
       repo: https://github.com/carsten-riedel/Coree.NETASP
     id: InvokeAsync
     path: ../../src/Projects/Coree.NETASP/Middleware/RequestUrlFiltering/RequestUrlFilteringMiddleware.cs
-    startLine: 27
+    startLine: 32
   assemblies:
   - Coree.NETASP
   namespace: Coree.NETASP.Middleware.RequestUrlFiltering
@@ -130,22 +132,22 @@ items:
       repo: https://github.com/carsten-riedel/Coree.NETASP
     id: GetFullRequestUri
     path: ../../src/Projects/Coree.NETASP/Middleware/RequestUrlFiltering/RequestUrlFilteringMiddleware.cs
-    startLine: 50
+    startLine: 83
   assemblies:
   - Coree.NETASP
   namespace: Coree.NETASP.Middleware.RequestUrlFiltering
   summary: Builds the complete URI from the request components.
   example: []
   syntax:
-    content: public static Uri GetFullRequestUri(HttpContext context)
+    content: public Uri? GetFullRequestUri(HttpContext context)
     parameters:
     - id: context
       type: Microsoft.AspNetCore.Http.HttpContext
       description: The HTTP context containing the request.
     return:
       type: System.Uri
-      description: The full URI of the request.
-    content.vb: Public Shared Function GetFullRequestUri(context As HttpContext) As Uri
+      description: The full URI of the request or null if URI is invalid.
+    content.vb: Public Function GetFullRequestUri(context As HttpContext) As Uri
   overload: Coree.NETASP.Middleware.RequestUrlFiltering.RequestUrlFilteringMiddleware.GetFullRequestUri*
 references:
 - uid: Coree.NETASP.Middleware.RequestUrlFiltering
@@ -425,7 +427,7 @@ references:
   fullName: System
 - uid: Coree.NETASP.Middleware.RequestUrlFiltering.RequestUrlFilteringMiddleware.#ctor*
   commentId: Overload:Coree.NETASP.Middleware.RequestUrlFiltering.RequestUrlFilteringMiddleware.#ctor
-  href: Coree.NETASP.Middleware.RequestUrlFiltering.RequestUrlFilteringMiddleware.html#Coree_NETASP_Middleware_RequestUrlFiltering_RequestUrlFilteringMiddleware__ctor_Microsoft_AspNetCore_Http_RequestDelegate_Microsoft_Extensions_Options_IOptions_Coree_NETASP_Middleware_RequestUrlFiltering_RequestUrlFilteringOptions__Microsoft_Extensions_Logging_ILogger_Coree_NETASP_Middleware_RequestUrlFiltering_RequestUrlFilteringMiddleware__
+  href: Coree.NETASP.Middleware.RequestUrlFiltering.RequestUrlFilteringMiddleware.html#Coree_NETASP_Middleware_RequestUrlFiltering_RequestUrlFilteringMiddleware__ctor_Microsoft_AspNetCore_Http_RequestDelegate_Microsoft_Extensions_Options_IOptions_Coree_NETASP_Middleware_RequestUrlFiltering_RequestUrlFilteringOptions__Microsoft_Extensions_Logging_ILogger_Coree_NETASP_Middleware_RequestUrlFiltering_RequestUrlFilteringMiddleware__Coree_NETASP_Services_Points_IPointService_
   name: RequestUrlFilteringMiddleware
   nameWithType: RequestUrlFilteringMiddleware.RequestUrlFilteringMiddleware
   fullName: Coree.NETASP.Middleware.RequestUrlFiltering.RequestUrlFilteringMiddleware.RequestUrlFilteringMiddleware
@@ -506,6 +508,13 @@ references:
     name: RequestUrlFilteringMiddleware
     href: Coree.NETASP.Middleware.RequestUrlFiltering.RequestUrlFilteringMiddleware.html
   - name: )
+- uid: Coree.NETASP.Services.Points.IPointService
+  commentId: T:Coree.NETASP.Services.Points.IPointService
+  parent: Coree.NETASP.Services.Points
+  href: Coree.NETASP.Services.Points.IPointService.html
+  name: IPointService
+  nameWithType: IPointService
+  fullName: Coree.NETASP.Services.Points.IPointService
 - uid: Microsoft.AspNetCore.Http
   commentId: N:Microsoft.AspNetCore.Http
   isExternal: true
@@ -673,6 +682,44 @@ references:
     name: Logging
     isExternal: true
     href: https://learn.microsoft.com/dotnet/api/microsoft.extensions.logging
+- uid: Coree.NETASP.Services.Points
+  commentId: N:Coree.NETASP.Services.Points
+  href: Coree.html
+  name: Coree.NETASP.Services.Points
+  nameWithType: Coree.NETASP.Services.Points
+  fullName: Coree.NETASP.Services.Points
+  spec.csharp:
+  - uid: Coree
+    name: Coree
+    href: Coree.html
+  - name: .
+  - uid: Coree.NETASP
+    name: NETASP
+    href: Coree.NETASP.html
+  - name: .
+  - uid: Coree.NETASP.Services
+    name: Services
+    href: Coree.NETASP.Services.html
+  - name: .
+  - uid: Coree.NETASP.Services.Points
+    name: Points
+    href: Coree.NETASP.Services.Points.html
+  spec.vb:
+  - uid: Coree
+    name: Coree
+    href: Coree.html
+  - name: .
+  - uid: Coree.NETASP
+    name: NETASP
+    href: Coree.NETASP.html
+  - name: .
+  - uid: Coree.NETASP.Services
+    name: Services
+    href: Coree.NETASP.Services.html
+  - name: .
+  - uid: Coree.NETASP.Services.Points
+    name: Points
+    href: Coree.NETASP.Services.Points.html
 - uid: Coree.NETASP.Middleware.RequestUrlFiltering.RequestUrlFilteringMiddleware.InvokeAsync*
   commentId: Overload:Coree.NETASP.Middleware.RequestUrlFiltering.RequestUrlFilteringMiddleware.InvokeAsync
   href: Coree.NETASP.Middleware.RequestUrlFiltering.RequestUrlFilteringMiddleware.html#Coree_NETASP_Middleware_RequestUrlFiltering_RequestUrlFilteringMiddleware_InvokeAsync_Microsoft_AspNetCore_Http_HttpContext_

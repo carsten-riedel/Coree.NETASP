@@ -1,0 +1,23 @@
+### YamlMime:ManagedReference
+items:
+- uid: Coree.NETASP.Middleware.RequestLogging
+  commentId: N:Coree.NETASP.Middleware.RequestLogging
+  id: Coree.NETASP.Middleware.RequestLogging
+  children:
+  - Coree.NETASP.Middleware.RequestLogging.RequestLoggingMiddleware
+  langs:
+  - csharp
+  - vb
+  name: Coree.NETASP.Middleware.RequestLogging
+  nameWithType: Coree.NETASP.Middleware.RequestLogging
+  fullName: Coree.NETASP.Middleware.RequestLogging
+  type: Namespace
+  assemblies:
+  - Coree.NETASP
+references:
+- uid: Coree.NETASP.Middleware.RequestLogging.RequestLoggingMiddleware
+  commentId: T:Coree.NETASP.Middleware.RequestLogging.RequestLoggingMiddleware
+  href: Coree.NETASP.Middleware.RequestLogging.RequestLoggingMiddleware.html
+  name: RequestLoggingMiddleware
+  nameWithType: RequestLoggingMiddleware
+  fullName: Coree.NETASP.Middleware.RequestLogging.RequestLoggingMiddleware

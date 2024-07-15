@@ -1,0 +1,144 @@
+### YamlMime:ManagedReference
+items:
+- uid: Coree.NETASP.Extensions.KestrelOptions.ConfigureWebHostBuilderExtensions.ListenType
+  commentId: T:Coree.NETASP.Extensions.KestrelOptions.ConfigureWebHostBuilderExtensions.ListenType
+  id: ConfigureWebHostBuilderExtensions.ListenType
+  parent: Coree.NETASP.Extensions.KestrelOptions
+  children:
+  - Coree.NETASP.Extensions.KestrelOptions.ConfigureWebHostBuilderExtensions.ListenType.AnyIp
+  - Coree.NETASP.Extensions.KestrelOptions.ConfigureWebHostBuilderExtensions.ListenType.Localhost
+  langs:
+  - csharp
+  - vb
+  name: ConfigureWebHostBuilderExtensions.ListenType
+  nameWithType: ConfigureWebHostBuilderExtensions.ListenType
+  fullName: Coree.NETASP.Extensions.KestrelOptions.ConfigureWebHostBuilderExtensions.ListenType
+  type: Enum
+  source:
+    remote:
+      path: src/Projects/Coree.NETASP/Extensions/KestrelServerOptions/ConfigureKestrelSimple.cs
+      branch: master
+      repo: https://github.com/carsten-riedel/Coree.NETASP
+    id: ListenType
+    path: ../../src/Projects/Coree.NETASP/Extensions/KestrelServerOptions/ConfigureKestrelSimple.cs
+    startLine: 13
+  assemblies:
+  - Coree.NETASP
+  namespace: Coree.NETASP.Extensions.KestrelOptions
+  syntax:
+    content: public enum ConfigureWebHostBuilderExtensions.ListenType
+    content.vb: Public Enum ConfigureWebHostBuilderExtensions.ListenType
+- uid: Coree.NETASP.Extensions.KestrelOptions.ConfigureWebHostBuilderExtensions.ListenType.Localhost
+  commentId: F:Coree.NETASP.Extensions.KestrelOptions.ConfigureWebHostBuilderExtensions.ListenType.Localhost
+  id: Localhost
+  parent: Coree.NETASP.Extensions.KestrelOptions.ConfigureWebHostBuilderExtensions.ListenType
+  langs:
+  - csharp
+  - vb
+  name: Localhost
+  nameWithType: ConfigureWebHostBuilderExtensions.ListenType.Localhost
+  fullName: Coree.NETASP.Extensions.KestrelOptions.ConfigureWebHostBuilderExtensions.ListenType.Localhost
+  type: Field
+  source:
+    remote:
+      path: src/Projects/Coree.NETASP/Extensions/KestrelServerOptions/ConfigureKestrelSimple.cs
+      branch: master
+      repo: https://github.com/carsten-riedel/Coree.NETASP
+    id: Localhost
+    path: ../../src/Projects/Coree.NETASP/Extensions/KestrelServerOptions/ConfigureKestrelSimple.cs
+    startLine: 15
+  assemblies:
+  - Coree.NETASP
+  namespace: Coree.NETASP.Extensions.KestrelOptions
+  syntax:
+    content: Localhost = 0
+    return:
+      type: Coree.NETASP.Extensions.KestrelOptions.ConfigureWebHostBuilderExtensions.ListenType
+- uid: Coree.NETASP.Extensions.KestrelOptions.ConfigureWebHostBuilderExtensions.ListenType.AnyIp
+  commentId: F:Coree.NETASP.Extensions.KestrelOptions.ConfigureWebHostBuilderExtensions.ListenType.AnyIp
+  id: AnyIp
+  parent: Coree.NETASP.Extensions.KestrelOptions.ConfigureWebHostBuilderExtensions.ListenType
+  langs:
+  - csharp
+  - vb
+  name: AnyIp
+  nameWithType: ConfigureWebHostBuilderExtensions.ListenType.AnyIp
+  fullName: Coree.NETASP.Extensions.KestrelOptions.ConfigureWebHostBuilderExtensions.ListenType.AnyIp
+  type: Field
+  source:
+    remote:
+      path: src/Projects/Coree.NETASP/Extensions/KestrelServerOptions/ConfigureKestrelSimple.cs
+      branch: master
+      repo: https://github.com/carsten-riedel/Coree.NETASP
+    id: AnyIp
+    path: ../../src/Projects/Coree.NETASP/Extensions/KestrelServerOptions/ConfigureKestrelSimple.cs
+    startLine: 16
+  assemblies:
+  - Coree.NETASP
+  namespace: Coree.NETASP.Extensions.KestrelOptions
+  syntax:
+    content: AnyIp = 1
+    return:
+      type: Coree.NETASP.Extensions.KestrelOptions.ConfigureWebHostBuilderExtensions.ListenType
+references:
+- uid: Coree.NETASP.Extensions.KestrelOptions
+  commentId: N:Coree.NETASP.Extensions.KestrelOptions
+  href: Coree.html
+  name: Coree.NETASP.Extensions.KestrelOptions
+  nameWithType: Coree.NETASP.Extensions.KestrelOptions
+  fullName: Coree.NETASP.Extensions.KestrelOptions
+  spec.csharp:
+  - uid: Coree
+    name: Coree
+    href: Coree.html
+  - name: .
+  - uid: Coree.NETASP
+    name: NETASP
+    href: Coree.NETASP.html
+  - name: .
+  - uid: Coree.NETASP.Extensions
+    name: Extensions
+    href: Coree.NETASP.Extensions.html
+  - name: .
+  - uid: Coree.NETASP.Extensions.KestrelOptions
+    name: KestrelOptions
+    href: Coree.NETASP.Extensions.KestrelOptions.html
+  spec.vb:
+  - uid: Coree
+    name: Coree
+    href: Coree.html
+  - name: .
+  - uid: Coree.NETASP
+    name: NETASP
+    href: Coree.NETASP.html
+  - name: .
+  - uid: Coree.NETASP.Extensions
+    name: Extensions
+    href: Coree.NETASP.Extensions.html
+  - name: .
+  - uid: Coree.NETASP.Extensions.KestrelOptions
+    name: KestrelOptions
+    href: Coree.NETASP.Extensions.KestrelOptions.html
+- uid: Coree.NETASP.Extensions.KestrelOptions.ConfigureWebHostBuilderExtensions.ListenType
+  commentId: T:Coree.NETASP.Extensions.KestrelOptions.ConfigureWebHostBuilderExtensions.ListenType
+  parent: Coree.NETASP.Extensions.KestrelOptions
+  href: Coree.NETASP.Extensions.KestrelOptions.ConfigureWebHostBuilderExtensions.html
+  name: ConfigureWebHostBuilderExtensions.ListenType
+  nameWithType: ConfigureWebHostBuilderExtensions.ListenType
+  fullName: Coree.NETASP.Extensions.KestrelOptions.ConfigureWebHostBuilderExtensions.ListenType
+  spec.csharp:
+  - uid: Coree.NETASP.Extensions.KestrelOptions.ConfigureWebHostBuilderExtensions
+    name: ConfigureWebHostBuilderExtensions
+    href: Coree.NETASP.Extensions.KestrelOptions.ConfigureWebHostBuilderExtensions.html
+  - name: .
+  - uid: Coree.NETASP.Extensions.KestrelOptions.ConfigureWebHostBuilderExtensions.ListenType
+    name: ListenType
+    href: Coree.NETASP.Extensions.KestrelOptions.ConfigureWebHostBuilderExtensions.ListenType.html
+  spec.vb:
+  - uid: Coree.NETASP.Extensions.KestrelOptions.ConfigureWebHostBuilderExtensions
+    name: ConfigureWebHostBuilderExtensions
+    href: Coree.NETASP.Extensions.KestrelOptions.ConfigureWebHostBuilderExtensions.html
+  - name: .
+  - uid: Coree.NETASP.Extensions.KestrelOptions.ConfigureWebHostBuilderExtensions.ListenType
+    name: ListenType
+    href: Coree.NETASP.Extensions.KestrelOptions.ConfigureWebHostBuilderExtensions.ListenType.html

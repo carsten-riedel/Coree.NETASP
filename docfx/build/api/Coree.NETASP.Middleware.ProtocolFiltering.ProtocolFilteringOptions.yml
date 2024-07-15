@@ -6,6 +6,9 @@ items:
   parent: Coree.NETASP.Middleware.ProtocolFiltering
   children:
   - Coree.NETASP.Middleware.ProtocolFiltering.ProtocolFilteringOptions.Blacklist
+  - Coree.NETASP.Middleware.ProtocolFiltering.ProtocolFilteringOptions.ContinueOnDisallowed
+  - Coree.NETASP.Middleware.ProtocolFiltering.ProtocolFilteringOptions.DisallowedFailureRating
+  - Coree.NETASP.Middleware.ProtocolFiltering.ProtocolFilteringOptions.DisallowedStatusCode
   - Coree.NETASP.Middleware.ProtocolFiltering.ProtocolFilteringOptions.Whitelist
   langs:
   - csharp
@@ -21,7 +24,7 @@ items:
       repo: https://github.com/carsten-riedel/Coree.NETASP
     id: ProtocolFilteringOptions
     path: ../../src/Projects/Coree.NETASP/Middleware/ProtocolFiltering/ProtocolFilteringMiddleware.cs
-    startLine: 8
+    startLine: 72
   assemblies:
   - Coree.NETASP
   namespace: Coree.NETASP.Middleware.ProtocolFiltering
@@ -56,7 +59,7 @@ items:
       repo: https://github.com/carsten-riedel/Coree.NETASP
     id: Whitelist
     path: ../../src/Projects/Coree.NETASP/Middleware/ProtocolFiltering/ProtocolFilteringMiddleware.cs
-    startLine: 10
+    startLine: 74
   assemblies:
   - Coree.NETASP
   namespace: Coree.NETASP.Middleware.ProtocolFiltering
@@ -85,7 +88,7 @@ items:
       repo: https://github.com/carsten-riedel/Coree.NETASP
     id: Blacklist
     path: ../../src/Projects/Coree.NETASP/Middleware/ProtocolFiltering/ProtocolFilteringMiddleware.cs
-    startLine: 11
+    startLine: 75
   assemblies:
   - Coree.NETASP
   namespace: Coree.NETASP.Middleware.ProtocolFiltering
@@ -96,6 +99,93 @@ items:
       type: System.String[]
     content.vb: Public Property Blacklist As String()
   overload: Coree.NETASP.Middleware.ProtocolFiltering.ProtocolFilteringOptions.Blacklist*
+- uid: Coree.NETASP.Middleware.ProtocolFiltering.ProtocolFilteringOptions.DisallowedStatusCode
+  commentId: P:Coree.NETASP.Middleware.ProtocolFiltering.ProtocolFilteringOptions.DisallowedStatusCode
+  id: DisallowedStatusCode
+  parent: Coree.NETASP.Middleware.ProtocolFiltering.ProtocolFilteringOptions
+  langs:
+  - csharp
+  - vb
+  name: DisallowedStatusCode
+  nameWithType: ProtocolFilteringOptions.DisallowedStatusCode
+  fullName: Coree.NETASP.Middleware.ProtocolFiltering.ProtocolFilteringOptions.DisallowedStatusCode
+  type: Property
+  source:
+    remote:
+      path: src/Projects/Coree.NETASP/Middleware/ProtocolFiltering/ProtocolFilteringMiddleware.cs
+      branch: master
+      repo: https://github.com/carsten-riedel/Coree.NETASP
+    id: DisallowedStatusCode
+    path: ../../src/Projects/Coree.NETASP/Middleware/ProtocolFiltering/ProtocolFilteringMiddleware.cs
+    startLine: 76
+  assemblies:
+  - Coree.NETASP
+  namespace: Coree.NETASP.Middleware.ProtocolFiltering
+  syntax:
+    content: public int DisallowedStatusCode { get; set; }
+    parameters: []
+    return:
+      type: System.Int32
+    content.vb: Public Property DisallowedStatusCode As Integer
+  overload: Coree.NETASP.Middleware.ProtocolFiltering.ProtocolFilteringOptions.DisallowedStatusCode*
+- uid: Coree.NETASP.Middleware.ProtocolFiltering.ProtocolFilteringOptions.DisallowedFailureRating
+  commentId: P:Coree.NETASP.Middleware.ProtocolFiltering.ProtocolFilteringOptions.DisallowedFailureRating
+  id: DisallowedFailureRating
+  parent: Coree.NETASP.Middleware.ProtocolFiltering.ProtocolFilteringOptions
+  langs:
+  - csharp
+  - vb
+  name: DisallowedFailureRating
+  nameWithType: ProtocolFilteringOptions.DisallowedFailureRating
+  fullName: Coree.NETASP.Middleware.ProtocolFiltering.ProtocolFilteringOptions.DisallowedFailureRating
+  type: Property
+  source:
+    remote:
+      path: src/Projects/Coree.NETASP/Middleware/ProtocolFiltering/ProtocolFilteringMiddleware.cs
+      branch: master
+      repo: https://github.com/carsten-riedel/Coree.NETASP
+    id: DisallowedFailureRating
+    path: ../../src/Projects/Coree.NETASP/Middleware/ProtocolFiltering/ProtocolFilteringMiddleware.cs
+    startLine: 77
+  assemblies:
+  - Coree.NETASP
+  namespace: Coree.NETASP.Middleware.ProtocolFiltering
+  syntax:
+    content: public int DisallowedFailureRating { get; set; }
+    parameters: []
+    return:
+      type: System.Int32
+    content.vb: Public Property DisallowedFailureRating As Integer
+  overload: Coree.NETASP.Middleware.ProtocolFiltering.ProtocolFilteringOptions.DisallowedFailureRating*
+- uid: Coree.NETASP.Middleware.ProtocolFiltering.ProtocolFilteringOptions.ContinueOnDisallowed
+  commentId: P:Coree.NETASP.Middleware.ProtocolFiltering.ProtocolFilteringOptions.ContinueOnDisallowed
+  id: ContinueOnDisallowed
+  parent: Coree.NETASP.Middleware.ProtocolFiltering.ProtocolFilteringOptions
+  langs:
+  - csharp
+  - vb
+  name: ContinueOnDisallowed
+  nameWithType: ProtocolFilteringOptions.ContinueOnDisallowed
+  fullName: Coree.NETASP.Middleware.ProtocolFiltering.ProtocolFilteringOptions.ContinueOnDisallowed
+  type: Property
+  source:
+    remote:
+      path: src/Projects/Coree.NETASP/Middleware/ProtocolFiltering/ProtocolFilteringMiddleware.cs
+      branch: master
+      repo: https://github.com/carsten-riedel/Coree.NETASP
+    id: ContinueOnDisallowed
+    path: ../../src/Projects/Coree.NETASP/Middleware/ProtocolFiltering/ProtocolFilteringMiddleware.cs
+    startLine: 78
+  assemblies:
+  - Coree.NETASP
+  namespace: Coree.NETASP.Middleware.ProtocolFiltering
+  syntax:
+    content: public bool ContinueOnDisallowed { get; set; }
+    parameters: []
+    return:
+      type: System.Boolean
+    content.vb: Public Property ContinueOnDisallowed As Boolean
+  overload: Coree.NETASP.Middleware.ProtocolFiltering.ProtocolFilteringOptions.ContinueOnDisallowed*
 references:
 - uid: Coree.NETASP.Middleware.ProtocolFiltering
   commentId: N:Coree.NETASP.Middleware.ProtocolFiltering
@@ -407,3 +497,43 @@ references:
   name: Blacklist
   nameWithType: ProtocolFilteringOptions.Blacklist
   fullName: Coree.NETASP.Middleware.ProtocolFiltering.ProtocolFilteringOptions.Blacklist
+- uid: Coree.NETASP.Middleware.ProtocolFiltering.ProtocolFilteringOptions.DisallowedStatusCode*
+  commentId: Overload:Coree.NETASP.Middleware.ProtocolFiltering.ProtocolFilteringOptions.DisallowedStatusCode
+  href: Coree.NETASP.Middleware.ProtocolFiltering.ProtocolFilteringOptions.html#Coree_NETASP_Middleware_ProtocolFiltering_ProtocolFilteringOptions_DisallowedStatusCode
+  name: DisallowedStatusCode
+  nameWithType: ProtocolFilteringOptions.DisallowedStatusCode
+  fullName: Coree.NETASP.Middleware.ProtocolFiltering.ProtocolFilteringOptions.DisallowedStatusCode
+- uid: System.Int32
+  commentId: T:System.Int32
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.int32
+  name: int
+  nameWithType: int
+  fullName: int
+  nameWithType.vb: Integer
+  fullName.vb: Integer
+  name.vb: Integer
+- uid: Coree.NETASP.Middleware.ProtocolFiltering.ProtocolFilteringOptions.DisallowedFailureRating*
+  commentId: Overload:Coree.NETASP.Middleware.ProtocolFiltering.ProtocolFilteringOptions.DisallowedFailureRating
+  href: Coree.NETASP.Middleware.ProtocolFiltering.ProtocolFilteringOptions.html#Coree_NETASP_Middleware_ProtocolFiltering_ProtocolFilteringOptions_DisallowedFailureRating
+  name: DisallowedFailureRating
+  nameWithType: ProtocolFilteringOptions.DisallowedFailureRating
+  fullName: Coree.NETASP.Middleware.ProtocolFiltering.ProtocolFilteringOptions.DisallowedFailureRating
+- uid: Coree.NETASP.Middleware.ProtocolFiltering.ProtocolFilteringOptions.ContinueOnDisallowed*
+  commentId: Overload:Coree.NETASP.Middleware.ProtocolFiltering.ProtocolFilteringOptions.ContinueOnDisallowed
+  href: Coree.NETASP.Middleware.ProtocolFiltering.ProtocolFilteringOptions.html#Coree_NETASP_Middleware_ProtocolFiltering_ProtocolFilteringOptions_ContinueOnDisallowed
+  name: ContinueOnDisallowed
+  nameWithType: ProtocolFilteringOptions.ContinueOnDisallowed
+  fullName: Coree.NETASP.Middleware.ProtocolFiltering.ProtocolFilteringOptions.ContinueOnDisallowed
+- uid: System.Boolean
+  commentId: T:System.Boolean
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.boolean
+  name: bool
+  nameWithType: bool
+  fullName: bool
+  nameWithType.vb: Boolean
+  fullName.vb: Boolean
+  name.vb: Boolean

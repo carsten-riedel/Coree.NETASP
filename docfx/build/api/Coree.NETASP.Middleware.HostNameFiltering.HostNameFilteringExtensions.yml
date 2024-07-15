@@ -5,7 +5,7 @@ items:
   id: HostNameFilteringExtensions
   parent: Coree.NETASP.Middleware.HostNameFiltering
   children:
-  - Coree.NETASP.Middleware.HostNameFiltering.HostNameFilteringExtensions.AddHostNameFiltering(Microsoft.Extensions.DependencyInjection.IServiceCollection,System.String[])
+  - Coree.NETASP.Middleware.HostNameFiltering.HostNameFilteringExtensions.AddHostNameFiltering(Microsoft.Extensions.DependencyInjection.IServiceCollection,System.String[],System.String[],System.Boolean,System.Int32,System.Int32)
   langs:
   - csharp
   - vb
@@ -20,7 +20,7 @@ items:
       repo: https://github.com/carsten-riedel/Coree.NETASP
     id: HostNameFilteringExtensions
     path: ../../src/Projects/Coree.NETASP/Middleware/HostNameFiltering/HostNameFilteringMiddleware.cs
-    startLine: 56
+    startLine: 75
   assemblies:
   - Coree.NETASP
   namespace: Coree.NETASP.Middleware.HostNameFiltering
@@ -42,17 +42,17 @@ items:
   - System.Object.MemberwiseClone
   - System.Object.ReferenceEquals(System.Object,System.Object)
   - System.Object.ToString
-- uid: Coree.NETASP.Middleware.HostNameFiltering.HostNameFilteringExtensions.AddHostNameFiltering(Microsoft.Extensions.DependencyInjection.IServiceCollection,System.String[])
-  commentId: M:Coree.NETASP.Middleware.HostNameFiltering.HostNameFilteringExtensions.AddHostNameFiltering(Microsoft.Extensions.DependencyInjection.IServiceCollection,System.String[])
-  id: AddHostNameFiltering(Microsoft.Extensions.DependencyInjection.IServiceCollection,System.String[])
+- uid: Coree.NETASP.Middleware.HostNameFiltering.HostNameFilteringExtensions.AddHostNameFiltering(Microsoft.Extensions.DependencyInjection.IServiceCollection,System.String[],System.String[],System.Boolean,System.Int32,System.Int32)
+  commentId: M:Coree.NETASP.Middleware.HostNameFiltering.HostNameFilteringExtensions.AddHostNameFiltering(Microsoft.Extensions.DependencyInjection.IServiceCollection,System.String[],System.String[],System.Boolean,System.Int32,System.Int32)
+  id: AddHostNameFiltering(Microsoft.Extensions.DependencyInjection.IServiceCollection,System.String[],System.String[],System.Boolean,System.Int32,System.Int32)
   isExtensionMethod: true
   parent: Coree.NETASP.Middleware.HostNameFiltering.HostNameFilteringExtensions
   langs:
   - csharp
   - vb
-  name: AddHostNameFiltering(IServiceCollection, string[])
-  nameWithType: HostNameFilteringExtensions.AddHostNameFiltering(IServiceCollection, string[])
-  fullName: Coree.NETASP.Middleware.HostNameFiltering.HostNameFilteringExtensions.AddHostNameFiltering(Microsoft.Extensions.DependencyInjection.IServiceCollection, string[])
+  name: AddHostNameFiltering(IServiceCollection, string[]?, string[]?, bool, int, int)
+  nameWithType: HostNameFilteringExtensions.AddHostNameFiltering(IServiceCollection, string[]?, string[]?, bool, int, int)
+  fullName: Coree.NETASP.Middleware.HostNameFiltering.HostNameFilteringExtensions.AddHostNameFiltering(Microsoft.Extensions.DependencyInjection.IServiceCollection, string[]?, string[]?, bool, int, int)
   type: Method
   source:
     remote:
@@ -61,14 +61,14 @@ items:
       repo: https://github.com/carsten-riedel/Coree.NETASP
     id: AddHostNameFiltering
     path: ../../src/Projects/Coree.NETASP/Middleware/HostNameFiltering/HostNameFilteringMiddleware.cs
-    startLine: 64
+    startLine: 83
   assemblies:
   - Coree.NETASP
   namespace: Coree.NETASP.Middleware.HostNameFiltering
   summary: Adds and configures the HostNameFilteringMiddleware options.
   example: []
   syntax:
-    content: public static IServiceCollection AddHostNameFiltering(this IServiceCollection services, string[] whitelist)
+    content: public static IServiceCollection AddHostNameFiltering(this IServiceCollection services, string[]? whitelist = null, string[]? blacklist = null, bool continueOnDisallowed = false, int disallowedFailureRating = 10, int disallowedStatusCode = 400)
     parameters:
     - id: services
       type: Microsoft.Extensions.DependencyInjection.IServiceCollection
@@ -76,14 +76,22 @@ items:
     - id: whitelist
       type: System.String[]
       description: An array of strings specifying the hostnames that should be allowed by the middleware. This list directly populates the Whitelist property of the <xref href="Coree.NETASP.Middleware.HostNameFiltering.HostNameFilterOptions" data-throw-if-not-resolved="false"></xref>.
+    - id: blacklist
+      type: System.String[]
+    - id: continueOnDisallowed
+      type: System.Boolean
+    - id: disallowedFailureRating
+      type: System.Int32
+    - id: disallowedStatusCode
+      type: System.Int32
     return:
       type: Microsoft.Extensions.DependencyInjection.IServiceCollection
       description: The IServiceCollection so that additional calls can be chained, enabling fluent configuration.
-    content.vb: Public Shared Function AddHostNameFiltering(services As IServiceCollection, whitelist As String()) As IServiceCollection
+    content.vb: Public Shared Function AddHostNameFiltering(services As IServiceCollection, whitelist As String() = Nothing, blacklist As String() = Nothing, continueOnDisallowed As Boolean = False, disallowedFailureRating As Integer = 10, disallowedStatusCode As Integer = 400) As IServiceCollection
   overload: Coree.NETASP.Middleware.HostNameFiltering.HostNameFilteringExtensions.AddHostNameFiltering*
-  nameWithType.vb: HostNameFilteringExtensions.AddHostNameFiltering(IServiceCollection, String())
-  fullName.vb: Coree.NETASP.Middleware.HostNameFiltering.HostNameFilteringExtensions.AddHostNameFiltering(Microsoft.Extensions.DependencyInjection.IServiceCollection, String())
-  name.vb: AddHostNameFiltering(IServiceCollection, String())
+  nameWithType.vb: HostNameFilteringExtensions.AddHostNameFiltering(IServiceCollection, String(), String(), Boolean, Integer, Integer)
+  fullName.vb: Coree.NETASP.Middleware.HostNameFiltering.HostNameFilteringExtensions.AddHostNameFiltering(Microsoft.Extensions.DependencyInjection.IServiceCollection, String(), String(), Boolean, Integer, Integer)
+  name.vb: AddHostNameFiltering(IServiceCollection, String(), String(), Boolean, Integer, Integer)
 references:
 - uid: Coree.NETASP.Middleware.HostNameFiltering.HostNameFilteringMiddleware
   commentId: T:Coree.NETASP.Middleware.HostNameFiltering.HostNameFilteringMiddleware
@@ -374,7 +382,7 @@ references:
   fullName: Coree.NETASP.Middleware.HostNameFiltering.HostNameFilterOptions
 - uid: Coree.NETASP.Middleware.HostNameFiltering.HostNameFilteringExtensions.AddHostNameFiltering*
   commentId: Overload:Coree.NETASP.Middleware.HostNameFiltering.HostNameFilteringExtensions.AddHostNameFiltering
-  href: Coree.NETASP.Middleware.HostNameFiltering.HostNameFilteringExtensions.html#Coree_NETASP_Middleware_HostNameFiltering_HostNameFilteringExtensions_AddHostNameFiltering_Microsoft_Extensions_DependencyInjection_IServiceCollection_System_String___
+  href: Coree.NETASP.Middleware.HostNameFiltering.HostNameFilteringExtensions.html#Coree_NETASP_Middleware_HostNameFiltering_HostNameFilteringExtensions_AddHostNameFiltering_Microsoft_Extensions_DependencyInjection_IServiceCollection_System_String___System_String___System_Boolean_System_Int32_System_Int32_
   name: AddHostNameFiltering
   nameWithType: HostNameFilteringExtensions.AddHostNameFiltering
   fullName: Coree.NETASP.Middleware.HostNameFiltering.HostNameFilteringExtensions.AddHostNameFiltering
@@ -409,6 +417,28 @@ references:
     href: https://learn.microsoft.com/dotnet/api/system.string
   - name: (
   - name: )
+- uid: System.Boolean
+  commentId: T:System.Boolean
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.boolean
+  name: bool
+  nameWithType: bool
+  fullName: bool
+  nameWithType.vb: Boolean
+  fullName.vb: Boolean
+  name.vb: Boolean
+- uid: System.Int32
+  commentId: T:System.Int32
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.int32
+  name: int
+  nameWithType: int
+  fullName: int
+  nameWithType.vb: Integer
+  fullName.vb: Integer
+  name.vb: Integer
 - uid: Microsoft.Extensions.DependencyInjection
   commentId: N:Microsoft.Extensions.DependencyInjection
   isExternal: true

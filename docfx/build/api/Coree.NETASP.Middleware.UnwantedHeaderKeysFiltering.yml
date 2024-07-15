@@ -17,12 +17,6 @@ items:
   assemblies:
   - Coree.NETASP
 references:
-- uid: Coree.NETASP.Middleware.UnwantedHeaderKeysFiltering.UnwantedHeaderKeysOptions
-  commentId: T:Coree.NETASP.Middleware.UnwantedHeaderKeysFiltering.UnwantedHeaderKeysOptions
-  href: Coree.NETASP.Middleware.UnwantedHeaderKeysFiltering.UnwantedHeaderKeysOptions.html
-  name: UnwantedHeaderKeysOptions
-  nameWithType: UnwantedHeaderKeysOptions
-  fullName: Coree.NETASP.Middleware.UnwantedHeaderKeysFiltering.UnwantedHeaderKeysOptions
 - uid: Coree.NETASP.Middleware.UnwantedHeaderKeysFiltering.UnwantedHeaderKeysMiddleware
   commentId: T:Coree.NETASP.Middleware.UnwantedHeaderKeysFiltering.UnwantedHeaderKeysMiddleware
   href: Coree.NETASP.Middleware.UnwantedHeaderKeysFiltering.UnwantedHeaderKeysMiddleware.html
@@ -35,3 +29,9 @@ references:
   name: UnwantedHeaderKeysMiddlewareExtensions
   nameWithType: UnwantedHeaderKeysMiddlewareExtensions
   fullName: Coree.NETASP.Middleware.UnwantedHeaderKeysFiltering.UnwantedHeaderKeysMiddlewareExtensions
+- uid: Coree.NETASP.Middleware.UnwantedHeaderKeysFiltering.UnwantedHeaderKeysOptions
+  commentId: T:Coree.NETASP.Middleware.UnwantedHeaderKeysFiltering.UnwantedHeaderKeysOptions
+  href: Coree.NETASP.Middleware.UnwantedHeaderKeysFiltering.UnwantedHeaderKeysOptions.html
+  name: UnwantedHeaderKeysOptions
+  nameWithType: UnwantedHeaderKeysOptions
+  fullName: Coree.NETASP.Middleware.UnwantedHeaderKeysFiltering.UnwantedHeaderKeysOptions

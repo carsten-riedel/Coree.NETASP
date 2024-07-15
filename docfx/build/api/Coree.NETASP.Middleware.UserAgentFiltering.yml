@@ -7,7 +7,6 @@ items:
   - Coree.NETASP.Middleware.UserAgentFiltering.UserAgentFilterOptions
   - Coree.NETASP.Middleware.UserAgentFiltering.UserAgentFilteringExtensions
   - Coree.NETASP.Middleware.UserAgentFiltering.UserAgentFilteringMiddleware
-  - Coree.NETASP.Middleware.UserAgentFiltering.ValidationsStringExtensions
   langs:
   - csharp
   - vb
@@ -18,27 +17,21 @@ items:
   assemblies:
   - Coree.NETASP
 references:
-- uid: Coree.NETASP.Middleware.UserAgentFiltering.UserAgentFilteringExtensions
-  commentId: T:Coree.NETASP.Middleware.UserAgentFiltering.UserAgentFilteringExtensions
-  href: Coree.NETASP.Middleware.UserAgentFiltering.UserAgentFilteringExtensions.html
-  name: UserAgentFilteringExtensions
-  nameWithType: UserAgentFilteringExtensions
-  fullName: Coree.NETASP.Middleware.UserAgentFiltering.UserAgentFilteringExtensions
 - uid: Coree.NETASP.Middleware.UserAgentFiltering.UserAgentFilteringMiddleware
   commentId: T:Coree.NETASP.Middleware.UserAgentFiltering.UserAgentFilteringMiddleware
   href: Coree.NETASP.Middleware.UserAgentFiltering.UserAgentFilteringMiddleware.html
   name: UserAgentFilteringMiddleware
   nameWithType: UserAgentFilteringMiddleware
   fullName: Coree.NETASP.Middleware.UserAgentFiltering.UserAgentFilteringMiddleware
+- uid: Coree.NETASP.Middleware.UserAgentFiltering.UserAgentFilteringExtensions
+  commentId: T:Coree.NETASP.Middleware.UserAgentFiltering.UserAgentFilteringExtensions
+  href: Coree.NETASP.Middleware.UserAgentFiltering.UserAgentFilteringExtensions.html
+  name: UserAgentFilteringExtensions
+  nameWithType: UserAgentFilteringExtensions
+  fullName: Coree.NETASP.Middleware.UserAgentFiltering.UserAgentFilteringExtensions
 - uid: Coree.NETASP.Middleware.UserAgentFiltering.UserAgentFilterOptions
   commentId: T:Coree.NETASP.Middleware.UserAgentFiltering.UserAgentFilterOptions
   href: Coree.NETASP.Middleware.UserAgentFiltering.UserAgentFilterOptions.html
   name: UserAgentFilterOptions
   nameWithType: UserAgentFilterOptions
   fullName: Coree.NETASP.Middleware.UserAgentFiltering.UserAgentFilterOptions
-- uid: Coree.NETASP.Middleware.UserAgentFiltering.ValidationsStringExtensions
-  commentId: T:Coree.NETASP.Middleware.UserAgentFiltering.ValidationsStringExtensions
-  href: Coree.NETASP.Middleware.UserAgentFiltering.ValidationsStringExtensions.html
-  name: ValidationsStringExtensions
-  nameWithType: ValidationsStringExtensions
-  fullName: Coree.NETASP.Middleware.UserAgentFiltering.ValidationsStringExtensions

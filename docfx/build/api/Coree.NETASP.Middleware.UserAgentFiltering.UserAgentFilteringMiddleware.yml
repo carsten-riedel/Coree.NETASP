@@ -5,7 +5,7 @@ items:
   id: UserAgentFilteringMiddleware
   parent: Coree.NETASP.Middleware.UserAgentFiltering
   children:
-  - Coree.NETASP.Middleware.UserAgentFiltering.UserAgentFilteringMiddleware.#ctor(Microsoft.AspNetCore.Http.RequestDelegate,Microsoft.Extensions.Options.IOptions{Coree.NETASP.Middleware.UserAgentFiltering.UserAgentFilterOptions},Microsoft.Extensions.Logging.ILogger{Coree.NETASP.Middleware.UserAgentFiltering.UserAgentFilteringMiddleware})
+  - Coree.NETASP.Middleware.UserAgentFiltering.UserAgentFilteringMiddleware.#ctor(Microsoft.AspNetCore.Http.RequestDelegate,Microsoft.Extensions.Options.IOptions{Coree.NETASP.Middleware.UserAgentFiltering.UserAgentFilterOptions},Microsoft.Extensions.Logging.ILogger{Coree.NETASP.Middleware.UserAgentFiltering.UserAgentFilteringMiddleware},Coree.NETASP.Services.Points.IPointService)
   - Coree.NETASP.Middleware.UserAgentFiltering.UserAgentFilteringMiddleware.InvokeAsync(Microsoft.AspNetCore.Http.HttpContext)
   langs:
   - csharp
@@ -21,7 +21,7 @@ items:
       repo: https://github.com/carsten-riedel/Coree.NETASP
     id: UserAgentFilteringMiddleware
     path: ../../src/Projects/Coree.NETASP/Middleware/UserAgentFiltering/UserAgentFilteringMiddleware.cs
-    startLine: 9
+    startLine: 11
   assemblies:
   - Coree.NETASP
   namespace: Coree.NETASP.Middleware.UserAgentFiltering
@@ -40,16 +40,16 @@ items:
   - System.Object.MemberwiseClone
   - System.Object.ReferenceEquals(System.Object,System.Object)
   - System.Object.ToString
-- uid: Coree.NETASP.Middleware.UserAgentFiltering.UserAgentFilteringMiddleware.#ctor(Microsoft.AspNetCore.Http.RequestDelegate,Microsoft.Extensions.Options.IOptions{Coree.NETASP.Middleware.UserAgentFiltering.UserAgentFilterOptions},Microsoft.Extensions.Logging.ILogger{Coree.NETASP.Middleware.UserAgentFiltering.UserAgentFilteringMiddleware})
-  commentId: M:Coree.NETASP.Middleware.UserAgentFiltering.UserAgentFilteringMiddleware.#ctor(Microsoft.AspNetCore.Http.RequestDelegate,Microsoft.Extensions.Options.IOptions{Coree.NETASP.Middleware.UserAgentFiltering.UserAgentFilterOptions},Microsoft.Extensions.Logging.ILogger{Coree.NETASP.Middleware.UserAgentFiltering.UserAgentFilteringMiddleware})
-  id: '#ctor(Microsoft.AspNetCore.Http.RequestDelegate,Microsoft.Extensions.Options.IOptions{Coree.NETASP.Middleware.UserAgentFiltering.UserAgentFilterOptions},Microsoft.Extensions.Logging.ILogger{Coree.NETASP.Middleware.UserAgentFiltering.UserAgentFilteringMiddleware})'
+- uid: Coree.NETASP.Middleware.UserAgentFiltering.UserAgentFilteringMiddleware.#ctor(Microsoft.AspNetCore.Http.RequestDelegate,Microsoft.Extensions.Options.IOptions{Coree.NETASP.Middleware.UserAgentFiltering.UserAgentFilterOptions},Microsoft.Extensions.Logging.ILogger{Coree.NETASP.Middleware.UserAgentFiltering.UserAgentFilteringMiddleware},Coree.NETASP.Services.Points.IPointService)
+  commentId: M:Coree.NETASP.Middleware.UserAgentFiltering.UserAgentFilteringMiddleware.#ctor(Microsoft.AspNetCore.Http.RequestDelegate,Microsoft.Extensions.Options.IOptions{Coree.NETASP.Middleware.UserAgentFiltering.UserAgentFilterOptions},Microsoft.Extensions.Logging.ILogger{Coree.NETASP.Middleware.UserAgentFiltering.UserAgentFilteringMiddleware},Coree.NETASP.Services.Points.IPointService)
+  id: '#ctor(Microsoft.AspNetCore.Http.RequestDelegate,Microsoft.Extensions.Options.IOptions{Coree.NETASP.Middleware.UserAgentFiltering.UserAgentFilterOptions},Microsoft.Extensions.Logging.ILogger{Coree.NETASP.Middleware.UserAgentFiltering.UserAgentFilteringMiddleware},Coree.NETASP.Services.Points.IPointService)'
   parent: Coree.NETASP.Middleware.UserAgentFiltering.UserAgentFilteringMiddleware
   langs:
   - csharp
   - vb
-  name: UserAgentFilteringMiddleware(RequestDelegate, IOptions<UserAgentFilterOptions>, ILogger<UserAgentFilteringMiddleware>)
-  nameWithType: UserAgentFilteringMiddleware.UserAgentFilteringMiddleware(RequestDelegate, IOptions<UserAgentFilterOptions>, ILogger<UserAgentFilteringMiddleware>)
-  fullName: Coree.NETASP.Middleware.UserAgentFiltering.UserAgentFilteringMiddleware.UserAgentFilteringMiddleware(Microsoft.AspNetCore.Http.RequestDelegate, Microsoft.Extensions.Options.IOptions<Coree.NETASP.Middleware.UserAgentFiltering.UserAgentFilterOptions>, Microsoft.Extensions.Logging.ILogger<Coree.NETASP.Middleware.UserAgentFiltering.UserAgentFilteringMiddleware>)
+  name: UserAgentFilteringMiddleware(RequestDelegate, IOptions<UserAgentFilterOptions>, ILogger<UserAgentFilteringMiddleware>, IPointService)
+  nameWithType: UserAgentFilteringMiddleware.UserAgentFilteringMiddleware(RequestDelegate, IOptions<UserAgentFilterOptions>, ILogger<UserAgentFilteringMiddleware>, IPointService)
+  fullName: Coree.NETASP.Middleware.UserAgentFiltering.UserAgentFilteringMiddleware.UserAgentFilteringMiddleware(Microsoft.AspNetCore.Http.RequestDelegate, Microsoft.Extensions.Options.IOptions<Coree.NETASP.Middleware.UserAgentFiltering.UserAgentFilterOptions>, Microsoft.Extensions.Logging.ILogger<Coree.NETASP.Middleware.UserAgentFiltering.UserAgentFilteringMiddleware>, Coree.NETASP.Services.Points.IPointService)
   type: Constructor
   source:
     remote:
@@ -58,24 +58,26 @@ items:
       repo: https://github.com/carsten-riedel/Coree.NETASP
     id: .ctor
     path: ../../src/Projects/Coree.NETASP/Middleware/UserAgentFiltering/UserAgentFilteringMiddleware.cs
-    startLine: 15
+    startLine: 18
   assemblies:
   - Coree.NETASP
   namespace: Coree.NETASP.Middleware.UserAgentFiltering
   syntax:
-    content: public UserAgentFilteringMiddleware(RequestDelegate next, IOptions<UserAgentFilterOptions> options, ILogger<UserAgentFilteringMiddleware> logger)
+    content: public UserAgentFilteringMiddleware(RequestDelegate nextMiddleware, IOptions<UserAgentFilterOptions> options, ILogger<UserAgentFilteringMiddleware> logger, IPointService pointService)
     parameters:
-    - id: next
+    - id: nextMiddleware
       type: Microsoft.AspNetCore.Http.RequestDelegate
     - id: options
       type: Microsoft.Extensions.Options.IOptions{Coree.NETASP.Middleware.UserAgentFiltering.UserAgentFilterOptions}
     - id: logger
       type: Microsoft.Extensions.Logging.ILogger{Coree.NETASP.Middleware.UserAgentFiltering.UserAgentFilteringMiddleware}
-    content.vb: Public Sub New([next] As RequestDelegate, options As IOptions(Of UserAgentFilterOptions), logger As ILogger(Of UserAgentFilteringMiddleware))
+    - id: pointService
+      type: Coree.NETASP.Services.Points.IPointService
+    content.vb: Public Sub New(nextMiddleware As RequestDelegate, options As IOptions(Of UserAgentFilterOptions), logger As ILogger(Of UserAgentFilteringMiddleware), pointService As IPointService)
   overload: Coree.NETASP.Middleware.UserAgentFiltering.UserAgentFilteringMiddleware.#ctor*
-  nameWithType.vb: UserAgentFilteringMiddleware.New(RequestDelegate, IOptions(Of UserAgentFilterOptions), ILogger(Of UserAgentFilteringMiddleware))
-  fullName.vb: Coree.NETASP.Middleware.UserAgentFiltering.UserAgentFilteringMiddleware.New(Microsoft.AspNetCore.Http.RequestDelegate, Microsoft.Extensions.Options.IOptions(Of Coree.NETASP.Middleware.UserAgentFiltering.UserAgentFilterOptions), Microsoft.Extensions.Logging.ILogger(Of Coree.NETASP.Middleware.UserAgentFiltering.UserAgentFilteringMiddleware))
-  name.vb: New(RequestDelegate, IOptions(Of UserAgentFilterOptions), ILogger(Of UserAgentFilteringMiddleware))
+  nameWithType.vb: UserAgentFilteringMiddleware.New(RequestDelegate, IOptions(Of UserAgentFilterOptions), ILogger(Of UserAgentFilteringMiddleware), IPointService)
+  fullName.vb: Coree.NETASP.Middleware.UserAgentFiltering.UserAgentFilteringMiddleware.New(Microsoft.AspNetCore.Http.RequestDelegate, Microsoft.Extensions.Options.IOptions(Of Coree.NETASP.Middleware.UserAgentFiltering.UserAgentFilterOptions), Microsoft.Extensions.Logging.ILogger(Of Coree.NETASP.Middleware.UserAgentFiltering.UserAgentFilteringMiddleware), Coree.NETASP.Services.Points.IPointService)
+  name.vb: New(RequestDelegate, IOptions(Of UserAgentFilterOptions), ILogger(Of UserAgentFilteringMiddleware), IPointService)
 - uid: Coree.NETASP.Middleware.UserAgentFiltering.UserAgentFilteringMiddleware.InvokeAsync(Microsoft.AspNetCore.Http.HttpContext)
   commentId: M:Coree.NETASP.Middleware.UserAgentFiltering.UserAgentFilteringMiddleware.InvokeAsync(Microsoft.AspNetCore.Http.HttpContext)
   id: InvokeAsync(Microsoft.AspNetCore.Http.HttpContext)
@@ -94,7 +96,7 @@ items:
       repo: https://github.com/carsten-riedel/Coree.NETASP
     id: InvokeAsync
     path: ../../src/Projects/Coree.NETASP/Middleware/UserAgentFiltering/UserAgentFilteringMiddleware.cs
-    startLine: 27
+    startLine: 32
   assemblies:
   - Coree.NETASP
   namespace: Coree.NETASP.Middleware.UserAgentFiltering
@@ -389,7 +391,7 @@ references:
   fullName: System
 - uid: Coree.NETASP.Middleware.UserAgentFiltering.UserAgentFilteringMiddleware.#ctor*
   commentId: Overload:Coree.NETASP.Middleware.UserAgentFiltering.UserAgentFilteringMiddleware.#ctor
-  href: Coree.NETASP.Middleware.UserAgentFiltering.UserAgentFilteringMiddleware.html#Coree_NETASP_Middleware_UserAgentFiltering_UserAgentFilteringMiddleware__ctor_Microsoft_AspNetCore_Http_RequestDelegate_Microsoft_Extensions_Options_IOptions_Coree_NETASP_Middleware_UserAgentFiltering_UserAgentFilterOptions__Microsoft_Extensions_Logging_ILogger_Coree_NETASP_Middleware_UserAgentFiltering_UserAgentFilteringMiddleware__
+  href: Coree.NETASP.Middleware.UserAgentFiltering.UserAgentFilteringMiddleware.html#Coree_NETASP_Middleware_UserAgentFiltering_UserAgentFilteringMiddleware__ctor_Microsoft_AspNetCore_Http_RequestDelegate_Microsoft_Extensions_Options_IOptions_Coree_NETASP_Middleware_UserAgentFiltering_UserAgentFilterOptions__Microsoft_Extensions_Logging_ILogger_Coree_NETASP_Middleware_UserAgentFiltering_UserAgentFilteringMiddleware__Coree_NETASP_Services_Points_IPointService_
   name: UserAgentFilteringMiddleware
   nameWithType: UserAgentFilteringMiddleware.UserAgentFilteringMiddleware
   fullName: Coree.NETASP.Middleware.UserAgentFiltering.UserAgentFilteringMiddleware.UserAgentFilteringMiddleware
@@ -470,6 +472,13 @@ references:
     name: UserAgentFilteringMiddleware
     href: Coree.NETASP.Middleware.UserAgentFiltering.UserAgentFilteringMiddleware.html
   - name: )
+- uid: Coree.NETASP.Services.Points.IPointService
+  commentId: T:Coree.NETASP.Services.Points.IPointService
+  parent: Coree.NETASP.Services.Points
+  href: Coree.NETASP.Services.Points.IPointService.html
+  name: IPointService
+  nameWithType: IPointService
+  fullName: Coree.NETASP.Services.Points.IPointService
 - uid: Microsoft.AspNetCore.Http
   commentId: N:Microsoft.AspNetCore.Http
   isExternal: true
@@ -637,6 +646,44 @@ references:
     name: Logging
     isExternal: true
     href: https://learn.microsoft.com/dotnet/api/microsoft.extensions.logging
+- uid: Coree.NETASP.Services.Points
+  commentId: N:Coree.NETASP.Services.Points
+  href: Coree.html
+  name: Coree.NETASP.Services.Points
+  nameWithType: Coree.NETASP.Services.Points
+  fullName: Coree.NETASP.Services.Points
+  spec.csharp:
+  - uid: Coree
+    name: Coree
+    href: Coree.html
+  - name: .
+  - uid: Coree.NETASP
+    name: NETASP
+    href: Coree.NETASP.html
+  - name: .
+  - uid: Coree.NETASP.Services
+    name: Services
+    href: Coree.NETASP.Services.html
+  - name: .
+  - uid: Coree.NETASP.Services.Points
+    name: Points
+    href: Coree.NETASP.Services.Points.html
+  spec.vb:
+  - uid: Coree
+    name: Coree
+    href: Coree.html
+  - name: .
+  - uid: Coree.NETASP
+    name: NETASP
+    href: Coree.NETASP.html
+  - name: .
+  - uid: Coree.NETASP.Services
+    name: Services
+    href: Coree.NETASP.Services.html
+  - name: .
+  - uid: Coree.NETASP.Services.Points
+    name: Points
+    href: Coree.NETASP.Services.Points.html
 - uid: Coree.NETASP.Middleware.UserAgentFiltering.UserAgentFilteringMiddleware.InvokeAsync*
   commentId: Overload:Coree.NETASP.Middleware.UserAgentFiltering.UserAgentFilteringMiddleware.InvokeAsync
   href: Coree.NETASP.Middleware.UserAgentFiltering.UserAgentFilteringMiddleware.html#Coree_NETASP_Middleware_UserAgentFiltering_UserAgentFilteringMiddleware_InvokeAsync_Microsoft_AspNetCore_Http_HttpContext_

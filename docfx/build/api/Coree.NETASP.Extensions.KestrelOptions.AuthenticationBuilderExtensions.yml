@@ -1,0 +1,844 @@
+### YamlMime:ManagedReference
+items:
+- uid: Coree.NETASP.Extensions.KestrelOptions.AuthenticationBuilderExtensions
+  commentId: T:Coree.NETASP.Extensions.KestrelOptions.AuthenticationBuilderExtensions
+  id: AuthenticationBuilderExtensions
+  parent: Coree.NETASP.Extensions.KestrelOptions
+  children:
+  - Coree.NETASP.Extensions.KestrelOptions.AuthenticationBuilderExtensions.AddDefaultCookieConfig(Microsoft.AspNetCore.Authentication.AuthenticationBuilder)
+  - Coree.NETASP.Extensions.KestrelOptions.AuthenticationBuilderExtensions.AddDefaultCookieConfig(Microsoft.AspNetCore.Authentication.AuthenticationBuilder,System.Action{Microsoft.AspNetCore.Http.CookieBuilder,Microsoft.AspNetCore.Authentication.Cookies.CookieAuthenticationEvents,Microsoft.AspNetCore.Authentication.Cookies.CookieAuthenticationOptions})
+  - Coree.NETASP.Extensions.KestrelOptions.AuthenticationBuilderExtensions.AddDefaultCookieConfig(Microsoft.AspNetCore.Authentication.AuthenticationBuilder,System.Func{Microsoft.AspNetCore.Authentication.Cookies.CookieSignedInContext,System.Threading.Tasks.Task},System.Func{Microsoft.AspNetCore.Authentication.RedirectContext{Microsoft.AspNetCore.Authentication.Cookies.CookieAuthenticationOptions},System.Threading.Tasks.Task},System.Func{Microsoft.AspNetCore.Authentication.RedirectContext{Microsoft.AspNetCore.Authentication.Cookies.CookieAuthenticationOptions},System.Threading.Tasks.Task},System.Func{Microsoft.AspNetCore.Authentication.Cookies.CookieValidatePrincipalContext,System.Threading.Tasks.Task},System.String,System.Nullable{System.TimeSpan},System.Boolean)
+  langs:
+  - csharp
+  - vb
+  name: AuthenticationBuilderExtensions
+  nameWithType: AuthenticationBuilderExtensions
+  fullName: Coree.NETASP.Extensions.KestrelOptions.AuthenticationBuilderExtensions
+  type: Class
+  source:
+    remote:
+      path: src/Projects/Coree.NETASP/Extensions/KestrelServerOptions/ConfigureKestrelSimple.cs
+      branch: master
+      repo: https://github.com/carsten-riedel/Coree.NETASP
+    id: AuthenticationBuilderExtensions
+    path: ../../src/Projects/Coree.NETASP/Extensions/KestrelServerOptions/ConfigureKestrelSimple.cs
+    startLine: 156
+  assemblies:
+  - Coree.NETASP
+  namespace: Coree.NETASP.Extensions.KestrelOptions
+  syntax:
+    content: public static class AuthenticationBuilderExtensions
+    content.vb: Public Module AuthenticationBuilderExtensions
+  inheritance:
+  - System.Object
+  inheritedMembers:
+  - System.Object.Equals(System.Object)
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.GetHashCode
+  - System.Object.GetType
+  - System.Object.MemberwiseClone
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+  - System.Object.ToString
+- uid: Coree.NETASP.Extensions.KestrelOptions.AuthenticationBuilderExtensions.AddDefaultCookieConfig(Microsoft.AspNetCore.Authentication.AuthenticationBuilder)
+  commentId: M:Coree.NETASP.Extensions.KestrelOptions.AuthenticationBuilderExtensions.AddDefaultCookieConfig(Microsoft.AspNetCore.Authentication.AuthenticationBuilder)
+  id: AddDefaultCookieConfig(Microsoft.AspNetCore.Authentication.AuthenticationBuilder)
+  isExtensionMethod: true
+  parent: Coree.NETASP.Extensions.KestrelOptions.AuthenticationBuilderExtensions
+  langs:
+  - csharp
+  - vb
+  name: AddDefaultCookieConfig(AuthenticationBuilder)
+  nameWithType: AuthenticationBuilderExtensions.AddDefaultCookieConfig(AuthenticationBuilder)
+  fullName: Coree.NETASP.Extensions.KestrelOptions.AuthenticationBuilderExtensions.AddDefaultCookieConfig(Microsoft.AspNetCore.Authentication.AuthenticationBuilder)
+  type: Method
+  source:
+    remote:
+      path: src/Projects/Coree.NETASP/Extensions/KestrelServerOptions/ConfigureKestrelSimple.cs
+      branch: master
+      repo: https://github.com/carsten-riedel/Coree.NETASP
+    id: AddDefaultCookieConfig
+    path: ../../src/Projects/Coree.NETASP/Extensions/KestrelServerOptions/ConfigureKestrelSimple.cs
+    startLine: 174
+  assemblies:
+  - Coree.NETASP
+  namespace: Coree.NETASP.Extensions.KestrelOptions
+  syntax:
+    content: public static AuthenticationBuilder AddDefaultCookieConfig(this AuthenticationBuilder builder)
+    parameters:
+    - id: builder
+      type: Microsoft.AspNetCore.Authentication.AuthenticationBuilder
+    return:
+      type: Microsoft.AspNetCore.Authentication.AuthenticationBuilder
+    content.vb: Public Shared Function AddDefaultCookieConfig(builder As AuthenticationBuilder) As AuthenticationBuilder
+  overload: Coree.NETASP.Extensions.KestrelOptions.AuthenticationBuilderExtensions.AddDefaultCookieConfig*
+- uid: Coree.NETASP.Extensions.KestrelOptions.AuthenticationBuilderExtensions.AddDefaultCookieConfig(Microsoft.AspNetCore.Authentication.AuthenticationBuilder,System.Func{Microsoft.AspNetCore.Authentication.Cookies.CookieSignedInContext,System.Threading.Tasks.Task},System.Func{Microsoft.AspNetCore.Authentication.RedirectContext{Microsoft.AspNetCore.Authentication.Cookies.CookieAuthenticationOptions},System.Threading.Tasks.Task},System.Func{Microsoft.AspNetCore.Authentication.RedirectContext{Microsoft.AspNetCore.Authentication.Cookies.CookieAuthenticationOptions},System.Threading.Tasks.Task},System.Func{Microsoft.AspNetCore.Authentication.Cookies.CookieValidatePrincipalContext,System.Threading.Tasks.Task},System.String,System.Nullable{System.TimeSpan},System.Boolean)
+  commentId: M:Coree.NETASP.Extensions.KestrelOptions.AuthenticationBuilderExtensions.AddDefaultCookieConfig(Microsoft.AspNetCore.Authentication.AuthenticationBuilder,System.Func{Microsoft.AspNetCore.Authentication.Cookies.CookieSignedInContext,System.Threading.Tasks.Task},System.Func{Microsoft.AspNetCore.Authentication.RedirectContext{Microsoft.AspNetCore.Authentication.Cookies.CookieAuthenticationOptions},System.Threading.Tasks.Task},System.Func{Microsoft.AspNetCore.Authentication.RedirectContext{Microsoft.AspNetCore.Authentication.Cookies.CookieAuthenticationOptions},System.Threading.Tasks.Task},System.Func{Microsoft.AspNetCore.Authentication.Cookies.CookieValidatePrincipalContext,System.Threading.Tasks.Task},System.String,System.Nullable{System.TimeSpan},System.Boolean)
+  id: AddDefaultCookieConfig(Microsoft.AspNetCore.Authentication.AuthenticationBuilder,System.Func{Microsoft.AspNetCore.Authentication.Cookies.CookieSignedInContext,System.Threading.Tasks.Task},System.Func{Microsoft.AspNetCore.Authentication.RedirectContext{Microsoft.AspNetCore.Authentication.Cookies.CookieAuthenticationOptions},System.Threading.Tasks.Task},System.Func{Microsoft.AspNetCore.Authentication.RedirectContext{Microsoft.AspNetCore.Authentication.Cookies.CookieAuthenticationOptions},System.Threading.Tasks.Task},System.Func{Microsoft.AspNetCore.Authentication.Cookies.CookieValidatePrincipalContext,System.Threading.Tasks.Task},System.String,System.Nullable{System.TimeSpan},System.Boolean)
+  isExtensionMethod: true
+  parent: Coree.NETASP.Extensions.KestrelOptions.AuthenticationBuilderExtensions
+  langs:
+  - csharp
+  - vb
+  name: AddDefaultCookieConfig(AuthenticationBuilder, Func<CookieSignedInContext, Task>, Func<RedirectContext<CookieAuthenticationOptions>, Task>, Func<RedirectContext<CookieAuthenticationOptions>, Task>, Func<CookieValidatePrincipalContext, Task>, string, TimeSpan?, bool)
+  nameWithType: AuthenticationBuilderExtensions.AddDefaultCookieConfig(AuthenticationBuilder, Func<CookieSignedInContext, Task>, Func<RedirectContext<CookieAuthenticationOptions>, Task>, Func<RedirectContext<CookieAuthenticationOptions>, Task>, Func<CookieValidatePrincipalContext, Task>, string, TimeSpan?, bool)
+  fullName: Coree.NETASP.Extensions.KestrelOptions.AuthenticationBuilderExtensions.AddDefaultCookieConfig(Microsoft.AspNetCore.Authentication.AuthenticationBuilder, System.Func<Microsoft.AspNetCore.Authentication.Cookies.CookieSignedInContext, System.Threading.Tasks.Task>, System.Func<Microsoft.AspNetCore.Authentication.RedirectContext<Microsoft.AspNetCore.Authentication.Cookies.CookieAuthenticationOptions>, System.Threading.Tasks.Task>, System.Func<Microsoft.AspNetCore.Authentication.RedirectContext<Microsoft.AspNetCore.Authentication.Cookies.CookieAuthenticationOptions>, System.Threading.Tasks.Task>, System.Func<Microsoft.AspNetCore.Authentication.Cookies.CookieValidatePrincipalContext, System.Threading.Tasks.Task>, string, System.TimeSpan?, bool)
+  type: Method
+  source:
+    remote:
+      path: src/Projects/Coree.NETASP/Extensions/KestrelServerOptions/ConfigureKestrelSimple.cs
+      branch: master
+      repo: https://github.com/carsten-riedel/Coree.NETASP
+    id: AddDefaultCookieConfig
+    path: ../../src/Projects/Coree.NETASP/Extensions/KestrelServerOptions/ConfigureKestrelSimple.cs
+    startLine: 238
+  assemblies:
+  - Coree.NETASP
+  namespace: Coree.NETASP.Extensions.KestrelOptions
+  syntax:
+    content: public static AuthenticationBuilder AddDefaultCookieConfig(this AuthenticationBuilder builder, Func<CookieSignedInContext, Task> OnSignedIn, Func<RedirectContext<CookieAuthenticationOptions>, Task> OnRedirectToAccessDenied, Func<RedirectContext<CookieAuthenticationOptions>, Task> OnRedirectToLogin, Func<CookieValidatePrincipalContext, Task> OnValidatePrincipal, string Name = "AuthorizationToken", TimeSpan? ExpireTimeSpan = null, bool SlidingExpiration = true)
+    parameters:
+    - id: builder
+      type: Microsoft.AspNetCore.Authentication.AuthenticationBuilder
+    - id: OnSignedIn
+      type: System.Func{Microsoft.AspNetCore.Authentication.Cookies.CookieSignedInContext,System.Threading.Tasks.Task}
+    - id: OnRedirectToAccessDenied
+      type: System.Func{Microsoft.AspNetCore.Authentication.RedirectContext{Microsoft.AspNetCore.Authentication.Cookies.CookieAuthenticationOptions},System.Threading.Tasks.Task}
+    - id: OnRedirectToLogin
+      type: System.Func{Microsoft.AspNetCore.Authentication.RedirectContext{Microsoft.AspNetCore.Authentication.Cookies.CookieAuthenticationOptions},System.Threading.Tasks.Task}
+    - id: OnValidatePrincipal
+      type: System.Func{Microsoft.AspNetCore.Authentication.Cookies.CookieValidatePrincipalContext,System.Threading.Tasks.Task}
+    - id: Name
+      type: System.String
+    - id: ExpireTimeSpan
+      type: System.Nullable{System.TimeSpan}
+    - id: SlidingExpiration
+      type: System.Boolean
+    return:
+      type: Microsoft.AspNetCore.Authentication.AuthenticationBuilder
+    content.vb: Public Shared Function AddDefaultCookieConfig(builder As AuthenticationBuilder, OnSignedIn As Func(Of CookieSignedInContext, Task), OnRedirectToAccessDenied As Func(Of RedirectContext(Of CookieAuthenticationOptions), Task), OnRedirectToLogin As Func(Of RedirectContext(Of CookieAuthenticationOptions), Task), OnValidatePrincipal As Func(Of CookieValidatePrincipalContext, Task), Name As String = "AuthorizationToken", ExpireTimeSpan As TimeSpan? = Nothing, SlidingExpiration As Boolean = True) As AuthenticationBuilder
+  overload: Coree.NETASP.Extensions.KestrelOptions.AuthenticationBuilderExtensions.AddDefaultCookieConfig*
+  nameWithType.vb: AuthenticationBuilderExtensions.AddDefaultCookieConfig(AuthenticationBuilder, Func(Of CookieSignedInContext, Task), Func(Of RedirectContext(Of CookieAuthenticationOptions), Task), Func(Of RedirectContext(Of CookieAuthenticationOptions), Task), Func(Of CookieValidatePrincipalContext, Task), String, TimeSpan?, Boolean)
+  fullName.vb: Coree.NETASP.Extensions.KestrelOptions.AuthenticationBuilderExtensions.AddDefaultCookieConfig(Microsoft.AspNetCore.Authentication.AuthenticationBuilder, System.Func(Of Microsoft.AspNetCore.Authentication.Cookies.CookieSignedInContext, System.Threading.Tasks.Task), System.Func(Of Microsoft.AspNetCore.Authentication.RedirectContext(Of Microsoft.AspNetCore.Authentication.Cookies.CookieAuthenticationOptions), System.Threading.Tasks.Task), System.Func(Of Microsoft.AspNetCore.Authentication.RedirectContext(Of Microsoft.AspNetCore.Authentication.Cookies.CookieAuthenticationOptions), System.Threading.Tasks.Task), System.Func(Of Microsoft.AspNetCore.Authentication.Cookies.CookieValidatePrincipalContext, System.Threading.Tasks.Task), String, System.TimeSpan?, Boolean)
+  name.vb: AddDefaultCookieConfig(AuthenticationBuilder, Func(Of CookieSignedInContext, Task), Func(Of RedirectContext(Of CookieAuthenticationOptions), Task), Func(Of RedirectContext(Of CookieAuthenticationOptions), Task), Func(Of CookieValidatePrincipalContext, Task), String, TimeSpan?, Boolean)
+- uid: Coree.NETASP.Extensions.KestrelOptions.AuthenticationBuilderExtensions.AddDefaultCookieConfig(Microsoft.AspNetCore.Authentication.AuthenticationBuilder,System.Action{Microsoft.AspNetCore.Http.CookieBuilder,Microsoft.AspNetCore.Authentication.Cookies.CookieAuthenticationEvents,Microsoft.AspNetCore.Authentication.Cookies.CookieAuthenticationOptions})
+  commentId: M:Coree.NETASP.Extensions.KestrelOptions.AuthenticationBuilderExtensions.AddDefaultCookieConfig(Microsoft.AspNetCore.Authentication.AuthenticationBuilder,System.Action{Microsoft.AspNetCore.Http.CookieBuilder,Microsoft.AspNetCore.Authentication.Cookies.CookieAuthenticationEvents,Microsoft.AspNetCore.Authentication.Cookies.CookieAuthenticationOptions})
+  id: AddDefaultCookieConfig(Microsoft.AspNetCore.Authentication.AuthenticationBuilder,System.Action{Microsoft.AspNetCore.Http.CookieBuilder,Microsoft.AspNetCore.Authentication.Cookies.CookieAuthenticationEvents,Microsoft.AspNetCore.Authentication.Cookies.CookieAuthenticationOptions})
+  isExtensionMethod: true
+  parent: Coree.NETASP.Extensions.KestrelOptions.AuthenticationBuilderExtensions
+  langs:
+  - csharp
+  - vb
+  name: AddDefaultCookieConfig(AuthenticationBuilder, Action<CookieBuilder, CookieAuthenticationEvents, CookieAuthenticationOptions>)
+  nameWithType: AuthenticationBuilderExtensions.AddDefaultCookieConfig(AuthenticationBuilder, Action<CookieBuilder, CookieAuthenticationEvents, CookieAuthenticationOptions>)
+  fullName: Coree.NETASP.Extensions.KestrelOptions.AuthenticationBuilderExtensions.AddDefaultCookieConfig(Microsoft.AspNetCore.Authentication.AuthenticationBuilder, System.Action<Microsoft.AspNetCore.Http.CookieBuilder, Microsoft.AspNetCore.Authentication.Cookies.CookieAuthenticationEvents, Microsoft.AspNetCore.Authentication.Cookies.CookieAuthenticationOptions>)
+  type: Method
+  source:
+    remote:
+      path: src/Projects/Coree.NETASP/Extensions/KestrelServerOptions/ConfigureKestrelSimple.cs
+      branch: master
+      repo: https://github.com/carsten-riedel/Coree.NETASP
+    id: AddDefaultCookieConfig
+    path: ../../src/Projects/Coree.NETASP/Extensions/KestrelServerOptions/ConfigureKestrelSimple.cs
+    startLine: 277
+  assemblies:
+  - Coree.NETASP
+  namespace: Coree.NETASP.Extensions.KestrelOptions
+  syntax:
+    content: public static AuthenticationBuilder AddDefaultCookieConfig(this AuthenticationBuilder builder, Action<CookieBuilder, CookieAuthenticationEvents, CookieAuthenticationOptions> action)
+    parameters:
+    - id: builder
+      type: Microsoft.AspNetCore.Authentication.AuthenticationBuilder
+    - id: action
+      type: System.Action{Microsoft.AspNetCore.Http.CookieBuilder,Microsoft.AspNetCore.Authentication.Cookies.CookieAuthenticationEvents,Microsoft.AspNetCore.Authentication.Cookies.CookieAuthenticationOptions}
+    return:
+      type: Microsoft.AspNetCore.Authentication.AuthenticationBuilder
+    content.vb: Public Shared Function AddDefaultCookieConfig(builder As AuthenticationBuilder, action As Action(Of CookieBuilder, CookieAuthenticationEvents, CookieAuthenticationOptions)) As AuthenticationBuilder
+  overload: Coree.NETASP.Extensions.KestrelOptions.AuthenticationBuilderExtensions.AddDefaultCookieConfig*
+  nameWithType.vb: AuthenticationBuilderExtensions.AddDefaultCookieConfig(AuthenticationBuilder, Action(Of CookieBuilder, CookieAuthenticationEvents, CookieAuthenticationOptions))
+  fullName.vb: Coree.NETASP.Extensions.KestrelOptions.AuthenticationBuilderExtensions.AddDefaultCookieConfig(Microsoft.AspNetCore.Authentication.AuthenticationBuilder, System.Action(Of Microsoft.AspNetCore.Http.CookieBuilder, Microsoft.AspNetCore.Authentication.Cookies.CookieAuthenticationEvents, Microsoft.AspNetCore.Authentication.Cookies.CookieAuthenticationOptions))
+  name.vb: AddDefaultCookieConfig(AuthenticationBuilder, Action(Of CookieBuilder, CookieAuthenticationEvents, CookieAuthenticationOptions))
+references:
+- uid: Coree.NETASP.Extensions.KestrelOptions
+  commentId: N:Coree.NETASP.Extensions.KestrelOptions
+  href: Coree.html
+  name: Coree.NETASP.Extensions.KestrelOptions
+  nameWithType: Coree.NETASP.Extensions.KestrelOptions
+  fullName: Coree.NETASP.Extensions.KestrelOptions
+  spec.csharp:
+  - uid: Coree
+    name: Coree
+    href: Coree.html
+  - name: .
+  - uid: Coree.NETASP
+    name: NETASP
+    href: Coree.NETASP.html
+  - name: .
+  - uid: Coree.NETASP.Extensions
+    name: Extensions
+    href: Coree.NETASP.Extensions.html
+  - name: .
+  - uid: Coree.NETASP.Extensions.KestrelOptions
+    name: KestrelOptions
+    href: Coree.NETASP.Extensions.KestrelOptions.html
+  spec.vb:
+  - uid: Coree
+    name: Coree
+    href: Coree.html
+  - name: .
+  - uid: Coree.NETASP
+    name: NETASP
+    href: Coree.NETASP.html
+  - name: .
+  - uid: Coree.NETASP.Extensions
+    name: Extensions
+    href: Coree.NETASP.Extensions.html
+  - name: .
+  - uid: Coree.NETASP.Extensions.KestrelOptions
+    name: KestrelOptions
+    href: Coree.NETASP.Extensions.KestrelOptions.html
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object
+  name: object
+  nameWithType: object
+  fullName: object
+  nameWithType.vb: Object
+  fullName.vb: Object
+  name.vb: Object
+- uid: System.Object.Equals(System.Object)
+  commentId: M:System.Object.Equals(System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  name: Equals(object)
+  nameWithType: object.Equals(object)
+  fullName: object.Equals(object)
+  nameWithType.vb: Object.Equals(Object)
+  fullName.vb: Object.Equals(Object)
+  name.vb: Equals(Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  name: Equals(object, object)
+  nameWithType: object.Equals(object, object)
+  fullName: object.Equals(object, object)
+  nameWithType.vb: Object.Equals(Object, Object)
+  fullName.vb: Object.Equals(Object, Object)
+  name.vb: Equals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.GetHashCode
+  commentId: M:System.Object.GetHashCode
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  name: GetHashCode()
+  nameWithType: object.GetHashCode()
+  fullName: object.GetHashCode()
+  nameWithType.vb: Object.GetHashCode()
+  fullName.vb: Object.GetHashCode()
+  spec.csharp:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  - name: (
+  - name: )
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  name: GetType()
+  nameWithType: object.GetType()
+  fullName: object.GetType()
+  nameWithType.vb: Object.GetType()
+  fullName.vb: Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+- uid: System.Object.MemberwiseClone
+  commentId: M:System.Object.MemberwiseClone
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  name: MemberwiseClone()
+  nameWithType: object.MemberwiseClone()
+  fullName: object.MemberwiseClone()
+  nameWithType.vb: Object.MemberwiseClone()
+  fullName.vb: Object.MemberwiseClone()
+  spec.csharp:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  - name: (
+  - name: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  name: ReferenceEquals(object, object)
+  nameWithType: object.ReferenceEquals(object, object)
+  fullName: object.ReferenceEquals(object, object)
+  nameWithType.vb: Object.ReferenceEquals(Object, Object)
+  fullName.vb: Object.ReferenceEquals(Object, Object)
+  name.vb: ReferenceEquals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.ToString
+  commentId: M:System.Object.ToString
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  name: ToString()
+  nameWithType: object.ToString()
+  fullName: object.ToString()
+  nameWithType.vb: Object.ToString()
+  fullName.vb: Object.ToString()
+  spec.csharp:
+  - uid: System.Object.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  - name: (
+  - name: )
+- uid: System
+  commentId: N:System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: Coree.NETASP.Extensions.KestrelOptions.AuthenticationBuilderExtensions.AddDefaultCookieConfig*
+  commentId: Overload:Coree.NETASP.Extensions.KestrelOptions.AuthenticationBuilderExtensions.AddDefaultCookieConfig
+  href: Coree.NETASP.Extensions.KestrelOptions.AuthenticationBuilderExtensions.html#Coree_NETASP_Extensions_KestrelOptions_AuthenticationBuilderExtensions_AddDefaultCookieConfig_Microsoft_AspNetCore_Authentication_AuthenticationBuilder_
+  name: AddDefaultCookieConfig
+  nameWithType: AuthenticationBuilderExtensions.AddDefaultCookieConfig
+  fullName: Coree.NETASP.Extensions.KestrelOptions.AuthenticationBuilderExtensions.AddDefaultCookieConfig
+- uid: Microsoft.AspNetCore.Authentication.AuthenticationBuilder
+  commentId: T:Microsoft.AspNetCore.Authentication.AuthenticationBuilder
+  parent: Microsoft.AspNetCore.Authentication
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/microsoft.aspnetcore.authentication.authenticationbuilder
+  name: AuthenticationBuilder
+  nameWithType: AuthenticationBuilder
+  fullName: Microsoft.AspNetCore.Authentication.AuthenticationBuilder
+- uid: Microsoft.AspNetCore.Authentication
+  commentId: N:Microsoft.AspNetCore.Authentication
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/microsoft
+  name: Microsoft.AspNetCore.Authentication
+  nameWithType: Microsoft.AspNetCore.Authentication
+  fullName: Microsoft.AspNetCore.Authentication
+  spec.csharp:
+  - uid: Microsoft
+    name: Microsoft
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/microsoft
+  - name: .
+  - uid: Microsoft.AspNetCore
+    name: AspNetCore
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/microsoft.aspnetcore
+  - name: .
+  - uid: Microsoft.AspNetCore.Authentication
+    name: Authentication
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/microsoft.aspnetcore.authentication
+  spec.vb:
+  - uid: Microsoft
+    name: Microsoft
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/microsoft
+  - name: .
+  - uid: Microsoft.AspNetCore
+    name: AspNetCore
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/microsoft.aspnetcore
+  - name: .
+  - uid: Microsoft.AspNetCore.Authentication
+    name: Authentication
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/microsoft.aspnetcore.authentication
+- uid: System.Func{Microsoft.AspNetCore.Authentication.Cookies.CookieSignedInContext,System.Threading.Tasks.Task}
+  commentId: T:System.Func{Microsoft.AspNetCore.Authentication.Cookies.CookieSignedInContext,System.Threading.Tasks.Task}
+  parent: System
+  definition: System.Func`2
+  href: https://learn.microsoft.com/dotnet/api/system.func-2
+  name: Func<CookieSignedInContext, Task>
+  nameWithType: Func<CookieSignedInContext, Task>
+  fullName: System.Func<Microsoft.AspNetCore.Authentication.Cookies.CookieSignedInContext, System.Threading.Tasks.Task>
+  nameWithType.vb: Func(Of CookieSignedInContext, Task)
+  fullName.vb: System.Func(Of Microsoft.AspNetCore.Authentication.Cookies.CookieSignedInContext, System.Threading.Tasks.Task)
+  name.vb: Func(Of CookieSignedInContext, Task)
+  spec.csharp:
+  - uid: System.Func`2
+    name: Func
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.func-2
+  - name: <
+  - uid: Microsoft.AspNetCore.Authentication.Cookies.CookieSignedInContext
+    name: CookieSignedInContext
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/microsoft.aspnetcore.authentication.cookies.cookiesignedincontext
+  - name: ','
+  - name: " "
+  - uid: System.Threading.Tasks.Task
+    name: Task
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading.tasks.task
+  - name: '>'
+  spec.vb:
+  - uid: System.Func`2
+    name: Func
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.func-2
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: Microsoft.AspNetCore.Authentication.Cookies.CookieSignedInContext
+    name: CookieSignedInContext
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/microsoft.aspnetcore.authentication.cookies.cookiesignedincontext
+  - name: ','
+  - name: " "
+  - uid: System.Threading.Tasks.Task
+    name: Task
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading.tasks.task
+  - name: )
+- uid: System.Func{Microsoft.AspNetCore.Authentication.RedirectContext{Microsoft.AspNetCore.Authentication.Cookies.CookieAuthenticationOptions},System.Threading.Tasks.Task}
+  commentId: T:System.Func{Microsoft.AspNetCore.Authentication.RedirectContext{Microsoft.AspNetCore.Authentication.Cookies.CookieAuthenticationOptions},System.Threading.Tasks.Task}
+  parent: System
+  definition: System.Func`2
+  href: https://learn.microsoft.com/dotnet/api/system.func-2
+  name: Func<RedirectContext<CookieAuthenticationOptions>, Task>
+  nameWithType: Func<RedirectContext<CookieAuthenticationOptions>, Task>
+  fullName: System.Func<Microsoft.AspNetCore.Authentication.RedirectContext<Microsoft.AspNetCore.Authentication.Cookies.CookieAuthenticationOptions>, System.Threading.Tasks.Task>
+  nameWithType.vb: Func(Of RedirectContext(Of CookieAuthenticationOptions), Task)
+  fullName.vb: System.Func(Of Microsoft.AspNetCore.Authentication.RedirectContext(Of Microsoft.AspNetCore.Authentication.Cookies.CookieAuthenticationOptions), System.Threading.Tasks.Task)
+  name.vb: Func(Of RedirectContext(Of CookieAuthenticationOptions), Task)
+  spec.csharp:
+  - uid: System.Func`2
+    name: Func
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.func-2
+  - name: <
+  - uid: Microsoft.AspNetCore.Authentication.RedirectContext`1
+    name: RedirectContext
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/microsoft.aspnetcore.authentication.redirectcontext-1
+  - name: <
+  - uid: Microsoft.AspNetCore.Authentication.Cookies.CookieAuthenticationOptions
+    name: CookieAuthenticationOptions
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/microsoft.aspnetcore.authentication.cookies.cookieauthenticationoptions
+  - name: '>'
+  - name: ','
+  - name: " "
+  - uid: System.Threading.Tasks.Task
+    name: Task
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading.tasks.task
+  - name: '>'
+  spec.vb:
+  - uid: System.Func`2
+    name: Func
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.func-2
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: Microsoft.AspNetCore.Authentication.RedirectContext`1
+    name: RedirectContext
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/microsoft.aspnetcore.authentication.redirectcontext-1
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: Microsoft.AspNetCore.Authentication.Cookies.CookieAuthenticationOptions
+    name: CookieAuthenticationOptions
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/microsoft.aspnetcore.authentication.cookies.cookieauthenticationoptions
+  - name: )
+  - name: ','
+  - name: " "
+  - uid: System.Threading.Tasks.Task
+    name: Task
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading.tasks.task
+  - name: )
+- uid: System.Func{Microsoft.AspNetCore.Authentication.Cookies.CookieValidatePrincipalContext,System.Threading.Tasks.Task}
+  commentId: T:System.Func{Microsoft.AspNetCore.Authentication.Cookies.CookieValidatePrincipalContext,System.Threading.Tasks.Task}
+  parent: System
+  definition: System.Func`2
+  href: https://learn.microsoft.com/dotnet/api/system.func-2
+  name: Func<CookieValidatePrincipalContext, Task>
+  nameWithType: Func<CookieValidatePrincipalContext, Task>
+  fullName: System.Func<Microsoft.AspNetCore.Authentication.Cookies.CookieValidatePrincipalContext, System.Threading.Tasks.Task>
+  nameWithType.vb: Func(Of CookieValidatePrincipalContext, Task)
+  fullName.vb: System.Func(Of Microsoft.AspNetCore.Authentication.Cookies.CookieValidatePrincipalContext, System.Threading.Tasks.Task)
+  name.vb: Func(Of CookieValidatePrincipalContext, Task)
+  spec.csharp:
+  - uid: System.Func`2
+    name: Func
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.func-2
+  - name: <
+  - uid: Microsoft.AspNetCore.Authentication.Cookies.CookieValidatePrincipalContext
+    name: CookieValidatePrincipalContext
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/microsoft.aspnetcore.authentication.cookies.cookievalidateprincipalcontext
+  - name: ','
+  - name: " "
+  - uid: System.Threading.Tasks.Task
+    name: Task
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading.tasks.task
+  - name: '>'
+  spec.vb:
+  - uid: System.Func`2
+    name: Func
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.func-2
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: Microsoft.AspNetCore.Authentication.Cookies.CookieValidatePrincipalContext
+    name: CookieValidatePrincipalContext
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/microsoft.aspnetcore.authentication.cookies.cookievalidateprincipalcontext
+  - name: ','
+  - name: " "
+  - uid: System.Threading.Tasks.Task
+    name: Task
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading.tasks.task
+  - name: )
+- uid: System.String
+  commentId: T:System.String
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.string
+  name: string
+  nameWithType: string
+  fullName: string
+  nameWithType.vb: String
+  fullName.vb: String
+  name.vb: String
+- uid: System.Nullable{System.TimeSpan}
+  commentId: T:System.Nullable{System.TimeSpan}
+  parent: System
+  definition: System.Nullable`1
+  href: https://learn.microsoft.com/dotnet/api/system.timespan
+  name: TimeSpan?
+  nameWithType: TimeSpan?
+  fullName: System.TimeSpan?
+  spec.csharp:
+  - uid: System.TimeSpan
+    name: TimeSpan
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.timespan
+  - name: '?'
+  spec.vb:
+  - uid: System.TimeSpan
+    name: TimeSpan
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.timespan
+  - name: '?'
+- uid: System.Boolean
+  commentId: T:System.Boolean
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.boolean
+  name: bool
+  nameWithType: bool
+  fullName: bool
+  nameWithType.vb: Boolean
+  fullName.vb: Boolean
+  name.vb: Boolean
+- uid: System.Func`2
+  commentId: T:System.Func`2
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.func-2
+  name: Func<T, TResult>
+  nameWithType: Func<T, TResult>
+  fullName: System.Func<T, TResult>
+  nameWithType.vb: Func(Of T, TResult)
+  fullName.vb: System.Func(Of T, TResult)
+  name.vb: Func(Of T, TResult)
+  spec.csharp:
+  - uid: System.Func`2
+    name: Func
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.func-2
+  - name: <
+  - name: T
+  - name: ','
+  - name: " "
+  - name: TResult
+  - name: '>'
+  spec.vb:
+  - uid: System.Func`2
+    name: Func
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.func-2
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: ','
+  - name: " "
+  - name: TResult
+  - name: )
+- uid: System.Nullable`1
+  commentId: T:System.Nullable`1
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.nullable-1
+  name: Nullable<T>
+  nameWithType: Nullable<T>
+  fullName: System.Nullable<T>
+  nameWithType.vb: Nullable(Of T)
+  fullName.vb: System.Nullable(Of T)
+  name.vb: Nullable(Of T)
+  spec.csharp:
+  - uid: System.Nullable`1
+    name: Nullable
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.nullable-1
+  - name: <
+  - name: T
+  - name: '>'
+  spec.vb:
+  - uid: System.Nullable`1
+    name: Nullable
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.nullable-1
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+- uid: System.Action{Microsoft.AspNetCore.Http.CookieBuilder,Microsoft.AspNetCore.Authentication.Cookies.CookieAuthenticationEvents,Microsoft.AspNetCore.Authentication.Cookies.CookieAuthenticationOptions}
+  commentId: T:System.Action{Microsoft.AspNetCore.Http.CookieBuilder,Microsoft.AspNetCore.Authentication.Cookies.CookieAuthenticationEvents,Microsoft.AspNetCore.Authentication.Cookies.CookieAuthenticationOptions}
+  parent: System
+  definition: System.Action`3
+  href: https://learn.microsoft.com/dotnet/api/system.action-3
+  name: Action<CookieBuilder, CookieAuthenticationEvents, CookieAuthenticationOptions>
+  nameWithType: Action<CookieBuilder, CookieAuthenticationEvents, CookieAuthenticationOptions>
+  fullName: System.Action<Microsoft.AspNetCore.Http.CookieBuilder, Microsoft.AspNetCore.Authentication.Cookies.CookieAuthenticationEvents, Microsoft.AspNetCore.Authentication.Cookies.CookieAuthenticationOptions>
+  nameWithType.vb: Action(Of CookieBuilder, CookieAuthenticationEvents, CookieAuthenticationOptions)
+  fullName.vb: System.Action(Of Microsoft.AspNetCore.Http.CookieBuilder, Microsoft.AspNetCore.Authentication.Cookies.CookieAuthenticationEvents, Microsoft.AspNetCore.Authentication.Cookies.CookieAuthenticationOptions)
+  name.vb: Action(Of CookieBuilder, CookieAuthenticationEvents, CookieAuthenticationOptions)
+  spec.csharp:
+  - uid: System.Action`3
+    name: Action
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.action-3
+  - name: <
+  - uid: Microsoft.AspNetCore.Http.CookieBuilder
+    name: CookieBuilder
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/microsoft.aspnetcore.http.cookiebuilder
+  - name: ','
+  - name: " "
+  - uid: Microsoft.AspNetCore.Authentication.Cookies.CookieAuthenticationEvents
+    name: CookieAuthenticationEvents
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/microsoft.aspnetcore.authentication.cookies.cookieauthenticationevents
+  - name: ','
+  - name: " "
+  - uid: Microsoft.AspNetCore.Authentication.Cookies.CookieAuthenticationOptions
+    name: CookieAuthenticationOptions
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/microsoft.aspnetcore.authentication.cookies.cookieauthenticationoptions
+  - name: '>'
+  spec.vb:
+  - uid: System.Action`3
+    name: Action
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.action-3
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: Microsoft.AspNetCore.Http.CookieBuilder
+    name: CookieBuilder
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/microsoft.aspnetcore.http.cookiebuilder
+  - name: ','
+  - name: " "
+  - uid: Microsoft.AspNetCore.Authentication.Cookies.CookieAuthenticationEvents
+    name: CookieAuthenticationEvents
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/microsoft.aspnetcore.authentication.cookies.cookieauthenticationevents
+  - name: ','
+  - name: " "
+  - uid: Microsoft.AspNetCore.Authentication.Cookies.CookieAuthenticationOptions
+    name: CookieAuthenticationOptions
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/microsoft.aspnetcore.authentication.cookies.cookieauthenticationoptions
+  - name: )
+- uid: System.Action`3
+  commentId: T:System.Action`3
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.action-3
+  name: Action<T1, T2, T3>
+  nameWithType: Action<T1, T2, T3>
+  fullName: System.Action<T1, T2, T3>
+  nameWithType.vb: Action(Of T1, T2, T3)
+  fullName.vb: System.Action(Of T1, T2, T3)
+  name.vb: Action(Of T1, T2, T3)
+  spec.csharp:
+  - uid: System.Action`3
+    name: Action
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.action-3
+  - name: <
+  - name: T1
+  - name: ','
+  - name: " "
+  - name: T2
+  - name: ','
+  - name: " "
+  - name: T3
+  - name: '>'
+  spec.vb:
+  - uid: System.Action`3
+    name: Action
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.action-3
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T1
+  - name: ','
+  - name: " "
+  - name: T2
+  - name: ','
+  - name: " "
+  - name: T3
+  - name: )

@@ -1,0 +1,23 @@
+### YamlMime:ManagedReference
+items:
+- uid: Coree.NETASP.Extensions
+  commentId: N:Coree.NETASP.Extensions
+  id: Coree.NETASP.Extensions
+  children:
+  - Coree.NETASP.Extensions.HttpResponseExtensions
+  langs:
+  - csharp
+  - vb
+  name: Coree.NETASP.Extensions
+  nameWithType: Coree.NETASP.Extensions
+  fullName: Coree.NETASP.Extensions
+  type: Namespace
+  assemblies:
+  - Coree.NETASP
+references:
+- uid: Coree.NETASP.Extensions.HttpResponseExtensions
+  commentId: T:Coree.NETASP.Extensions.HttpResponseExtensions
+  href: Coree.NETASP.Extensions.HttpResponseExtensions.html
+  name: HttpResponseExtensions
+  nameWithType: HttpResponseExtensions
+  fullName: Coree.NETASP.Extensions.HttpResponseExtensions

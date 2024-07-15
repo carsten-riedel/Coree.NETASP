@@ -6,6 +6,9 @@ items:
   parent: Coree.NETASP.Middleware.UnwantedHeaderKeysFiltering
   children:
   - Coree.NETASP.Middleware.UnwantedHeaderKeysFiltering.UnwantedHeaderKeysOptions.Blacklist
+  - Coree.NETASP.Middleware.UnwantedHeaderKeysFiltering.UnwantedHeaderKeysOptions.ContinueOnDisallowed
+  - Coree.NETASP.Middleware.UnwantedHeaderKeysFiltering.UnwantedHeaderKeysOptions.DisallowedFailureRating
+  - Coree.NETASP.Middleware.UnwantedHeaderKeysFiltering.UnwantedHeaderKeysOptions.DisallowedStatusCode
   langs:
   - csharp
   - vb
@@ -20,7 +23,7 @@ items:
       repo: https://github.com/carsten-riedel/Coree.NETASP
     id: UnwantedHeaderKeysOptions
     path: ../../src/Projects/Coree.NETASP/Middleware/UnwantedHeaderKeysFiltering/UnwantedHeaderKeysMiddleware.cs
-    startLine: 6
+    startLine: 100
   assemblies:
   - Coree.NETASP
   namespace: Coree.NETASP.Middleware.UnwantedHeaderKeysFiltering
@@ -55,7 +58,7 @@ items:
       repo: https://github.com/carsten-riedel/Coree.NETASP
     id: Blacklist
     path: ../../src/Projects/Coree.NETASP/Middleware/UnwantedHeaderKeysFiltering/UnwantedHeaderKeysMiddleware.cs
-    startLine: 8
+    startLine: 102
   assemblies:
   - Coree.NETASP
   namespace: Coree.NETASP.Middleware.UnwantedHeaderKeysFiltering
@@ -66,6 +69,93 @@ items:
       type: System.String[]
     content.vb: Public Property Blacklist As String()
   overload: Coree.NETASP.Middleware.UnwantedHeaderKeysFiltering.UnwantedHeaderKeysOptions.Blacklist*
+- uid: Coree.NETASP.Middleware.UnwantedHeaderKeysFiltering.UnwantedHeaderKeysOptions.DisallowedStatusCode
+  commentId: P:Coree.NETASP.Middleware.UnwantedHeaderKeysFiltering.UnwantedHeaderKeysOptions.DisallowedStatusCode
+  id: DisallowedStatusCode
+  parent: Coree.NETASP.Middleware.UnwantedHeaderKeysFiltering.UnwantedHeaderKeysOptions
+  langs:
+  - csharp
+  - vb
+  name: DisallowedStatusCode
+  nameWithType: UnwantedHeaderKeysOptions.DisallowedStatusCode
+  fullName: Coree.NETASP.Middleware.UnwantedHeaderKeysFiltering.UnwantedHeaderKeysOptions.DisallowedStatusCode
+  type: Property
+  source:
+    remote:
+      path: src/Projects/Coree.NETASP/Middleware/UnwantedHeaderKeysFiltering/UnwantedHeaderKeysMiddleware.cs
+      branch: master
+      repo: https://github.com/carsten-riedel/Coree.NETASP
+    id: DisallowedStatusCode
+    path: ../../src/Projects/Coree.NETASP/Middleware/UnwantedHeaderKeysFiltering/UnwantedHeaderKeysMiddleware.cs
+    startLine: 103
+  assemblies:
+  - Coree.NETASP
+  namespace: Coree.NETASP.Middleware.UnwantedHeaderKeysFiltering
+  syntax:
+    content: public int DisallowedStatusCode { get; set; }
+    parameters: []
+    return:
+      type: System.Int32
+    content.vb: Public Property DisallowedStatusCode As Integer
+  overload: Coree.NETASP.Middleware.UnwantedHeaderKeysFiltering.UnwantedHeaderKeysOptions.DisallowedStatusCode*
+- uid: Coree.NETASP.Middleware.UnwantedHeaderKeysFiltering.UnwantedHeaderKeysOptions.DisallowedFailureRating
+  commentId: P:Coree.NETASP.Middleware.UnwantedHeaderKeysFiltering.UnwantedHeaderKeysOptions.DisallowedFailureRating
+  id: DisallowedFailureRating
+  parent: Coree.NETASP.Middleware.UnwantedHeaderKeysFiltering.UnwantedHeaderKeysOptions
+  langs:
+  - csharp
+  - vb
+  name: DisallowedFailureRating
+  nameWithType: UnwantedHeaderKeysOptions.DisallowedFailureRating
+  fullName: Coree.NETASP.Middleware.UnwantedHeaderKeysFiltering.UnwantedHeaderKeysOptions.DisallowedFailureRating
+  type: Property
+  source:
+    remote:
+      path: src/Projects/Coree.NETASP/Middleware/UnwantedHeaderKeysFiltering/UnwantedHeaderKeysMiddleware.cs
+      branch: master
+      repo: https://github.com/carsten-riedel/Coree.NETASP
+    id: DisallowedFailureRating
+    path: ../../src/Projects/Coree.NETASP/Middleware/UnwantedHeaderKeysFiltering/UnwantedHeaderKeysMiddleware.cs
+    startLine: 104
+  assemblies:
+  - Coree.NETASP
+  namespace: Coree.NETASP.Middleware.UnwantedHeaderKeysFiltering
+  syntax:
+    content: public int DisallowedFailureRating { get; set; }
+    parameters: []
+    return:
+      type: System.Int32
+    content.vb: Public Property DisallowedFailureRating As Integer
+  overload: Coree.NETASP.Middleware.UnwantedHeaderKeysFiltering.UnwantedHeaderKeysOptions.DisallowedFailureRating*
+- uid: Coree.NETASP.Middleware.UnwantedHeaderKeysFiltering.UnwantedHeaderKeysOptions.ContinueOnDisallowed
+  commentId: P:Coree.NETASP.Middleware.UnwantedHeaderKeysFiltering.UnwantedHeaderKeysOptions.ContinueOnDisallowed
+  id: ContinueOnDisallowed
+  parent: Coree.NETASP.Middleware.UnwantedHeaderKeysFiltering.UnwantedHeaderKeysOptions
+  langs:
+  - csharp
+  - vb
+  name: ContinueOnDisallowed
+  nameWithType: UnwantedHeaderKeysOptions.ContinueOnDisallowed
+  fullName: Coree.NETASP.Middleware.UnwantedHeaderKeysFiltering.UnwantedHeaderKeysOptions.ContinueOnDisallowed
+  type: Property
+  source:
+    remote:
+      path: src/Projects/Coree.NETASP/Middleware/UnwantedHeaderKeysFiltering/UnwantedHeaderKeysMiddleware.cs
+      branch: master
+      repo: https://github.com/carsten-riedel/Coree.NETASP
+    id: ContinueOnDisallowed
+    path: ../../src/Projects/Coree.NETASP/Middleware/UnwantedHeaderKeysFiltering/UnwantedHeaderKeysMiddleware.cs
+    startLine: 105
+  assemblies:
+  - Coree.NETASP
+  namespace: Coree.NETASP.Middleware.UnwantedHeaderKeysFiltering
+  syntax:
+    content: public bool ContinueOnDisallowed { get; set; }
+    parameters: []
+    return:
+      type: System.Boolean
+    content.vb: Public Property ContinueOnDisallowed As Boolean
+  overload: Coree.NETASP.Middleware.UnwantedHeaderKeysFiltering.UnwantedHeaderKeysOptions.ContinueOnDisallowed*
 references:
 - uid: Coree.NETASP.Middleware.UnwantedHeaderKeysFiltering
   commentId: N:Coree.NETASP.Middleware.UnwantedHeaderKeysFiltering
@@ -371,3 +461,43 @@ references:
     href: https://learn.microsoft.com/dotnet/api/system.string
   - name: (
   - name: )
+- uid: Coree.NETASP.Middleware.UnwantedHeaderKeysFiltering.UnwantedHeaderKeysOptions.DisallowedStatusCode*
+  commentId: Overload:Coree.NETASP.Middleware.UnwantedHeaderKeysFiltering.UnwantedHeaderKeysOptions.DisallowedStatusCode
+  href: Coree.NETASP.Middleware.UnwantedHeaderKeysFiltering.UnwantedHeaderKeysOptions.html#Coree_NETASP_Middleware_UnwantedHeaderKeysFiltering_UnwantedHeaderKeysOptions_DisallowedStatusCode
+  name: DisallowedStatusCode
+  nameWithType: UnwantedHeaderKeysOptions.DisallowedStatusCode
+  fullName: Coree.NETASP.Middleware.UnwantedHeaderKeysFiltering.UnwantedHeaderKeysOptions.DisallowedStatusCode
+- uid: System.Int32
+  commentId: T:System.Int32
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.int32
+  name: int
+  nameWithType: int
+  fullName: int
+  nameWithType.vb: Integer
+  fullName.vb: Integer
+  name.vb: Integer
+- uid: Coree.NETASP.Middleware.UnwantedHeaderKeysFiltering.UnwantedHeaderKeysOptions.DisallowedFailureRating*
+  commentId: Overload:Coree.NETASP.Middleware.UnwantedHeaderKeysFiltering.UnwantedHeaderKeysOptions.DisallowedFailureRating
+  href: Coree.NETASP.Middleware.UnwantedHeaderKeysFiltering.UnwantedHeaderKeysOptions.html#Coree_NETASP_Middleware_UnwantedHeaderKeysFiltering_UnwantedHeaderKeysOptions_DisallowedFailureRating
+  name: DisallowedFailureRating
+  nameWithType: UnwantedHeaderKeysOptions.DisallowedFailureRating
+  fullName: Coree.NETASP.Middleware.UnwantedHeaderKeysFiltering.UnwantedHeaderKeysOptions.DisallowedFailureRating
+- uid: Coree.NETASP.Middleware.UnwantedHeaderKeysFiltering.UnwantedHeaderKeysOptions.ContinueOnDisallowed*
+  commentId: Overload:Coree.NETASP.Middleware.UnwantedHeaderKeysFiltering.UnwantedHeaderKeysOptions.ContinueOnDisallowed
+  href: Coree.NETASP.Middleware.UnwantedHeaderKeysFiltering.UnwantedHeaderKeysOptions.html#Coree_NETASP_Middleware_UnwantedHeaderKeysFiltering_UnwantedHeaderKeysOptions_ContinueOnDisallowed
+  name: ContinueOnDisallowed
+  nameWithType: UnwantedHeaderKeysOptions.ContinueOnDisallowed
+  fullName: Coree.NETASP.Middleware.UnwantedHeaderKeysFiltering.UnwantedHeaderKeysOptions.ContinueOnDisallowed
+- uid: System.Boolean
+  commentId: T:System.Boolean
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.boolean
+  name: bool
+  nameWithType: bool
+  fullName: bool
+  nameWithType.vb: Boolean
+  fullName.vb: Boolean
+  name.vb: Boolean

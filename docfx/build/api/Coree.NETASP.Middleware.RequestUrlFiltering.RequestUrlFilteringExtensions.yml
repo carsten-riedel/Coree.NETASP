@@ -5,7 +5,7 @@ items:
   id: RequestUrlFilteringExtensions
   parent: Coree.NETASP.Middleware.RequestUrlFiltering
   children:
-  - Coree.NETASP.Middleware.RequestUrlFiltering.RequestUrlFilteringExtensions.AddRequestUrlFiltering(Microsoft.Extensions.DependencyInjection.IServiceCollection,System.String[],System.String[])
+  - Coree.NETASP.Middleware.RequestUrlFiltering.RequestUrlFilteringExtensions.AddRequestUrlFiltering(Microsoft.Extensions.DependencyInjection.IServiceCollection,System.String[],System.String[],System.Boolean,System.Int32,System.Int32)
   langs:
   - csharp
   - vb
@@ -15,12 +15,12 @@ items:
   type: Class
   source:
     remote:
-      path: src/Projects/Coree.NETASP/Middleware/RequestUrlFiltering/AddRequestUrlFiltering.cs
+      path: src/Projects/Coree.NETASP/Middleware/RequestUrlFiltering/RequestUrlFilteringMiddleware.cs
       branch: master
       repo: https://github.com/carsten-riedel/Coree.NETASP
     id: RequestUrlFilteringExtensions
-    path: ../../src/Projects/Coree.NETASP/Middleware/RequestUrlFiltering/AddRequestUrlFiltering.cs
-    startLine: 2
+    path: ../../src/Projects/Coree.NETASP/Middleware/RequestUrlFiltering/RequestUrlFilteringMiddleware.cs
+    startLine: 116
   assemblies:
   - Coree.NETASP
   namespace: Coree.NETASP.Middleware.RequestUrlFiltering
@@ -37,33 +37,33 @@ items:
   - System.Object.MemberwiseClone
   - System.Object.ReferenceEquals(System.Object,System.Object)
   - System.Object.ToString
-- uid: Coree.NETASP.Middleware.RequestUrlFiltering.RequestUrlFilteringExtensions.AddRequestUrlFiltering(Microsoft.Extensions.DependencyInjection.IServiceCollection,System.String[],System.String[])
-  commentId: M:Coree.NETASP.Middleware.RequestUrlFiltering.RequestUrlFilteringExtensions.AddRequestUrlFiltering(Microsoft.Extensions.DependencyInjection.IServiceCollection,System.String[],System.String[])
-  id: AddRequestUrlFiltering(Microsoft.Extensions.DependencyInjection.IServiceCollection,System.String[],System.String[])
+- uid: Coree.NETASP.Middleware.RequestUrlFiltering.RequestUrlFilteringExtensions.AddRequestUrlFiltering(Microsoft.Extensions.DependencyInjection.IServiceCollection,System.String[],System.String[],System.Boolean,System.Int32,System.Int32)
+  commentId: M:Coree.NETASP.Middleware.RequestUrlFiltering.RequestUrlFilteringExtensions.AddRequestUrlFiltering(Microsoft.Extensions.DependencyInjection.IServiceCollection,System.String[],System.String[],System.Boolean,System.Int32,System.Int32)
+  id: AddRequestUrlFiltering(Microsoft.Extensions.DependencyInjection.IServiceCollection,System.String[],System.String[],System.Boolean,System.Int32,System.Int32)
   isExtensionMethod: true
   parent: Coree.NETASP.Middleware.RequestUrlFiltering.RequestUrlFilteringExtensions
   langs:
   - csharp
   - vb
-  name: AddRequestUrlFiltering(IServiceCollection, string[]?, string[]?)
-  nameWithType: RequestUrlFilteringExtensions.AddRequestUrlFiltering(IServiceCollection, string[]?, string[]?)
-  fullName: Coree.NETASP.Middleware.RequestUrlFiltering.RequestUrlFilteringExtensions.AddRequestUrlFiltering(Microsoft.Extensions.DependencyInjection.IServiceCollection, string[]?, string[]?)
+  name: AddRequestUrlFiltering(IServiceCollection, string[]?, string[]?, bool, int, int)
+  nameWithType: RequestUrlFilteringExtensions.AddRequestUrlFiltering(IServiceCollection, string[]?, string[]?, bool, int, int)
+  fullName: Coree.NETASP.Middleware.RequestUrlFiltering.RequestUrlFilteringExtensions.AddRequestUrlFiltering(Microsoft.Extensions.DependencyInjection.IServiceCollection, string[]?, string[]?, bool, int, int)
   type: Method
   source:
     remote:
-      path: src/Projects/Coree.NETASP/Middleware/RequestUrlFiltering/AddRequestUrlFiltering.cs
+      path: src/Projects/Coree.NETASP/Middleware/RequestUrlFiltering/RequestUrlFilteringMiddleware.cs
       branch: master
       repo: https://github.com/carsten-riedel/Coree.NETASP
     id: AddRequestUrlFiltering
-    path: ../../src/Projects/Coree.NETASP/Middleware/RequestUrlFiltering/AddRequestUrlFiltering.cs
-    startLine: 9
+    path: ../../src/Projects/Coree.NETASP/Middleware/RequestUrlFiltering/RequestUrlFilteringMiddleware.cs
+    startLine: 123
   assemblies:
   - Coree.NETASP
   namespace: Coree.NETASP.Middleware.RequestUrlFiltering
   summary: Adds and configures the HostNameFilteringMiddleware options.
   example: []
   syntax:
-    content: public static IServiceCollection AddRequestUrlFiltering(this IServiceCollection services, string[]? whitelist = null, string[]? blacklist = null)
+    content: public static IServiceCollection AddRequestUrlFiltering(this IServiceCollection services, string[]? whitelist = null, string[]? blacklist = null, bool continueOnDisallowed = false, int disallowedFailureRating = 10, int disallowedStatusCode = 400)
     parameters:
     - id: services
       type: Microsoft.Extensions.DependencyInjection.IServiceCollection
@@ -72,14 +72,20 @@ items:
       type: System.String[]
     - id: blacklist
       type: System.String[]
+    - id: continueOnDisallowed
+      type: System.Boolean
+    - id: disallowedFailureRating
+      type: System.Int32
+    - id: disallowedStatusCode
+      type: System.Int32
     return:
       type: Microsoft.Extensions.DependencyInjection.IServiceCollection
       description: The IServiceCollection so that additional calls can be chained.
-    content.vb: Public Shared Function AddRequestUrlFiltering(services As IServiceCollection, whitelist As String() = Nothing, blacklist As String() = Nothing) As IServiceCollection
+    content.vb: Public Shared Function AddRequestUrlFiltering(services As IServiceCollection, whitelist As String() = Nothing, blacklist As String() = Nothing, continueOnDisallowed As Boolean = False, disallowedFailureRating As Integer = 10, disallowedStatusCode As Integer = 400) As IServiceCollection
   overload: Coree.NETASP.Middleware.RequestUrlFiltering.RequestUrlFilteringExtensions.AddRequestUrlFiltering*
-  nameWithType.vb: RequestUrlFilteringExtensions.AddRequestUrlFiltering(IServiceCollection, String(), String())
-  fullName.vb: Coree.NETASP.Middleware.RequestUrlFiltering.RequestUrlFilteringExtensions.AddRequestUrlFiltering(Microsoft.Extensions.DependencyInjection.IServiceCollection, String(), String())
-  name.vb: AddRequestUrlFiltering(IServiceCollection, String(), String())
+  nameWithType.vb: RequestUrlFilteringExtensions.AddRequestUrlFiltering(IServiceCollection, String(), String(), Boolean, Integer, Integer)
+  fullName.vb: Coree.NETASP.Middleware.RequestUrlFiltering.RequestUrlFilteringExtensions.AddRequestUrlFiltering(Microsoft.Extensions.DependencyInjection.IServiceCollection, String(), String(), Boolean, Integer, Integer)
+  name.vb: AddRequestUrlFiltering(IServiceCollection, String(), String(), Boolean, Integer, Integer)
 references:
 - uid: Coree.NETASP.Middleware.RequestUrlFiltering
   commentId: N:Coree.NETASP.Middleware.RequestUrlFiltering
@@ -358,7 +364,7 @@ references:
   fullName: System
 - uid: Coree.NETASP.Middleware.RequestUrlFiltering.RequestUrlFilteringExtensions.AddRequestUrlFiltering*
   commentId: Overload:Coree.NETASP.Middleware.RequestUrlFiltering.RequestUrlFilteringExtensions.AddRequestUrlFiltering
-  href: Coree.NETASP.Middleware.RequestUrlFiltering.RequestUrlFilteringExtensions.html#Coree_NETASP_Middleware_RequestUrlFiltering_RequestUrlFilteringExtensions_AddRequestUrlFiltering_Microsoft_Extensions_DependencyInjection_IServiceCollection_System_String___System_String___
+  href: Coree.NETASP.Middleware.RequestUrlFiltering.RequestUrlFilteringExtensions.html#Coree_NETASP_Middleware_RequestUrlFiltering_RequestUrlFilteringExtensions_AddRequestUrlFiltering_Microsoft_Extensions_DependencyInjection_IServiceCollection_System_String___System_String___System_Boolean_System_Int32_System_Int32_
   name: AddRequestUrlFiltering
   nameWithType: RequestUrlFilteringExtensions.AddRequestUrlFiltering
   fullName: Coree.NETASP.Middleware.RequestUrlFiltering.RequestUrlFilteringExtensions.AddRequestUrlFiltering
@@ -393,6 +399,28 @@ references:
     href: https://learn.microsoft.com/dotnet/api/system.string
   - name: (
   - name: )
+- uid: System.Boolean
+  commentId: T:System.Boolean
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.boolean
+  name: bool
+  nameWithType: bool
+  fullName: bool
+  nameWithType.vb: Boolean
+  fullName.vb: Boolean
+  name.vb: Boolean
+- uid: System.Int32
+  commentId: T:System.Int32
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.int32
+  name: int
+  nameWithType: int
+  fullName: int
+  nameWithType.vb: Integer
+  fullName.vb: Integer
+  name.vb: Integer
 - uid: Microsoft.Extensions.DependencyInjection
   commentId: N:Microsoft.Extensions.DependencyInjection
   isExternal: true

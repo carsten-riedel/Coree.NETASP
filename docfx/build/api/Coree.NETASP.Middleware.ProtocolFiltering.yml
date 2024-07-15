@@ -17,18 +17,18 @@ items:
   assemblies:
   - Coree.NETASP
 references:
-- uid: Coree.NETASP.Middleware.ProtocolFiltering.ProtocolFilteringOptions
-  commentId: T:Coree.NETASP.Middleware.ProtocolFiltering.ProtocolFilteringOptions
-  href: Coree.NETASP.Middleware.ProtocolFiltering.ProtocolFilteringOptions.html
-  name: ProtocolFilteringOptions
-  nameWithType: ProtocolFilteringOptions
-  fullName: Coree.NETASP.Middleware.ProtocolFiltering.ProtocolFilteringOptions
 - uid: Coree.NETASP.Middleware.ProtocolFiltering.ProtocolFilteringMiddleware
   commentId: T:Coree.NETASP.Middleware.ProtocolFiltering.ProtocolFilteringMiddleware
   href: Coree.NETASP.Middleware.ProtocolFiltering.ProtocolFilteringMiddleware.html
   name: ProtocolFilteringMiddleware
   nameWithType: ProtocolFilteringMiddleware
   fullName: Coree.NETASP.Middleware.ProtocolFiltering.ProtocolFilteringMiddleware
+- uid: Coree.NETASP.Middleware.ProtocolFiltering.ProtocolFilteringOptions
+  commentId: T:Coree.NETASP.Middleware.ProtocolFiltering.ProtocolFilteringOptions
+  href: Coree.NETASP.Middleware.ProtocolFiltering.ProtocolFilteringOptions.html
+  name: ProtocolFilteringOptions
+  nameWithType: ProtocolFilteringOptions
+  fullName: Coree.NETASP.Middleware.ProtocolFiltering.ProtocolFilteringOptions
 - uid: Coree.NETASP.Middleware.ProtocolFiltering.ProtocolFilteringMiddlewareExtensions
   commentId: T:Coree.NETASP.Middleware.ProtocolFiltering.ProtocolFilteringMiddlewareExtensions
   href: Coree.NETASP.Middleware.ProtocolFiltering.ProtocolFilteringMiddlewareExtensions.html

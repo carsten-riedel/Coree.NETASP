@@ -5,7 +5,7 @@ items:
   id: AcceptLanguageFilteringMiddleware
   parent: Coree.NETASP.Middleware.AcceptLanguageFiltering
   children:
-  - Coree.NETASP.Middleware.AcceptLanguageFiltering.AcceptLanguageFilteringMiddleware.#ctor(Microsoft.AspNetCore.Http.RequestDelegate,Microsoft.Extensions.Logging.ILogger{Coree.NETASP.Middleware.AcceptLanguageFiltering.AcceptLanguageFilteringMiddleware},Microsoft.Extensions.Options.IOptions{Coree.NETASP.Middleware.AcceptLanguageFiltering.AcceptLanguageFilteringOptions})
+  - Coree.NETASP.Middleware.AcceptLanguageFiltering.AcceptLanguageFilteringMiddleware.#ctor(Microsoft.AspNetCore.Http.RequestDelegate,Microsoft.Extensions.Logging.ILogger{Coree.NETASP.Middleware.AcceptLanguageFiltering.AcceptLanguageFilteringMiddleware},Microsoft.Extensions.Options.IOptions{Coree.NETASP.Middleware.AcceptLanguageFiltering.AcceptLanguageFilteringOptions},Coree.NETASP.Services.Points.IPointService)
   - Coree.NETASP.Middleware.AcceptLanguageFiltering.AcceptLanguageFilteringMiddleware.InvokeAsync(Microsoft.AspNetCore.Http.HttpContext)
   langs:
   - csharp
@@ -21,7 +21,7 @@ items:
       repo: https://github.com/carsten-riedel/Coree.NETASP
     id: AcceptLanguageFilteringMiddleware
     path: ../../src/Projects/Coree.NETASP/Middleware/AcceptLanguageFiltering/AcceptLanguageFilteringMiddleware.cs
-    startLine: 9
+    startLine: 11
   assemblies:
   - Coree.NETASP
   namespace: Coree.NETASP.Middleware.AcceptLanguageFiltering
@@ -40,16 +40,16 @@ items:
   - System.Object.MemberwiseClone
   - System.Object.ReferenceEquals(System.Object,System.Object)
   - System.Object.ToString
-- uid: Coree.NETASP.Middleware.AcceptLanguageFiltering.AcceptLanguageFilteringMiddleware.#ctor(Microsoft.AspNetCore.Http.RequestDelegate,Microsoft.Extensions.Logging.ILogger{Coree.NETASP.Middleware.AcceptLanguageFiltering.AcceptLanguageFilteringMiddleware},Microsoft.Extensions.Options.IOptions{Coree.NETASP.Middleware.AcceptLanguageFiltering.AcceptLanguageFilteringOptions})
-  commentId: M:Coree.NETASP.Middleware.AcceptLanguageFiltering.AcceptLanguageFilteringMiddleware.#ctor(Microsoft.AspNetCore.Http.RequestDelegate,Microsoft.Extensions.Logging.ILogger{Coree.NETASP.Middleware.AcceptLanguageFiltering.AcceptLanguageFilteringMiddleware},Microsoft.Extensions.Options.IOptions{Coree.NETASP.Middleware.AcceptLanguageFiltering.AcceptLanguageFilteringOptions})
-  id: '#ctor(Microsoft.AspNetCore.Http.RequestDelegate,Microsoft.Extensions.Logging.ILogger{Coree.NETASP.Middleware.AcceptLanguageFiltering.AcceptLanguageFilteringMiddleware},Microsoft.Extensions.Options.IOptions{Coree.NETASP.Middleware.AcceptLanguageFiltering.AcceptLanguageFilteringOptions})'
+- uid: Coree.NETASP.Middleware.AcceptLanguageFiltering.AcceptLanguageFilteringMiddleware.#ctor(Microsoft.AspNetCore.Http.RequestDelegate,Microsoft.Extensions.Logging.ILogger{Coree.NETASP.Middleware.AcceptLanguageFiltering.AcceptLanguageFilteringMiddleware},Microsoft.Extensions.Options.IOptions{Coree.NETASP.Middleware.AcceptLanguageFiltering.AcceptLanguageFilteringOptions},Coree.NETASP.Services.Points.IPointService)
+  commentId: M:Coree.NETASP.Middleware.AcceptLanguageFiltering.AcceptLanguageFilteringMiddleware.#ctor(Microsoft.AspNetCore.Http.RequestDelegate,Microsoft.Extensions.Logging.ILogger{Coree.NETASP.Middleware.AcceptLanguageFiltering.AcceptLanguageFilteringMiddleware},Microsoft.Extensions.Options.IOptions{Coree.NETASP.Middleware.AcceptLanguageFiltering.AcceptLanguageFilteringOptions},Coree.NETASP.Services.Points.IPointService)
+  id: '#ctor(Microsoft.AspNetCore.Http.RequestDelegate,Microsoft.Extensions.Logging.ILogger{Coree.NETASP.Middleware.AcceptLanguageFiltering.AcceptLanguageFilteringMiddleware},Microsoft.Extensions.Options.IOptions{Coree.NETASP.Middleware.AcceptLanguageFiltering.AcceptLanguageFilteringOptions},Coree.NETASP.Services.Points.IPointService)'
   parent: Coree.NETASP.Middleware.AcceptLanguageFiltering.AcceptLanguageFilteringMiddleware
   langs:
   - csharp
   - vb
-  name: AcceptLanguageFilteringMiddleware(RequestDelegate, ILogger<AcceptLanguageFilteringMiddleware>, IOptions<AcceptLanguageFilteringOptions>)
-  nameWithType: AcceptLanguageFilteringMiddleware.AcceptLanguageFilteringMiddleware(RequestDelegate, ILogger<AcceptLanguageFilteringMiddleware>, IOptions<AcceptLanguageFilteringOptions>)
-  fullName: Coree.NETASP.Middleware.AcceptLanguageFiltering.AcceptLanguageFilteringMiddleware.AcceptLanguageFilteringMiddleware(Microsoft.AspNetCore.Http.RequestDelegate, Microsoft.Extensions.Logging.ILogger<Coree.NETASP.Middleware.AcceptLanguageFiltering.AcceptLanguageFilteringMiddleware>, Microsoft.Extensions.Options.IOptions<Coree.NETASP.Middleware.AcceptLanguageFiltering.AcceptLanguageFilteringOptions>)
+  name: AcceptLanguageFilteringMiddleware(RequestDelegate, ILogger<AcceptLanguageFilteringMiddleware>, IOptions<AcceptLanguageFilteringOptions>, IPointService)
+  nameWithType: AcceptLanguageFilteringMiddleware.AcceptLanguageFilteringMiddleware(RequestDelegate, ILogger<AcceptLanguageFilteringMiddleware>, IOptions<AcceptLanguageFilteringOptions>, IPointService)
+  fullName: Coree.NETASP.Middleware.AcceptLanguageFiltering.AcceptLanguageFilteringMiddleware.AcceptLanguageFilteringMiddleware(Microsoft.AspNetCore.Http.RequestDelegate, Microsoft.Extensions.Logging.ILogger<Coree.NETASP.Middleware.AcceptLanguageFiltering.AcceptLanguageFilteringMiddleware>, Microsoft.Extensions.Options.IOptions<Coree.NETASP.Middleware.AcceptLanguageFiltering.AcceptLanguageFilteringOptions>, Coree.NETASP.Services.Points.IPointService)
   type: Constructor
   source:
     remote:
@@ -58,14 +58,14 @@ items:
       repo: https://github.com/carsten-riedel/Coree.NETASP
     id: .ctor
     path: ../../src/Projects/Coree.NETASP/Middleware/AcceptLanguageFiltering/AcceptLanguageFilteringMiddleware.cs
-    startLine: 21
+    startLine: 24
   assemblies:
   - Coree.NETASP
   namespace: Coree.NETASP.Middleware.AcceptLanguageFiltering
   summary: Initializes a new instance of the <xref href="Coree.NETASP.Middleware.AcceptLanguageFiltering.AcceptLanguageFilteringMiddleware" data-throw-if-not-resolved="false"></xref> class.
   example: []
   syntax:
-    content: public AcceptLanguageFilteringMiddleware(RequestDelegate nextMiddleware, ILogger<AcceptLanguageFilteringMiddleware> logger, IOptions<AcceptLanguageFilteringOptions> options)
+    content: public AcceptLanguageFilteringMiddleware(RequestDelegate nextMiddleware, ILogger<AcceptLanguageFilteringMiddleware> logger, IOptions<AcceptLanguageFilteringOptions> options, IPointService pointService)
     parameters:
     - id: nextMiddleware
       type: Microsoft.AspNetCore.Http.RequestDelegate
@@ -76,11 +76,13 @@ items:
     - id: options
       type: Microsoft.Extensions.Options.IOptions{Coree.NETASP.Middleware.AcceptLanguageFiltering.AcceptLanguageFilteringOptions}
       description: The options containing the whitelist and blacklist of languages.
-    content.vb: Public Sub New(nextMiddleware As RequestDelegate, logger As ILogger(Of AcceptLanguageFilteringMiddleware), options As IOptions(Of AcceptLanguageFilteringOptions))
+    - id: pointService
+      type: Coree.NETASP.Services.Points.IPointService
+    content.vb: Public Sub New(nextMiddleware As RequestDelegate, logger As ILogger(Of AcceptLanguageFilteringMiddleware), options As IOptions(Of AcceptLanguageFilteringOptions), pointService As IPointService)
   overload: Coree.NETASP.Middleware.AcceptLanguageFiltering.AcceptLanguageFilteringMiddleware.#ctor*
-  nameWithType.vb: AcceptLanguageFilteringMiddleware.New(RequestDelegate, ILogger(Of AcceptLanguageFilteringMiddleware), IOptions(Of AcceptLanguageFilteringOptions))
-  fullName.vb: Coree.NETASP.Middleware.AcceptLanguageFiltering.AcceptLanguageFilteringMiddleware.New(Microsoft.AspNetCore.Http.RequestDelegate, Microsoft.Extensions.Logging.ILogger(Of Coree.NETASP.Middleware.AcceptLanguageFiltering.AcceptLanguageFilteringMiddleware), Microsoft.Extensions.Options.IOptions(Of Coree.NETASP.Middleware.AcceptLanguageFiltering.AcceptLanguageFilteringOptions))
-  name.vb: New(RequestDelegate, ILogger(Of AcceptLanguageFilteringMiddleware), IOptions(Of AcceptLanguageFilteringOptions))
+  nameWithType.vb: AcceptLanguageFilteringMiddleware.New(RequestDelegate, ILogger(Of AcceptLanguageFilteringMiddleware), IOptions(Of AcceptLanguageFilteringOptions), IPointService)
+  fullName.vb: Coree.NETASP.Middleware.AcceptLanguageFiltering.AcceptLanguageFilteringMiddleware.New(Microsoft.AspNetCore.Http.RequestDelegate, Microsoft.Extensions.Logging.ILogger(Of Coree.NETASP.Middleware.AcceptLanguageFiltering.AcceptLanguageFilteringMiddleware), Microsoft.Extensions.Options.IOptions(Of Coree.NETASP.Middleware.AcceptLanguageFiltering.AcceptLanguageFilteringOptions), Coree.NETASP.Services.Points.IPointService)
+  name.vb: New(RequestDelegate, ILogger(Of AcceptLanguageFilteringMiddleware), IOptions(Of AcceptLanguageFilteringOptions), IPointService)
 - uid: Coree.NETASP.Middleware.AcceptLanguageFiltering.AcceptLanguageFilteringMiddleware.InvokeAsync(Microsoft.AspNetCore.Http.HttpContext)
   commentId: M:Coree.NETASP.Middleware.AcceptLanguageFiltering.AcceptLanguageFilteringMiddleware.InvokeAsync(Microsoft.AspNetCore.Http.HttpContext)
   id: InvokeAsync(Microsoft.AspNetCore.Http.HttpContext)
@@ -99,7 +101,7 @@ items:
       repo: https://github.com/carsten-riedel/Coree.NETASP
     id: InvokeAsync
     path: ../../src/Projects/Coree.NETASP/Middleware/AcceptLanguageFiltering/AcceptLanguageFilteringMiddleware.cs
-    startLine: 33
+    startLine: 37
   assemblies:
   - Coree.NETASP
   namespace: Coree.NETASP.Middleware.AcceptLanguageFiltering
@@ -400,7 +402,7 @@ references:
   fullName: Coree.NETASP.Middleware.AcceptLanguageFiltering.AcceptLanguageFilteringMiddleware
 - uid: Coree.NETASP.Middleware.AcceptLanguageFiltering.AcceptLanguageFilteringMiddleware.#ctor*
   commentId: Overload:Coree.NETASP.Middleware.AcceptLanguageFiltering.AcceptLanguageFilteringMiddleware.#ctor
-  href: Coree.NETASP.Middleware.AcceptLanguageFiltering.AcceptLanguageFilteringMiddleware.html#Coree_NETASP_Middleware_AcceptLanguageFiltering_AcceptLanguageFilteringMiddleware__ctor_Microsoft_AspNetCore_Http_RequestDelegate_Microsoft_Extensions_Logging_ILogger_Coree_NETASP_Middleware_AcceptLanguageFiltering_AcceptLanguageFilteringMiddleware__Microsoft_Extensions_Options_IOptions_Coree_NETASP_Middleware_AcceptLanguageFiltering_AcceptLanguageFilteringOptions__
+  href: Coree.NETASP.Middleware.AcceptLanguageFiltering.AcceptLanguageFilteringMiddleware.html#Coree_NETASP_Middleware_AcceptLanguageFiltering_AcceptLanguageFilteringMiddleware__ctor_Microsoft_AspNetCore_Http_RequestDelegate_Microsoft_Extensions_Logging_ILogger_Coree_NETASP_Middleware_AcceptLanguageFiltering_AcceptLanguageFilteringMiddleware__Microsoft_Extensions_Options_IOptions_Coree_NETASP_Middleware_AcceptLanguageFiltering_AcceptLanguageFilteringOptions__Coree_NETASP_Services_Points_IPointService_
   name: AcceptLanguageFilteringMiddleware
   nameWithType: AcceptLanguageFilteringMiddleware.AcceptLanguageFilteringMiddleware
   fullName: Coree.NETASP.Middleware.AcceptLanguageFiltering.AcceptLanguageFilteringMiddleware.AcceptLanguageFilteringMiddleware
@@ -481,6 +483,13 @@ references:
     name: AcceptLanguageFilteringOptions
     href: Coree.NETASP.Middleware.AcceptLanguageFiltering.AcceptLanguageFilteringOptions.html
   - name: )
+- uid: Coree.NETASP.Services.Points.IPointService
+  commentId: T:Coree.NETASP.Services.Points.IPointService
+  parent: Coree.NETASP.Services.Points
+  href: Coree.NETASP.Services.Points.IPointService.html
+  name: IPointService
+  nameWithType: IPointService
+  fullName: Coree.NETASP.Services.Points.IPointService
 - uid: Microsoft.AspNetCore.Http
   commentId: N:Microsoft.AspNetCore.Http
   isExternal: true
@@ -648,6 +657,44 @@ references:
     name: Options
     isExternal: true
     href: https://learn.microsoft.com/dotnet/api/microsoft.extensions.options
+- uid: Coree.NETASP.Services.Points
+  commentId: N:Coree.NETASP.Services.Points
+  href: Coree.html
+  name: Coree.NETASP.Services.Points
+  nameWithType: Coree.NETASP.Services.Points
+  fullName: Coree.NETASP.Services.Points
+  spec.csharp:
+  - uid: Coree
+    name: Coree
+    href: Coree.html
+  - name: .
+  - uid: Coree.NETASP
+    name: NETASP
+    href: Coree.NETASP.html
+  - name: .
+  - uid: Coree.NETASP.Services
+    name: Services
+    href: Coree.NETASP.Services.html
+  - name: .
+  - uid: Coree.NETASP.Services.Points
+    name: Points
+    href: Coree.NETASP.Services.Points.html
+  spec.vb:
+  - uid: Coree
+    name: Coree
+    href: Coree.html
+  - name: .
+  - uid: Coree.NETASP
+    name: NETASP
+    href: Coree.NETASP.html
+  - name: .
+  - uid: Coree.NETASP.Services
+    name: Services
+    href: Coree.NETASP.Services.html
+  - name: .
+  - uid: Coree.NETASP.Services.Points
+    name: Points
+    href: Coree.NETASP.Services.Points.html
 - uid: Coree.NETASP.Middleware.AcceptLanguageFiltering.AcceptLanguageFilteringMiddleware.InvokeAsync*
   commentId: Overload:Coree.NETASP.Middleware.AcceptLanguageFiltering.AcceptLanguageFilteringMiddleware.InvokeAsync
   href: Coree.NETASP.Middleware.AcceptLanguageFiltering.AcceptLanguageFilteringMiddleware.html#Coree_NETASP_Middleware_AcceptLanguageFiltering_AcceptLanguageFilteringMiddleware_InvokeAsync_Microsoft_AspNetCore_Http_HttpContext_

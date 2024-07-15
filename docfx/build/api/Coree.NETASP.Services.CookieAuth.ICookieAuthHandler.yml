@@ -1,0 +1,826 @@
+### YamlMime:ManagedReference
+items:
+- uid: Coree.NETASP.Services.CookieAuth.ICookieAuthHandler
+  commentId: T:Coree.NETASP.Services.CookieAuth.ICookieAuthHandler
+  id: ICookieAuthHandler
+  parent: Coree.NETASP.Services.CookieAuth
+  children:
+  - Coree.NETASP.Services.CookieAuth.ICookieAuthHandler.AuthenticateAsync(System.String,System.String)
+  - Coree.NETASP.Services.CookieAuth.ICookieAuthHandler.CheckSlidingExpirationAsync(Microsoft.AspNetCore.Authentication.Cookies.CookieSlidingExpirationContext)
+  - Coree.NETASP.Services.CookieAuth.ICookieAuthHandler.GetClaimsAsync(System.String)
+  - Coree.NETASP.Services.CookieAuth.ICookieAuthHandler.RedirectToAccessDeniedAsync(Microsoft.AspNetCore.Authentication.RedirectContext{Microsoft.AspNetCore.Authentication.Cookies.CookieAuthenticationOptions})
+  - Coree.NETASP.Services.CookieAuth.ICookieAuthHandler.RedirectToLoginAsync(Microsoft.AspNetCore.Authentication.RedirectContext{Microsoft.AspNetCore.Authentication.Cookies.CookieAuthenticationOptions})
+  - Coree.NETASP.Services.CookieAuth.ICookieAuthHandler.RedirectToLogoutAsync(Microsoft.AspNetCore.Authentication.RedirectContext{Microsoft.AspNetCore.Authentication.Cookies.CookieAuthenticationOptions})
+  - Coree.NETASP.Services.CookieAuth.ICookieAuthHandler.SignedInAsync(Microsoft.AspNetCore.Authentication.Cookies.CookieSignedInContext)
+  - Coree.NETASP.Services.CookieAuth.ICookieAuthHandler.SigningInAsync(Microsoft.AspNetCore.Authentication.Cookies.CookieSigningInContext)
+  - Coree.NETASP.Services.CookieAuth.ICookieAuthHandler.SigningOutAsync(Microsoft.AspNetCore.Authentication.Cookies.CookieSigningOutContext)
+  - Coree.NETASP.Services.CookieAuth.ICookieAuthHandler.ValidatePrincipalAsync(Microsoft.AspNetCore.Authentication.Cookies.CookieValidatePrincipalContext)
+  langs:
+  - csharp
+  - vb
+  name: ICookieAuthHandler
+  nameWithType: ICookieAuthHandler
+  fullName: Coree.NETASP.Services.CookieAuth.ICookieAuthHandler
+  type: Interface
+  source:
+    remote:
+      path: src/Projects/Coree.NETASP/Services/CookieAuth/CookieAuthHandler.cs
+      branch: master
+      repo: https://github.com/carsten-riedel/Coree.NETASP
+    id: ICookieAuthHandler
+    path: ../../src/Projects/Coree.NETASP/Services/CookieAuth/CookieAuthHandler.cs
+    startLine: 9
+  assemblies:
+  - Coree.NETASP
+  namespace: Coree.NETASP.Services.CookieAuth
+  syntax:
+    content: public interface ICookieAuthHandler
+    content.vb: Public Interface ICookieAuthHandler
+- uid: Coree.NETASP.Services.CookieAuth.ICookieAuthHandler.AuthenticateAsync(System.String,System.String)
+  commentId: M:Coree.NETASP.Services.CookieAuth.ICookieAuthHandler.AuthenticateAsync(System.String,System.String)
+  id: AuthenticateAsync(System.String,System.String)
+  parent: Coree.NETASP.Services.CookieAuth.ICookieAuthHandler
+  langs:
+  - csharp
+  - vb
+  name: AuthenticateAsync(string, string)
+  nameWithType: ICookieAuthHandler.AuthenticateAsync(string, string)
+  fullName: Coree.NETASP.Services.CookieAuth.ICookieAuthHandler.AuthenticateAsync(string, string)
+  type: Method
+  source:
+    remote:
+      path: src/Projects/Coree.NETASP/Services/CookieAuth/CookieAuthHandler.cs
+      branch: master
+      repo: https://github.com/carsten-riedel/Coree.NETASP
+    id: AuthenticateAsync
+    path: ../../src/Projects/Coree.NETASP/Services/CookieAuth/CookieAuthHandler.cs
+    startLine: 11
+  assemblies:
+  - Coree.NETASP
+  namespace: Coree.NETASP.Services.CookieAuth
+  syntax:
+    content: Task<bool> AuthenticateAsync(string username, string password)
+    parameters:
+    - id: username
+      type: System.String
+    - id: password
+      type: System.String
+    return:
+      type: System.Threading.Tasks.Task{System.Boolean}
+    content.vb: Function AuthenticateAsync(username As String, password As String) As Task(Of Boolean)
+  overload: Coree.NETASP.Services.CookieAuth.ICookieAuthHandler.AuthenticateAsync*
+  nameWithType.vb: ICookieAuthHandler.AuthenticateAsync(String, String)
+  fullName.vb: Coree.NETASP.Services.CookieAuth.ICookieAuthHandler.AuthenticateAsync(String, String)
+  name.vb: AuthenticateAsync(String, String)
+- uid: Coree.NETASP.Services.CookieAuth.ICookieAuthHandler.GetClaimsAsync(System.String)
+  commentId: M:Coree.NETASP.Services.CookieAuth.ICookieAuthHandler.GetClaimsAsync(System.String)
+  id: GetClaimsAsync(System.String)
+  parent: Coree.NETASP.Services.CookieAuth.ICookieAuthHandler
+  langs:
+  - csharp
+  - vb
+  name: GetClaimsAsync(string)
+  nameWithType: ICookieAuthHandler.GetClaimsAsync(string)
+  fullName: Coree.NETASP.Services.CookieAuth.ICookieAuthHandler.GetClaimsAsync(string)
+  type: Method
+  source:
+    remote:
+      path: src/Projects/Coree.NETASP/Services/CookieAuth/CookieAuthHandler.cs
+      branch: master
+      repo: https://github.com/carsten-riedel/Coree.NETASP
+    id: GetClaimsAsync
+    path: ../../src/Projects/Coree.NETASP/Services/CookieAuth/CookieAuthHandler.cs
+    startLine: 13
+  assemblies:
+  - Coree.NETASP
+  namespace: Coree.NETASP.Services.CookieAuth
+  syntax:
+    content: Task<List<Claim>> GetClaimsAsync(string username)
+    parameters:
+    - id: username
+      type: System.String
+    return:
+      type: System.Threading.Tasks.Task{System.Collections.Generic.List{System.Security.Claims.Claim}}
+    content.vb: Function GetClaimsAsync(username As String) As Task(Of List(Of Claim))
+  overload: Coree.NETASP.Services.CookieAuth.ICookieAuthHandler.GetClaimsAsync*
+  nameWithType.vb: ICookieAuthHandler.GetClaimsAsync(String)
+  fullName.vb: Coree.NETASP.Services.CookieAuth.ICookieAuthHandler.GetClaimsAsync(String)
+  name.vb: GetClaimsAsync(String)
+- uid: Coree.NETASP.Services.CookieAuth.ICookieAuthHandler.ValidatePrincipalAsync(Microsoft.AspNetCore.Authentication.Cookies.CookieValidatePrincipalContext)
+  commentId: M:Coree.NETASP.Services.CookieAuth.ICookieAuthHandler.ValidatePrincipalAsync(Microsoft.AspNetCore.Authentication.Cookies.CookieValidatePrincipalContext)
+  id: ValidatePrincipalAsync(Microsoft.AspNetCore.Authentication.Cookies.CookieValidatePrincipalContext)
+  parent: Coree.NETASP.Services.CookieAuth.ICookieAuthHandler
+  langs:
+  - csharp
+  - vb
+  name: ValidatePrincipalAsync(CookieValidatePrincipalContext)
+  nameWithType: ICookieAuthHandler.ValidatePrincipalAsync(CookieValidatePrincipalContext)
+  fullName: Coree.NETASP.Services.CookieAuth.ICookieAuthHandler.ValidatePrincipalAsync(Microsoft.AspNetCore.Authentication.Cookies.CookieValidatePrincipalContext)
+  type: Method
+  source:
+    remote:
+      path: src/Projects/Coree.NETASP/Services/CookieAuth/CookieAuthHandler.cs
+      branch: master
+      repo: https://github.com/carsten-riedel/Coree.NETASP
+    id: ValidatePrincipalAsync
+    path: ../../src/Projects/Coree.NETASP/Services/CookieAuth/CookieAuthHandler.cs
+    startLine: 15
+  assemblies:
+  - Coree.NETASP
+  namespace: Coree.NETASP.Services.CookieAuth
+  syntax:
+    content: Task ValidatePrincipalAsync(CookieValidatePrincipalContext context)
+    parameters:
+    - id: context
+      type: Microsoft.AspNetCore.Authentication.Cookies.CookieValidatePrincipalContext
+    return:
+      type: System.Threading.Tasks.Task
+    content.vb: Function ValidatePrincipalAsync(context As CookieValidatePrincipalContext) As Task
+  overload: Coree.NETASP.Services.CookieAuth.ICookieAuthHandler.ValidatePrincipalAsync*
+- uid: Coree.NETASP.Services.CookieAuth.ICookieAuthHandler.SignedInAsync(Microsoft.AspNetCore.Authentication.Cookies.CookieSignedInContext)
+  commentId: M:Coree.NETASP.Services.CookieAuth.ICookieAuthHandler.SignedInAsync(Microsoft.AspNetCore.Authentication.Cookies.CookieSignedInContext)
+  id: SignedInAsync(Microsoft.AspNetCore.Authentication.Cookies.CookieSignedInContext)
+  parent: Coree.NETASP.Services.CookieAuth.ICookieAuthHandler
+  langs:
+  - csharp
+  - vb
+  name: SignedInAsync(CookieSignedInContext)
+  nameWithType: ICookieAuthHandler.SignedInAsync(CookieSignedInContext)
+  fullName: Coree.NETASP.Services.CookieAuth.ICookieAuthHandler.SignedInAsync(Microsoft.AspNetCore.Authentication.Cookies.CookieSignedInContext)
+  type: Method
+  source:
+    remote:
+      path: src/Projects/Coree.NETASP/Services/CookieAuth/CookieAuthHandler.cs
+      branch: master
+      repo: https://github.com/carsten-riedel/Coree.NETASP
+    id: SignedInAsync
+    path: ../../src/Projects/Coree.NETASP/Services/CookieAuth/CookieAuthHandler.cs
+    startLine: 17
+  assemblies:
+  - Coree.NETASP
+  namespace: Coree.NETASP.Services.CookieAuth
+  syntax:
+    content: Task SignedInAsync(CookieSignedInContext context)
+    parameters:
+    - id: context
+      type: Microsoft.AspNetCore.Authentication.Cookies.CookieSignedInContext
+    return:
+      type: System.Threading.Tasks.Task
+    content.vb: Function SignedInAsync(context As CookieSignedInContext) As Task
+  overload: Coree.NETASP.Services.CookieAuth.ICookieAuthHandler.SignedInAsync*
+- uid: Coree.NETASP.Services.CookieAuth.ICookieAuthHandler.RedirectToLogoutAsync(Microsoft.AspNetCore.Authentication.RedirectContext{Microsoft.AspNetCore.Authentication.Cookies.CookieAuthenticationOptions})
+  commentId: M:Coree.NETASP.Services.CookieAuth.ICookieAuthHandler.RedirectToLogoutAsync(Microsoft.AspNetCore.Authentication.RedirectContext{Microsoft.AspNetCore.Authentication.Cookies.CookieAuthenticationOptions})
+  id: RedirectToLogoutAsync(Microsoft.AspNetCore.Authentication.RedirectContext{Microsoft.AspNetCore.Authentication.Cookies.CookieAuthenticationOptions})
+  parent: Coree.NETASP.Services.CookieAuth.ICookieAuthHandler
+  langs:
+  - csharp
+  - vb
+  name: RedirectToLogoutAsync(RedirectContext<CookieAuthenticationOptions>)
+  nameWithType: ICookieAuthHandler.RedirectToLogoutAsync(RedirectContext<CookieAuthenticationOptions>)
+  fullName: Coree.NETASP.Services.CookieAuth.ICookieAuthHandler.RedirectToLogoutAsync(Microsoft.AspNetCore.Authentication.RedirectContext<Microsoft.AspNetCore.Authentication.Cookies.CookieAuthenticationOptions>)
+  type: Method
+  source:
+    remote:
+      path: src/Projects/Coree.NETASP/Services/CookieAuth/CookieAuthHandler.cs
+      branch: master
+      repo: https://github.com/carsten-riedel/Coree.NETASP
+    id: RedirectToLogoutAsync
+    path: ../../src/Projects/Coree.NETASP/Services/CookieAuth/CookieAuthHandler.cs
+    startLine: 19
+  assemblies:
+  - Coree.NETASP
+  namespace: Coree.NETASP.Services.CookieAuth
+  syntax:
+    content: Task RedirectToLogoutAsync(RedirectContext<CookieAuthenticationOptions> context)
+    parameters:
+    - id: context
+      type: Microsoft.AspNetCore.Authentication.RedirectContext{Microsoft.AspNetCore.Authentication.Cookies.CookieAuthenticationOptions}
+    return:
+      type: System.Threading.Tasks.Task
+    content.vb: Function RedirectToLogoutAsync(context As RedirectContext(Of CookieAuthenticationOptions)) As Task
+  overload: Coree.NETASP.Services.CookieAuth.ICookieAuthHandler.RedirectToLogoutAsync*
+  nameWithType.vb: ICookieAuthHandler.RedirectToLogoutAsync(RedirectContext(Of CookieAuthenticationOptions))
+  fullName.vb: Coree.NETASP.Services.CookieAuth.ICookieAuthHandler.RedirectToLogoutAsync(Microsoft.AspNetCore.Authentication.RedirectContext(Of Microsoft.AspNetCore.Authentication.Cookies.CookieAuthenticationOptions))
+  name.vb: RedirectToLogoutAsync(RedirectContext(Of CookieAuthenticationOptions))
+- uid: Coree.NETASP.Services.CookieAuth.ICookieAuthHandler.RedirectToAccessDeniedAsync(Microsoft.AspNetCore.Authentication.RedirectContext{Microsoft.AspNetCore.Authentication.Cookies.CookieAuthenticationOptions})
+  commentId: M:Coree.NETASP.Services.CookieAuth.ICookieAuthHandler.RedirectToAccessDeniedAsync(Microsoft.AspNetCore.Authentication.RedirectContext{Microsoft.AspNetCore.Authentication.Cookies.CookieAuthenticationOptions})
+  id: RedirectToAccessDeniedAsync(Microsoft.AspNetCore.Authentication.RedirectContext{Microsoft.AspNetCore.Authentication.Cookies.CookieAuthenticationOptions})
+  parent: Coree.NETASP.Services.CookieAuth.ICookieAuthHandler
+  langs:
+  - csharp
+  - vb
+  name: RedirectToAccessDeniedAsync(RedirectContext<CookieAuthenticationOptions>)
+  nameWithType: ICookieAuthHandler.RedirectToAccessDeniedAsync(RedirectContext<CookieAuthenticationOptions>)
+  fullName: Coree.NETASP.Services.CookieAuth.ICookieAuthHandler.RedirectToAccessDeniedAsync(Microsoft.AspNetCore.Authentication.RedirectContext<Microsoft.AspNetCore.Authentication.Cookies.CookieAuthenticationOptions>)
+  type: Method
+  source:
+    remote:
+      path: src/Projects/Coree.NETASP/Services/CookieAuth/CookieAuthHandler.cs
+      branch: master
+      repo: https://github.com/carsten-riedel/Coree.NETASP
+    id: RedirectToAccessDeniedAsync
+    path: ../../src/Projects/Coree.NETASP/Services/CookieAuth/CookieAuthHandler.cs
+    startLine: 21
+  assemblies:
+  - Coree.NETASP
+  namespace: Coree.NETASP.Services.CookieAuth
+  syntax:
+    content: Task RedirectToAccessDeniedAsync(RedirectContext<CookieAuthenticationOptions> context)
+    parameters:
+    - id: context
+      type: Microsoft.AspNetCore.Authentication.RedirectContext{Microsoft.AspNetCore.Authentication.Cookies.CookieAuthenticationOptions}
+    return:
+      type: System.Threading.Tasks.Task
+    content.vb: Function RedirectToAccessDeniedAsync(context As RedirectContext(Of CookieAuthenticationOptions)) As Task
+  overload: Coree.NETASP.Services.CookieAuth.ICookieAuthHandler.RedirectToAccessDeniedAsync*
+  nameWithType.vb: ICookieAuthHandler.RedirectToAccessDeniedAsync(RedirectContext(Of CookieAuthenticationOptions))
+  fullName.vb: Coree.NETASP.Services.CookieAuth.ICookieAuthHandler.RedirectToAccessDeniedAsync(Microsoft.AspNetCore.Authentication.RedirectContext(Of Microsoft.AspNetCore.Authentication.Cookies.CookieAuthenticationOptions))
+  name.vb: RedirectToAccessDeniedAsync(RedirectContext(Of CookieAuthenticationOptions))
+- uid: Coree.NETASP.Services.CookieAuth.ICookieAuthHandler.RedirectToLoginAsync(Microsoft.AspNetCore.Authentication.RedirectContext{Microsoft.AspNetCore.Authentication.Cookies.CookieAuthenticationOptions})
+  commentId: M:Coree.NETASP.Services.CookieAuth.ICookieAuthHandler.RedirectToLoginAsync(Microsoft.AspNetCore.Authentication.RedirectContext{Microsoft.AspNetCore.Authentication.Cookies.CookieAuthenticationOptions})
+  id: RedirectToLoginAsync(Microsoft.AspNetCore.Authentication.RedirectContext{Microsoft.AspNetCore.Authentication.Cookies.CookieAuthenticationOptions})
+  parent: Coree.NETASP.Services.CookieAuth.ICookieAuthHandler
+  langs:
+  - csharp
+  - vb
+  name: RedirectToLoginAsync(RedirectContext<CookieAuthenticationOptions>)
+  nameWithType: ICookieAuthHandler.RedirectToLoginAsync(RedirectContext<CookieAuthenticationOptions>)
+  fullName: Coree.NETASP.Services.CookieAuth.ICookieAuthHandler.RedirectToLoginAsync(Microsoft.AspNetCore.Authentication.RedirectContext<Microsoft.AspNetCore.Authentication.Cookies.CookieAuthenticationOptions>)
+  type: Method
+  source:
+    remote:
+      path: src/Projects/Coree.NETASP/Services/CookieAuth/CookieAuthHandler.cs
+      branch: master
+      repo: https://github.com/carsten-riedel/Coree.NETASP
+    id: RedirectToLoginAsync
+    path: ../../src/Projects/Coree.NETASP/Services/CookieAuth/CookieAuthHandler.cs
+    startLine: 23
+  assemblies:
+  - Coree.NETASP
+  namespace: Coree.NETASP.Services.CookieAuth
+  syntax:
+    content: Task RedirectToLoginAsync(RedirectContext<CookieAuthenticationOptions> context)
+    parameters:
+    - id: context
+      type: Microsoft.AspNetCore.Authentication.RedirectContext{Microsoft.AspNetCore.Authentication.Cookies.CookieAuthenticationOptions}
+    return:
+      type: System.Threading.Tasks.Task
+    content.vb: Function RedirectToLoginAsync(context As RedirectContext(Of CookieAuthenticationOptions)) As Task
+  overload: Coree.NETASP.Services.CookieAuth.ICookieAuthHandler.RedirectToLoginAsync*
+  nameWithType.vb: ICookieAuthHandler.RedirectToLoginAsync(RedirectContext(Of CookieAuthenticationOptions))
+  fullName.vb: Coree.NETASP.Services.CookieAuth.ICookieAuthHandler.RedirectToLoginAsync(Microsoft.AspNetCore.Authentication.RedirectContext(Of Microsoft.AspNetCore.Authentication.Cookies.CookieAuthenticationOptions))
+  name.vb: RedirectToLoginAsync(RedirectContext(Of CookieAuthenticationOptions))
+- uid: Coree.NETASP.Services.CookieAuth.ICookieAuthHandler.CheckSlidingExpirationAsync(Microsoft.AspNetCore.Authentication.Cookies.CookieSlidingExpirationContext)
+  commentId: M:Coree.NETASP.Services.CookieAuth.ICookieAuthHandler.CheckSlidingExpirationAsync(Microsoft.AspNetCore.Authentication.Cookies.CookieSlidingExpirationContext)
+  id: CheckSlidingExpirationAsync(Microsoft.AspNetCore.Authentication.Cookies.CookieSlidingExpirationContext)
+  parent: Coree.NETASP.Services.CookieAuth.ICookieAuthHandler
+  langs:
+  - csharp
+  - vb
+  name: CheckSlidingExpirationAsync(CookieSlidingExpirationContext)
+  nameWithType: ICookieAuthHandler.CheckSlidingExpirationAsync(CookieSlidingExpirationContext)
+  fullName: Coree.NETASP.Services.CookieAuth.ICookieAuthHandler.CheckSlidingExpirationAsync(Microsoft.AspNetCore.Authentication.Cookies.CookieSlidingExpirationContext)
+  type: Method
+  source:
+    remote:
+      path: src/Projects/Coree.NETASP/Services/CookieAuth/CookieAuthHandler.cs
+      branch: master
+      repo: https://github.com/carsten-riedel/Coree.NETASP
+    id: CheckSlidingExpirationAsync
+    path: ../../src/Projects/Coree.NETASP/Services/CookieAuth/CookieAuthHandler.cs
+    startLine: 25
+  assemblies:
+  - Coree.NETASP
+  namespace: Coree.NETASP.Services.CookieAuth
+  syntax:
+    content: Task CheckSlidingExpirationAsync(CookieSlidingExpirationContext context)
+    parameters:
+    - id: context
+      type: Microsoft.AspNetCore.Authentication.Cookies.CookieSlidingExpirationContext
+    return:
+      type: System.Threading.Tasks.Task
+    content.vb: Function CheckSlidingExpirationAsync(context As CookieSlidingExpirationContext) As Task
+  overload: Coree.NETASP.Services.CookieAuth.ICookieAuthHandler.CheckSlidingExpirationAsync*
+- uid: Coree.NETASP.Services.CookieAuth.ICookieAuthHandler.SigningInAsync(Microsoft.AspNetCore.Authentication.Cookies.CookieSigningInContext)
+  commentId: M:Coree.NETASP.Services.CookieAuth.ICookieAuthHandler.SigningInAsync(Microsoft.AspNetCore.Authentication.Cookies.CookieSigningInContext)
+  id: SigningInAsync(Microsoft.AspNetCore.Authentication.Cookies.CookieSigningInContext)
+  parent: Coree.NETASP.Services.CookieAuth.ICookieAuthHandler
+  langs:
+  - csharp
+  - vb
+  name: SigningInAsync(CookieSigningInContext)
+  nameWithType: ICookieAuthHandler.SigningInAsync(CookieSigningInContext)
+  fullName: Coree.NETASP.Services.CookieAuth.ICookieAuthHandler.SigningInAsync(Microsoft.AspNetCore.Authentication.Cookies.CookieSigningInContext)
+  type: Method
+  source:
+    remote:
+      path: src/Projects/Coree.NETASP/Services/CookieAuth/CookieAuthHandler.cs
+      branch: master
+      repo: https://github.com/carsten-riedel/Coree.NETASP
+    id: SigningInAsync
+    path: ../../src/Projects/Coree.NETASP/Services/CookieAuth/CookieAuthHandler.cs
+    startLine: 27
+  assemblies:
+  - Coree.NETASP
+  namespace: Coree.NETASP.Services.CookieAuth
+  syntax:
+    content: Task SigningInAsync(CookieSigningInContext context)
+    parameters:
+    - id: context
+      type: Microsoft.AspNetCore.Authentication.Cookies.CookieSigningInContext
+    return:
+      type: System.Threading.Tasks.Task
+    content.vb: Function SigningInAsync(context As CookieSigningInContext) As Task
+  overload: Coree.NETASP.Services.CookieAuth.ICookieAuthHandler.SigningInAsync*
+- uid: Coree.NETASP.Services.CookieAuth.ICookieAuthHandler.SigningOutAsync(Microsoft.AspNetCore.Authentication.Cookies.CookieSigningOutContext)
+  commentId: M:Coree.NETASP.Services.CookieAuth.ICookieAuthHandler.SigningOutAsync(Microsoft.AspNetCore.Authentication.Cookies.CookieSigningOutContext)
+  id: SigningOutAsync(Microsoft.AspNetCore.Authentication.Cookies.CookieSigningOutContext)
+  parent: Coree.NETASP.Services.CookieAuth.ICookieAuthHandler
+  langs:
+  - csharp
+  - vb
+  name: SigningOutAsync(CookieSigningOutContext)
+  nameWithType: ICookieAuthHandler.SigningOutAsync(CookieSigningOutContext)
+  fullName: Coree.NETASP.Services.CookieAuth.ICookieAuthHandler.SigningOutAsync(Microsoft.AspNetCore.Authentication.Cookies.CookieSigningOutContext)
+  type: Method
+  source:
+    remote:
+      path: src/Projects/Coree.NETASP/Services/CookieAuth/CookieAuthHandler.cs
+      branch: master
+      repo: https://github.com/carsten-riedel/Coree.NETASP
+    id: SigningOutAsync
+    path: ../../src/Projects/Coree.NETASP/Services/CookieAuth/CookieAuthHandler.cs
+    startLine: 29
+  assemblies:
+  - Coree.NETASP
+  namespace: Coree.NETASP.Services.CookieAuth
+  syntax:
+    content: Task SigningOutAsync(CookieSigningOutContext context)
+    parameters:
+    - id: context
+      type: Microsoft.AspNetCore.Authentication.Cookies.CookieSigningOutContext
+    return:
+      type: System.Threading.Tasks.Task
+    content.vb: Function SigningOutAsync(context As CookieSigningOutContext) As Task
+  overload: Coree.NETASP.Services.CookieAuth.ICookieAuthHandler.SigningOutAsync*
+references:
+- uid: Coree.NETASP.Services.CookieAuth
+  commentId: N:Coree.NETASP.Services.CookieAuth
+  href: Coree.html
+  name: Coree.NETASP.Services.CookieAuth
+  nameWithType: Coree.NETASP.Services.CookieAuth
+  fullName: Coree.NETASP.Services.CookieAuth
+  spec.csharp:
+  - uid: Coree
+    name: Coree
+    href: Coree.html
+  - name: .
+  - uid: Coree.NETASP
+    name: NETASP
+    href: Coree.NETASP.html
+  - name: .
+  - uid: Coree.NETASP.Services
+    name: Services
+    href: Coree.NETASP.Services.html
+  - name: .
+  - uid: Coree.NETASP.Services.CookieAuth
+    name: CookieAuth
+    href: Coree.NETASP.Services.CookieAuth.html
+  spec.vb:
+  - uid: Coree
+    name: Coree
+    href: Coree.html
+  - name: .
+  - uid: Coree.NETASP
+    name: NETASP
+    href: Coree.NETASP.html
+  - name: .
+  - uid: Coree.NETASP.Services
+    name: Services
+    href: Coree.NETASP.Services.html
+  - name: .
+  - uid: Coree.NETASP.Services.CookieAuth
+    name: CookieAuth
+    href: Coree.NETASP.Services.CookieAuth.html
+- uid: Coree.NETASP.Services.CookieAuth.ICookieAuthHandler.AuthenticateAsync*
+  commentId: Overload:Coree.NETASP.Services.CookieAuth.ICookieAuthHandler.AuthenticateAsync
+  href: Coree.NETASP.Services.CookieAuth.ICookieAuthHandler.html#Coree_NETASP_Services_CookieAuth_ICookieAuthHandler_AuthenticateAsync_System_String_System_String_
+  name: AuthenticateAsync
+  nameWithType: ICookieAuthHandler.AuthenticateAsync
+  fullName: Coree.NETASP.Services.CookieAuth.ICookieAuthHandler.AuthenticateAsync
+- uid: System.String
+  commentId: T:System.String
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.string
+  name: string
+  nameWithType: string
+  fullName: string
+  nameWithType.vb: String
+  fullName.vb: String
+  name.vb: String
+- uid: System.Threading.Tasks.Task{System.Boolean}
+  commentId: T:System.Threading.Tasks.Task{System.Boolean}
+  parent: System.Threading.Tasks
+  definition: System.Threading.Tasks.Task`1
+  href: https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1
+  name: Task<bool>
+  nameWithType: Task<bool>
+  fullName: System.Threading.Tasks.Task<bool>
+  nameWithType.vb: Task(Of Boolean)
+  fullName.vb: System.Threading.Tasks.Task(Of Boolean)
+  name.vb: Task(Of Boolean)
+  spec.csharp:
+  - uid: System.Threading.Tasks.Task`1
+    name: Task
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1
+  - name: <
+  - uid: System.Boolean
+    name: bool
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.boolean
+  - name: '>'
+  spec.vb:
+  - uid: System.Threading.Tasks.Task`1
+    name: Task
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: System.Boolean
+    name: Boolean
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.boolean
+  - name: )
+- uid: System
+  commentId: N:System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: System.Threading.Tasks.Task`1
+  commentId: T:System.Threading.Tasks.Task`1
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1
+  name: Task<TResult>
+  nameWithType: Task<TResult>
+  fullName: System.Threading.Tasks.Task<TResult>
+  nameWithType.vb: Task(Of TResult)
+  fullName.vb: System.Threading.Tasks.Task(Of TResult)
+  name.vb: Task(Of TResult)
+  spec.csharp:
+  - uid: System.Threading.Tasks.Task`1
+    name: Task
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1
+  - name: <
+  - name: TResult
+  - name: '>'
+  spec.vb:
+  - uid: System.Threading.Tasks.Task`1
+    name: Task
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1
+  - name: (
+  - name: Of
+  - name: " "
+  - name: TResult
+  - name: )
+- uid: System.Threading.Tasks
+  commentId: N:System.Threading.Tasks
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System.Threading.Tasks
+  nameWithType: System.Threading.Tasks
+  fullName: System.Threading.Tasks
+  spec.csharp:
+  - uid: System
+    name: System
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system
+  - name: .
+  - uid: System.Threading
+    name: Threading
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading
+  - name: .
+  - uid: System.Threading.Tasks
+    name: Tasks
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading.tasks
+  spec.vb:
+  - uid: System
+    name: System
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system
+  - name: .
+  - uid: System.Threading
+    name: Threading
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading
+  - name: .
+  - uid: System.Threading.Tasks
+    name: Tasks
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading.tasks
+- uid: Coree.NETASP.Services.CookieAuth.ICookieAuthHandler.GetClaimsAsync*
+  commentId: Overload:Coree.NETASP.Services.CookieAuth.ICookieAuthHandler.GetClaimsAsync
+  href: Coree.NETASP.Services.CookieAuth.ICookieAuthHandler.html#Coree_NETASP_Services_CookieAuth_ICookieAuthHandler_GetClaimsAsync_System_String_
+  name: GetClaimsAsync
+  nameWithType: ICookieAuthHandler.GetClaimsAsync
+  fullName: Coree.NETASP.Services.CookieAuth.ICookieAuthHandler.GetClaimsAsync
+- uid: System.Threading.Tasks.Task{System.Collections.Generic.List{System.Security.Claims.Claim}}
+  commentId: T:System.Threading.Tasks.Task{System.Collections.Generic.List{System.Security.Claims.Claim}}
+  parent: System.Threading.Tasks
+  definition: System.Threading.Tasks.Task`1
+  href: https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1
+  name: Task<List<Claim>>
+  nameWithType: Task<List<Claim>>
+  fullName: System.Threading.Tasks.Task<System.Collections.Generic.List<System.Security.Claims.Claim>>
+  nameWithType.vb: Task(Of List(Of Claim))
+  fullName.vb: System.Threading.Tasks.Task(Of System.Collections.Generic.List(Of System.Security.Claims.Claim))
+  name.vb: Task(Of List(Of Claim))
+  spec.csharp:
+  - uid: System.Threading.Tasks.Task`1
+    name: Task
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1
+  - name: <
+  - uid: System.Collections.Generic.List`1
+    name: List
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1
+  - name: <
+  - uid: System.Security.Claims.Claim
+    name: Claim
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.security.claims.claim
+  - name: '>'
+  - name: '>'
+  spec.vb:
+  - uid: System.Threading.Tasks.Task`1
+    name: Task
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: System.Collections.Generic.List`1
+    name: List
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: System.Security.Claims.Claim
+    name: Claim
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.security.claims.claim
+  - name: )
+  - name: )
+- uid: Coree.NETASP.Services.CookieAuth.ICookieAuthHandler.ValidatePrincipalAsync*
+  commentId: Overload:Coree.NETASP.Services.CookieAuth.ICookieAuthHandler.ValidatePrincipalAsync
+  href: Coree.NETASP.Services.CookieAuth.ICookieAuthHandler.html#Coree_NETASP_Services_CookieAuth_ICookieAuthHandler_ValidatePrincipalAsync_Microsoft_AspNetCore_Authentication_Cookies_CookieValidatePrincipalContext_
+  name: ValidatePrincipalAsync
+  nameWithType: ICookieAuthHandler.ValidatePrincipalAsync
+  fullName: Coree.NETASP.Services.CookieAuth.ICookieAuthHandler.ValidatePrincipalAsync
+- uid: Microsoft.AspNetCore.Authentication.Cookies.CookieValidatePrincipalContext
+  commentId: T:Microsoft.AspNetCore.Authentication.Cookies.CookieValidatePrincipalContext
+  parent: Microsoft.AspNetCore.Authentication.Cookies
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/microsoft.aspnetcore.authentication.cookies.cookievalidateprincipalcontext
+  name: CookieValidatePrincipalContext
+  nameWithType: CookieValidatePrincipalContext
+  fullName: Microsoft.AspNetCore.Authentication.Cookies.CookieValidatePrincipalContext
+- uid: System.Threading.Tasks.Task
+  commentId: T:System.Threading.Tasks.Task
+  parent: System.Threading.Tasks
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.threading.tasks.task
+  name: Task
+  nameWithType: Task
+  fullName: System.Threading.Tasks.Task
+- uid: Microsoft.AspNetCore.Authentication.Cookies
+  commentId: N:Microsoft.AspNetCore.Authentication.Cookies
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/microsoft
+  name: Microsoft.AspNetCore.Authentication.Cookies
+  nameWithType: Microsoft.AspNetCore.Authentication.Cookies
+  fullName: Microsoft.AspNetCore.Authentication.Cookies
+  spec.csharp:
+  - uid: Microsoft
+    name: Microsoft
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/microsoft
+  - name: .
+  - uid: Microsoft.AspNetCore
+    name: AspNetCore
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/microsoft.aspnetcore
+  - name: .
+  - uid: Microsoft.AspNetCore.Authentication
+    name: Authentication
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/microsoft.aspnetcore.authentication
+  - name: .
+  - uid: Microsoft.AspNetCore.Authentication.Cookies
+    name: Cookies
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/microsoft.aspnetcore.authentication.cookies
+  spec.vb:
+  - uid: Microsoft
+    name: Microsoft
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/microsoft
+  - name: .
+  - uid: Microsoft.AspNetCore
+    name: AspNetCore
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/microsoft.aspnetcore
+  - name: .
+  - uid: Microsoft.AspNetCore.Authentication
+    name: Authentication
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/microsoft.aspnetcore.authentication
+  - name: .
+  - uid: Microsoft.AspNetCore.Authentication.Cookies
+    name: Cookies
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/microsoft.aspnetcore.authentication.cookies
+- uid: Coree.NETASP.Services.CookieAuth.ICookieAuthHandler.SignedInAsync*
+  commentId: Overload:Coree.NETASP.Services.CookieAuth.ICookieAuthHandler.SignedInAsync
+  href: Coree.NETASP.Services.CookieAuth.ICookieAuthHandler.html#Coree_NETASP_Services_CookieAuth_ICookieAuthHandler_SignedInAsync_Microsoft_AspNetCore_Authentication_Cookies_CookieSignedInContext_
+  name: SignedInAsync
+  nameWithType: ICookieAuthHandler.SignedInAsync
+  fullName: Coree.NETASP.Services.CookieAuth.ICookieAuthHandler.SignedInAsync
+- uid: Microsoft.AspNetCore.Authentication.Cookies.CookieSignedInContext
+  commentId: T:Microsoft.AspNetCore.Authentication.Cookies.CookieSignedInContext
+  parent: Microsoft.AspNetCore.Authentication.Cookies
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/microsoft.aspnetcore.authentication.cookies.cookiesignedincontext
+  name: CookieSignedInContext
+  nameWithType: CookieSignedInContext
+  fullName: Microsoft.AspNetCore.Authentication.Cookies.CookieSignedInContext
+- uid: Coree.NETASP.Services.CookieAuth.ICookieAuthHandler.RedirectToLogoutAsync*
+  commentId: Overload:Coree.NETASP.Services.CookieAuth.ICookieAuthHandler.RedirectToLogoutAsync
+  href: Coree.NETASP.Services.CookieAuth.ICookieAuthHandler.html#Coree_NETASP_Services_CookieAuth_ICookieAuthHandler_RedirectToLogoutAsync_Microsoft_AspNetCore_Authentication_RedirectContext_Microsoft_AspNetCore_Authentication_Cookies_CookieAuthenticationOptions__
+  name: RedirectToLogoutAsync
+  nameWithType: ICookieAuthHandler.RedirectToLogoutAsync
+  fullName: Coree.NETASP.Services.CookieAuth.ICookieAuthHandler.RedirectToLogoutAsync
+- uid: Microsoft.AspNetCore.Authentication.RedirectContext{Microsoft.AspNetCore.Authentication.Cookies.CookieAuthenticationOptions}
+  commentId: T:Microsoft.AspNetCore.Authentication.RedirectContext{Microsoft.AspNetCore.Authentication.Cookies.CookieAuthenticationOptions}
+  parent: Microsoft.AspNetCore.Authentication
+  definition: Microsoft.AspNetCore.Authentication.RedirectContext`1
+  href: https://learn.microsoft.com/dotnet/api/microsoft.aspnetcore.authentication.redirectcontext-1
+  name: RedirectContext<CookieAuthenticationOptions>
+  nameWithType: RedirectContext<CookieAuthenticationOptions>
+  fullName: Microsoft.AspNetCore.Authentication.RedirectContext<Microsoft.AspNetCore.Authentication.Cookies.CookieAuthenticationOptions>
+  nameWithType.vb: RedirectContext(Of CookieAuthenticationOptions)
+  fullName.vb: Microsoft.AspNetCore.Authentication.RedirectContext(Of Microsoft.AspNetCore.Authentication.Cookies.CookieAuthenticationOptions)
+  name.vb: RedirectContext(Of CookieAuthenticationOptions)
+  spec.csharp:
+  - uid: Microsoft.AspNetCore.Authentication.RedirectContext`1
+    name: RedirectContext
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/microsoft.aspnetcore.authentication.redirectcontext-1
+  - name: <
+  - uid: Microsoft.AspNetCore.Authentication.Cookies.CookieAuthenticationOptions
+    name: CookieAuthenticationOptions
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/microsoft.aspnetcore.authentication.cookies.cookieauthenticationoptions
+  - name: '>'
+  spec.vb:
+  - uid: Microsoft.AspNetCore.Authentication.RedirectContext`1
+    name: RedirectContext
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/microsoft.aspnetcore.authentication.redirectcontext-1
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: Microsoft.AspNetCore.Authentication.Cookies.CookieAuthenticationOptions
+    name: CookieAuthenticationOptions
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/microsoft.aspnetcore.authentication.cookies.cookieauthenticationoptions
+  - name: )
+- uid: Microsoft.AspNetCore.Authentication.RedirectContext`1
+  commentId: T:Microsoft.AspNetCore.Authentication.RedirectContext`1
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/microsoft.aspnetcore.authentication.redirectcontext-1
+  name: RedirectContext<TOptions>
+  nameWithType: RedirectContext<TOptions>
+  fullName: Microsoft.AspNetCore.Authentication.RedirectContext<TOptions>
+  nameWithType.vb: RedirectContext(Of TOptions)
+  fullName.vb: Microsoft.AspNetCore.Authentication.RedirectContext(Of TOptions)
+  name.vb: RedirectContext(Of TOptions)
+  spec.csharp:
+  - uid: Microsoft.AspNetCore.Authentication.RedirectContext`1
+    name: RedirectContext
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/microsoft.aspnetcore.authentication.redirectcontext-1
+  - name: <
+  - name: TOptions
+  - name: '>'
+  spec.vb:
+  - uid: Microsoft.AspNetCore.Authentication.RedirectContext`1
+    name: RedirectContext
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/microsoft.aspnetcore.authentication.redirectcontext-1
+  - name: (
+  - name: Of
+  - name: " "
+  - name: TOptions
+  - name: )
+- uid: Microsoft.AspNetCore.Authentication
+  commentId: N:Microsoft.AspNetCore.Authentication
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/microsoft
+  name: Microsoft.AspNetCore.Authentication
+  nameWithType: Microsoft.AspNetCore.Authentication
+  fullName: Microsoft.AspNetCore.Authentication
+  spec.csharp:
+  - uid: Microsoft
+    name: Microsoft
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/microsoft
+  - name: .
+  - uid: Microsoft.AspNetCore
+    name: AspNetCore
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/microsoft.aspnetcore
+  - name: .
+  - uid: Microsoft.AspNetCore.Authentication
+    name: Authentication
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/microsoft.aspnetcore.authentication
+  spec.vb:
+  - uid: Microsoft
+    name: Microsoft
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/microsoft
+  - name: .
+  - uid: Microsoft.AspNetCore
+    name: AspNetCore
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/microsoft.aspnetcore
+  - name: .
+  - uid: Microsoft.AspNetCore.Authentication
+    name: Authentication
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/microsoft.aspnetcore.authentication
+- uid: Coree.NETASP.Services.CookieAuth.ICookieAuthHandler.RedirectToAccessDeniedAsync*
+  commentId: Overload:Coree.NETASP.Services.CookieAuth.ICookieAuthHandler.RedirectToAccessDeniedAsync
+  href: Coree.NETASP.Services.CookieAuth.ICookieAuthHandler.html#Coree_NETASP_Services_CookieAuth_ICookieAuthHandler_RedirectToAccessDeniedAsync_Microsoft_AspNetCore_Authentication_RedirectContext_Microsoft_AspNetCore_Authentication_Cookies_CookieAuthenticationOptions__
+  name: RedirectToAccessDeniedAsync
+  nameWithType: ICookieAuthHandler.RedirectToAccessDeniedAsync
+  fullName: Coree.NETASP.Services.CookieAuth.ICookieAuthHandler.RedirectToAccessDeniedAsync
+- uid: Coree.NETASP.Services.CookieAuth.ICookieAuthHandler.RedirectToLoginAsync*
+  commentId: Overload:Coree.NETASP.Services.CookieAuth.ICookieAuthHandler.RedirectToLoginAsync
+  href: Coree.NETASP.Services.CookieAuth.ICookieAuthHandler.html#Coree_NETASP_Services_CookieAuth_ICookieAuthHandler_RedirectToLoginAsync_Microsoft_AspNetCore_Authentication_RedirectContext_Microsoft_AspNetCore_Authentication_Cookies_CookieAuthenticationOptions__
+  name: RedirectToLoginAsync
+  nameWithType: ICookieAuthHandler.RedirectToLoginAsync
+  fullName: Coree.NETASP.Services.CookieAuth.ICookieAuthHandler.RedirectToLoginAsync
+- uid: Coree.NETASP.Services.CookieAuth.ICookieAuthHandler.CheckSlidingExpirationAsync*
+  commentId: Overload:Coree.NETASP.Services.CookieAuth.ICookieAuthHandler.CheckSlidingExpirationAsync
+  href: Coree.NETASP.Services.CookieAuth.ICookieAuthHandler.html#Coree_NETASP_Services_CookieAuth_ICookieAuthHandler_CheckSlidingExpirationAsync_Microsoft_AspNetCore_Authentication_Cookies_CookieSlidingExpirationContext_
+  name: CheckSlidingExpirationAsync
+  nameWithType: ICookieAuthHandler.CheckSlidingExpirationAsync
+  fullName: Coree.NETASP.Services.CookieAuth.ICookieAuthHandler.CheckSlidingExpirationAsync
+- uid: Microsoft.AspNetCore.Authentication.Cookies.CookieSlidingExpirationContext
+  commentId: T:Microsoft.AspNetCore.Authentication.Cookies.CookieSlidingExpirationContext
+  parent: Microsoft.AspNetCore.Authentication.Cookies
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/microsoft.aspnetcore.authentication.cookies.cookieslidingexpirationcontext
+  name: CookieSlidingExpirationContext
+  nameWithType: CookieSlidingExpirationContext
+  fullName: Microsoft.AspNetCore.Authentication.Cookies.CookieSlidingExpirationContext
+- uid: Coree.NETASP.Services.CookieAuth.ICookieAuthHandler.SigningInAsync*
+  commentId: Overload:Coree.NETASP.Services.CookieAuth.ICookieAuthHandler.SigningInAsync
+  href: Coree.NETASP.Services.CookieAuth.ICookieAuthHandler.html#Coree_NETASP_Services_CookieAuth_ICookieAuthHandler_SigningInAsync_Microsoft_AspNetCore_Authentication_Cookies_CookieSigningInContext_
+  name: SigningInAsync
+  nameWithType: ICookieAuthHandler.SigningInAsync
+  fullName: Coree.NETASP.Services.CookieAuth.ICookieAuthHandler.SigningInAsync
+- uid: Microsoft.AspNetCore.Authentication.Cookies.CookieSigningInContext
+  commentId: T:Microsoft.AspNetCore.Authentication.Cookies.CookieSigningInContext
+  parent: Microsoft.AspNetCore.Authentication.Cookies
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/microsoft.aspnetcore.authentication.cookies.cookiesigningincontext
+  name: CookieSigningInContext
+  nameWithType: CookieSigningInContext
+  fullName: Microsoft.AspNetCore.Authentication.Cookies.CookieSigningInContext
+- uid: Coree.NETASP.Services.CookieAuth.ICookieAuthHandler.SigningOutAsync*
+  commentId: Overload:Coree.NETASP.Services.CookieAuth.ICookieAuthHandler.SigningOutAsync
+  href: Coree.NETASP.Services.CookieAuth.ICookieAuthHandler.html#Coree_NETASP_Services_CookieAuth_ICookieAuthHandler_SigningOutAsync_Microsoft_AspNetCore_Authentication_Cookies_CookieSigningOutContext_
+  name: SigningOutAsync
+  nameWithType: ICookieAuthHandler.SigningOutAsync
+  fullName: Coree.NETASP.Services.CookieAuth.ICookieAuthHandler.SigningOutAsync
+- uid: Microsoft.AspNetCore.Authentication.Cookies.CookieSigningOutContext
+  commentId: T:Microsoft.AspNetCore.Authentication.Cookies.CookieSigningOutContext
+  parent: Microsoft.AspNetCore.Authentication.Cookies
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/microsoft.aspnetcore.authentication.cookies.cookiesigningoutcontext
+  name: CookieSigningOutContext
+  nameWithType: CookieSigningOutContext
+  fullName: Microsoft.AspNetCore.Authentication.Cookies.CookieSigningOutContext

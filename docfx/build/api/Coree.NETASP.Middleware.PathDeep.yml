@@ -4,7 +4,9 @@ items:
   commentId: N:Coree.NETASP.Middleware.PathDeep
   id: Coree.NETASP.Middleware.PathDeep
   children:
+  - Coree.NETASP.Middleware.PathDeep.PathDeepFilteringExtensions
   - Coree.NETASP.Middleware.PathDeep.PathDeepFilteringMiddleware
+  - Coree.NETASP.Middleware.PathDeep.PathDeepFilteringOptions
   langs:
   - csharp
   - vb
@@ -21,3 +23,15 @@ references:
   name: PathDeepFilteringMiddleware
   nameWithType: PathDeepFilteringMiddleware
   fullName: Coree.NETASP.Middleware.PathDeep.PathDeepFilteringMiddleware
+- uid: Coree.NETASP.Middleware.PathDeep.PathDeepFilteringExtensions
+  commentId: T:Coree.NETASP.Middleware.PathDeep.PathDeepFilteringExtensions
+  href: Coree.NETASP.Middleware.PathDeep.PathDeepFilteringExtensions.html
+  name: PathDeepFilteringExtensions
+  nameWithType: PathDeepFilteringExtensions
+  fullName: Coree.NETASP.Middleware.PathDeep.PathDeepFilteringExtensions
+- uid: Coree.NETASP.Middleware.PathDeep.PathDeepFilteringOptions
+  commentId: T:Coree.NETASP.Middleware.PathDeep.PathDeepFilteringOptions
+  href: Coree.NETASP.Middleware.PathDeep.PathDeepFilteringOptions.html
+  name: PathDeepFilteringOptions
+  nameWithType: PathDeepFilteringOptions
+  fullName: Coree.NETASP.Middleware.PathDeep.PathDeepFilteringOptions

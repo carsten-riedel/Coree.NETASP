@@ -5,7 +5,7 @@ items:
   id: DnsHostNameFilteringMiddleware
   parent: Coree.NETASP.Middleware.DnsHostNameFiltering
   children:
-  - Coree.NETASP.Middleware.DnsHostNameFiltering.DnsHostNameFilteringMiddleware.#ctor(Microsoft.AspNetCore.Http.RequestDelegate,Microsoft.Extensions.Logging.ILogger{Coree.NETASP.Middleware.DnsHostNameFiltering.DnsHostNameFilteringMiddleware},Microsoft.Extensions.Options.IOptions{Coree.NETASP.Middleware.DnsHostNameFiltering.DnsHostNameFilteringOptions})
+  - Coree.NETASP.Middleware.DnsHostNameFiltering.DnsHostNameFilteringMiddleware.#ctor(Microsoft.AspNetCore.Http.RequestDelegate,Microsoft.Extensions.Logging.ILogger{Coree.NETASP.Middleware.DnsHostNameFiltering.DnsHostNameFilteringMiddleware},Microsoft.Extensions.Options.IOptions{Coree.NETASP.Middleware.DnsHostNameFiltering.DnsHostNameFilteringOptions},Coree.NETASP.Services.Points.IPointService)
   - Coree.NETASP.Middleware.DnsHostNameFiltering.DnsHostNameFilteringMiddleware.InvokeAsync(Microsoft.AspNetCore.Http.HttpContext)
   langs:
   - csharp
@@ -21,7 +21,7 @@ items:
       repo: https://github.com/carsten-riedel/Coree.NETASP
     id: DnsHostNameFilteringMiddleware
     path: ../../src/Projects/Coree.NETASP/Middleware/DnsHostNameFiltering/DnsHostNameFilteringMiddleware.cs
-    startLine: 18
+    startLine: 15
   assemblies:
   - Coree.NETASP
   namespace: Coree.NETASP.Middleware.DnsHostNameFiltering
@@ -40,16 +40,16 @@ items:
   - System.Object.MemberwiseClone
   - System.Object.ReferenceEquals(System.Object,System.Object)
   - System.Object.ToString
-- uid: Coree.NETASP.Middleware.DnsHostNameFiltering.DnsHostNameFilteringMiddleware.#ctor(Microsoft.AspNetCore.Http.RequestDelegate,Microsoft.Extensions.Logging.ILogger{Coree.NETASP.Middleware.DnsHostNameFiltering.DnsHostNameFilteringMiddleware},Microsoft.Extensions.Options.IOptions{Coree.NETASP.Middleware.DnsHostNameFiltering.DnsHostNameFilteringOptions})
-  commentId: M:Coree.NETASP.Middleware.DnsHostNameFiltering.DnsHostNameFilteringMiddleware.#ctor(Microsoft.AspNetCore.Http.RequestDelegate,Microsoft.Extensions.Logging.ILogger{Coree.NETASP.Middleware.DnsHostNameFiltering.DnsHostNameFilteringMiddleware},Microsoft.Extensions.Options.IOptions{Coree.NETASP.Middleware.DnsHostNameFiltering.DnsHostNameFilteringOptions})
-  id: '#ctor(Microsoft.AspNetCore.Http.RequestDelegate,Microsoft.Extensions.Logging.ILogger{Coree.NETASP.Middleware.DnsHostNameFiltering.DnsHostNameFilteringMiddleware},Microsoft.Extensions.Options.IOptions{Coree.NETASP.Middleware.DnsHostNameFiltering.DnsHostNameFilteringOptions})'
+- uid: Coree.NETASP.Middleware.DnsHostNameFiltering.DnsHostNameFilteringMiddleware.#ctor(Microsoft.AspNetCore.Http.RequestDelegate,Microsoft.Extensions.Logging.ILogger{Coree.NETASP.Middleware.DnsHostNameFiltering.DnsHostNameFilteringMiddleware},Microsoft.Extensions.Options.IOptions{Coree.NETASP.Middleware.DnsHostNameFiltering.DnsHostNameFilteringOptions},Coree.NETASP.Services.Points.IPointService)
+  commentId: M:Coree.NETASP.Middleware.DnsHostNameFiltering.DnsHostNameFilteringMiddleware.#ctor(Microsoft.AspNetCore.Http.RequestDelegate,Microsoft.Extensions.Logging.ILogger{Coree.NETASP.Middleware.DnsHostNameFiltering.DnsHostNameFilteringMiddleware},Microsoft.Extensions.Options.IOptions{Coree.NETASP.Middleware.DnsHostNameFiltering.DnsHostNameFilteringOptions},Coree.NETASP.Services.Points.IPointService)
+  id: '#ctor(Microsoft.AspNetCore.Http.RequestDelegate,Microsoft.Extensions.Logging.ILogger{Coree.NETASP.Middleware.DnsHostNameFiltering.DnsHostNameFilteringMiddleware},Microsoft.Extensions.Options.IOptions{Coree.NETASP.Middleware.DnsHostNameFiltering.DnsHostNameFilteringOptions},Coree.NETASP.Services.Points.IPointService)'
   parent: Coree.NETASP.Middleware.DnsHostNameFiltering.DnsHostNameFilteringMiddleware
   langs:
   - csharp
   - vb
-  name: DnsHostNameFilteringMiddleware(RequestDelegate, ILogger<DnsHostNameFilteringMiddleware>, IOptions<DnsHostNameFilteringOptions>)
-  nameWithType: DnsHostNameFilteringMiddleware.DnsHostNameFilteringMiddleware(RequestDelegate, ILogger<DnsHostNameFilteringMiddleware>, IOptions<DnsHostNameFilteringOptions>)
-  fullName: Coree.NETASP.Middleware.DnsHostNameFiltering.DnsHostNameFilteringMiddleware.DnsHostNameFilteringMiddleware(Microsoft.AspNetCore.Http.RequestDelegate, Microsoft.Extensions.Logging.ILogger<Coree.NETASP.Middleware.DnsHostNameFiltering.DnsHostNameFilteringMiddleware>, Microsoft.Extensions.Options.IOptions<Coree.NETASP.Middleware.DnsHostNameFiltering.DnsHostNameFilteringOptions>)
+  name: DnsHostNameFilteringMiddleware(RequestDelegate, ILogger<DnsHostNameFilteringMiddleware>, IOptions<DnsHostNameFilteringOptions>, IPointService)
+  nameWithType: DnsHostNameFilteringMiddleware.DnsHostNameFilteringMiddleware(RequestDelegate, ILogger<DnsHostNameFilteringMiddleware>, IOptions<DnsHostNameFilteringOptions>, IPointService)
+  fullName: Coree.NETASP.Middleware.DnsHostNameFiltering.DnsHostNameFilteringMiddleware.DnsHostNameFilteringMiddleware(Microsoft.AspNetCore.Http.RequestDelegate, Microsoft.Extensions.Logging.ILogger<Coree.NETASP.Middleware.DnsHostNameFiltering.DnsHostNameFilteringMiddleware>, Microsoft.Extensions.Options.IOptions<Coree.NETASP.Middleware.DnsHostNameFiltering.DnsHostNameFilteringOptions>, Coree.NETASP.Services.Points.IPointService)
   type: Constructor
   source:
     remote:
@@ -58,12 +58,12 @@ items:
       repo: https://github.com/carsten-riedel/Coree.NETASP
     id: .ctor
     path: ../../src/Projects/Coree.NETASP/Middleware/DnsHostNameFiltering/DnsHostNameFilteringMiddleware.cs
-    startLine: 24
+    startLine: 23
   assemblies:
   - Coree.NETASP
   namespace: Coree.NETASP.Middleware.DnsHostNameFiltering
   syntax:
-    content: public DnsHostNameFilteringMiddleware(RequestDelegate nextMiddleware, ILogger<DnsHostNameFilteringMiddleware> logger, IOptions<DnsHostNameFilteringOptions> options)
+    content: public DnsHostNameFilteringMiddleware(RequestDelegate nextMiddleware, ILogger<DnsHostNameFilteringMiddleware> logger, IOptions<DnsHostNameFilteringOptions> options, IPointService pointService)
     parameters:
     - id: nextMiddleware
       type: Microsoft.AspNetCore.Http.RequestDelegate
@@ -71,11 +71,13 @@ items:
       type: Microsoft.Extensions.Logging.ILogger{Coree.NETASP.Middleware.DnsHostNameFiltering.DnsHostNameFilteringMiddleware}
     - id: options
       type: Microsoft.Extensions.Options.IOptions{Coree.NETASP.Middleware.DnsHostNameFiltering.DnsHostNameFilteringOptions}
-    content.vb: Public Sub New(nextMiddleware As RequestDelegate, logger As ILogger(Of DnsHostNameFilteringMiddleware), options As IOptions(Of DnsHostNameFilteringOptions))
+    - id: pointService
+      type: Coree.NETASP.Services.Points.IPointService
+    content.vb: Public Sub New(nextMiddleware As RequestDelegate, logger As ILogger(Of DnsHostNameFilteringMiddleware), options As IOptions(Of DnsHostNameFilteringOptions), pointService As IPointService)
   overload: Coree.NETASP.Middleware.DnsHostNameFiltering.DnsHostNameFilteringMiddleware.#ctor*
-  nameWithType.vb: DnsHostNameFilteringMiddleware.New(RequestDelegate, ILogger(Of DnsHostNameFilteringMiddleware), IOptions(Of DnsHostNameFilteringOptions))
-  fullName.vb: Coree.NETASP.Middleware.DnsHostNameFiltering.DnsHostNameFilteringMiddleware.New(Microsoft.AspNetCore.Http.RequestDelegate, Microsoft.Extensions.Logging.ILogger(Of Coree.NETASP.Middleware.DnsHostNameFiltering.DnsHostNameFilteringMiddleware), Microsoft.Extensions.Options.IOptions(Of Coree.NETASP.Middleware.DnsHostNameFiltering.DnsHostNameFilteringOptions))
-  name.vb: New(RequestDelegate, ILogger(Of DnsHostNameFilteringMiddleware), IOptions(Of DnsHostNameFilteringOptions))
+  nameWithType.vb: DnsHostNameFilteringMiddleware.New(RequestDelegate, ILogger(Of DnsHostNameFilteringMiddleware), IOptions(Of DnsHostNameFilteringOptions), IPointService)
+  fullName.vb: Coree.NETASP.Middleware.DnsHostNameFiltering.DnsHostNameFilteringMiddleware.New(Microsoft.AspNetCore.Http.RequestDelegate, Microsoft.Extensions.Logging.ILogger(Of Coree.NETASP.Middleware.DnsHostNameFiltering.DnsHostNameFilteringMiddleware), Microsoft.Extensions.Options.IOptions(Of Coree.NETASP.Middleware.DnsHostNameFiltering.DnsHostNameFilteringOptions), Coree.NETASP.Services.Points.IPointService)
+  name.vb: New(RequestDelegate, ILogger(Of DnsHostNameFilteringMiddleware), IOptions(Of DnsHostNameFilteringOptions), IPointService)
 - uid: Coree.NETASP.Middleware.DnsHostNameFiltering.DnsHostNameFilteringMiddleware.InvokeAsync(Microsoft.AspNetCore.Http.HttpContext)
   commentId: M:Coree.NETASP.Middleware.DnsHostNameFiltering.DnsHostNameFilteringMiddleware.InvokeAsync(Microsoft.AspNetCore.Http.HttpContext)
   id: InvokeAsync(Microsoft.AspNetCore.Http.HttpContext)
@@ -389,7 +391,7 @@ references:
   fullName: System
 - uid: Coree.NETASP.Middleware.DnsHostNameFiltering.DnsHostNameFilteringMiddleware.#ctor*
   commentId: Overload:Coree.NETASP.Middleware.DnsHostNameFiltering.DnsHostNameFilteringMiddleware.#ctor
-  href: Coree.NETASP.Middleware.DnsHostNameFiltering.DnsHostNameFilteringMiddleware.html#Coree_NETASP_Middleware_DnsHostNameFiltering_DnsHostNameFilteringMiddleware__ctor_Microsoft_AspNetCore_Http_RequestDelegate_Microsoft_Extensions_Logging_ILogger_Coree_NETASP_Middleware_DnsHostNameFiltering_DnsHostNameFilteringMiddleware__Microsoft_Extensions_Options_IOptions_Coree_NETASP_Middleware_DnsHostNameFiltering_DnsHostNameFilteringOptions__
+  href: Coree.NETASP.Middleware.DnsHostNameFiltering.DnsHostNameFilteringMiddleware.html#Coree_NETASP_Middleware_DnsHostNameFiltering_DnsHostNameFilteringMiddleware__ctor_Microsoft_AspNetCore_Http_RequestDelegate_Microsoft_Extensions_Logging_ILogger_Coree_NETASP_Middleware_DnsHostNameFiltering_DnsHostNameFilteringMiddleware__Microsoft_Extensions_Options_IOptions_Coree_NETASP_Middleware_DnsHostNameFiltering_DnsHostNameFilteringOptions__Coree_NETASP_Services_Points_IPointService_
   name: DnsHostNameFilteringMiddleware
   nameWithType: DnsHostNameFilteringMiddleware.DnsHostNameFilteringMiddleware
   fullName: Coree.NETASP.Middleware.DnsHostNameFiltering.DnsHostNameFilteringMiddleware.DnsHostNameFilteringMiddleware
@@ -470,6 +472,13 @@ references:
     name: DnsHostNameFilteringOptions
     href: Coree.NETASP.Middleware.DnsHostNameFiltering.DnsHostNameFilteringOptions.html
   - name: )
+- uid: Coree.NETASP.Services.Points.IPointService
+  commentId: T:Coree.NETASP.Services.Points.IPointService
+  parent: Coree.NETASP.Services.Points
+  href: Coree.NETASP.Services.Points.IPointService.html
+  name: IPointService
+  nameWithType: IPointService
+  fullName: Coree.NETASP.Services.Points.IPointService
 - uid: Microsoft.AspNetCore.Http
   commentId: N:Microsoft.AspNetCore.Http
   isExternal: true
@@ -637,6 +646,44 @@ references:
     name: Options
     isExternal: true
     href: https://learn.microsoft.com/dotnet/api/microsoft.extensions.options
+- uid: Coree.NETASP.Services.Points
+  commentId: N:Coree.NETASP.Services.Points
+  href: Coree.html
+  name: Coree.NETASP.Services.Points
+  nameWithType: Coree.NETASP.Services.Points
+  fullName: Coree.NETASP.Services.Points
+  spec.csharp:
+  - uid: Coree
+    name: Coree
+    href: Coree.html
+  - name: .
+  - uid: Coree.NETASP
+    name: NETASP
+    href: Coree.NETASP.html
+  - name: .
+  - uid: Coree.NETASP.Services
+    name: Services
+    href: Coree.NETASP.Services.html
+  - name: .
+  - uid: Coree.NETASP.Services.Points
+    name: Points
+    href: Coree.NETASP.Services.Points.html
+  spec.vb:
+  - uid: Coree
+    name: Coree
+    href: Coree.html
+  - name: .
+  - uid: Coree.NETASP
+    name: NETASP
+    href: Coree.NETASP.html
+  - name: .
+  - uid: Coree.NETASP.Services
+    name: Services
+    href: Coree.NETASP.Services.html
+  - name: .
+  - uid: Coree.NETASP.Services.Points
+    name: Points
+    href: Coree.NETASP.Services.Points.html
 - uid: Coree.NETASP.Middleware.DnsHostNameFiltering.DnsHostNameFilteringMiddleware.InvokeAsync*
   commentId: Overload:Coree.NETASP.Middleware.DnsHostNameFiltering.DnsHostNameFilteringMiddleware.InvokeAsync
   href: Coree.NETASP.Middleware.DnsHostNameFiltering.DnsHostNameFilteringMiddleware.html#Coree_NETASP_Middleware_DnsHostNameFiltering_DnsHostNameFilteringMiddleware_InvokeAsync_Microsoft_AspNetCore_Http_HttpContext_

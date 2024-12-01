@@ -25,6 +25,7 @@ namespace Coree.NETASP.Middleware.PathDeep
         {
             
             var requestPath = context.Request.Path.ToString();
+            _logger.LogDebug("RequestPath {path}", context.Request.Path);
             var pathDepth = CalculatePathDepth(requestPath);
 
 

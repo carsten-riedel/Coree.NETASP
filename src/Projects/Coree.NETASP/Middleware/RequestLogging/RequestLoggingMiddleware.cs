@@ -1,7 +1,10 @@
 ﻿using System.Net;
 using System.Reflection.PortableExecutable;
 using System.Text;
+
+using Microsoft.AspNetCore.Connections.Features;
 using Microsoft.AspNetCore.Http.Extensions;
+using Microsoft.AspNetCore.Http.Features;
 
 namespace Coree.NETASP.Middleware.RequestLogging
 {
@@ -76,6 +79,22 @@ namespace Coree.NETASP.Middleware.RequestLogging
                 requestString.AppendLine($"Connection.Id: {context.Connection.Id}");
                 requestString.AppendLine($"Trace:         {context.TraceIdentifier}");
                 requestString.AppendLine($"Request:       {context.Request.GetDisplayUrl()}");
+
+                // Check if the request is HTTPS
+                if (context.Request.IsHttps)
+                {
+                    var tlsFeature = context.Features.Get<ITlsHandshakeFeature>();
+                    if (tlsFeature != null)
+                    {
+                        var protocol = tlsFeature.Protocol;
+                        requestString.AppendLine($"TLS Protocol:  {protocol}");
+                    }
+                    else
+                    {
+                        requestString.AppendLine($"TLS Protocol:  Unknown handshake");
+                    }
+                }
+
                 requestString.AppendLine($"Method:        {context.Request.Method}");
                 requestString.AppendLine($"Remote:        {RemoteIP}:{RemotePort}");
                 //_logger.LogInformation("-- Request URL: {URL}, Client IP: {ClientIP}", context.Request.GetDisplayUrl(), clientIP);
@@ -98,6 +117,9 @@ namespace Coree.NETASP.Middleware.RequestLogging
                 {
                     requestString.AppendLine($"Header:        {header.Key} = {header.Value}");
                 }
+
+
+
                 //_logger.LogInformation("Header: {Key}: {Value}", header.Key, header.Value);
                 _logger.LogInformation("Request: {request}", requestString.ToString());
             }

@@ -1,4 +1,6 @@
-﻿using Coree.NETASP.Extensions;
+﻿using System.Text.Json;
+
+using Coree.NETASP.Extensions;
 using Coree.NETASP.Services.Points;
 using Coree.NETStandard.Extensions.Validations.String;
 
@@ -13,15 +15,20 @@ namespace Coree.NETASP.Middleware.ProtocolFiltering
     {
         private readonly RequestDelegate _nextMiddleware;
         private readonly ILogger<ProtocolFilteringMiddleware> _logger;
-        private readonly ProtocolFilteringOptions _options;
+        private readonly IOptionsMonitor<ProtocolFilteringMiddlewareOptions> _optionsMonitor;
+        private ProtocolFilteringMiddlewareOptions _options;
         private readonly IPointService _pointService;
 
-        public ProtocolFilteringMiddleware(RequestDelegate nextMiddleware, ILogger<ProtocolFilteringMiddleware> logger, IOptions<ProtocolFilteringOptions> options, IPointService pointService)
+        public ProtocolFilteringMiddleware(IOptionsMonitor<ProtocolFilteringMiddlewareOptions> optionsMonitor,RequestDelegate nextMiddleware, ILogger<ProtocolFilteringMiddleware> logger, IPointService pointService , IServiceProvider serviceProvider)
         {
             _nextMiddleware = nextMiddleware;
+            _optionsMonitor = optionsMonitor;
             _logger = logger;
-            _options = options.Value;
+            _options = _optionsMonitor.CurrentValue;
             _pointService = pointService;
+            _optionsMonitor.OnChange(updatedOptions => { _options = updatedOptions; 
+                _logger.LogDebug("Configuration for {OptionsName} updated.", nameof(ProtocolFilteringMiddlewareOptions));}
+            );
         }
 
         /// <summary>
@@ -70,7 +77,7 @@ namespace Coree.NETASP.Middleware.ProtocolFiltering
         }
     }
 
-    public class ProtocolFilteringOptions
+    public class ProtocolFilteringMiddlewareOptions
     {
         public string[]? Whitelist { get; set; }
         public string[]? Blacklist { get; set; }
@@ -81,12 +88,12 @@ namespace Coree.NETASP.Middleware.ProtocolFiltering
 
     public static class ProtocolFilteringMiddlewareExtensions
     {
-        public static IServiceCollection AddProtocolFiltering(this IServiceCollection services, string[]? whitelist = null, string[]? blacklist = null, bool continueOnDisallowed = false, int disallowedFailureRating = 10, int disallowedStatusCode = StatusCodes.Status400BadRequest)
+        public static IServiceCollection ConfigureProtocolFilteringMiddleware(this IServiceCollection services, string[]? whitelist = null, string[]? blacklist = null, bool continueOnDisallowed = false, int disallowedFailureRating = 10, int disallowedStatusCode = StatusCodes.Status400BadRequest)
         {
             whitelist ??= new string[] { "HTTP/1.1", "HTTP/2", "HTTP/2.0", "HTTP/3", "HTTP/3.0" };
             blacklist ??= new string[] { "", "HTTP/1.0", "HTTP/1.?" };
 
-            services.Configure<ProtocolFilteringOptions>(options =>
+            services.Configure<ProtocolFilteringMiddlewareOptions>(options =>
             {
                 options.Whitelist = whitelist;
                 options.Blacklist = blacklist;
@@ -97,5 +104,50 @@ namespace Coree.NETASP.Middleware.ProtocolFiltering
 
             return services;
         }
+
+        public static IServiceCollection ConfigureProtocolFilteringMiddleware(this IServiceCollection services, string directoryPath)
+        {
+            // Ensure the directory path ends with a directory separator
+            if (!directoryPath.EndsWith(Path.DirectorySeparatorChar.ToString()))
+                directoryPath += Path.DirectorySeparatorChar;
+
+            // Construct the file name from the ProtocolFilteringOptions class name
+            string fileName = nameof(ProtocolFilteringMiddlewareOptions) + ".json";
+            string fullPath = directoryPath + fileName;
+
+            // Check if the JSON file exists
+            if (!File.Exists(fullPath))
+            {
+                // Create default configuration object
+                ProtocolFilteringMiddlewareOptions defaultOptions = new ProtocolFilteringMiddlewareOptions
+                {
+                    Whitelist = new string[] { "HTTP/1.1", "HTTP/2", "HTTP/2.0", "HTTP/3", "HTTP/3.0" },
+                    Blacklist = new[] { "", "HTTP/1.0", "HTTP/1.?" },
+                    ContinueOnDisallowed = true,
+                    DisallowedFailureRating = 10,
+                    DisallowedStatusCode = 400
+                };
+
+                string topLevelKey = nameof(ProtocolFilteringMiddlewareOptions);
+                var optionsDictionary = new Dictionary<string, object> { { topLevelKey, defaultOptions } };
+
+                string defaultJson = JsonSerializer.Serialize(optionsDictionary, new JsonSerializerOptions { WriteIndented = true });
+
+                // Create the file with default settings
+                File.WriteAllText(fullPath, defaultJson);
+
+            }
+
+            // Create a configuration object
+            var configuration = new ConfigurationBuilder().AddJsonFile(fullPath, optional: false, reloadOnChange: true).Build();
+            
+            // Bind and configure the ProtocolFilteringOptions using the loaded configuration
+            services.Configure<ProtocolFilteringMiddlewareOptions>(configuration.GetSection("ProtocolFilteringMiddlewareOptions"));
+
+            return services;
+        }
     }
+
+
+
 }

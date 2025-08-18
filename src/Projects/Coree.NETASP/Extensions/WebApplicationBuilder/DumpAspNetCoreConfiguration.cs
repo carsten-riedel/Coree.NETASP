@@ -22,8 +22,11 @@ namespace Coree.NETASP.Extensions.WebApplicationBuilderExtensions
 #if DEBUG
     using (var serviceProvider = builder.Services.BuildServiceProvider())
     {
-        // Dump HostFilteringOptions
-        var hostFilterOptions = serviceProvider.GetService<IOptions<HostFilteringOptions>>();
+                // Resolve the ILogger for the current type (or replace with any type you need)
+                var logger = serviceProvider.GetRequiredService<ILogger<WebApplicationBuilder>>();
+
+                // Dump HostFilteringOptions
+                var hostFilterOptions = serviceProvider.GetService<IOptions<HostFilteringOptions>>();
         if (hostFilterOptions != null)
         {
             Console.WriteLine($"AllowedHosts: {string.Join(", ", hostFilterOptions.Value.AllowedHosts)}");

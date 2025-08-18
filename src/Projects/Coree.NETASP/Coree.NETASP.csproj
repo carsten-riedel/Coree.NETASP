@@ -18,18 +18,26 @@
 	  <Compile Remove="Middleware\Messages\MessageConstants.cs" />
 	</ItemGroup>
 	<ItemGroup>
+	  <None Remove="Middleware\TimeFrameToken\TimeFrameTokenMiddleware.cs" />
 	  <None Remove="Middleware\FailurePointsMiddleware.cs" />
 	  <None Remove="Middleware\RequestThrottlingMiddleware.cs" />
+	  <None Remove="Middleware\TimeFrameTT.cs" />
 	  <None Remove="Services\CookieAuth\CookieAuthHandler.cs" />
 	  <None Remove="Services\Points\PointService.cs" />
 	</ItemGroup>
 
 	<ItemGroup>
 		<PackageReference Include="Coree.NET" Version="0.1.8945.20552" />
+		<PackageReference Include="Microsoft.Extensions.Caching.Memory" Version="9.0.1" />
+		<PackageReference Include="Microsoft.Extensions.Hosting" Version="9.0.3" />
 	</ItemGroup>
 
 	<ItemGroup>
 	  <None Include="Middleware\Messages\MessageConstants.cs" />
+	</ItemGroup>
+
+	<ItemGroup>
+	  <Folder Include="Middleware\PathDeepFiltering\" />
 	</ItemGroup>
 
 </Project>

@@ -173,6 +173,7 @@ namespace Coree.NETASP.Services.CertificateManager
             {
                 sanBuilder.AddDnsName(san);
             }
+
             req.CertificateExtensions.Add(sanBuilder.Build());
 
             var cert = req.CreateSelfSigned(new DateTimeOffset(DateTime.UtcNow.AddDays(-1)), new DateTimeOffset(DateTime.UtcNow.AddYears(validityPeriodYears)));

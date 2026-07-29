@@ -1,3 +1,11 @@
+param (
+    [string]$PAT,
+    [Alias("NUGET_PAT")]
+    [string]$SECRET_NUGET_APIKEY,
+    [Alias("NUGET_TEST_PAT")]
+    [string]$SECRET_INTTESTNUGET_APIKEY
+)
+
 $ErrorActionPreference = 'Stop'
 
 $version    = $PSVersionTable.PSVersion.ToString()
@@ -6,9 +14,8 @@ $filename   = "cicd-${version}-${datetime}.log"
 $Transcript = Join-Path -Path "$PSScriptRoot" -ChildPath $filename
 Start-Transcript -Path "$Transcript"
 
-$PAT = $args[0]
-$NUGET_PAT = $args[1]
-$NUGET_TEST_PAT = $args[2]
+$NUGET_PAT = $SECRET_NUGET_APIKEY
+$NUGET_TEST_PAT = $SECRET_INTTESTNUGET_APIKEY
 
 . "$PSScriptRoot/cicd_util.ps1"
 . "$PSScriptRoot/cicd_prebuild_enviroment_prepare.ps1"
